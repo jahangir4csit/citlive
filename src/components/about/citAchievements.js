@@ -17,7 +17,7 @@ const CITAchievements = (data) => {
                     </div>
                     <div class="col-lg-7 offset-lg-1 col-md-6">
                         <div class="iso_text">
-                            <h3>{citCertified.title}</h3>
+                            <h3 dangerouslySetInnerHTML={{ __html: citCertified.title }} />
                             <p dangerouslySetInnerHTML={{ __html: citCertified.description }} />
                         </div>
                     </div>

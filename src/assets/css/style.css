@@ -4887,6 +4887,9 @@ Our facilities_item Area End
   border-radius: 50%;
   margin-right: 22px;
 }
+.single_profile_item .single_profile_img img{
+  border-radius: 50%;
+}
 
 .single_profile_item .single_profile_name h4 {
   color: #1F1E1E;
