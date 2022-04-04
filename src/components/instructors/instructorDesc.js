@@ -3,6 +3,9 @@ import { StaticImage } from "gatsby-plugin-image";
 
 export default function InstructorDesc(data){
     const instructorData = data.data;
+    const departs = data.departData;
+    console.log(departs, 'depart info');
+
     return(
         <section id="instructors_teachers">
             <div class="container">
@@ -19,30 +22,30 @@ export default function InstructorDesc(data){
                     <div class="col-md-4">
                         <div class="instructors_item instructors_item_1">
                             <div class="image">
-                                <StaticImage src="../../images/teachers/item-1.png" alt="image" />
+                                <img src={departs.departmentInfo.departmentIcon.sourceUrl} alt="Department" />
                             </div>
                             <div class="text">
-                                <h4>৩০ <span>ডিপার্টমেন্ট</span></h4>
+                                <h4>{departs.departmentInfo.departmentNumber} <span>{departs.departmentInfo.deptTitle}</span></h4>
                             </div>
                         </div>
                     </div>
                     <div class="col-md-4">
                         <div class="instructors_item instructors_item_2">
                             <div class="image">
-                                <StaticImage src="../../images/teachers/item-2.png" alt="image" />
+                                <img src={departs.mentorsInfo.mentorsIcon.sourceUrl} alt="Mentors" />
                             </div>
                             <div class="text">
-                                <h4>৩০ <span>শিক্ষকবৃন্দ</span></h4>
+                                <h4>{departs.mentorsInfo.mentorsNumber} <span>{departs.mentorsInfo.mentorsTitle}</span></h4>
                             </div>
                         </div>
                     </div>
                     <div class="col-md-4">
                         <div class="instructors_item instructors_item_3">
                             <div class="image">
-                                <StaticImage src="../../images/teachers/item-3.png" alt="image" />
+                                <img src={departs.supportInfo.supportsIcon.sourceUrl} alt="247 Support" />
                             </div>
                             <div class="text">
-                                <h4>৩০ <span>২৪/৭ সাপোর্ট মেন্টর</span></h4>
+                                <h4>{departs.supportInfo.supportsNumber} <span>{departs.supportInfo.supportTitle}</span></h4>
                             </div>
                         </div>
                     </div>
