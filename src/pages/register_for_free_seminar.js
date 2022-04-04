@@ -7,10 +7,6 @@ import Button from 'react-bootstrap/Button'
 import FloatingLabel from 'react-bootstrap/FloatingLabel'
 
 import {
-  ApolloClient,
-  InMemoryCache,
-  ApolloProvider,
-  useQuery,
   gql,
   useMutation
 } from "@apollo/client";
@@ -33,7 +29,7 @@ const RegSeminar = () => {
   const [courseVal, setCourseValue] = useState('')
 
   const [createSubmission, { loading, error, data }] = useMutation(SEMINAR_MUTATION);
-  
+
   if (loading) return 'Submitting...';
   if (error) return `Submission error! ${error.message}`;
 

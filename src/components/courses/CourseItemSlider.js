@@ -30,7 +30,7 @@ export default function CourseItemSlider(data){
                                     <FontAwesomeIcon icon={faStar} />
                                     <FontAwesomeIcon icon={faStar} />
                                     <FontAwesomeIcon icon={faStarHalfAlt} />
-                                    25 Reviews</span>
+                                    {courseItem.course_options.reviewsCount ? courseItem.course_options.reviewsCount : '0'} রিভিউস</span>
                                 <span class="stu">{courseItem.course_options.studentsIn ? courseItem.course_options.studentsIn : 0} স্টুডেন্ট</span>
                             </li>
                         </ul>
