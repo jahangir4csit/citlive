@@ -95,7 +95,11 @@ export default function FreeSeminar({data}){
                 </div>
             </div>
         </section>
-        <CourseSlide coursSlide={courseData} />
+        <CourseSlide 
+          coursSlide={courseData} 
+          secHeading={page.homeAdmissionSecHeading} 
+          secDesc={page.homeAdmissionSecDesc} 
+          noBg />
         </Layout>
         </React.Fragment>
         
@@ -109,6 +113,8 @@ export const query = graphql`
       nodes {
         title
         content
+        homeAdmissionSecHeading
+        homeAdmissionSecDesc
         latestSeminarVideo {
           sectionHeading
           latestSeminarVideoId
@@ -149,6 +155,7 @@ export const query = graphql`
               courseFee
               discountFee
               studentsIn
+              reviewsCount
             }
           }
         }

@@ -100,7 +100,7 @@ const settingsCourseItem = {
 
       return (
         <section id="courseslide">
-            <div class="container populer_courses">
+            <div class="container populer_courses" style={{ background: data.noBg ? 'transparent' : '' }}>
                 <div class="row">
                     <CourseSlideDesc 
                     secHeading={data.secHeading} 
