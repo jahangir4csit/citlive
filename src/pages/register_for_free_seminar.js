@@ -1,10 +1,19 @@
 import React, { useState } from "react";
-import gql from 'graphql-tag';
-import { Mutation } from 'react-apollo';
+//import gql from 'graphql-tag';
+//import { Mutation } from 'react-apollo';
 import Layout from "../components/layout";
 import Form from 'react-bootstrap/Form'
 import Button from 'react-bootstrap/Button'
 import FloatingLabel from 'react-bootstrap/FloatingLabel'
+
+import {
+  ApolloClient,
+  InMemoryCache,
+  ApolloProvider,
+  useQuery,
+  gql,
+  useMutation
+} from "@apollo/client";
 
 const SEMINAR_MUTATION = gql`
   mutation CreateSubmissionMutation($clientMutationId: String!, $name: String!, $mobile: String!, $email: String!, $address: String!, $course: String!){
@@ -23,6 +32,11 @@ const RegSeminar = () => {
   const [addressVal, setAddressValue] = useState('')
   const [courseVal, setCourseValue] = useState('')
 
+  const [createSubmission, { loading, error, data }] = useMutation(SEMINAR_MUTATION);
+  
+  if (loading) return 'Submitting...';
+  if (error) return `Submission error! ${error.message}`;
+
   return (
     <Layout>
       <section id="admission" className='mt-5 pt-5 pb-5'>
@@ -32,8 +46,8 @@ const RegSeminar = () => {
                     <div class="section_heading mb-5">
                         <h2>জয়েন ফ্রি সেমিনার</h2>
                     </div>
-                    <Mutation mutation={SEMINAR_MUTATION}>
-                    {(createSubmission, { loading, error, data }) => (
+                    {/* <Mutation mutation={useMutation(SEMINAR_MUTATION)}> */}
+                    {/* {(createSubmission, { loading, error, data }) => ( */}
                     <React.Fragment>
                       <Form 
                         onSubmit={async event => {
@@ -150,8 +164,8 @@ const RegSeminar = () => {
                       {data && <p>ধন্যবাদ, শীঘ্রই আপনার সাথে যোগাযোগ করা হবে </p>}
                     </div>
                     </React.Fragment>
-                    )}
-                    </Mutation>
+                    {/* )}
+                    </Mutation> */}
                 </div>
             </div>
           </div>

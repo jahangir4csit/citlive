@@ -1,6 +1,10 @@
 import React from 'react';
-import { ApolloProvider } from 'react-apollo';
+//import { ApolloProvider } from 'react-apollo';
 import { client } from './src/context/ApolloContext';
+
+import {
+  ApolloProvider,
+} from "@apollo/client";
 
 /* ** Importing style *** */
 import "./node_modules/bootstrap/dist/css/bootstrap.min.css"
