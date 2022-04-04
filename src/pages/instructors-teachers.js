@@ -36,14 +36,14 @@ export const query = graphql`
             departmentIcon {
               sourceUrl
             }
-            deptTitle
             departmentNumber
+            deptTitle
           }
           mentorsInfo {
-            departmentIcon {
+            menorsBoxColor
+            mentorsIcon {
               sourceUrl
             }
-            menorsBoxColor
             mentorsNumber
             mentorsTitle
           }
@@ -56,6 +56,7 @@ export const query = graphql`
             }
           }
         }
+        
       }
     }
     allWpCourseCategory {
