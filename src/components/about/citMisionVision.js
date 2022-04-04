@@ -29,7 +29,7 @@ const CITMisionVision = (data) =>{
                                             {statementTab.cit_state_icon ? 
                                             <img src={statementTab.cit_state_icon} alt="tab icon" />
                                             : ''}
-                                             {statementTab.cit_state_title} {console.log(statementTab)}
+                                             {statementTab.cit_state_title}
                                         </Nav.Link>
                                     </Nav.Item>
                                         )
@@ -45,10 +45,8 @@ const CITMisionVision = (data) =>{
                                     <Tab.Pane eventKey={'tab'+statementContent.cit_state_title.split(" ")[0]}>
                                         <Row>
                                             <Col lg={8} sm={12}>
-                                                <h3>{statementContent.cit_state_title}</h3>
-                                                <p>
-                                                    {statementContent.cit_state_desc}
-                                                </p>
+                                                <h3 dangerouslySetInnerHTML={{ __html: statementContent.cit_state_title }} />
+                                                <p dangerouslySetInnerHTML={{ __html: statementContent.cit_state_desc }} />
                                             </Col>
                                             {statementContent.cit_state_details_image ?
                                             <Col lg={4} sm={12}>
