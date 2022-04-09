@@ -549,6 +549,9 @@ div.success_menu ul.common_slider_class li {
   top: -48%;
   z-index: -1;
 }
+.banner_img img{
+  border-radius: 35px;
+}
 
 .banner_img .plus {
   position: absolute;
@@ -1300,6 +1303,9 @@ div.success_menu ul.common_slider_class li {
   -ms-border-radius: 5px;
   -o-border-radius: 5px;
   margin-top: 38px;
+}
+.facilities-placement{
+  margin-top: 59px;
 }
 
 /* =================================
