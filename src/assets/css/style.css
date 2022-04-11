@@ -549,8 +549,9 @@ div.success_menu ul.common_slider_class li {
   top: -48%;
   z-index: -1;
 }
-.banner_img img{
+.banner_img .homebanner-thumb{
   border-radius: 35px;
+  border: 10px solid #fff;
 }
 
 .banner_img .plus {

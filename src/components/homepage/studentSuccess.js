@@ -3,7 +3,7 @@ import React,{useState} from 'react'
 //import ModalVideo from 'react-modal-video'
 import { useFeaturedCases } from "../hooks/useSuccessCaseFeatured";
 import CaseItem from "../successCase/caseItem";
-
+import { Link } from "gatsby"
 
 const StudentSuccess = (data)=>{
 
@@ -27,6 +27,11 @@ const StudentSuccess = (data)=>{
                             <CaseItem data={storyItem} />
                         )
                     )}
+                    <div class="col-12">
+                        <div class="more_facilities_btn text-center">
+                            <Link to="/success-story">আরো দেখুন</Link>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section> 

@@ -26,6 +26,33 @@ export default function OurFacilities({data}) {
         id
         title
         content
+        citMoreFacilities {
+          cit_facility_type {
+            value
+          }
+          facility_sec_title
+          facility_sec_sub_title
+          facility_sec_description
+          facility_sec_video_thumb
+          facility_sec_video_id
+          cit_facelity_js_items {
+            title
+            facilityBoxBg
+            featuredImage {
+              node {
+                sourceUrl
+              }
+            }
+          }
+          cit_facelity_jp_items {
+            title
+            featuredImage {
+              node {
+                sourceUrl
+              }
+            }
+          }
+        }
       }
     }
   }

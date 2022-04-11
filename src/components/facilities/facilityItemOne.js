@@ -3,7 +3,7 @@ import React from "react";
 export default function FacilityItemOne(){
 
     return(
-        <div className="col-md-12">
+        <div className="col-md-12 job_placement">
             <div className="row">
                 <div class="col-md-6">
                     <div class="job_placement_contant">

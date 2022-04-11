@@ -75,7 +75,7 @@ const HomeBanner = ()=>{
                 </div>
                 <div class="col-lg-7">
                     <div class="banner_img">
-                        <img class="img-fluid w-100" src={banner.featuredImage.node.sourceUrl} alt="Home Banner" />
+                        <img class="img-fluid homebanner-thumb" src={banner.featuredImage.node.sourceUrl} alt="Home Banner" />
                         <div class="banner_img_overly">
                             {banner.homeBannerData.videoId !=null &&
                             <div class="overly_icon">
