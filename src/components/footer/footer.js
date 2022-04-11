@@ -1,4 +1,4 @@
-import { faFacebookF, faLinkedinIn, faYoutube } from '@fortawesome/free-brands-svg-icons'
+import { faFacebookF, faLinkedinIn, faYoutube, faInstagram } from '@fortawesome/free-brands-svg-icons'
 import { faEnvelopeOpen, faMapMarkerAlt, faPhoneAlt } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { StaticImage } from "gatsby-plugin-image"
@@ -129,6 +129,9 @@ const Footer = ()=>{
                                         }
                                         {footerData.crbThemeOptions.citSmediaTweet &&
                                             <Link to={footerData.crbThemeOptions.citSmediaTweet}><FontAwesomeIcon icon={faYoutube} /></Link>
+                                        }
+                                        {footerData.crbThemeOptions.citSmediaInsta &&
+                                            <Link to={footerData.crbThemeOptions.citSmediaInsta}><FontAwesomeIcon icon={faInstagram} /></Link>
                                         }
                                     </div>
                                 </div>
