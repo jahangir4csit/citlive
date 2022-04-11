@@ -22,6 +22,7 @@ export const useFooterData = () => {
             citSmediaFb
             citSmediaIn
             citSmediaTweet
+            citSmediaInsta
           }
         }
       }
