@@ -38,7 +38,7 @@ const GalleryGrid = (data)=>{
                         </div>
                     </div>
                     
-                    <div class="col-lg-12 ss_pagination d-none d-md-block">
+                    {/* <div class="col-lg-12 ss_pagination d-none d-md-block">
                         <nav aria-label="Page navigation example">
                             <ul class="pagination justify-content-end">
                             <li class="page-item disabled">
@@ -54,7 +54,7 @@ const GalleryGrid = (data)=>{
                             </li>
                             </ul>
                         </nav>
-                    </div>
+                    </div> */}
 
                 </div>
             </div>
