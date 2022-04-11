@@ -1,4 +1,4 @@
-import { faFacebookF, faLinkedinIn, faTwitter } from '@fortawesome/free-brands-svg-icons'
+import { faFacebookF, faLinkedinIn, faYoutube } from '@fortawesome/free-brands-svg-icons'
 import { faEnvelopeOpen, faMapMarkerAlt, faPhoneAlt } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { StaticImage } from "gatsby-plugin-image"
@@ -11,7 +11,6 @@ const Footer = ()=>{
 
     const footerNavs = useFooterMenuQuery();
     const footerData = useFooterData();
-    console.log(footerData, 'footer Data');
 
     return(
         <footer>
@@ -112,7 +111,7 @@ const Footer = ()=>{
                             <div class="row copy">
                                 <div class="col-md-4 col-sm-6 padding_0">
                                     <div class="footer_logo">
-                                        <StaticImage src="../../images/CIT_White_logo.png" alt="Logo" />
+                                        <StaticImage src="../../images/cit_white_logo.png" alt="Footer Logo" />
                                     </div>
                                 </div>
                                 <div class="col-md-4 copy_text_sm_last">
@@ -129,7 +128,7 @@ const Footer = ()=>{
                                             <Link to={footerData.crbThemeOptions.citSmediaIn}><FontAwesomeIcon icon={faLinkedinIn} /></Link>
                                         }
                                         {footerData.crbThemeOptions.citSmediaTweet &&
-                                            <Link to={footerData.crbThemeOptions.citSmediaTweet}><FontAwesomeIcon icon={faTwitter} /></Link>
+                                            <Link to={footerData.crbThemeOptions.citSmediaTweet}><FontAwesomeIcon icon={faYoutube} /></Link>
                                         }
                                     </div>
                                 </div>
