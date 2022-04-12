@@ -111,7 +111,7 @@ const Footer = ()=>{
                             <div class="row copy">
                                 <div class="col-md-4 col-sm-6 padding_0">
                                     <div class="footer_logo">
-                                        <StaticImage src="../../images/cit_white_logo.png" alt="Footer Logo" />
+                                        <StaticImage src="../../images/cit_logo_trans.png" alt="Footer Logo" />
                                     </div>
                                 </div>
                                 <div class="col-md-4 copy_text_sm_last">
