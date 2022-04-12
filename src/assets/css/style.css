@@ -2675,6 +2675,7 @@ professional Graphic banner Area Start
 .pg_banner_text > .course_desc_article {
   padding-top: 15px;
   padding-bottom: 36px;
+  font-size: 1.1rem;
 }
 .pg_banner_text > p {
   font-family: Ruposhi Bangla Unicode;
@@ -2813,12 +2814,12 @@ Course-Landing Left (7 column) Overviwe  Area Start
 }
 
 .course_overviwe_text p {
-  color: #575757;
-  font-family: Ruposhi Bangla Unicode;
-  font-size: 16px;
+  color: #000;
+  font-family: "Roboto", Ruposhi Bangla Unicode;
+  font-size: 1.1rem;
   font-style: normal;
   font-weight: 400;
-  line-height: 24px;
+  line-height: 28px;
   letter-spacing: 0em;
   text-align: left;
 }
@@ -2900,7 +2901,7 @@ Course-Landing Left (7 column) Overviwe  Area Start
 .pgc_inner_text ul li {
   color: #605F62;
   font-family: Ruposhi Bangla Unicode;
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 700;
   letter-spacing: 0.20000000298023224px;
   display: -webkit-box;
@@ -3054,11 +3055,11 @@ Course-Landing Left (7 column) Overviwe  Area Start
 }
 
 .pg_marketplace .marketplace_item .text p {
-  color: #575757;
+  color: #605f62;
   font-family: Ruposhi Bangla Unicode;
-  font-size: 12px;
+  font-size: 16px;
   font-weight: 400;
-  line-height: 18px;
+  line-height: 24px;
   letter-spacing: 0em;
   padding-top: 21px;
 }
@@ -3142,11 +3143,11 @@ Course-Landing Left (7 column) Overviwe  Area Start
 .pg_more_facilities_item p {
   color: #605F62;
   font-family: Ruposhi Bangla Unicode;
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 400;
-  line-height: 21px;
+  line-height: 24px;
   letter-spacing: 0.20000000298023224px;
-  max-width: 257px;
+  max-width: 305px;
   padding-bottom: 4px;
 }
 
@@ -3375,7 +3376,7 @@ Course-Landing right side bar Position Stiky  Area Start
 .pg_wait > p {
   color: #575757;
   font-family: Ruposhi Bangla Unicode;
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 400;
   line-height: 24px;
   letter-spacing: 0px;
