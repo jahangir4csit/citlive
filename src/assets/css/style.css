@@ -453,9 +453,9 @@ div.success_menu ul.common_slider_class li {
 
 .banner_text > p {
   font-family: Ruposhi Bangla Unicode;
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 400;
-  line-height: 26px;
+  line-height: 28px;
   letter-spacing: 0.20000000298023224px;
   padding-bottom: 22px;
 }
@@ -821,9 +821,9 @@ div.success_menu ul.common_slider_class li {
 .section_heading p {
   color: #605F62;
   font-family: Ruposhi Bangla Unicode;
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 400;
-  line-height: 26px;
+  line-height: 28px;
   letter-spacing: 0.20000000298023224px;
   text-align: center;
   padding-top: 15px;
@@ -1078,11 +1078,11 @@ div.success_menu ul.common_slider_class li {
 .counte_item p {
   color: #605F62;
   font-family: Ruposhi Bangla Unicode;
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 400;
-  line-height: 21px;
+  line-height: 24px;
   letter-spacing: 0.20000000298023224px;
-  max-width: 257px;
+  max-width: 305px;
   padding-bottom: 4px;
 }
 
@@ -1254,12 +1254,12 @@ div.success_menu ul.common_slider_class li {
 
 .more_facilities_item p {
   color: #605F62;
-  font-family: Ruposhi Bangla Unicode;
-  font-size: 14px;
+  font-family: 'Ruposhi Bangla Unicode';
+  font-size: 16px;
   font-weight: 400;
-  line-height: 21px;
+  line-height: 24px;
   letter-spacing: 0.20000000298023224px;
-  max-width: 257px;
+  max-width: 305px;
   padding-bottom: 4px;
 }
 
@@ -1700,13 +1700,13 @@ del {
 .seminar_content > p {
   color: #605F62;
   font-family: Ruposhi Bangla Unicode;
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 400;
-  line-height: 26px;
+  line-height: 28px;
   letter-spacing: 0.20000000298023224px;
   padding-top: 18px;
   padding-bottom: 18px;
-  max-width: 435px;
+  /* max-width: 435px; */
 }
 
 .seminar_content h3 {
@@ -1919,9 +1919,9 @@ del {
 .glory_text p {
   color: #605F62;
   font-family: Ruposhi Bangla Unicode;
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 400;
-  line-height: 26px;
+  line-height: 28px;
   letter-spacing: 0.20000000298023224px;
   padding-top: 20px;
   padding-bottom: 30px;
@@ -2010,9 +2010,9 @@ del {
 .practical_project_text p {
   color: #605F62;
   font-family: Ruposhi Bangla Unicode;
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 400;
-  line-height: 26px;
+  line-height: 28px;
   letter-spacing: 0.20000000298023224px;
 }
 
@@ -2051,8 +2051,8 @@ del {
   color: #1F1E1E;
   font-family: Ruposhi Bangla Unicode;
   font-weight: bold;
-  font-size: 13px;
-  line-height: 21px;
+  font-size: 16px;
+  line-height: 24px;
 }
 .counter_up_style2{
   margin-bottom: 25px;
@@ -2324,9 +2324,9 @@ del {
 .blog_item .blog_text p {
   color: #605F62;
   font-family: Ruposhi Bangla Unicode;
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 400;
-  line-height: 21px;
+  line-height: 24px;
   letter-spacing: 0.20000000298023224px;
   padding-top: 8px;
   padding-bottom: 38px;
@@ -3804,9 +3804,9 @@ Our facilities Heading Area Start
 .facilities_heading p {
   color: #575757;
   font-family: Ruposhi Bangla Unicode;
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 400;
-  line-height: 26px;
+  line-height: 28px;
   letter-spacing: 0.20000000298023224px;
   padding-bottom: 59px;
   max-width: 857px;
@@ -5079,10 +5079,10 @@ form.student_form select {
 
 .ceo_text p {
   color: #605F62;
-  font-family: Ruposhi Bangla Unicode;
-  font-size: 14px;
+  font-family: 'Ruposhi Bangla Unicode';
+  font-size: 18px;
   font-weight: 400;
-  line-height: 21px;
+  line-height: 28px;
   letter-spacing: 0.20000000298023224px;
 }
 
@@ -5192,9 +5192,9 @@ form.student_form select {
 .iso_text p {
   color: #605F62;
   font-family: Ruposhi Bangla Unicode;
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 400;
-  line-height: 26px;
+  line-height: 28px;
   letter-spacing: 0.20000000298023224px;
   max-width: 563px;
 }
@@ -5294,9 +5294,9 @@ form.student_form select {
 #mission .mission_body p {
   color: #605F62;
   font-family: Ruposhi Bangla Unicode;
-  font-size: 14px;
+  font-size: 18px;
   font-weight: 400;
-  line-height: 21px;
+  line-height: 28px;
   letter-spacing: 0.20000000298023224px;
   text-align: left;
   padding-left: 8px;

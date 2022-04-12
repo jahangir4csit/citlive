@@ -8,12 +8,13 @@ import FacilityItems from '../components/facilities/facilityItems'
 export default function OurFacilities({data}) {
 
     const pageData = data.allWpPage.nodes[0];
+    const facilitiesData = pageData.citMoreFacilities;
 
     return(
       <Layout>
         <Seo title="Our Facilities" />
         <PageDesc data={pageData} />
-        <FacilityItems />
+        <FacilityItems data={facilitiesData} />
       </Layout>
     )
   

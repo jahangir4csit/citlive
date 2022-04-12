@@ -6,7 +6,6 @@ const FeaturedTextOne = ()=>{
 
     const data = useFeaturedText();
     const ftOne = data.allWpSection.nodes[0];
-    console.log(ftOne, 'FT One');
 
 
     return(
