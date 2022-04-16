@@ -11,6 +11,7 @@ export default function Courses({data}){
 
 const courseData = data.allWpCourseCategory.nodes;
 const page = data.allWpPage.nodes[0];
+const reviewsData = data.allWp.nodes[0];
 
     return(
     <Layout>
@@ -24,7 +25,9 @@ const page = data.allWpPage.nodes[0];
         />
         <StudentFeedback
         secHeading="মন্তব্য" 
-        secDesc="আমরা বিশ্বাস করি আমাদের প্রতিটি শিক্ষার্থী ক্রিয়েটিভ আইটি পরিবারের সদস্য। তাই শিক্ষার্থীদের যেকোনো গঠনমূলক মন্তব্য আমাদের ভুল-ত্রুটি শুধরে সামনে এগিয়ে চলার পথে প্রেরণা যোগায়।" />
+        secDesc="আমরা বিশ্বাস করি আমাদের প্রতিটি শিক্ষার্থী ক্রিয়েটিভ আইটি পরিবারের সদস্য। তাই শিক্ষার্থীদের যেকোনো গঠনমূলক মন্তব্য আমাদের ভুল-ত্রুটি শুধরে সামনে এগিয়ে চলার পথে প্রেরণা যোগায়।" 
+        data={reviewsData}
+        />
     </Layout>
     )
 
@@ -75,6 +78,20 @@ export const query = graphql`
         content
         admissionSecHeading
         admissionSecDesc
+      }
+    }
+    allWp {
+      nodes {
+        crbThemeOptions {
+          citReviewsFacebook
+          citReviewsGoogle
+          crbFacebookReviews {
+            crb_fb_review_url
+          }
+          crbGooogleReviews {
+            crb_goo_review_url
+          }
+        }
       }
     }
   }
