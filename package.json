@@ -37,6 +37,7 @@
     "react-modal-video": "^1.2.8",
     "react-slick": "^0.28.1",
     "react-sticky": "^6.0.3",
+    "react-string-replace": "^1.0.0",
     "slick-carousel": "^1.8.1"
   },
   "devDependencies": {

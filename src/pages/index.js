@@ -23,6 +23,7 @@ export default function HomePage({data}){
   const courseData = data.allWpCourseCategory.nodes;
   const homeData = data.allWpPage.nodes[0];
   const seminarUpcomming = data.allWpSeminar.nodes;
+  const reviewsData = data.allWp.nodes[0];
 
   return(
     <Layout>
@@ -48,6 +49,7 @@ export default function HomePage({data}){
       <StudentFeedback 
       secHeading={homeData.homeCommentsSecHeading} 
       secDesc={homeData.homeCommentsSecDesc}
+      data={reviewsData}
       />
       <VirtualTour />
       <AdmissionCourses 
@@ -187,6 +189,20 @@ query CourseData
           timeH
           timeS
           timeSlot
+        }
+      }
+    }
+  }
+  allWp {
+    nodes {
+      crbThemeOptions {
+        citReviewsFacebook
+        citReviewsGoogle
+        crbFacebookReviews {
+          crb_fb_review_url
+        }
+        crbGooogleReviews {
+          crb_goo_review_url
         }
       }
     }

@@ -1,6 +1,7 @@
 import React from "react";
 import FacilityItemOne from './facilityItemOne'
-import FacilityItemTwo from './facilityTwo'
+import FacilityItemTwo from './facilityItemTwo'
+import FacilityItemDefault from './facilityItemDefault'
 
 export default function FacilityItems(data){
 
@@ -16,8 +17,8 @@ export default function FacilityItems(data){
 
                             switch(facilityItem.cit_facility_type.value){
                                 case "jobplacement": return <FacilityItemOne itemData={facilityItem} key={index} />
-                                case "freelancing": return <FacilityItemOne itemData={facilityItem} key={index} />
-                                default: return <FacilityItemTwo itemData={facilityItem} key={index} />              
+                                case "freelancing": return <FacilityItemTwo itemData={facilityItem} key={index} />
+                                default: return <FacilityItemDefault itemData={facilityItem} key={index} />              
                             }
                         }
                     )}

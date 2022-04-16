@@ -1,12 +1,13 @@
 import React,{useState} from 'react'
-import ReactDOM from 'react-dom'
 import ModalVideo from 'react-modal-video'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import {faPlay} from '@fortawesome/free-solid-svg-icons'
+import {faPlay} from '@fortawesome/free-solid-svg-icons' 
 import NumberBn from '../utils/numberBn'
 
 
-export default function FacilityItemOne(data){
+
+
+export default function FacilityItemTwo(data){
 
     const facilityDetails = data.itemData;
 
@@ -21,7 +22,7 @@ export default function FacilityItemOne(data){
         <div className="col-md-12 job_placement" style={{ backgroundColor: facilityDetails.facility_sec_bg}}>
             <div className="row">
                 <div class="col-md-6">
-                    <div class="job_placement_contant">
+                    <div class="job_placement_contant freelancing">
                         <ul>
                             <li><h3 dangerouslySetInnerHTML={{ __html: facilityDetails.facility_sec_title }} /></li>
                             <li dangerouslySetInnerHTML={{ __html: facilityDetails.facility_sec_sub_title }} />
@@ -40,10 +41,10 @@ export default function FacilityItemOne(data){
                 </div>
                 <div class="col-md-6">
                     <div class="jobplacement_partner">
-                        <h3>জবপ্লেসমেন্ট পার্টনার</h3>
+                        <h3>ফ্রিল্যান্সং মার্কেটপ্লেস</h3>
                         <ul>
-                            {facilityDetails.cit_facelity_jp_items.length > 0 &&
-                                facilityDetails.cit_facelity_jp_items.slice(0, 17).map(
+                            {facilityDetails.cit_facelity_js_items.length > 0 &&
+                                facilityDetails.cit_facelity_js_items.slice(0, 11).map(
                                     item=>
                                     <li>
                                         {item.featuredImage != null ?
@@ -53,10 +54,10 @@ export default function FacilityItemOne(data){
                                 )
                             }
                             
-                            {facilityDetails.cit_facelity_jp_items.length > 17 &&
+                            {facilityDetails.cit_facelity_js_items.length > 11 &&
                             
                             <li>
-                                <p>+<NumberBn number={facilityDetails.cit_facelity_jp_items.length - 17} />
+                                <p>+<NumberBn number={facilityDetails.cit_facelity_js_items.length - 11} />
                                  <span>প্রতিষ্টান</span></p>
                             </li>
                             }
@@ -67,6 +68,3 @@ export default function FacilityItemOne(data){
         </div>
     )
 }
-
-
-

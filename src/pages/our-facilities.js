@@ -14,7 +14,7 @@ export default function OurFacilities({data}) {
       <Layout>
         <Seo title="Our Facilities" />
         <PageDesc data={pageData} />
-        <FacilityItems data={facilitiesData} />
+        <FacilityItems data={facilitiesData} /> 
       </Layout>
     )
   
@@ -36,6 +36,7 @@ export default function OurFacilities({data}) {
           facility_sec_description
           facility_sec_video_thumb
           facility_sec_video_id
+          facility_sec_bg
           cit_facelity_js_items {
             title
             facilityBoxBg

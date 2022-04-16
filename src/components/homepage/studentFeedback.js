@@ -8,20 +8,31 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import googleLogo from '../../images/google_text_icon.png';
 
 const StudentFeedback = (data)=>{
+
+    const fbReviewsCount = data.data.crbThemeOptions.citReviewsFacebook;
+    const fbReviews = data.data.crbThemeOptions.crbFacebookReviews;
+    const googleReviewsCount = data.data.crbThemeOptions.citReviewsGoogle;
+    const googleReviews = data.data.crbThemeOptions.crbGooogleReviews;
+    console.log(fbReviews, 'fb reviews');
+
     return(
         <section id="student_feedback">
             <div class="container">
                 <FeedbackHeading secHeading={data.secHeading} secDesc={data.secDesc} />
                 <div class="col-12">
-                    <FeedbackSliderOne />
+                    {fbReviews.length > 0 &&
+                    <FeedbackSliderOne fbreviews={fbReviews} />
+                    }
                 </div>
                 <div class="col-12">
                     <div class="recommends text-center">
-                        <h4>12401 <img src={RecommendsIcon} alt="icon" /> <span>Recommends</span></h4>
+                        <h4>{fbReviewsCount} <img src={RecommendsIcon} alt="icon" /> <span>Recommends</span></h4>
                     </div>
                 </div>
                 <div class="col-12">
-                    <FeedbackSliderTwo />
+                    {googleReviews.length > 0 &&
+                    <FeedbackSliderTwo googlereviews={googleReviews} />
+                    }
                 </div>
                 <div class="col-12">
                     <div class="excellent text-center">
@@ -33,7 +44,7 @@ const StudentFeedback = (data)=>{
                                 <FontAwesomeIcon icon={faStar} />
                                 <FontAwesomeIcon icon={faStar} />
                             </span>
-                            <span class="number">205</span>
+                            <span class="number">{googleReviewsCount}</span>
                             <span class="review">reviews on</span>
                             <img src={googleLogo} alt="icon" />
                         </h4>
