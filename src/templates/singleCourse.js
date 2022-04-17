@@ -25,7 +25,8 @@ export default function SingleCourse({data}){
     }
 
 
-    const post = data.allWpCourse.nodes[0]
+    const post = data.allWpCourse.nodes[0];
+    const reviewsData = data.allWp.nodes[0];
     console.log(post, 'Single Course')
 
     const [isOpen, setOpen] = useState(false);
@@ -394,7 +395,9 @@ export default function SingleCourse({data}){
 
                         <StudentFeedback 
                         secDesc="আমরা বিশ্বাস করি আমাদের প্রতিটি শিক্ষার্থী ক্রিয়েটিভ আইটি পরিবারের সদস্য। তাই শিক্ষার্থীদের যেকোনো গঠনমূলক মন্তব্য আমাদের ভুল-ত্রুটি শুধরে সামনে এগিয়ে চলার পথে প্রেরণা যোগায়। 
-" />
+" 
+data={reviewsData}
+/>
 
                     </div>
 
@@ -556,6 +559,20 @@ export const query = graphql`
         }
       }
     }
+    allWp {
+        nodes {
+          crbThemeOptions {
+            citReviewsFacebook
+            citReviewsGoogle
+            crbFacebookReviews {
+              crb_fb_review_url
+            }
+            crbGooogleReviews {
+              crb_goo_review_url
+            }
+          }
+        }
+      }
   }
 `
 
