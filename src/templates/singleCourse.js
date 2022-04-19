@@ -41,7 +41,7 @@ export default function SingleCourse({data}){
 
     const settingsProjectsSlider = {
       className: "pgp_slider",
-      autoplay:false,
+      autoplay:true,
       slidesToShow:1,
       slidesToScroll:1,
       arrows:false,
