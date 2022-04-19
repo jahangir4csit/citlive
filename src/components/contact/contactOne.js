@@ -9,7 +9,7 @@ const ContactOne = (data)=>{
                 <div class="row align-items-center">
                     <div class="col-md-5">
                         <div className="office_map">
-                            {data.keyId === 0 &&  data.keyId === 1 ?
+                            {data.keyId === 0 ||  data.keyId === 1 ?
                             <svg width="131" height="46" viewBox="0 0 131 46" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M16 46L0 34.5V1L16 15V46Z" fill="#367645"/>
                                 <path d="M131 0H0V34H131L119.958 17L131 0Z" fill="#35AB51"/>
