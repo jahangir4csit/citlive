@@ -3305,12 +3305,13 @@ Course-Landing right side bar Position Stiky  Area Start
   line-height: 21px;
   letter-spacing: 0.20000000298023224px;
 }
-.pg_succsess_img_slider .slick-slider .slick-track, .pg_succsess_img_slider .slick-list,
+
+/* .pg_succsess_img_slider .slick-slider .slick-track, .pg_succsess_img_slider .slick-list,
 .pg_succsess_img_slider .slick-list .slick-track
 {
   transform: none!important;
   -webkit-transform: none!important; 
-}
+} */
 
 .pg_succsess_img_slider .pg_slide_item {
   border-radius: 10px;
@@ -3354,6 +3355,10 @@ Course-Landing right side bar Position Stiky  Area Start
     animation: sticky .5s linear;
     transition: all linear .3s;
 }
+.pg_succsess_img_slider .modalvidwrap{
+  border: none;
+}
+
 .pg_wait_wrap{
   max-width: 526px;
 }
