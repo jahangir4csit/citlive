@@ -6790,6 +6790,9 @@ Blog Dtails Sidebar Page Area End
   opacity: 1;
 }
 
+.accordion .faq-item{
+  margin-bottom: 30px;
+}
 .accordion-header{
   margin-left: 30px;
   margin-right: 30px;

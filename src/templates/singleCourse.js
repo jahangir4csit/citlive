@@ -97,9 +97,9 @@ export default function SingleCourse({data}){
                                     <span>{post.course_options.studentsIn} স্টুডেন্ট</span>}
                                 </p>
                             </div>
-                            <div class="countdown_sm_device">
+                            {/* <div class="countdown_sm_device">
                                 <p>৩০% ছাড়ের <span id="day"></span><span id="hour"></span><span id="min"></span> বাকি!</p>
-                            </div>
+                            </div> */}
 
                         </div>
                     </div>
@@ -162,17 +162,17 @@ export default function SingleCourse({data}){
 
                                 {post.course_options.courseFee != null ?
                                 <div class="join_offline">
-                                    <h4>অফলাইন ব্যাচ</h4>
-                                    <p>৳ {post.course_options.courseFee} টাকা মাত্র</p>
-                                    <a href="#">ভর্তি</a>
+                                    <h4>কোর্স ফী (অফলাইন)</h4>
+                                    <p>৳ {post.course_options.courseFee} টাকা</p>
+                                    <Link to="/contact-us">Enroll Now</Link>
                                 </div>
                                 : ''}
 
                                 {post.course_options.courseFeeOnline != null ?
                                 <div class="join_offline">
-                                    <h4>অনলাইন ব্যাচ</h4>
-                                    <p>৳ {post.course_options.courseFeeOnline} টাকা মাত্র</p>
-                                    <a href="#">ভর্তি</a>
+                                    <h4>কোর্স ফী (অনলাইন)</h4>
+                                    <p>৳ {post.course_options.courseFeeOnline} টাকা</p>
+                                    <Link to="/contact-us">Enroll Now</Link>
                                 </div>
                                 : ''}
 
@@ -411,16 +411,16 @@ data={reviewsData}
                                 <div class="join_offline_main">
                                     {post.course_options.courseFee !=null ?
                                     <div class="join_offline">
-                                        <h4>অফলাইন ব্যাচ</h4>
-                                        <p>৳ {post.course_options.courseFee} টাকা মাত্র</p>
-                                        <a href="#">ভর্তি</a>
+                                        <h4>কোর্স ফী (অফলাইন)</h4>
+                                        <p>৳ {post.course_options.courseFee} টাকা</p>
+                                        <Link to="/contact-us">Enroll Now</Link>
                                     </div>
                                     : ''}
                                     {post.course_options.courseFeeOnline !=null ?
                                     <div class="join_offline">
-                                        <h4>অনলাইন ব্যাচ</h4>
-                                        <p>৳ {post.course_options.courseFeeOnline} টাকা মাত্র</p>
-                                        <a href="#">ভর্তি</a>
+                                        <h4>কোর্স ফী (অনলাইন)</h4>
+                                        <p>৳ {post.course_options.courseFeeOnline} টাকা</p>
+                                        <Link to="/contact-us">Enroll Now</Link>
                                     </div>
                                     : ''}
                                 </div>

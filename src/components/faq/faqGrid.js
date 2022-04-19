@@ -30,7 +30,7 @@ const FaqGrid = (data)=>{
                                                             
                                                         {faqItems.faqs_item.map(
                                                             (faqItem, index)=>(
-                                                            <div className="col-md-6">
+                                                            <div className="col-md-6 faq-item">
                                                                 <Accordion.Item eventKey={index}>
                                                                     <Accordion.Header>{faqItem.title}</Accordion.Header>
                                                                     <Accordion.Body>
@@ -51,7 +51,7 @@ const FaqGrid = (data)=>{
                         </div>
                     </div>
                     
-                    <div class="col-lg-12 ss_pagination d-none d-md-block">
+                    {/* <div class="col-lg-12 ss_pagination d-none d-md-block">
                         <nav aria-label="Page navigation example">
                             <ul class="pagination justify-content-end">
                             <li class="page-item disabled">
@@ -67,7 +67,7 @@ const FaqGrid = (data)=>{
                             </li>
                             </ul>
                         </nav>
-                    </div>
+                    </div> */}
 
                 </div>
             </div>
