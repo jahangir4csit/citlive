@@ -4,7 +4,6 @@ import { Link } from "gatsby";
 const Facilities = (data)=>{
     
     const facilityItems = data.facilities;
-    console.log(facilityItems, 'facility');
 
     return(
         <section id="more_facilities">
@@ -25,7 +24,7 @@ const Facilities = (data)=>{
                                 <img src={facility.featuredImage.node.sourceUrl} alt={facility.featuredImage.node.title} />
                                 : ''}
                                 <h3 dangerouslySetInnerHTML={{ __html: facility.title }} />
-                                <div dangerouslySetInnerHTML={{ __html: facility.excerpt }} />
+                                <div dangerouslySetInnerHTML={{ __html: facility.content }} />
                             </div>
                         </div>
                         )

@@ -155,7 +155,7 @@ query CourseData
       }
       homeSpecialFacilityItems {
         title
-        excerpt
+        content
         facilityBoxBg
         featuredImage {
           node {
