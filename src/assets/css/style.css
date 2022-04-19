@@ -3357,6 +3357,10 @@ Course-Landing right side bar Position Stiky  Area Start
 }
 .pg_succsess_img_slider .modalvidwrap{
   border: none;
+  background: none;
+}
+.pg_succsess_img_slider .modalvidwrap img{
+  border-radius: 28px;
 }
 
 .pg_wait_wrap{
