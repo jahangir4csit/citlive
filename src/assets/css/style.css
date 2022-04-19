@@ -5730,6 +5730,7 @@ form.student_form .form_heading h3 {
   position: absolute;
   top: 22px;
   left: -22px;
+  max-width: 131px;
 }
 
 .office_map iframe {

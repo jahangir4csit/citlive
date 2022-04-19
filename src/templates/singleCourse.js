@@ -155,7 +155,7 @@ export default function SingleCourse({data}){
 
                         <div class="sm_device-show d-block d-sm-none">
                             
-                            <SuccessStorySlider />
+                          <SuccessStorySlider sdata={post.courseSuccessCase.successCaseLink} />
                             <div class="pg_wait">
                                 <h3>ভর্তি চলছে!</h3>
                                 <p>অফলাইন (সরাসরি ইন্সটিটিউটে) বা অনলাইন (লাইভ ক্লাস)- যে কোন ব্যাচে সুবিধামতো সময় বেছে নিয়ে ভর্তি হতে পারেন এখনই। </p>
@@ -177,7 +177,7 @@ export default function SingleCourse({data}){
                                 : ''}
 
                                 <div class="wait_btn text-center">
-                                    <a href="free-seminer-schedule.html">ফ্রি সেমিনার</a>
+                                  <Link to="/free-seminar">ফ্রি সেমিনার</Link>
                                 </div>
                             </div>
                         </div>

@@ -19,8 +19,8 @@ export default function ContactUs({data}){
       <Seo title="Contact CIT" />
       <ContactDesc data={pageData} />
       {branches.map(
-        branch=>(
-          <ContactOne data={branch} />
+        (branch, index)=>(
+          <ContactOne data={branch} key={index} keyId={index} />
         )
       )}
       <ContactForm courseList={courseList} />

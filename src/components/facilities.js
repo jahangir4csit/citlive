@@ -1,6 +1,5 @@
 import React from "react";
-import { StaticImage } from "gatsby-plugin-image";
-
+import { Link } from "gatsby"; 
 
 const Facilities = (data)=>{
     
@@ -33,7 +32,7 @@ const Facilities = (data)=>{
                     )}
                     <div class="col-12">
                         <div class="more_facilities_btn text-center">
-                            <a href="#">অন্যান্য সুবিধা দেখুন</a>
+                            <Link to="/our-facilities">অন্যান্য সুবিধা দেখুন</Link>
                         </div>
                     </div>
                 </div>

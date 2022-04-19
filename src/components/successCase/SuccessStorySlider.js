@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Slider from "react-slick";
 import { ModalVid } from '../utils/modal';
+import { Link } from "gatsby"; 
 
 
 export default function SuccessStorySlider(data){
@@ -23,7 +24,7 @@ export default function SuccessStorySlider(data){
     return(
         <div class="pg_succsess_story">
             <div class="heading">
-                <h4><span>সাকসেস স্টোরি</span> <span><a href="#">আরও দেখুন</a></span></h4>
+                <h4><span>সাকসেস স্টোরি</span> <span><Link to="/success-story">আরও দেখুন</Link></span></h4>
             </div>
             {sData ?
             <Slider {...settingsSuccessSlider}>

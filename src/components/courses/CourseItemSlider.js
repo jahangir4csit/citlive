@@ -1,6 +1,5 @@
 import { faChevronLeft, faChevronRight, faStar, faStarHalfAlt } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { StaticImage } from "gatsby-plugin-image";
 import React, { Component } from "react";
 import { Link } from 'gatsby';
 

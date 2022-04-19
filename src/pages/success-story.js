@@ -55,6 +55,7 @@ export const query = graphql`
               courseFee
               discountFee
               studentsIn
+              reviewsCount
             }
           }
         }
