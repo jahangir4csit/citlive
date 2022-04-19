@@ -9,6 +9,7 @@ export const ModalVid = (data) => {
         global.window = {}
     }
     const caseSingle = data.videoData;
+    console.log(caseSingle, 'Success Modal');
 
     const [isOpen, setOpen] = useState(false)
 

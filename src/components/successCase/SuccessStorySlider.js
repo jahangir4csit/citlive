@@ -31,7 +31,7 @@ export default function SuccessStorySlider(data){
             {sData.map(
                 item=>(
 
-                    item.featuredImage && item.successStoryLink ?
+                    item.featuredImage || item.successStoryLink ?
                     <ModalVid videoData={item} />
                     : '' 
                 )
