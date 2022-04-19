@@ -9,9 +9,9 @@ module.exports = {
     {
       resolve: `gatsby-source-wordpress`,
       options: {
-        //url: `https://bangladeshigf.org/cit/graphql`,
+        url: `https://bangladeshigf.org/cit/graphql`,
         //url: `http://cit.creativejuniors.com/graphql`,
-        url: `http://localhost/citbd/graphql`
+        //url: `http://localhost/citbd/graphql`
         //url: `https://www.creativeitinstitute.com/citdev21/graphql`,
       },
     },

@@ -4,7 +4,7 @@ import { useStaticQuery, graphql } from "gatsby"
 export const useFeaturedTextTwo = () => {
     const data = useStaticQuery(graphql`
     query FeaturedTextTwo {
-      allWpSection(filter: {databaseId: {eq: 2111}}) {
+      allWpSection(filter: {databaseId: {eq: 2112}}) {
         nodes {
           title
           featuredImage {
