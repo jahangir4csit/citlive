@@ -24,6 +24,7 @@ export default function HomePage({data}){
   const homeData = data.allWpPage.nodes[0];
   const seminarUpcomming = data.allWpSeminar.nodes;
   const reviewsData = data.allWp.nodes[0];
+  const vitrualTour = data.allWpSection.nodes[0];
 
   return(
     <Layout>
@@ -51,7 +52,7 @@ export default function HomePage({data}){
       secDesc={homeData.homeCommentsSecDesc}
       data={reviewsData}
       />
-      <VirtualTour />
+      <VirtualTour vData={vitrualTour} />
       <AdmissionCourses 
       secHeading={homeData.homeAdmissionSecHeading} 
       secDesc={homeData.homeAdmissionSecDesc}
@@ -191,6 +192,12 @@ query CourseData
           timeSlot
         }
       }
+    }
+  }
+  allWpSection(filter: {isContentNode: {}, databaseId: {eq: 4367}}) {
+    nodes {
+      citVirtualTourIframe
+      databaseId
     }
   }
   allWp {

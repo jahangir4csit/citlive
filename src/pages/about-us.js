@@ -23,12 +23,13 @@ export default function AboutUs({data}) {
   const initiatives = pageData.initiatives;
   const photoWall = pageData.citPhotoWall;
   const statementData = pageData.statementsData;
+  const vitrualTour = data.allWpSection.nodes[0];
 
   return(
     <Layout>
       <Seo title={pageData.title} />
       <AboutDesc data={pageData} />
-      <VirtualTour />
+      <VirtualTour vData={vitrualTour} />
       <FeaturedTextTwo />
       <CounterUp />
       <MgtBrief data={mgtData} />
@@ -99,6 +100,12 @@ export const query = graphql`
         citPhotoWall {
           url
         }
+      }
+    }
+    allWpSection(filter: {isContentNode: {}, databaseId: {eq: 4367}}) {
+      nodes {
+        citVirtualTourIframe
+        databaseId
       }
     }
   }
