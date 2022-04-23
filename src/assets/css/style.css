@@ -73,6 +73,9 @@ html,
 body {
   overflow-x: hidden;
 }
+.font-600{
+  font-weight: 600;
+}
 
 .video_icon {
   width: 40px;
@@ -804,7 +807,10 @@ div.success_menu ul.common_slider_class li {
   border-radius: 35px;
   padding: 0 20px 18px;
 }
-
+.section{
+  padding-top: 65px;
+  padding-bottom: 65px;
+}
 .section_heading {
   text-align: center;
 }

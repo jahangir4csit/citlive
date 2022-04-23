@@ -12,6 +12,8 @@ export const useStatCountUp = () => {
             achv_ntype {
               label
             }
+            achv_boxbg
+            achv_heading_color
           }
         }
       }
