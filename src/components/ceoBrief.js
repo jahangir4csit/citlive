@@ -5,6 +5,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 const CEObrief = (data)=>{
 
+    const Description = data.desc;
+
     return(
         <section id="ceo">
             <div class="container">
@@ -20,7 +22,7 @@ const CEObrief = (data)=>{
                         <div class="ceo_text">
                             <h3>{data.name}</h3>
                             <h4>{data.dsg}</h4>
-                            <p dangerouslySetInnerHTML={{ __html: data.desc }} />
+                            <p dangerouslySetInnerHTML={{ __html: Description }} />
                         </div>
                         {data.smedia.length > 0 &&
                         <div class="follow_on">
