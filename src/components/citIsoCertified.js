@@ -1,6 +1,8 @@
 import React from "react"
 
 const CitIsoCertified = (data) => {
+
+    const description = data.desc;
     
     return(
         <section id="iso">
@@ -16,7 +18,7 @@ const CitIsoCertified = (data) => {
                     <div class="col-lg-7 offset-lg-1 col-md-6">
                         <div class="iso_text">
                             <h3 dangerouslySetInnerHTML={{ __html: data.title }} />
-                            <p dangerouslySetInnerHTML={{ __html: data.desc }} />
+                            <p dangerouslySetInnerHTML={{ __html: description }} />
                         </div>
                     </div>
                 </div>
