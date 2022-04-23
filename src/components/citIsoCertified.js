@@ -3,6 +3,7 @@ import React from "react"
 const CitIsoCertified = (data) => {
 
     const Description = data.desc;
+    console.log(Description, 'Iso Desc');
     
     return(
         <section id="iso">

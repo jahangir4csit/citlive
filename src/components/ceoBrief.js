@@ -6,6 +6,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 const CEObrief = (data)=>{
 
     const Description = data.desc;
+    console.log(Description, 'Ceo Desc');
 
     return(
         <section id="ceo">
