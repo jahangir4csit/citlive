@@ -3034,8 +3034,12 @@ Course-Landing Left (7 column) Overviwe  Area Start
   border-radius: 25px;
   margin-top: 45px;
 }
+.pg_marketplace2{
+  padding: 58px 0;
+  margin-top: 45px;
+}
 
-.pg_marketplace h2 {
+.pg_marketplace h2,.pg_marketplace2 h2 {
   color: #1F1E1E;
   font-family: Hind Siliguri;
   font-size: 32px;
@@ -3043,6 +3047,16 @@ Course-Landing Left (7 column) Overviwe  Area Start
   line-height: 38px;
   letter-spacing: 0.20000000298023224px;
   padding-bottom: 43px;
+}
+
+.pg_marketplace2 .marketplace_item{
+  padding-top: 18px;
+  padding-left: 32px;
+  padding-right: 32px;
+  padding-bottom: 24px;
+  margin-bottom: 27px;
+  border: 1px solid #D4D4D4;
+  border-radius: 15px;
 }
 
 .pg_marketplace .marketplace_item {
@@ -3055,11 +3069,11 @@ Course-Landing Left (7 column) Overviwe  Area Start
   margin-bottom: 27px;
 }
 
-.pg_marketplace .marketplace_item .icon {
+.pg_marketplace .marketplace_item .icon,.pg_marketplace2 .marketplace_item .icon {
   text-align: center;
 }
 
-.pg_marketplace .marketplace_item .icon h5 {
+.pg_marketplace .marketplace_item .icon h5,.pg_marketplace2 .marketplace_item .icon h5 {
   text-align: center;
   color: #1F1E1E;
   font-family: Hind Siliguri;
@@ -3069,7 +3083,7 @@ Course-Landing Left (7 column) Overviwe  Area Start
   letter-spacing: 0.20000000298023224px;
 }
 
-.pg_marketplace .marketplace_item .text p {
+.pg_marketplace .marketplace_item .text p,.pg_marketplace2 .marketplace_item .text p {
   color: #605f62;
   font-family: Ruposhi Bangla Unicode;
   font-size: 16px;
@@ -3918,6 +3932,9 @@ Our facilities_item Area Start
   max-width: 535px;
   border-radius: 31px;
   position: relative;
+}
+.job_placement_contant_img img{
+  border-radius: 15px;
 }
 
 .jobplacement_partner {

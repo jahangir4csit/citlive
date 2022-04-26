@@ -4,11 +4,12 @@ import Counter from "./utils/counter";
 
 const CITinitiatives = (data) =>{
     const initiativeData = data.data;
+    const MarginBottom = data.marginBottom;
 
     return(
-        <section id="counter_up" class="about_counter_up">
+        <section id="counter_up" class="about_counter_up" style={{ marginBottom: MarginBottom ? '3rem' : '' }}>
             <div class="container">
-                <h2>অসাধারণ কিছু উদ্যোগ</h2>
+                <h2>{data.title ? data.title : 'অসাধারণ কিছু উদ্যোগ'}</h2>
                 <div class="row">
                     {initiativeData.map(
                         initiative=>(

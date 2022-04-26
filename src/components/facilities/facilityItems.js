@@ -6,7 +6,6 @@ import FacilityItemDefault from './facilityItemDefault'
 export default function FacilityItems(data){
 
     const facilityItems = data.data;
-    console.log(facilityItems, 'facilities data');
 
     return(
         <section className="facilities-placement">

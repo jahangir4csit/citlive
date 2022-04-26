@@ -60,25 +60,23 @@ export default function DepartmentGrid(data){
                             {catData.allWpCourseCategory.nodes.map(
                                  item=>(
 
-                            <Link to={`https://preview-cit.gtsb.io/course-cat/`+item.slug} style={boxShadow ? styles.boxStyle.a : styles.boxStyle.none}>
-                                <div className="training_department_item" style={boxShadow ? styles.boxStyle.shadow : styles.boxStyle.none}>
-                                    <div class="couse_icon">
-                                        <img src={item.categoryThumb.categoryThumbnail.sourceUrl ? item.categoryThumb.categoryThumbnail.sourceUrl : ''} 
-                                            alt={item.name} />
+                                <Link to={`https://preview-cit.gtsb.io/course-cat/`+item.slug} style={boxShadow ? styles.boxStyle.a : styles.boxStyle.none}>
+                                    <div className="training_department_item" style={boxShadow ? styles.boxStyle.shadow : styles.boxStyle.none}>
+                                        <div class="couse_icon">
+                                            <img src={item.categoryThumb.categoryThumbnail.sourceUrl ? item.categoryThumb.categoryThumbnail.sourceUrl : ''} 
+                                                alt={item.name} />
+                                        </div>
+                                        <div class="couse_text">
+                                            <h3>{item.name}</h3>
+                                        </div>
                                     </div>
-                                    <div class="couse_text">
-                                        <h3>{item.name}</h3>
-                                    </div>
-                                </div>
-                            </Link>
+                                </Link>
 
-                            )
-
+                                )
                             )}
-                            
                         </div>
                     </div>
-                    </section>
+                </section>
             )}
             />
 

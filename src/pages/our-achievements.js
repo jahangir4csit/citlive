@@ -47,7 +47,7 @@ export default function OurAchievements({data}) {
                   desc={section.citIsoCertifiedDesc}
                   image={section.citIsoCertifiedImage} 
                   key={index} />
-                  case "cit_initiatives": return <CITinitiatives data={section.citInitiatives} key={index} />
+                  case "cit_initiatives": return <CITinitiatives marginBottom data={section.citInitiatives} key={index} />
                   default: return ''              
                 }
               }
