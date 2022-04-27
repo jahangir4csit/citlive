@@ -233,7 +233,8 @@ export default function SingleCourse({data}){
                             </Tab.Container>
                         </div>
                         }
-                        {post.course_options.softwareForCourse != null && post.course_options.softwareForCourse.length > 0 ? 
+                        {post.course_options.softwareForCourse != null && post.course_options.softwareForCourse.length > 0 &&
+                        post.course_options.softwareForCourse[0].title !== 'Empty' ? 
                         <div class="pgc_software">
                             <h3>যেসব সফটওয়্যার শেখানো হয়</h3>
                             <div class="row">
@@ -261,7 +262,8 @@ export default function SingleCourse({data}){
                             </div>
                         </div>
                         : '' }
-                        {post.course_options.courseForWhome !=null && post.course_options.courseForWhome.length > 0 ?
+                        {post.course_options.courseForWhome !=null && post.course_options.courseForWhome.length > 0 &&
+                        post.course_options.courseForWhome[0].title !== 'Empty' ?
                         <div class="pgc_for_whom">
                             <h3>এই কোর্স যাদের জন্য</h3>
                             <div class="row">
@@ -289,7 +291,8 @@ export default function SingleCourse({data}){
                             </div>
                         </div>
                         : '' }
-                        {post.course_options.jobMarket !=null && post.course_options.jobMarket.length > 0 ?
+                        {post.course_options.jobMarket !=null && post.course_options.jobMarket.length > 0 &&
+                        post.course_options.jobMarket[0].title !== 'Empty' ?
                         <div class="pg_marketplace">
                             <h2>আপনি যেখানে কাজ করতে পারেন</h2>
                             <div class="row">
@@ -318,7 +321,8 @@ export default function SingleCourse({data}){
                             </div>
                         </div>
                         : '' }
-                        {post.course_options.jobPosition !=null && post.course_options.jobPosition.length > 0 ?
+                        {post.course_options.jobPosition !=null && post.course_options.jobPosition.length > 0 &&
+                        post.course_options.jobPosition[0].title !== 'Empty' ?
                         <div class="pg_job">
                             <h3> যে সকল পজিশনে জব করতে পারবেন </h3>
                             <div class="row g-0">
@@ -343,7 +347,8 @@ export default function SingleCourse({data}){
                             </div>
                         </div>
                         : '' }
-                        {post.course_options.courseFacilities !=null && post.course_options.courseFacilities.length > 0 ?
+                        {post.course_options.courseFacilities !=null && post.course_options.courseFacilities.length > 0 &&
+                        post.course_options.courseFacilities[0].title !== 'Empty' ?
                         <div class="pgs_facilitice">
                             <h3>ক্রিয়েটিভ আইটির বিশেষ সেবা</h3>
                             <div class="row">
