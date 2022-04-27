@@ -71,6 +71,7 @@ export default function FreeSeminar({data}){
                 </div>
             </div>
         </section>
+{page.latestSeminarVideo.latestSeminarVideoId &&
         <section id="previous_seminer_video">
             <div class="container">
                 <div class="prev_semi_video_heading">
@@ -95,6 +96,7 @@ export default function FreeSeminar({data}){
                 </div>
             </div>
         </section>
+}
         <CourseSlide 
           coursSlide={courseData} 
           secHeading={page.homeAdmissionSecHeading} 
