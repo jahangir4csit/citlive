@@ -65,7 +65,7 @@ export default function FeedbackSliderOne(data){
                     <div>
                         <div class="feedback_item">
                             <iframe src={`https://www.facebook.com/plugins/post.php?href=${review.crb_fb_review_url}&width=100%&show_text=true&appId=191181859164389&height=100%`} 
-                             style={{border:'none', overflow:'hidden'}} 
+                             style={{border:'none', overflow:'hidden', width: '100%', height: 'auto'}} 
                             scrolling="no" frameborder="0" allowfullscreen="true" 
                             allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share">
                             </iframe>
