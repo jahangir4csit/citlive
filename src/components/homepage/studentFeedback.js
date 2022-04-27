@@ -29,10 +29,9 @@ const StudentFeedback = (data)=>{
                         <h4>{fbReviewsCount} <img src={RecommendsIcon} alt="icon" /> <span>Recommends</span></h4>
                     </div>
                 </div>
+                {googleReviews.length > 0 &&
                 <div class="col-12">
-                    {googleReviews.length > 0 &&
                     <FeedbackSliderTwo googlereviews={googleReviews} />
-                    }
                 </div>
                 <div class="col-12">
                     <div class="excellent text-center">
@@ -50,6 +49,7 @@ const StudentFeedback = (data)=>{
                         </h4>
                     </div>
                 </div>
+                }
             </div>
         </section>
     )
