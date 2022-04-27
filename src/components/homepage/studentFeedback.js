@@ -33,6 +33,8 @@ const StudentFeedback = (data)=>{
                 <div class="col-12">
                     <FeedbackSliderTwo googlereviews={googleReviews} />
                 </div>
+                }
+                {googleReviews.length > 0 &&
                 <div class="col-12">
                     <div class="excellent text-center">
                         <h4>EXCELLENT
