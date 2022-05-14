@@ -86,7 +86,7 @@ export default function OfficeWall(data){
                         photo=>(
                     <div class="col">
                         <div class="office_slide_item">
-                            <img class="img-fluid w-100" src={photo.url} alt="photo" />
+                            <img class="img-fluid w-100" src={photo.sourceUrl} alt={photo.altText ? photo.altText : 'Creative IT Institute'} />
                         </div>
                     </div>
                         )
@@ -105,7 +105,7 @@ export default function OfficeWall(data){
                     {photogallery.map(
                         photothumb=>(
                     <div class="traning_slider_item">
-                        <img class="img-fluid w-100" src={photothumb.url} alt="photo" />
+                        <img class="img-fluid w-100" src={photothumb.sourceUrl} alt={photothumb.altText ? photothumb.altText : 'Creative IT Institute'} />
                     </div>
                         )
                     )}

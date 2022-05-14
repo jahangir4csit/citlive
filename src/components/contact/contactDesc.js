@@ -8,7 +8,7 @@ const ContactDesc = (data)=>{
                 <div class="row">
                     <div class="col-12">
                         <div class="facilities_heading ">
-                            <h2>{contactData.title}</h2>
+                            <h1>{contactData.title}</h1>
                             <div className="dtails" dangerouslySetInnerHTML={{ __html: contactData.content }} />
                         </div>
                     </div>

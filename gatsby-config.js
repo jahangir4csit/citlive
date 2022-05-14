@@ -1,7 +1,9 @@
 module.exports = {
   siteMetadata: {
-    title: `Creative IT Institute Bangladesh`,
-    description: `Creative IT Institute Website`,
+    title: `Professional IT Training Institute in Bangladesh - Creative IT`,
+    description: `Develop your professional personal skills through Creative IT Institute We provide
+    Graphic Design, Web Software, Digital Marketing, Networking, Film Media,
+    Robotics Automation Training etc affordable price. Call +880 162 4666000`,
     author: `@Jahangir Ahmed`,
     siteUrl: `https://creativeitinstitute.com/`,
   },
@@ -13,6 +15,12 @@ module.exports = {
         //url: `http://cit.creativejuniors.com/graphql`,
         //url: `http://localhost/citbd/graphql`
         //url: `https://www.creativeitinstitute.com/citdev21/graphql`,
+      },
+    },
+    {
+      resolve: `gatsby-plugin-canonical-urls`,
+      options: {
+        siteUrl: `https://www.creativeitinstitute.com/`,
       },
     },
     `gatsby-plugin-react-helmet`,

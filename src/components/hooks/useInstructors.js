@@ -17,6 +17,7 @@ export const useInstructors = () => {
               featuredImage {
                 node {
                   sourceUrl
+                  altText
                 }
               }
               mentorTrainingExperiences
@@ -33,6 +34,7 @@ export const useInstructors = () => {
                     featuredImage {
                       node {
                         sourceUrl
+                        altText
                       }
                     }
                   }

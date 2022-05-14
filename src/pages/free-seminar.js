@@ -1,5 +1,6 @@
 import { graphql, Link } from "gatsby"
 import React,{useState} from 'react'
+import Seo from "../components/seo"
 import { StaticImage } from "gatsby-plugin-image"
 import Layout from "../components/layout"
 import CourseSlide from "../components/courses/CoursesSlide"
@@ -15,11 +16,15 @@ export default function FreeSeminar({data}){
     const page = data.allWpPage.nodes[0];
     const courseData = data.allWpCourseCategory.nodes;
     const seminarData = data.allWpSeminar.nodes;
+    const seo = page.pageMeta;
     const [isOpen, setOpen] = useState(false);
     
     return(
         <React.Fragment>
         <Layout>
+        <Seo 
+        title={seo.metaTitle} 
+        description={seo.metaDescription} />
         <section id="instructors_teachers" class="free_seminer_schedule">
             <div class="container">
                 <div class="row">
@@ -29,7 +34,7 @@ export default function FreeSeminar({data}){
                         </div>
 
                         <div class="facilities_heading ">
-                          <h2 dangerouslySetInnerHTML={{ __html: page.title }} />
+                          <h1 dangerouslySetInnerHTML={{ __html: page.title }} />
                           <div dangerouslySetInnerHTML={{ __html: page.content }} />
                         </div>
                     </div>
@@ -115,6 +120,10 @@ export const query = graphql`
       nodes {
         title
         content
+        pageMeta {
+          metaTitle
+          metaDescription
+        }
         homeAdmissionSecHeading
         homeAdmissionSecDesc
         latestSeminarVideo {

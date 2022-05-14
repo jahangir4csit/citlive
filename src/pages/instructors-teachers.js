@@ -10,12 +10,15 @@ import InstructorsList from "../components/instructors/instructorsList"
 export default function Instructors({data} = JSON.stringify(data, null, 5)) {
 
   const pageData = data.allWpPage.nodes[0];
+  const seo = pageData.pageMeta;
   const departmentInfo = data.allWpPage.nodes[0].department_info;
   const courseData = data.allWpCourseCategory.nodes;
 
   return(
     <Layout>
-      <Seo title={pageData.title} />
+      <Seo 
+      title={seo.metaTitle} 
+      description={seo.metaDescription} />
       <InstructorDesc data={pageData} departData={departmentInfo} />
       <InstructorsList />
       <CourseSlide coursSlide={courseData} />
@@ -30,6 +33,10 @@ export const query = graphql`
         id
         title
         content
+        pageMeta {
+          metaTitle
+          metaDescription
+        }
         department_info {
           departmentInfo {
             boxColor

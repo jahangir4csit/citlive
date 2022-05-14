@@ -9,6 +9,7 @@ import StudentFeedback from "../components/homepage/studentFeedback"
 import SuccessStorySlider from '../components/successCase/SuccessStorySlider'
 import {faPlay} from '@fortawesome/free-solid-svg-icons'
 import ModalVideo from 'react-modal-video'
+import Seo from "../components/seo"
 import Tabs from 'react-bootstrap/Tabs'
 import Tab from 'react-bootstrap/Tab'
 import TabContainer from 'react-bootstrap/TabContainer'
@@ -17,6 +18,7 @@ import TabPane from 'react-bootstrap/TabPane'
 import Nav from 'react-bootstrap/Nav'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
+import StudentProjects from '../components/courses/studentProjects'
 
 export default function SingleCourse({data}){
 
@@ -26,8 +28,10 @@ export default function SingleCourse({data}){
 
 
     const post = data.allWpCourse.nodes[0];
+    const seo = post.pageMeta;
     const reviewsData = data.allWp.nodes[0];
-    console.log(post, 'Single Course')
+    console.log(post, 'Single Course');
+    const projects = post.courseProjects;
 
     const [isOpen, setOpen] = useState(false);
 
@@ -52,6 +56,10 @@ export default function SingleCourse({data}){
 
     return(
         <Layout>
+        <Seo 
+        title={seo.metaTitle} 
+        description={seo.metaDescription} />
+
           <section id="profe_graphic_banner">
             <div class="pink_shape">
                 <StaticImage class="img-fluid" src="../images/course-landing/Pg_banner_shape2.png" alt="pink color victor shape" />
@@ -106,8 +114,12 @@ export default function SingleCourse({data}){
                     <div class="col-lg-7 pg_banner_img_col">
                         <div class="pg_banner_img position-relative">
                             {post.course_options.courseVideoThumbnail !=null ?
-                            <img class="img-fluid w-100" src={post.course_options.courseVideoThumbnail.sourceUrl} alt="image" />
-                            : <img class="img-fluid w-100" src={post.featuredImage.node.sourceUrl} alt="image" />
+                            <img class="img-fluid w-100" 
+                            src={post.course_options.courseVideoThumbnail.sourceUrl} 
+                            alt={post.course_options.courseVideoThumbnail.altText ? post.course_options.courseVideoThumbnail.altText : 'Creative IT Institute'} />
+                            : <img class="img-fluid w-100" 
+                            src={post.featuredImage.node.sourceUrl} 
+                            alt={post.featuredImage.node.altText ? post.featuredImage.node.altText : 'Creative IT Institute'} />
                             }
                             <div class="overly_icon">
                                 <ModalVideo channel='youtube' autoplay isOpen={isOpen} videoId={post.course_options.courseVideoUrl !== null ? post.course_options.courseVideoUrl : '1PDg90odyVY'} onClose={() => setOpen(false)} />
@@ -245,7 +257,9 @@ export default function SingleCourse({data}){
                                     <div class="pgc_item d-flex align-items-center">
                                         {softwareItem.featuredImage !=null &&
                                         <div class="pgcs_icon">
-                                          <img class="img-fluid w-100" src={softwareItem.featuredImage.node.sourceUrl} alt="image" />
+                                          <img class="img-fluid w-100" 
+                                          src={softwareItem.featuredImage.node.sourceUrl} 
+                                          alt={softwareItem.featuredImage.node.altText ? softwareItem.featuredImage.node.altText : 'Creative IT Institute'} />
                                         </div>
                                         }
                                         {softwareItem.title !=null &&
@@ -275,7 +289,9 @@ export default function SingleCourse({data}){
                                     <div class="pgcf_whom_item">
                                         <div class="pgcf_whom_item_icon">
                                             {courseforWItem.featuredImage !=null && 
-                                            <img class="img-fluid" src={courseforWItem.featuredImage.node.sourceUrl} alt={courseforWItem.title} />
+                                            <img class="img-fluid" 
+                                            src={courseforWItem.featuredImage.node.sourceUrl} 
+                                            alt={courseforWItem.featuredImage.node.altText ? courseforWItem.featuredImage.node.altText : 'Creative IT Institute'} />
                                             }
                                         </div>
                                         {courseforWItem.title !=null &&
@@ -304,7 +320,9 @@ export default function SingleCourse({data}){
                                     <div class="marketplace_item">
                                         <div class="icon">
                                             {jobMarket.featuredImage !=null && 
-                                            <img src={jobMarket.featuredImage.node.sourceUrl} alt={jobMarket.title}/>
+                                            <img 
+                                            src={jobMarket.featuredImage.node.sourceUrl} 
+                                            alt={jobMarket.featuredImage.node.altText ? jobMarket.featuredImage.node.altText : 'Creative IT Institute'}/>
                                             }
                                         </div>
                                         {jobMarket.content !=null &&
@@ -358,7 +376,9 @@ export default function SingleCourse({data}){
                                 <div class="col-md-6">
                                     <div class="pg_more_facilities_item pg_more_facilities_item_1" style={{ 'backgroundColor': courseFacility.facilityBoxBg }}>
                                         {courseFacility.featuredImage !=null && 
-                                        <img src={courseFacility.featuredImage.node.sourceUrl} alt={courseFacility.title} />
+                                        <img 
+                                        src={courseFacility.featuredImage.node.sourceUrl} 
+                                        alt={courseFacility.featuredImage.node.altText ? courseFacility.featuredImage.node.altText : 'Creative IT Institute'} />
                                         }
                                         {courseFacility.title !=null && <h3>{courseFacility.title}</h3>}
                                         {courseFacility.content !=null &&
@@ -373,29 +393,8 @@ export default function SingleCourse({data}){
                         </div>
                         : '' }
                         
-                        {post.studentProjects !=null && post.studentProjects.length > 0 ? 
-                        <div class="pgs_project">
-                            <div class="row">
-                                <h2>আমাদের শিক্ষার্থীদের কিছু প্রোজেক্ট</h2>
-                                
-                                <div class="col-12">
-                                    <Slider {...settingsProjectsSlider}>
-                                    {post.studentProjects.map(
-                                        item=> (
-                                            <div>
-                                                {item.url !=null &&
-                                                <div class="pgp_slide_item">
-                                                    <img class="img-fluid w-100" src={item.url} alt="image" />
-                                                </div>
-                                                }
-                                            </div>
-                                        )
-                                    )}
-
-                                    </Slider>
-                                </div>
-                            </div>
-                        </div>
+                        {projects.length > 0 ? 
+                        <StudentProjects projectsData={projects} />
                         : ''}
 
                         <StudentFeedback 
@@ -452,9 +451,14 @@ export const query = graphql`
         uri
         id
         content
+        pageMeta {
+          metaTitle
+          metaDescription
+        }
         featuredImage {
           node {
             sourceUrl
+            altText
           }
         }
         courseOverview
@@ -490,6 +494,7 @@ export const query = graphql`
           courseVideoUrl
           courseVideoThumbnail {
             sourceUrl
+            altText
           }
           softwareForCourse {
             ... on WpCitoption {
@@ -498,6 +503,7 @@ export const query = graphql`
               featuredImage {
                 node {
                   sourceUrl
+                  altText
                 }
               }
             }
@@ -516,6 +522,7 @@ export const query = graphql`
               featuredImage {
                 node {
                   sourceUrl
+                  altText
                 }
               }
             }
@@ -527,6 +534,7 @@ export const query = graphql`
               featuredImage {
                 node {
                   sourceUrl
+                  altText
                 }
               }
             }
@@ -540,9 +548,18 @@ export const query = graphql`
               featuredImage {
                 node {
                   sourceUrl
+                  altText
                 }
               }
             }
+          }
+        }
+        courseProjects {
+          video_id
+          video_thumb
+          gallery {
+            sourceUrl
+            altText
           }
         }
         studentProjects {
@@ -557,6 +574,7 @@ export const query = graphql`
                 featuredImage {
                     node {
                       sourceUrl
+                      altText
                     }
                 }
               }
@@ -577,7 +595,7 @@ export const query = graphql`
             }
           }
         }
-      }
+    }
   }
 `
 

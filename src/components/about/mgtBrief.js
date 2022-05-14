@@ -14,7 +14,7 @@ const MgtBrief = (data)=>{
                     <div class="col-md-6">
                         <div class="ceo_StaticImage">
                             {mgtBrief.photo !==null ? 
-                            <img class="img-fluid w-100" src={mgtBrief.photo.sourceUrl} alt={mgtBrief.name} />
+                            <img class="img-fluid w-100" src={mgtBrief.photo.sourceUrl} alt={mgtBrief.photo.altText ? mgtBrief.photo.altText : 'CEO|Creative IT Institute'} />
                             : ''}
                         </div>
                     </div>

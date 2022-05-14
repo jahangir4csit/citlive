@@ -1,5 +1,4 @@
 import React from "react";
-import { StaticImage } from "gatsby-plugin-image";
 
 export default function Mentor(data){
     const mentordata = data.data;
@@ -12,11 +11,13 @@ export default function Mentor(data){
                         <div class="single_profile_item">
                             {mentordata.featuredImage ?
                             <div class="single_profile_img">
-                                <img class="img-fluid" src={mentordata.featuredImage.node.sourceUrl} alt="image" />
+                                <img class="img-fluid" 
+                                src={mentordata.featuredImage.node.sourceUrl} 
+                                alt={mentordata.featuredImage.node.altText ? mentordata.featuredImage.node.altText : 'Creative IT Institute'} />
                             </div>
                             : '' }
                             <div class="single_profile_name">
-                                <h4>{mentordata.title}</h4>
+                                <h2>{mentordata.title}</h2>
                                 <p>{mentordata.mentorDsg}</p>
                             </div>
                         </div>
@@ -67,7 +68,9 @@ export default function Mentor(data){
                                 {mentordata.instructorsWorkplace.mentorWorkplace.map(
                                     workplace=>(
                                     workplace.featuredImage !==null ?
-                                    <img class="img-fluid" src={workplace.featuredImage.node.sourceUrl} alt="image" />
+                                    <img class="img-fluid" 
+                                    src={workplace.featuredImage.node.sourceUrl} 
+                                    alt={workplace.featuredImage.node.altText ? workplace.featuredImage.node.altText : 'Creative IT Institute'} />
                                     : workplace.title.concat('', ', ')
                                     )
                                 )} 

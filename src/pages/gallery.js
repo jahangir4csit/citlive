@@ -8,11 +8,14 @@ import GalleryGrid from "../components/gallery/galleryGrid"
 export default function Gallery({data}) {
 
     const pageData = data.allWpPage.nodes[0];
+    const seo = pageData.pageMeta;
     const gdata = pageData.crmGalleryEntry;
 
     return(
       <Layout>
-        <Seo title="gallery" />
+        <Seo 
+        title={seo.metaTitle} 
+        description={seo.metaDescription} />
         <PageDesc data={pageData} />
         <GalleryGrid gallaryData={gdata} />
       </Layout>
@@ -27,6 +30,10 @@ export default function Gallery({data}) {
         id
         title
         content
+        pageMeta {
+          metaTitle
+          metaDescription
+        }
         crmGalleryEntry {
             title
             crb_media_gallery {

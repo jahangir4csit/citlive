@@ -8,11 +8,14 @@ import FaqGrid from "../components/faq/faqGrid"
 export default function Faq({data}) {
 
     const pageData = data.allWpPage.nodes[0];
+    const seo = pageData.pageMeta;
     const faqsCollections = pageData.crmFaqsEntry;
 
     return(
       <Layout>
-        <Seo title="gallery" />
+        <Seo 
+        title={seo.metaTitle} 
+        description={seo.metaDescription} />
         <PageDesc data={pageData} />
         <FaqGrid faqsData={faqsCollections} />
       </Layout>
@@ -27,6 +30,10 @@ export default function Faq({data}) {
         id
         title
         content
+        pageMeta {
+          metaTitle
+          metaDescription
+        }
         crmFaqsEntry {
           title
           faqs_item {

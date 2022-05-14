@@ -8,11 +8,14 @@ import FacilityItems from '../components/facilities/facilityItems'
 export default function OurFacilities({data}) {
 
     const pageData = data.allWpPage.nodes[0];
+    const seo = pageData.pageMeta;
     const facilitiesData = pageData.citMoreFacilities;
 
     return(
       <Layout>
-        <Seo title="Our Facilities" />
+        <Seo 
+        title={seo.metaTitle} 
+        description={seo.metaDescription} />
         <PageDesc data={pageData} />
         <FacilityItems data={facilitiesData} /> 
       </Layout>
@@ -27,6 +30,10 @@ export default function OurFacilities({data}) {
         id
         title
         content
+        pageMeta {
+          metaTitle
+          metaDescription
+        }
         citMoreFacilities {
           cit_facility_type {
             value

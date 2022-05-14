@@ -17,17 +17,20 @@ import OfficeWall from "../components/about/officeWall"
 export default function AboutUs({data}) {
 
   const pageData = data.allWpPage.nodes[0];
+  const seo = pageData.pageMeta;
   const mgtData = pageData.pageSection.ceoBrief;
   const certified = pageData.pageSection.citCertified;
   const branchInfo = pageData.branchInfo;
   const initiatives = pageData.initiatives;
-  const photoWall = pageData.citPhotoWall;
+  const photoWall = pageData.citPhotoGallery;
   const statementData = pageData.statementsData;
   const vitrualTour = data.allWpSection.nodes[0];
 
   return(
     <Layout>
-      <Seo title={pageData.title} />
+      <Seo 
+      title={seo.metaTitle} 
+      description={seo.metaDescription} />
       <AboutDesc data={pageData} />
       <VirtualTour vData={vitrualTour} />
       <FeaturedTextTwo />
@@ -51,6 +54,10 @@ export const query = graphql`
         id
         title
         content
+        pageMeta {
+          metaTitle
+          metaDescription
+        }
         pageSection {
           aboutLogo {
             aboutLogo {
@@ -66,6 +73,7 @@ export const query = graphql`
             name
             photo {
               sourceUrl
+              altText
             }
             socialMedia {
               facebook
@@ -79,6 +87,7 @@ export const query = graphql`
             description
             photo {
               sourceUrl
+              altText
             }
           }
         }
@@ -86,6 +95,7 @@ export const query = graphql`
           cit_state_title
           cit_state_icon
           cit_state_details_image
+          image_alt_text
           cit_state_desc
         }
         branchInfo {
@@ -97,8 +107,9 @@ export const query = graphql`
           initiv_data
           initiv_title
         }
-        citPhotoWall {
-          url
+        citPhotoGallery {
+          sourceUrl
+          altText
         }
       }
     }

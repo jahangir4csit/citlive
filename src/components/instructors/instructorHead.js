@@ -1,5 +1,4 @@
 import React from "react";
-import { StaticImage } from "gatsby-plugin-image";
 
 export default function InstructorHead(data){
     const head = data.data;
@@ -10,7 +9,9 @@ export default function InstructorHead(data){
             <div class="col-lg-4">
                 {head.featuredImage ?
                 <div class="instructor_img">
-                    <img class="img-fluid" src={head.featuredImage.node.sourceUrl} alt="image" />
+                    <img class="img-fluid" 
+                    src={head.featuredImage.node.sourceUrl} 
+                    alt={head.featuredImage.node.altText ? head.featuredImage.node.altText : 'Creative IT Institute'} />
                 </div>
                 : '' }
             </div>
@@ -18,7 +19,7 @@ export default function InstructorHead(data){
                 <div class="row instructor_qualification">
                     <div class="col-lg-12">
                         <div class="instructor_profile_heading first_heading">
-                            <h1>{head.title}</h1>
+                            <h2>{head.title}</h2>
                             <p>{head.mentorDsg}</p>
                         </div>
                     </div>
@@ -75,7 +76,9 @@ export default function InstructorHead(data){
                                 {head.instructorsWorkplace.mentorWorkplace.map(
                                     workplace=>(
                                     workplace.featuredImage ?
-                                    <img class="img-fluid" src={workplace.featuredImage.node.sourceUrl} alt="image" />
+                                    <img class="img-fluid" 
+                                    src={workplace.featuredImage.node.sourceUrl} 
+                                    alt={workplace.featuredImage.node.altText ? workplace.featuredImage.node.altText : 'Creative IT Institute'} />
                                     : workplace.title.concat('', ', ')
                                     )
                                 )} 

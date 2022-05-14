@@ -3830,7 +3830,7 @@ Our facilities Heading Area Start
   padding-top: 125px;
 }
 
-.facilities_heading h2 {
+.facilities_heading h1 {
   color: #CF0000;
   font-family: Hind Siliguri;
   font-size: 45px;
@@ -4833,7 +4833,7 @@ Our facilities_item Area End
   border-bottom: 1px solid rgba(0, 0, 0, 0.07);
 }
 
-.instructor_profile_heading h1 {
+.instructor_profile_heading h2 {
   color: #1F1E1E;
   font-family: "Roboto", Hind Siliguri;
   font-size: 36px;
@@ -4940,9 +4940,9 @@ Our facilities_item Area End
   border-radius: 50%;
 }
 
-.single_profile_item .single_profile_name h4 {
+.single_profile_item .single_profile_name h2 {
   color: #1F1E1E;
-  font-family: Hind Siliguri;
+  font-family: 'Hind Siliguri';
   font-size: 24px;
   font-weight: 600;
   line-height: 26px;

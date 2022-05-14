@@ -11,6 +11,10 @@ exports.createPages = async ({ graphql, actions }) => {
           uri
           id
           content
+          pageMeta {
+            metaTitle
+            metaDescription
+          }
           featuredImage {
             node {
               sourceUrl

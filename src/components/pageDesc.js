@@ -8,7 +8,7 @@ const PageDesc = (data)=>{
                 <div class="row">
                     <div class="col-12">
                         <div class="facilities_heading ">
-                            <h2>{pageData.title}</h2>
+                            <h1>{pageData.title}</h1>
                             <div className="dtails" dangerouslySetInnerHTML={{ __html: pageData.content }} />
                         </div>
                     </div>

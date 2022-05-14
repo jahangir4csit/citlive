@@ -15,7 +15,7 @@ export default function InstructorDesc(data){
                                 <a href="#"><StaticImage src="../../images/Button-book.png" alt="icon" />ব্রাউজ কোর্স <i class="fa fa-angle-down ps-2"></i></a>
                             </div>
                         <div class="facilities_heading ">
-                            <h2>{instructorData.title}</h2>
+                            <h1>{instructorData.title}</h1>
                             <div className="dtails" dangerouslySetInnerHTML={{ __html: instructorData.content }} />
                         </div>
                     </div>

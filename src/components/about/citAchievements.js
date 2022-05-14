@@ -11,7 +11,7 @@ const CITAchievements = (data) => {
                     <div class="col-lg-4 col-md-6">
                         {citCertified.photo !==null ? 
                         <div class="iso_image">
-                            <img class="img-fluid w-100" src={citCertified.photo.sourceUrl} alt={citCertified.title}/>
+                            <img class="img-fluid w-100" src={citCertified.photo.sourceUrl} alt={citCertified.photo.altText ? citCertified.photo.altText : 'CIT|Achievements' }/>
                         </div>
                         : ''}
                     </div>

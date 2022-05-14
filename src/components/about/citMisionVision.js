@@ -51,7 +51,7 @@ const CITMisionVision = (data) =>{
                                             {statementContent.cit_state_details_image ?
                                             <Col lg={4} sm={12}>
                                                 <div class="mission_img">
-                                                    <img class="img-fluid" src={statementContent.cit_state_details_image} alt="statement image" />
+                                                    <img class="img-fluid" src={statementContent.cit_state_details_image} alt={statementContent.image_alt_text ? statementContent.image_alt_text : 'Creative IT Institute'} />
                                                 </div>
                                             </Col>
                                             : ''}

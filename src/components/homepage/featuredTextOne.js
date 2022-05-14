@@ -14,7 +14,9 @@ const FeaturedTextOne = ()=>{
             <div class="row align-items-center">
                 <div class="col-lg-5 col-md-6">
                     <div class="practical_project_img">
-                        <img class="img-fluid w-100" src={ftOne.featuredImage.node.sourceUrl} alt="image" />
+                        <img class="img-fluid w-100" 
+                        src={ftOne.featuredImage.node.sourceUrl} 
+                        alt={ftOne.featuredImage.node.altText ? ftOne.featuredImage.node.altText : 'Creative IT Institute'} />
                         <div class="prectical_dots">
                             <StaticImage src="../../images/prectical-dot.png" alt="victor-dots" />
                         </div>

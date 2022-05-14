@@ -11,13 +11,16 @@ import JpOverview from '../components/jobplacement/overview'
 export default function JobPlacement({data}) {
 
     const pageData = data.allWpPage.nodes[0];
+    const seo = pageData.pageMeta;
     const facilitiesData = pageData.citMoreFacilities;
     const successStories = data.allWpSuccessStories.nodes;
     console.log(data, 'JP Data');
 
     return(
       <Layout>
-        <Seo title="Job Placement" />
+        <Seo 
+        title={seo.metaTitle} 
+        description={seo.metaDescription} />
         <PageDesc data={pageData} />
         <JpOverview data={pageData.crmJpOverviewEntry} />
         <FacilityItems data={facilitiesData} />
@@ -48,6 +51,10 @@ export const query = graphql`
       id
       title
       content
+      pageMeta {
+        metaTitle
+        metaDescription
+      }
       citMoreFacilities {
         cit_facility_type {
           value

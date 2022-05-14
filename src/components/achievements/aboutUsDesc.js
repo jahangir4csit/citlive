@@ -21,7 +21,7 @@ const AboutUsDesc = (data) =>{
                         data.images.map(
                             (photoItem, index)=> 
                             <div class="single_img">
-                                <img class="img-fluid" src={photoItem.photo} alt="about" key={index} />
+                                <img class="img-fluid" src={photoItem.sourceUrl} alt={photoItem.altText ? photoItem.altText : 'Creative IT Institute'} key={index} />
                             </div>
                         )
                         : ''}

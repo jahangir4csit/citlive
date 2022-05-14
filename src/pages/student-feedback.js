@@ -9,11 +9,14 @@ import StudentReviewsGrid from '../components/reviews/studentReviewsGrid'
 export default function StudentsFeedback({data}) {
 
     const pageData = data.allWpPage.nodes[0];
+    const seo = pageData.pageMeta;
     const reviewsData = data.allWp.nodes[0];
 
     return(
       <Layout>
-        <Seo title="Student Feedback" />
+        <Seo 
+        title={seo.metaTitle} 
+        description={seo.metaDescription} />
         <PageDesc data={pageData} />
         <StudentReviewsGrid data={reviewsData} /> 
       </Layout>
@@ -28,6 +31,10 @@ export const query = graphql`
       id
       title
       content
+      pageMeta {
+        metaTitle
+        metaDescription
+      }
     }
   }
   allWp {

@@ -14,6 +14,7 @@ import CITinitiatives from '../components/citInitiatives'
 
 export default function OurAchievements({data}) {
     const pageData = data.allWpPage.nodes[0];
+    const seo = pageData.pageMeta;
     const topRatedCase = data.allWpSuccessStories.nodes;
     const sectionsData = data.allWpSection.nodes;
     // const initiatives = pageData.initiatives;
@@ -21,7 +22,9 @@ export default function OurAchievements({data}) {
 
     return(
         <Layout>
-            <Seo title={pageData.title} />
+            <Seo 
+            title={seo.metaTitle} 
+            description={seo.metaDescription} />
             <PageDesc data={pageData} />
             <FeaturedTextTwo />
             <CounterUp2 boxbg />
@@ -63,6 +66,10 @@ export const pageQuery = graphql`
         id
         title
         content
+        pageMeta {
+          metaTitle
+          metaDescription
+        }
       }
     }
     allWpSuccessStories(
@@ -85,7 +92,8 @@ export const pageQuery = graphql`
         citAboutDescTitle
         citAboutDescContent
         citAboutDescImages {
-          photo
+          altText
+          sourceUrl
         }
         citIsoCertifiedDesc
         citIsoCertifiedImage
@@ -94,7 +102,10 @@ export const pageQuery = graphql`
           value
         }
         citCeoName
-        citCeoImage
+        citCeoImage{
+          altText
+          sourceUrl
+        }
         citCeoDesg
         citCeoDescription
         citCeoSocialMedia {

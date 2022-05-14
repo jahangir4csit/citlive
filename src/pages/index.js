@@ -129,7 +129,10 @@ query CourseData
       homeSeminarSecHeading
       homeSeminarSecDesc
       homePartnersSecHeading
-      homeSeminarSecBanner
+      homeSeminarSecBanner {
+        altText
+        sourceUrl
+      }
       homePartnersSecDesc
       homeFavouriteExcludeCats
       homeFavouriteCourseSecHeading

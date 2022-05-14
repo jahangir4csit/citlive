@@ -10,13 +10,16 @@ import ContactForm from "../components/contact/contactForm"
 export default function ContactUs({data}){
 
   const pageData = data.allWpPage.nodes[0];
+  const seo = pageData.pageMeta;
   const branches = pageData.contactInfo;
   const courseList = data.allWpCourse.nodes;
 
   console.log(branches, 'Braches');
   return(
     <Layout>
-      <Seo title="Contact CIT" />
+      <Seo 
+      title={seo.metaTitle} 
+      description={seo.metaDescription} />
       <ContactDesc data={pageData} />
       {branches.map(
         (branch, index)=>(
@@ -35,6 +38,10 @@ export const query = graphql`
         id
         title
         content
+        pageMeta {
+          metaTitle
+          metaDescription
+        }
         contactInfo {
           branch_address
           branch_email

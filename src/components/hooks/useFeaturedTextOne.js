@@ -10,7 +10,7 @@ export const useFeaturedText = () => {
           featuredImage {
             node {
               sourceUrl
-              title
+              altText
             }
           }
           citFeaturedTextDesc

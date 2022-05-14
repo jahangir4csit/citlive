@@ -15,6 +15,7 @@ import PhotoWall from "../components/photoWall"
 export default function Freelancing({data}) {
 
     const pageData = data.allWpPage.nodes[0];
+    const seo = pageData.pageMeta;
     const facilitiesData = pageData.citMoreFacilities;
     const successStories = data.allWpSuccessStories.nodes;
     const sectionsData = data.allWpSection.nodes;
@@ -29,7 +30,9 @@ export default function Freelancing({data}) {
 
     return(
       <Layout>
-        <Seo title="Freelancing" />
+        <Seo 
+        title={seo.metaTitle} 
+        description={seo.metaDescription} />
         <PageDesc data={pageData} />
         <FacilityItems data={facilitiesData} />
         <CounterUp />
@@ -56,6 +59,10 @@ query($in: [String] = ["cit_initiatives", "cit_photoWall"]) {
       id
       title
       content
+      pageMeta {
+        metaTitle
+        metaDescription
+      }
       citFacelityJsItems {
         content
         featuredImage {

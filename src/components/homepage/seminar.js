@@ -4,6 +4,8 @@ import { Link } from "gatsby"
 
 const Seminar = (data)=>{
     const seminarDataUpcoming = data.upcomming;
+    const seminarBanner = data.secBanner[0];
+    console.log(seminarBanner, 'Seminar Banner');
     return(
         <section id="seminar">
             <div class="container seminar">
@@ -45,8 +47,8 @@ const Seminar = (data)=>{
                     </div>
                     <div class="col-lg-6">
                         <div class="free_seminar_img">
-                            {data.secBanner &&
-                            <img class="img-fluid w-100" src={data.secBanner} alt="Seminar" />
+                            {seminarBanner.sourceUrl &&
+                            <img class="img-fluid w-100" src={seminarBanner.sourceUrl} alt={seminarBanner.altText ? seminarBanner.altText : 'Creative IT Institute'} />
                             }
                             <div class="seminar_dots">
                                 <StaticImage class="img-fluid" src="../../images/seminar-dots.png" alt="victor dots" />

@@ -11,11 +11,14 @@ export default function Courses({data}){
 
 const courseData = data.allWpCourseCategory.nodes;
 const page = data.allWpPage.nodes[0];
+const seo = page.pageMeta;
 const reviewsData = data.allWp.nodes[0];
 
     return(
     <Layout>
-        <Seo title="Our Courses" />
+        <Seo 
+        title={seo.metaTitle} 
+        description={seo.metaDescription} />
         <CoursePageHeading  data={page} />
         <DepartmentGrid marginTop="0" boxShadow />
         <AdmissionCoursesList 
@@ -76,6 +79,10 @@ export const query = graphql`
       nodes {
         title
         content
+        pageMeta {
+          metaTitle
+          metaDescription
+        }
         admissionSecHeading
         admissionSecDesc
       }

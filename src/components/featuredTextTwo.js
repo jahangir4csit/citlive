@@ -32,7 +32,7 @@ const FeaturedTextTwo = (data)=>{
                     </div>
                     <div class="col-lg-6">
                         <div class="glory_img">
-                            <img class="img-fluid" src={ftTwo.featuredImage.node.sourceUrl} alt={ftTwo.featuredImage.node.title} />
+                            <img class="img-fluid" src={ftTwo.featuredImage.node.sourceUrl} alt={ftTwo.featuredImage.node.altText ? ftTwo.featuredImage.node.altText : 'Creative IT Institute'} />
                         </div>
                     </div>
                 </div>
