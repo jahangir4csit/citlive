@@ -7,35 +7,7 @@ import Button from 'react-bootstrap/Button'
 import FloatingLabel from 'react-bootstrap/FloatingLabel'
 import { useCourses } from "../components/hooks/useCourses";
 
-import {
-  gql,
-  useMutation
-} from "@apollo/client";
-
-const SEMINAR_MUTATION = gql`
-  mutation CreateSubmissionMutation($clientMutationId: String!, $name: String!, $mobile: String!, $email: String!, $address: String!, $course: String!){
-    createSubmission(input: {clientMutationId: $clientMutationId, name: $name, mobile: $mobile,  email: $email, address: $address, course: $course}) {
-      success
-      data
-    }
-  }
-`
-
 const RegSeminar = () => {
-
-  const courseslists = useCourses();
-  console.log(courseslists, 'courses names');
-
-  const [nameVal, setNameValue] = useState('')
-  const [mobileVal, setMobileValue] = useState('')
-  const [emailVal, setEmailValue] = useState('')
-  const [addressVal, setAddressValue] = useState('')
-  const [courseVal, setCourseValue] = useState('')
-
-  const [createSubmission, { loading, error, data }] = useMutation(SEMINAR_MUTATION);
-
-  if (loading) return 'Submitting...';
-  if (error) return `Submission error! ${error.message}`;
 
   return (
     <Layout>
