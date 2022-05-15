@@ -15,9 +15,9 @@ export default function SuccessStory({data}) {
 
     return(
         <Layout>
-            {/*<Seo 
+            <Seo 
             title={seo.metaTitle} 
-            description={seo.metaDescription} />*/}
+            description={seo.metaDescription} />
             <SuccessStoryDesc data={page} />
              <SuccessStoryGrid /> 
             <CourseSlide coursSlide={courseData} /> 
@@ -70,6 +70,10 @@ export const query = graphql`
         nodes {
           title
           content
+          pageMeta {
+            metaTitle
+            metaDescription
+          }
         }
     }
   }
