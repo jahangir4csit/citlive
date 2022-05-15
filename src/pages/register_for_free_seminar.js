@@ -5,7 +5,7 @@ import Layout from "../components/layout";
 import Form from 'react-bootstrap/Form'
 import Button from 'react-bootstrap/Button'
 import FloatingLabel from 'react-bootstrap/FloatingLabel'
-import { useCourses } from "../components/hooks/useCourses";
+//import { useCourses } from "../components/hooks/useCourses";
 
 import {
   gql,
@@ -123,10 +123,10 @@ const RegSeminar = () => {
                             setCourseValue(event.target.value)
                           }}
                           >
-                        {courseslists.allWpCourse.nodes.map(
+                        {/* {courseslists.allWpCourse.nodes.map(
                           course=> <option>{course.title}</option>
-                        )}
-                        {/* <option>ওয়েব ডিজাইন</option>
+                        )} */}
+                        <option>ওয়েব ডিজাইন</option>
                         <option>পাইথন জ্যাঙ্গো</option>
                         <option>পাইথন মেশিন লার্নিং</option>
                         <option>অ্যাপ ডেভেলপমেন্ট</option>
@@ -138,7 +138,7 @@ const RegSeminar = () => {
                         <option>মোশন গ্রাফিক্স</option>
                         <option>প্রফেশনাল ওয়েব ডেভেলপমেন্ট</option>
                         <option>UX/UI ডিজাইন</option>
-                        <option>UX/UI ডিজাইন</option> */}
+                        <option>UX/UI ডিজাইন</option>
                           </Form.Select>
                         </FloatingLabel>
                         
