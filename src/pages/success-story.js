@@ -15,11 +15,11 @@ export default function SuccessStory({data}) {
 
     return(
         <Layout>
-            <Seo 
+            {/*<Seo 
             title={seo.metaTitle} 
             description={seo.metaDescription} />
             <SuccessStoryDesc data={page} />
-            {/* <SuccessStoryGrid /> 
+             <SuccessStoryGrid /> 
             <CourseSlide coursSlide={courseData} /> */}
         </Layout>
     )
