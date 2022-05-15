@@ -18,9 +18,9 @@ export default function SuccessStory({data}) {
             {/*<Seo 
             title={seo.metaTitle} 
             description={seo.metaDescription} />
-            <SuccessStoryDesc data={page} />
+            <SuccessStoryDesc data={page} />*/}
              <SuccessStoryGrid /> 
-            <CourseSlide coursSlide={courseData} /> */}
+            <CourseSlide coursSlide={courseData} /> 
         </Layout>
     )
 
