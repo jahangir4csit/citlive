@@ -26,6 +26,8 @@ export default function HomePage({data}){
   const reviewsData = data.allWp.nodes[0];
   const vitrualTour = data.allWpSection.nodes[0];
 
+  console.log(homeData.citPartners, 'CIT Partners');
+
   return(
     <Layout>
       <Seo title="Home" />
@@ -170,9 +172,9 @@ query CourseData
       }
       citPartners {
         cit_partners_tab_title
-        cit_partners_item {
-          partner_logo
-          partner_name
+        partner_logo {
+          altText
+          sourceUrl
         }
       }
     }

@@ -1,5 +1,4 @@
 import React from "react";
-import { StaticImage } from "gatsby-plugin-image";
 
 const PartnerItem = (data)=>{
     return(
@@ -7,7 +6,7 @@ const PartnerItem = (data)=>{
             {data.partnersinfo.map(
                 item=>(
                     <li>
-                        <img src={item.partner_logo} alt={item.partner_name ? item.partner_name : 'CIT Partner'} />
+                        <img src={item.sourceUrl} alt={item.altText ? item.altText : 'CIT Partner'} />
                     </li>
                 )
             )}

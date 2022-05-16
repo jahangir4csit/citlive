@@ -36,7 +36,9 @@ const Partners = (data)=>{
                                 {partners.map(
                                     (partnerItems, index)=>(
                                         <TabPane className='company_item' eventKey={'tab_'+index}>
-                                            <PartnerItem partnersinfo={partnerItems.cit_partners_item} />
+                                            {partnerItems.partner_logo.length > 0 &&
+                                                <PartnerItem partnersinfo={partnerItems.partner_logo} />
+                                            }
                                         </TabPane>
                                     )
                                 )}
