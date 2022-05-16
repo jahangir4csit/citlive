@@ -114,19 +114,21 @@ export default function SingleCourse({data}){
                     <div class="col-lg-7 pg_banner_img_col">
                         <div class="pg_banner_img position-relative">
                             {post.course_options.courseVideoThumbnail !=null ?
-                            <img class="img-fluid w-100" 
-                            src={post.course_options.courseVideoThumbnail.sourceUrl} 
-                            alt={post.course_options.courseVideoThumbnail.altText ? post.course_options.courseVideoThumbnail.altText : 'Creative IT Institute'} />
+                            <Fragment>
+                              <img class="img-fluid w-100" 
+                              src={post.course_options.courseVideoThumbnail.sourceUrl} 
+                              alt={post.course_options.courseVideoThumbnail.altText ? post.course_options.courseVideoThumbnail.altText : 'Creative IT Institute'} />
+                              <div class="overly_icon">
+                                  <ModalVideo channel='youtube' autoplay isOpen={isOpen} videoId={post.course_options.courseVideoUrl !== null ? post.course_options.courseVideoUrl : '1PDg90odyVY'} onClose={() => setOpen(false)} />
+                                  <button className="modalvidwrap" onClick={()=> setOpen(true)}>
+                                      <FontAwesomeIcon icon={faPlay} />
+                                  </button>
+                              </div>
+                            </Fragment>
                             : <img class="img-fluid w-100" 
                             src={post.featuredImage.node.sourceUrl} 
                             alt={post.featuredImage.node.altText ? post.featuredImage.node.altText : 'Creative IT Institute'} />
                             }
-                            <div class="overly_icon">
-                                <ModalVideo channel='youtube' autoplay isOpen={isOpen} videoId={post.course_options.courseVideoUrl !== null ? post.course_options.courseVideoUrl : '1PDg90odyVY'} onClose={() => setOpen(false)} />
-                                <button className="modalvidwrap" onClick={()=> setOpen(true)}>
-                                    <FontAwesomeIcon icon={faPlay} />
-                                </button>
-                            </div>
                         </div>
                         <div class="yellow_dots_right"><StaticImage src="../images/course-landing/Pg_banner_shape3.png" alt="Yellow color dots" /></div>
                         <div class="yellow_dot_left"><StaticImage src="../images/course-landing/Pg_banner_shape3.png" alt="Yellow color dots" /></div>
