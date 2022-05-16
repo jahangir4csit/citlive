@@ -33,7 +33,7 @@ export default function StudentProjects(data){
                             item.video_id !=null ?
                             <div>
                                 <div class="pgp_slide_item">
-                                    <img class="img-fluid w-100" src={item.video_thumb} alt="project" />
+                                    <img class="img-fluid w-100" src={item.video_thumb} alt="Projects" />
                                     <div class="overly_icon">
                                         <ModalVideo channel='youtube' autoplay isOpen={isOpen} videoId={item.video_id} onClose={() => setOpen(false)} />
                                         <button className="modalvidwrap" onClick={()=> setOpen(true)}>
@@ -47,7 +47,7 @@ export default function StudentProjects(data){
                                 gitems=>(
                             <div>
                                 <div class="pgp_slide_item">
-                                    <img class="img-fluid w-100" src={gitems.sourceUrl} alt="project" />
+                                    <img class="img-fluid w-100" src={gitems.sourceUrl} alt={gitems.altText ? gitems.altText : 'Student Project'} />
                                 </div>
                             </div>
                             ))
