@@ -116,7 +116,7 @@ const Footer = ()=>{
                                 </div>
                                 <div class="col-md-4 copy_text_sm_last">
                                     <div class="copy_text">
-                                        <p dangerouslySetInnerHTML={{ __html: footerData.crbThemeOptions.citCopyrightText ? 'Copyright &copy; '+ footerData.crbThemeOptions.citCopyrightText : 'Creative IT Institute' }} />
+                                        <p dangerouslySetInnerHTML={{ __html: footerData.crbThemeOptions.citCopyrightText ? 'Copyright &copy; '+ footerData.crbThemeOptions.citCopyrightText + `All right reserved | <a href="/sitemap">Sitemap</a>` : 'Creative IT Institute' }} />
                                     </div>
                                 </div>
                                 <div class="col-md-4 col-sm-6">

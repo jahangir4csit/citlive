@@ -6874,3 +6874,19 @@ Blog Dtails Sidebar Page Area End
 
 }
 .feedback_1_slider{ max-height: 17rem }
+.site_map{
+  padding-bottom: 60px;
+}
+.site_map ul li a{
+  color: #212529;
+}
+.site_map h5{
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+.site_map ul{
+  margin-bottom: 1.2rem;
+}
+.site_map h5 a{
+  color: #212529;
+}
