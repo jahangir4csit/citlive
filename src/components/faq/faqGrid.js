@@ -17,11 +17,11 @@ const FaqGrid = (data)=>{
             <div class="container">
                 <div class="row">
                     <div class="col-12">
-                        <div class="success_tabs">
-                            <Tabs defaultActiveKey={faqs[0].title} id="uncontrolled-tab-example" className="success_menu">
+                        <div class="success_tabs pt-4">
+                            {/* <Tabs defaultActiveKey={faqs[0].title} id="uncontrolled-tab-example" className="success_menu"> */}
                                 {faqs.map(
-                                    faqItems=>(
-                                    <Tab eventKey={faqItems.title} title={faqItems.title}>
+                                    faqItems=>( 
+                                    // <Tab eventKey={faqItems.title} title={faqItems.title} >
                                         <div class="col-12" id={faqItems.title}>
                                             <div class="row g-4">
                                                 
@@ -44,10 +44,10 @@ const FaqGrid = (data)=>{
                                                 </div>
                                             </div>
                                         </div>
-                                    </Tab>
+                                    // </Tab>
                                     )
                                 )}
-                            </Tabs>
+                            {/* </Tabs> */}
                         </div>
                     </div>
                     
