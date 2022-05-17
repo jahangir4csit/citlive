@@ -109,17 +109,17 @@ const Footer = ()=>{
 
                         <div class="col-12">
                             <div class="row copy">
-                                <div class="col-md-4 col-sm-6 padding_0">
+                                <div class="col-md-3 col-sm-6 padding_0">
                                     <div class="footer_logo">
                                         <StaticImage src="../../images/cit_logo_trans.png" alt="Footer Logo" />
                                     </div>
                                 </div>
-                                <div class="col-md-4 copy_text_sm_last">
+                                <div class="col-md-6 copy_text_sm_last">
                                     <div class="copy_text">
-                                        <p dangerouslySetInnerHTML={{ __html: footerData.crbThemeOptions.citCopyrightText ? 'Copyright &copy; '+ footerData.crbThemeOptions.citCopyrightText + `All right reserved | <a href="/sitemap">Sitemap</a>` : 'Creative IT Institute' }} />
+                                        <p dangerouslySetInnerHTML={{ __html: footerData.crbThemeOptions.citCopyrightText ? 'Copyright &copy; '+ footerData.crbThemeOptions.citCopyrightText + `. All right reserved | <a href="/sitemap">Sitemap</a>` : 'Creative IT Institute' }} />
                                     </div>
                                 </div>
-                                <div class="col-md-4 col-sm-6">
+                                <div class="col-md-3 col-sm-6">
                                     <div class="copy_social_link">
                                         {footerData.crbThemeOptions.citSmediaFb &&
                                             <Link to={footerData.crbThemeOptions.citSmediaFb}><FontAwesomeIcon icon={faFacebookF} /></Link>
