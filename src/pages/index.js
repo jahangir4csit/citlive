@@ -30,7 +30,12 @@ export default function HomePage({data}){
 
   return(
     <Layout>
-      <Seo title="Home" />
+      <Seo 
+      title="Professional IT Training Institute in Bangladesh - Creative IT"
+      description="Develop your professional personal skills through Creative IT Institute We provide
+    Graphic Design, Web Software, Digital Marketing, Networking, Film Media,
+    Robotics Automation Training etc affordable price. Call +880 162 4666000"
+       />
       <HomeBanner />
       <DepartmentSlider courseCatInfo={courseData} />
       <CourseSlide 
