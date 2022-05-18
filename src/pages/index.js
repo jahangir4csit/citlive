@@ -75,10 +75,10 @@ export default function HomePage({data}){
       secDesc={homeData.homePartnersSecDesc}
       partnersData={homeData.citPartners}
       />
-      <BlogSlider 
+      {/* <BlogSlider 
       secHeading={homeData.homeBlogSecHeading} 
       secDesc={homeData.homeBlogSecDesc}
-      />
+      /> */}
     </Layout>
   )
 }
