@@ -116,7 +116,42 @@ div.success_menu ul.common_slider_class li {
 }
 
 /*===========Spacing================*/
-
+/* **** Padding Spacing **** */
+.pt9{
+  padding-top: 90px!important;
+}
+.py9{
+  padding-top: 90px!important;
+  padding-bottom: 90px!important;
+}
+.pt45{
+  padding-top: 45px!important;
+}
+.pb45{
+  padding-bottom: 45px!important;
+}
+.py45{
+  padding-top: 45px!important;
+  padding-bottom: 45px!important;
+}
+/* **** Margin Spacing **** */
+.mt9{
+  margin-top: 90px!important;
+}
+.my9{
+  margin-top: 90px!important;
+  margin-bottom: 90px!important;
+}
+.mt45{
+  margin-top: 45px!important;
+}
+.mb45{
+  margin-bottom: 45px!important;
+}
+.my45{
+  margin-top: 45px!important;
+  margin-bottom: 45px!important;
+}
 
 /*Common Menu Slider End*/
 /*=========All Common Css End=========*/
@@ -849,6 +884,9 @@ div.success_menu ul.common_slider_class li {
   line-height: 28px;
   letter-spacing: 0.20000000298023224px;
   padding-bottom: 40px!important;
+}
+.facilities_heading h2{
+  padding-bottom: 20px;
 }
 .course_slider_top {
   z-index: 5;
@@ -5086,11 +5124,10 @@ form.student_form select {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  padding-top: 35px;
 }
 
 #about_top .about_top_img .single_img {
-  margin: 41px;
+  margin: 0 40px;
 }
 
 /*==================================
@@ -5100,7 +5137,7 @@ form.student_form select {
         About Page CEO Part Start
 ================================== */
 #ceo {
-  margin-top: 93px;
+  margin-top: 90px;
 }
 
 #ceo > .container > .row:nth-child(even) {
@@ -5136,7 +5173,9 @@ form.student_form select {
   padding-bottom: 15px;
 }
 
-.ceo_text p {
+.ceo_text p,.facilities_desc .dtails,
+.facilities_desc .dtails p
+{
   color: #605F62;
   font-family: 'Ruposhi Bangla Unicode';
   font-size: 18px;
@@ -5262,7 +5301,10 @@ form.student_form select {
   display: block;
   padding: 10px 0;
 }
-
+.iso_style2{
+  background-color: #FBFDF2;
+  padding: 90px 0;
+}
 /*==================================
         About Page ISO Part Start
 ================================== */

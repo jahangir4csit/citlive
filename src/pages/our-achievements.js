@@ -49,9 +49,10 @@ export default function OurAchievements({data}) {
                   case "cit_iso_certified": return <CitIsoCertified 
                   title={section.citIsoCertifiedTitle}
                   desc={section.citIsoCertifiedDesc}
-                  image={section.citIsoCertifiedImage} 
+                  image={section.citIsoCertifiedImage}
+                  classes={'iso_style2 mt9 mb45'} 
                   key={index} />
-                  case "cit_initiatives": return <CITinitiatives marginBottom data={section.citInitiatives} key={index} />
+                  case "cit_initiatives": return <CITinitiatives classes={'pt45 pb45'} data={section.citInitiatives} key={index} />
                   default: return ''              
                 }
               }
