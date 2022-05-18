@@ -824,7 +824,7 @@ div.success_menu ul.common_slider_class li {
   padding-top: 46px;
 }
 
-.section_heading p {
+.section_heading p{
   color: #605F62;
   font-family: Ruposhi Bangla Unicode;
   font-size: 18px;
@@ -838,7 +838,18 @@ div.success_menu ul.common_slider_class li {
   text-align: center;
   padding-bottom: 58px;
 }
-
+.section_heading2 h2{
+  padding-bottom: 20px!important;
+}
+.section_heading2 p{
+  color: #605F62;
+  font-family: Ruposhi Bangla Unicode;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 28px;
+  letter-spacing: 0.20000000298023224px;
+  padding-bottom: 40px!important;
+}
 .course_slider_top {
   z-index: 5;
 }
@@ -3957,6 +3968,10 @@ Our facilities_item Area Start
   line-height: 33px;
   letter-spacing: 0.20000000298023224px;
   padding-bottom: 20px;
+}
+.jobplacement_partner p {
+  font-family: Ruposhi Bangla Unicode;
+  margin-bottom: 15px;
 }
 
 .jobplacement_partner ul {

@@ -20,8 +20,8 @@ export default function Freelancing({data}) {
     const successStories = data.allWpSuccessStories.nodes;
     const sectionsData = data.allWpSection.nodes;
 
-    const photoWall = sectionsData[1].citPhotoWall;
-    const initiativeData = sectionsData[0].citInitiatives;
+    const photoWall = sectionsData[0].citPhotoWall;
+    const initiativeData = sectionsData[1].citInitiatives;
 
     const marketPlaces = pageData.citFacelityJsItems;
     const forWhomesData = pageData.citFrFreelancingItem; 
