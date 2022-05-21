@@ -7,35 +7,34 @@ import Button from 'react-bootstrap/Button'
 import FloatingLabel from 'react-bootstrap/FloatingLabel'
 import { useCourses } from "../components/hooks/useCourses";
 
-import {
-  gql,
-  useMutation
-} from "@apollo/client";
+// import {
+//   gql,
+//   useMutation
+// } from "@apollo/client";
 
-const SEMINAR_MUTATION = gql`
-  mutation CreateSubmissionMutation($clientMutationId: String!, $name: String!, $mobile: String!, $email: String!, $address: String!, $course: String!){
-    createSubmission(input: {clientMutationId: $clientMutationId, name: $name, mobile: $mobile,  email: $email, address: $address, course: $course}) {
-      success
-      data
-    }
-  }
-`
+// const SEMINAR_MUTATION = gql`
+//   mutation CreateSubmissionMutation($clientMutationId: String!, $name: String!, $mobile: String!, $email: String!, $address: String!, $course: String!){
+//     createSubmission(input: {clientMutationId: $clientMutationId, name: $name, mobile: $mobile,  email: $email, address: $address, course: $course}) {
+//       success
+//       data
+//     }
+//   }
+// `
 
 const RegSeminar = () => {
 
-  const courseslists = useCourses();
-  console.log(courseslists, 'courses names');
+  // const courseslists = useCourses();
 
-  const [nameVal, setNameValue] = useState('')
-  const [mobileVal, setMobileValue] = useState('')
-  const [emailVal, setEmailValue] = useState('')
-  const [addressVal, setAddressValue] = useState('')
-  const [courseVal, setCourseValue] = useState('')
+  // const [nameVal, setNameValue] = useState('')
+  // const [mobileVal, setMobileValue] = useState('')
+  // const [emailVal, setEmailValue] = useState('')
+  // const [addressVal, setAddressValue] = useState('')
+  // const [courseVal, setCourseValue] = useState('')
 
-  const [createSubmission, { loading, error, data }] = useMutation(SEMINAR_MUTATION);
+  // const [createSubmission, { loading, error, data }] = useMutation(SEMINAR_MUTATION);
 
-  if (loading) return 'Submitting...';
-  if (error) return `Submission error! ${error.message}`;
+  // if (loading) return 'Submitting...';
+  // if (error) return `Submission error! ${error.message}`;
 
   return (
     <Layout>
@@ -48,7 +47,7 @@ const RegSeminar = () => {
                     </div>
                     {/* <Mutation mutation={useMutation(SEMINAR_MUTATION)}> */}
                     {/* {(createSubmission, { loading, error, data }) => ( */}
-                    <React.Fragment>
+                    {/* <React.Fragment>
                       <Form 
                         onSubmit={async event => {
                           event.preventDefault()
@@ -125,7 +124,7 @@ const RegSeminar = () => {
                           >
                         {courseslists.allWpCourse.nodes.map(
                           course=> <option>{course.title}</option>
-                        )}
+                        )} */}
                         {/* <option>ওয়েব ডিজাইন</option>
                         <option>পাইথন জ্যাঙ্গো</option>
                         <option>পাইথন মেশিন লার্নিং</option>
@@ -139,7 +138,7 @@ const RegSeminar = () => {
                         <option>প্রফেশনাল ওয়েব ডেভেলপমেন্ট</option>
                         <option>UX/UI ডিজাইন</option>
                         <option>UX/UI ডিজাইন</option> */}
-                          </Form.Select>
+                          {/* </Form.Select>
                         </FloatingLabel>
                         
                         <FloatingLabel controlId="floatingTextarea2" label="আপনার ঠিকানা">
@@ -158,15 +157,15 @@ const RegSeminar = () => {
                       <Button className="btn-formSend" variant="primary" type="submit">
                         সাবমিট 
                       </Button>
-                    </Form>
-                    <div style={{ padding: '20px' }}>
+                    </Form> */}
+                    {/* <div style={{ padding: '20px' }}>
                       {loading && <p>Loading...</p>}
                       {error && (
                         <p>An unknown error has occured, please try again later...</p>
                       )}
                       {data && <p>ধন্যবাদ, শীঘ্রই আপনার সাথে যোগাযোগ করা হবে </p>}
                     </div>
-                    </React.Fragment>
+                    </React.Fragment> */}
                     {/* )}
                     </Mutation> */}
                 </div>

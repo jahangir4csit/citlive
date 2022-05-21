@@ -11,9 +11,9 @@ module.exports = {
     {
       resolve: `gatsby-source-wordpress`,  
       options: {
-        url: `https://bangladeshigf.org/cit/graphql`,
+        //url: `https://bangladeshigf.org/cit/graphql`,
         //url: `http://cit.creativejuniors.com/graphql`,
-        //url: `http://localhost/citbd/graphql`
+        url: `http://localhost/citbd/graphql`
         //url: `https://www.creativeitinstitute.com/citdev21/graphql`,
       },
     },
@@ -59,7 +59,7 @@ module.exports = {
       resolve: `gatsby-plugin-scroll-reveal`,
       options: {
           threshold: 1, // Percentage of an element's area that needs to be visible to launch animation
-          once: true, // Defines if animation needs to be launched once
+          once: false, // Defines if animation needs to be launched once
           disable: false, // Flag for disabling animations
           
           // Advanced Options

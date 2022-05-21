@@ -11,7 +11,7 @@ export default function CourseItemSlider(data){
       return (
 
         <Link className="course_slider_item" to={`/courses/${courseItem.slug}`} >
-                <div class="course_single_item">
+                <div class="course_single_item" >
                     <div class="course_image">
                       {courseItem.featuredImage !== null ?
                         <img class="img-fluid w-100" src={courseItem.featuredImage.node.sourceUrl} alt={courseItem.title} />

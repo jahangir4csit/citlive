@@ -20,12 +20,19 @@ const Footer = ()=>{
                 <div class="container">
                     <div class="row">
                         <div class="col-12">
-                            <div class="footer_heading">
+                            <div class="footer_heading"
+                            data-sal="zoom-in"
+                            data-sal-delay="300"
+                            data-sal-duration="800"
+                            data-sal-easing="ease"
+                            >
                                 <h2 dangerouslySetInnerHTML={{ __html: footerData.crbThemeOptions.citFtHeading ? footerData.crbThemeOptions.citFtHeading : '' }} />
                                 <p dangerouslySetInnerHTML={{ __html: footerData.crbThemeOptions.citFtDesc ? footerData.crbThemeOptions.citFtDesc : '' }} />
                                 <div class="footer_btn">
                                     {footerData.crbThemeOptions.citFtButton1Title &&
-                                    <Link to={footerData.crbThemeOptions.citFtButton1Url} >{footerData.crbThemeOptions.citFtButton1Title}</Link>
+                                    <Link 
+                                    to={footerData.crbThemeOptions.citFtButton1Url} >
+                                    {footerData.crbThemeOptions.citFtButton1Title}</Link>
                                     }
                                     {footerData.crbThemeOptions.citFtButton2Title &&
                                     <Link to={footerData.crbThemeOptions.citFtButton2Url} >{footerData.crbThemeOptions.citFtButton2Title}</Link>
@@ -34,7 +41,12 @@ const Footer = ()=>{
                             </div>
                         </div>
 
-                        <div class="col-md-4 col-sm-6">
+                        <div class="col-md-4 col-sm-6"
+                        data-sal="slide-left"
+                        data-sal-delay="200"
+                        data-sal-duration="800"
+                        data-sal-easing="ease"
+                        >
                             <div class=" footer_item_1">
                                 <h5>যোগাযোগ</h5>
                                 <ul>
@@ -71,7 +83,12 @@ const Footer = ()=>{
                         </div>
 
                         {footerNavs[0] &&
-                            <div class="col-md-3 col-sm-6">
+                            <div class="col-md-3 col-sm-6"
+                            data-sal="slide-left"
+                            data-sal-delay="300"
+                            data-sal-duration="800"
+                            data-sal-easing="ease"
+                            >
                                 <div class="footer_item footer_item_2">
                                     <h5>{ footerNavs[0].name }</h5>
                                     <ul>
@@ -83,7 +100,12 @@ const Footer = ()=>{
                             </div>
                         }
                         {footerNavs[1] &&
-                            <div class="col-md-3 col-sm-6">
+                            <div class="col-md-3 col-sm-6"
+                            data-sal="slide-left"
+                            data-sal-delay="400"
+                            data-sal-duration="800"
+                            data-sal-easing="ease"
+                            >
                                 <div class="footer_item footer_item_2">
                                     <h5>{ footerNavs[1].name }</h5>
                                     <ul>
@@ -95,7 +117,12 @@ const Footer = ()=>{
                             </div>
                         }
                         {footerNavs[2] &&
-                            <div class="col-md-2 col-sm-6">
+                            <div class="col-md-2 col-sm-6"
+                            data-sal="slide-left"
+                            data-sal-delay="500"
+                            data-sal-duration="800"
+                            data-sal-easing="ease"
+                            >
                                 <div class="footer_item footer_item_2">
                                     <h5>{ footerNavs[2].name }</h5>
                                     <ul>
@@ -110,17 +137,32 @@ const Footer = ()=>{
                         <div class="col-12">
                             <div class="row copy">
                                 <div class="col-md-3 col-sm-6 padding_0">
-                                    <div class="footer_logo">
+                                    <div class="footer_logo"
+                                    data-sal="slide-left"
+                                    data-sal-delay="200"
+                                    data-sal-duration="800"
+                                    data-sal-easing="ease"
+                                    >
                                         <StaticImage src="../../images/cit_logo_transparent.png" alt="Creative IT Institute" />
                                     </div> 
                                 </div>
-                                <div class="col-md-6 copy_text_sm_last">
+                                <div class="col-md-6 copy_text_sm_last"
+                                data-sal="slide-up"
+                                data-sal-delay="200"
+                                data-sal-duration="800"
+                                data-sal-easing="ease"
+                                >
                                     <div class="copy_text">
                                         <p dangerouslySetInnerHTML={{ __html: footerData.crbThemeOptions.citCopyrightText ? 'Copyright &copy; '+ footerData.crbThemeOptions.citCopyrightText + `. All right reserved | <a href="/sitemap">Sitemap</a>` : 'Creative IT Institute' }} />
                                     </div>
                                 </div>
                                 <div class="col-md-3 col-sm-6">
-                                    <div class="copy_social_link">
+                                    <div class="copy_social_link"
+                                    data-sal="slide-right"
+                                    data-sal-delay="300"
+                                    data-sal-duration="800"
+                                    data-sal-easing="ease"
+                                    >
                                         {footerData.crbThemeOptions.citSmediaFb &&
                                             <Link to={footerData.crbThemeOptions.citSmediaFb}><FontAwesomeIcon icon={faFacebookF} /></Link>
                                         }

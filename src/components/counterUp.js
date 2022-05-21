@@ -12,7 +12,12 @@ const CounterUp = ()=>{
     const stats = statsData.allWpSection.nodes[0];
 
     return(
-        <section id="couter_up">
+        <section id="couter_up"
+        data-sal="slide-up"
+        data-sal-delay="300"
+        data-sal-duration="1000"
+        data-sal-easing="ease" 
+        >
             <div class="container">
                 <div class="row">
                     {

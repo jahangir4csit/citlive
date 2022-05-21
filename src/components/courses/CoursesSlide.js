@@ -102,21 +102,14 @@ const settingsCourseItem = {
         <section id="courseslide">
             <div class="container 
             populer_courses" 
-            style={{ background: data.noBg ? 'transparent' : '' }}
-            // data-sal="fade" 
-            // data-sal-delay="500"
-            // data-sal-duration="800"
-            // data-sal-easing="ease"
-            >
+            style={{ background: data.noBg ? 'transparent' : '' }} >
                 <div class="row">
                     <CourseSlideDesc 
                     secHeading={data.secHeading} 
                     secDesc={data.secDesc} 
                     />
                     <div class="col-12">
-                        <div class="course_mix_btn"
-
-                        >
+                        <div class="course_mix_btn">
                             <Slider {...settings}
                                 asNavFor={nav1}
                                 ref={(slider2) => setNav2(slider2)}
@@ -155,7 +148,7 @@ const settingsCourseItem = {
                                        {courseCatitem.courses.nodes.map(
                                           (courseItem, index)=>(
                                          
-                                            <CourseItemSlider singleItem={courseItem} />
+                                            <CourseItemSlider singleItem={courseItem} key={index} />
 
                                               )
                                             )} 

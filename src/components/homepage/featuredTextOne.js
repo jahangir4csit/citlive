@@ -13,7 +13,12 @@ const FeaturedTextOne = ()=>{
         <div class="container practical_project">
             <div class="row align-items-center">
                 <div class="col-lg-5 col-md-6">
-                    <div class="practical_project_img">
+                    <div class="practical_project_img"
+                    data-sal="slide-left"
+                    data-sal-delay="500"
+                    data-sal-duration="900"
+                    data-sal-easing="ease"
+                    >
                         <img class="img-fluid w-100" 
                         src={ftOne.featuredImage.node.sourceUrl} 
                         alt={ftOne.featuredImage.node.altText ? ftOne.featuredImage.node.altText : 'Creative IT Institute'} />
@@ -23,7 +28,12 @@ const FeaturedTextOne = ()=>{
                     </div>
                 </div>
                 <div class="col-lg-6 offset-lg-1 col-md-6">
-                    <div class="practical_project_text">
+                    <div class="practical_project_text"
+                    data-sal="slide-right"
+                    data-sal-delay="500"
+                    data-sal-duration="800"
+                    data-sal-easing="ease"
+                    >
                         <h2 dangerouslySetInnerHTML={{ __html: ftOne.title }} />
                         <div dangerouslySetInnerHTML={{ __html: ftOne.citFeaturedTextDesc }} />
                     </div>
