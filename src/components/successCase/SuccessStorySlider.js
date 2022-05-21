@@ -11,10 +11,10 @@ export default function SuccessStorySlider(data){
 
     const settingsSuccessSlider = {
         className: "pg_succsess_img_slider",
-        autoplay:true,
+        autoplay:false,
         slidesToShow:1,
         slidesToScroll:1,
-        arrows:false,
+        arrows:true,
         dots:true,
         infinite: true,
         speed: 500,

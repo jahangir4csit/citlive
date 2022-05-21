@@ -10,8 +10,7 @@ export default function CourseItemSlider(data){
 
       return (
 
-        <div>
-            <div class="course_slider_item">
+        <Link className="course_slider_item" to={`/courses/${courseItem.slug}`} >
                 <div class="course_single_item">
                     <div class="course_image">
                       {courseItem.featuredImage !== null ?
@@ -40,8 +39,7 @@ export default function CourseItemSlider(data){
                         </p>
                     </div>
                 </div>
-            </div>
-          </div> 
+            </Link>
 
       );
   }
