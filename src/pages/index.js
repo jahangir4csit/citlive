@@ -36,12 +36,14 @@ export default function HomePage({data}){
     Graphic Design, Web Software, Digital Marketing, Networking, Film Media,
     Robotics Automation Training etc affordable price. Call +880 162 4666000"
        />
-      <HomeBanner />
-      <DepartmentSlider courseCatInfo={courseData} />
+      <HomeBanner/>
+      <DepartmentSlider 
+      courseCatInfo={courseData} 
+      />
       <CourseSlide 
       secHeading={homeData.homeFavouriteCourseSecHeading} 
       secDesc={homeData.homeFavouriteCourseSecDesc} 
-      coursSlide={courseData} 
+      coursSlide={courseData}
       />
       <CitInfoSlider />
       <StudentSuccess 

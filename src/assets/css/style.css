@@ -114,7 +114,10 @@ div.success_menu ul.common_slider_class li {
   text-align: left;
   margin-right: 0;
 }
-
+/*===========Brand Style================*/
+.cit_radius{
+  border-radius: 24px;
+}
 /*===========Spacing================*/
 /* **** Padding Spacing **** */
 .pb-6{

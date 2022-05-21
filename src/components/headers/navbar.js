@@ -29,19 +29,37 @@ const MainNav = ()=>{
         <Fragment>
             <Navbar expand="lg" className={'d-none d-lg-block ' + (scroll ? "nav_sticky" : "")} id="navbar">
                 <Container>
-                    <Navbar.Brand href="/">
+                    <Navbar.Brand href="/"
+                    data-sal="zoom-in"
+                    data-sal-delay="300"
+                    data-sal-duration="800"
+                    data-sal-easing="ease"
+                    >
                         <img src={Logo} alt="Logo" />
                     </Navbar.Brand>
                     <Navbar.Collapse>
                         <Nav className="navbar-nav ms-auto mb-2 mb-lg-0 main_menu" as="ul">
                             {menuItem.map(
                                 menu=>                         
-                                <Nav.Item as="li">
+                                <Nav.Item as="li"
+                                data-sal="slide-right"
+                                data-sal-delay="300"
+                                data-sal-duration="800"
+                                data-sal-easing="ease"
+                                >
                                     <Nav.Link href={menu.url}>{menu.label}</Nav.Link>
                                 </Nav.Item>
                             )}
                             <Nav.Item class="navbar_btn">
-                                <Link to="/our-courses"><img src={BookButton} alt="icon" /><span style={{ marginRight: '0.5rem' }} >ব্রাউজ কোর্স </span><FontAwesomeIcon icon={faAngleDown} /></Link>
+                                <Link to="/our-courses"
+                                data-sal="flip-up"
+                                data-sal-delay="300"
+                                data-sal-duration="800"
+                                data-sal-easing="ease"
+                                >
+                                <img src={BookButton} alt="icon" />
+                                <span style={{ marginRight: '0.5rem' }} >ব্রাউজ কোর্স </span>
+                                <FontAwesomeIcon icon={faAngleDown} /></Link>
                             </Nav.Item>
                         </Nav>
                     </Navbar.Collapse>

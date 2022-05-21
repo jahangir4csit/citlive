@@ -65,7 +65,12 @@ export default function CitInfoSlider(){
       };
 
       return (
-        <section id="info">
+        <section id="info"
+        data-sal="slide-up"
+        data-sal-delay="300"
+        data-sal-duration="1000"
+        data-sal-easing="ease" 
+        >
             <div class="container">
                 <div class="row">
                     <div class="col-12 d-none d-sm-block">

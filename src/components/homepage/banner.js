@@ -40,26 +40,54 @@ const HomeBanner = ()=>{
             <div class="row align-items-center">
                 <div class="col-lg-5">
                     <div class="banner_text">
-                        <h5><span><img src={check} alt="icon" /></span>{banner.homeBannerData.homeBannerSubTitle}
+                        <h5
+                        data-sal="slide-left"
+                        data-sal-delay="200"
+                        data-sal-duration="700"
+                        data-sal-easing="ease"
+                        ><span><img src={check} alt="icon" /></span>
+                        {banner.homeBannerData.homeBannerSubTitle}
                         </h5>
                         <img src={Dot1} alt="victor_dot" className="dot_shape_banner" />
-                        <h1 dangerouslySetInnerHTML={{ __html: banner.homeBannerData.homeBannerTitle }} />
+                        <h1 dangerouslySetInnerHTML={{ __html: banner.homeBannerData.homeBannerTitle }} 
+                        data-sal="zoom-in"
+                        data-sal-delay="200"
+                        data-sal-duration="700"
+                        data-sal-easing="ease"
+                        />
                         <p dangerouslySetInnerHTML={{ __html: banner.homeBannerData.bannerShortDesc }} />
 
-                        <Link to="/our-courses" class="browse_btn">
+                        <Link to="/our-courses" 
+                        class="browse_btn"
+                        data-sal="slide-left"
+                        data-sal-delay="300"
+                        data-sal-duration="800"
+                        data-sal-easing="ease"
+                        >
                             <span>
                                 <img src={buttonBook} alt="icon" />
                             </span>
                             ব্রাউজ কোর্স
                         </Link>
-                        <Link to="/our-courses"  class="d-inline-block d-sm-none">
+                        <Link to="/our-courses"  
+                        class="d-inline-block d-sm-none"
+                        data-sal="slide-left"
+                        data-sal-delay="300"
+                        data-sal-duration="800"
+                        data-sal-easing="ease"
+                        >
                             <span>
                                 <img src={buttonBook} alt="icon" />
                             </span>
                             ব্রাউজ কোর্স 
                             <span class="ms-2 angle"><i class="fa fa-angle-down"></i></span>
                         </Link>
-                        <Link class="join_btn" to="/free-seminer-schedule">
+                        <Link class="join_btn" to="/free-seminer-schedule"
+                        data-sal="slide-right"
+                        data-sal-delay="300"
+                        data-sal-duration="800"
+                        data-sal-easing="ease"
+                        >
                             <span>
                                 <img src={buttonBook} alt="icon" />
                             </span>
@@ -75,7 +103,15 @@ const HomeBanner = ()=>{
                 </div>
                 <div class="col-lg-7">
                     <div class="banner_img">
-                        <img class="img-fluid homebanner-thumb" src={banner.featuredImage.node.sourceUrl} alt="Home Banner" />
+                        <img 
+                        class="img-fluid homebanner-thumb" 
+                        src={banner.featuredImage.node.sourceUrl} 
+                        alt="Home Banner" 
+                        data-sal="zoom-in"
+                        data-sal-delay="200"
+                        data-sal-duration="700"
+                        data-sal-easing="ease"
+                        />
                         <div class="banner_img_overly">
                             {banner.homeBannerData.videoId !=null &&
                             <div class="overly_icon">

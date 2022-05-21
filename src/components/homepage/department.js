@@ -74,7 +74,12 @@ export default function  DepartmentSlider(data){
 
       return (
         <section id="course_department">
-            <div class="container">
+            <div class="container"
+                    data-sal="slide-up"
+                    data-sal-delay="500"
+                    data-sal-duration="800"
+                    data-sal-easing="ease"
+            >
 
                 <Slider {...settings}>
                     {courseCat.map(

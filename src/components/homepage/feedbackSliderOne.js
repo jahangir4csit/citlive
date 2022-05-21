@@ -36,7 +36,7 @@ export default function FeedbackSliderOne(data){
 
     const settings = {
     className: "feedback_1_slider",
-    autoplay:false,
+    autoplay:true,
     slidesToShow:2,
     slidesToScroll:1,
     arrows:true,

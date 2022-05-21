@@ -33,7 +33,7 @@ export default class FeedbackSliderOne extends Component {
     render() {
         const settings = {
         className: "feedback_2_slider",
-        autoplay:false,
+        autoplay:true,
         slidesToShow:2,
         slidesToScroll:1,
         arrows:true,

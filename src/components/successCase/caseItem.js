@@ -8,7 +8,12 @@ export default function CaseItem(data){
 
     return(        
         <div class="col-md-6">
-            <div class="success_item" style={{ marginBottom: mb ? '30px' : '0' }}>
+            <div class="success_item" style={{ marginBottom: mb ? '30px' : '0' }}
+            data-sal="slide-right"
+            data-sal-delay="300"
+            data-sal-duration="800"
+            data-sal-easing="ease" 
+            >
                 {/* {caseData.featuredImage && caseData.successStoryLink ? */}
                 {caseData.successStoryLink ?
                 <ModalVid videoData={caseData} />

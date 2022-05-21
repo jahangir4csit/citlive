@@ -13,12 +13,13 @@ const StudentFeedback = (data)=>{
     const fbReviews = data.data.crbThemeOptions.crbFacebookReviews;
     const googleReviewsCount = data.data.crbThemeOptions.citReviewsGoogle;
     const googleReviews = data.data.crbThemeOptions.crbGooogleReviews;
-    console.log(fbReviews, 'fb reviews');
 
     return(
         <section id="student_feedback">
             <div class="container">
-                <FeedbackHeading secHeading={data.secHeading} secDesc={data.secDesc} />
+                <FeedbackHeading 
+                secHeading={data.secHeading} 
+                secDesc={data.secDesc} />
                 <div class="col-12">
                     {fbReviews.length > 0 &&
                     <FeedbackSliderOne fbreviews={fbReviews} />
