@@ -1937,7 +1937,10 @@ del {
   -ms-transition: all linear .3s;
   -o-transition: all linear .3s;
 }
-
+.seminar_content ul li .text_main .join_btn a:hover{
+  background-color:#CF0000;
+  color: #fff;
+}
 .seminar_content .seminar_btn {
   padding-top: 22px;
 }
@@ -1959,6 +1962,11 @@ del {
   text-align: center;
   letter-spacing: 0.2px;
   padding: 10px 18px;
+}
+.seminar_content .seminar_btn a:hover{
+  border: 1px solid #FF1E1E;
+  background: transparent;
+  color: #FF1E1E;
 }
 
 .free_seminar_img {
