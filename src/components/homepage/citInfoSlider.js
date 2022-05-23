@@ -7,10 +7,9 @@ import {useJobPlacementStats } from '../hooks/useJobPlacementStats'
 function SampleNextArrow(props) {
   const { style, onClick } = props;
   return (
-      <div className="nextarrow">
+      <div className="nextarrow" onClick={onClick}>
           <FontAwesomeIcon icon={faChevronRight}
               style={{ ...style, fontSize: "14px", display: "inline" }}
-              onClick={onClick}
           />
       </div>
   );
@@ -19,10 +18,9 @@ function SampleNextArrow(props) {
 function SamplePrevArrow(props) {
   const { className, style, onClick } = props;
   return (
-      <div className="prevarrow">
+      <div className="prevarrow" onClick={onClick}>
           <FontAwesomeIcon icon={faChevronLeft}
               style={{ ...style, fontSize: "14px", display: "inline" }}
-              onClick={onClick}
           />
       </div>
   );

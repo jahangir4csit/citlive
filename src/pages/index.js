@@ -1,5 +1,6 @@
 import { graphql } from "gatsby"
 import * as React from "react"
+import LazyLoad from 'react-lazyload';
 import BlogSlider from "../components/blog/blogSlider"
 import CounterUp from "../components/counterUp"
 import AdmissionCourses from "../components/courses/admissionCourses"
@@ -61,7 +62,9 @@ export default function HomePage({data}){
       secDesc={homeData.homeCommentsSecDesc}
       data={reviewsData}
       />
-      <VirtualTour vData={vitrualTour} />
+      <LazyLoad once>
+        <VirtualTour vData={vitrualTour} />
+      </LazyLoad>
       <AdmissionCourses 
       secHeading={homeData.homeAdmissionSecHeading} 
       secDesc={homeData.homeAdmissionSecDesc}

@@ -3,7 +3,7 @@ import React from 'react';
 import { client } from './src/context/ApolloContext';
 
 import {
-  ApolloProvider,
+  ApolloProvider
 } from "@apollo/client";
 
 /* ** Importing style *** */

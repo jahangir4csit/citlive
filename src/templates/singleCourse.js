@@ -201,13 +201,13 @@ export default function SingleCourse({data}){
                                 <div class="pgc_curriculum_header d-flex align-items-center justify-content-between">
                                     <h3>কোর্স কারিকুলাম</h3>
                                     <Nav variant="pills" defaultActiveKey={post.crmModuleEntry[0].crm_module_entry_title.split(' ').join('-')}>
-                                        {post.crmModuleEntry.length > 1 ? 
+                                        {post.crmModuleEntry.length > 1 && 
                                         post.crmModuleEntry.map(
                                             modulesNav =>
                                         <Nav.Item className='navbar_btn'>
                                             <Nav.Link eventKey={modulesNav.crm_module_entry_title.split(' ').join('-')} className=''>{modulesNav.crm_module_entry_title}</Nav.Link>
                                         </Nav.Item>
-                                        ) : ''}
+                                        )}
                                     </Nav>
                                 </div>
                                 <Tab.Content>
@@ -218,7 +218,7 @@ export default function SingleCourse({data}){
                                             {moduleContent.crm_module_meta.map(
                                                 module=>
                                             <li>
-                                                <h4>{module.crm_module_opt_title} <span>{module.crm_module_opt_duration}</span></h4>
+                                                {/* {module.crm_module_opt_title && <h4>{module.crm_module_opt_title} <span>{module.crm_module_opt_duration}</span></h4>} */}
                                                 <div class="row">
                                                     {module.crm_module_items.map(
                                                         moduleItems=>

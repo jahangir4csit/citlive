@@ -35,33 +35,44 @@ export default function DepartmentGrid(data){
         <StaticQuery
             query={graphql`
                 {
-                    allWpCourseCategory {
-                    nodes {
-                        name
-                        slug
-                        link
-                        termTaxonomyId
-                        categoryThumb {
-                        categoryThumbnail {
-                            sourceUrl
+                    allWpCourseCategory(skip: 1) {
+                        nodes {
+                          name
+                          slug
+                          link
+                          termTaxonomyId
+                          categoryThumb {
+                            categoryThumbnail {
+                              sourceUrl
+                            }
+                          }
                         }
-                        }
-                    }
-                    }
+                      }
                 }
             `}
             render={catData => (
                 
                 <section id="training_department" style={{ marginTop: secMarginTop, marginBottom: secMarginBottom}}>
                     <div class="container">
-                        {title ? <h2>{title}</h2> : ''}
+                        {title ? <h2
+                        data-sal="slide-left"
+                        data-sal-delay="300"
+                        data-sal-duration="800"
+                        data-sal-easing="ease"
+                        >{title}</h2> : ''}
 
                         <div class="training_department_main">
                             {catData.allWpCourseCategory.nodes.map(
-                                 item=>(
+                                 (item, index)=>(
 
-                                <Link to={`https://preview-cit.gtsb.io/course-cat/`+item.slug} style={boxShadow ? styles.boxStyle.a : styles.boxStyle.none}>
-                                    <div className="training_department_item" style={boxShadow ? styles.boxStyle.shadow : styles.boxStyle.none}>
+                                <Link to={`https://preview-cit.gtsb.io/course-cat/`+item.slug} style={boxShadow ? styles.boxStyle.a : styles.boxStyle.none}
+                                data-sal="slide-left"
+                                data-sal-delay={index*=300}
+                                data-sal-duration="900"
+                                data-sal-easing="ease"
+                                >
+                                    <div className="training_department_item" 
+                                    style={boxShadow ? styles.boxStyle.shadow : styles.boxStyle.none}>
                                         <div class="couse_icon">
                                             <img src={item.categoryThumb.categoryThumbnail.sourceUrl ? item.categoryThumb.categoryThumbnail.sourceUrl : ''} 
                                                 alt={item.name} />

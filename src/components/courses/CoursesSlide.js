@@ -8,10 +8,9 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 function SampleNextArrow(props) {
   const { style, onClick } = props;
   return (
-      <div className="nextarrow">
+      <div className="nextarrow" onClick={onClick}>
           <FontAwesomeIcon icon={faChevronRight}
               style={{ ...style, fontSize: "14px", display: "inline" }}
-              onClick={onClick}
           />
       </div>
   );
@@ -20,10 +19,9 @@ function SampleNextArrow(props) {
 function SamplePrevArrow(props) {
   const { className, style, onClick } = props;
   return (
-      <div className="prevarrow">
+      <div className="prevarrow" onClick={onClick}>
           <FontAwesomeIcon icon={faChevronLeft}
               style={{ ...style, fontSize: "14px", display: "inline" }}
-              onClick={onClick}
           />
       </div>
   );
@@ -73,18 +71,16 @@ const settingsCourseItem = {
       {
         breakpoint: 576,
         settings: {
-          arrows: false,
+          arrows: true,
           centerMode: true,
-          centerPadding: '120px',
           slidesToShow: 1
         }
       },
       {
         breakpoint: 415,
         settings: {
-          arrows: false,
+          arrows: true,
           centerMode: true,
-          centerPadding: '60px',
           slidesToShow: 1
         }
       }
@@ -92,9 +88,40 @@ const settingsCourseItem = {
 };
     const settings = {
         arrows: false,
+        slidesToShow: 5,
+        nextArrow: <SampleNextArrow />,
+        prevArrow: <SamplePrevArrow />,
+        responsive: [
+          {
+            breakpoint: 992,
+            settings: {
+              arrows: false,
+              centerMode: true,
+              centerPadding: '50px',
+              slidesToShow: 2
+            }
+          },
+          {
+            breakpoint: 576,
+            settings: {
+              arrows: true,
+              centerMode: true,
+              slidesToShow: 1
+            }
+          },
+          {
+            breakpoint: 415,
+            settings: {
+              arrows: true,
+              centerMode: true,
+              slidesToShow: 1
+            }
+          }
+      ]
+
     };
     const settingsCategoryBody = {
-        ...settings,
+        //...settings,
         className: "course_body_slider",
     };
 
@@ -113,7 +140,7 @@ const settingsCourseItem = {
                             <Slider {...settings}
                                 asNavFor={nav1}
                                 ref={(slider2) => setNav2(slider2)}
-                                slidesToShow={5}
+                                // slidesToShow={5}
                                 slidesToScroll= {1}
                                 swipeToSlide={true}
                                 focusOnSelect={true}
@@ -123,10 +150,10 @@ const settingsCourseItem = {
                             (item, index)=>(
                               
                                 <button class="course_single_btn"
-                                data-sal="slide-left"
-                                data-sal-delay={index *= 300}
-                                data-sal-duration="800"
-                                data-sal-easing="ease"
+                                // data-sal="slide-left"
+                                // data-sal-delay={index *= 300}
+                                // data-sal-duration="800"
+                                // data-sal-easing="ease"
                                 ><span>{item.name}</span></button>
                             )
                             )}

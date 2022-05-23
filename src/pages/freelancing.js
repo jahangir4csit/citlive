@@ -1,5 +1,6 @@
 import React from "react"
 import { graphql } from "gatsby"
+import LazyLoad from 'react-lazyload';
 import Seo from "../components/seo"
 import Layout from "../components/layout"
 import PageDesc from '../components/pageDesc'
@@ -39,13 +40,17 @@ export default function Freelancing({data}) {
         {forWhomesData.length > 0 &&
         <FrForWhome data={forWhomesData} />
         }
-        <CITinitiatives marginBottom data={initiativeData} title="ফ্রিল্যান্সিং নিয়ে আমাদের অসাধারণ কিছু উদ্যোগ" />
+        <LazyLoad once>
+          <CITinitiatives marginBottom data={initiativeData} title="ফ্রিল্যান্সিং নিয়ে আমাদের অসাধারণ কিছু উদ্যোগ" />
+        </LazyLoad>
         
         <JpDepartmentGrid title={pageData.jobDeptTitle} data={pageData.citJpDepartment} />
         {marketPlaces.length > 0 &&
           <FrJobMarkets data={marketPlaces}/>
         }
-        <PhotoWall data={photoWall} />
+        <LazyLoad once>
+          <PhotoWall data={photoWall} />
+        </LazyLoad>
         <JpSuccessStories data={successStories} secHeading={pageData.jpSuccessCaseTitle} />
       </Layout>
     )

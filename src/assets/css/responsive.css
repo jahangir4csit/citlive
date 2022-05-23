@@ -3004,27 +3004,28 @@
 		line-height: 20px;
 	}
 
-	.topPrevarrow.slick-arrow {
-		left: -3px;
+	.slick-slider .prevarrow {
+		left: 0px;
 		width: 40px;
 		height: 40px;
-		line-height: 40px;
+		line-height: 36px;
 		color: rgba(0, 0, 0, 0.3);
 		font-size: 18px;
 	}
 
-	.topNextarrow.slick-arrow {
-		right: -3px;
+	.slick-slider .nextarrow {
+		right: 0px;
 		width: 40px;
 		height: 40px;
-		line-height: 40px;
+		line-height: 36px;
 		color: rgba(0, 0, 0, 0.3);
 		font-size: 18px;
 	}
 
-	.topPrevarrow.slick-arrow:hover,
-	.topNextarrow.slick-arrow:hover {
-		color: red;
+	.slick-slider .prevarrow:hover,
+	.slick-slider .nextarrow:hover {
+		color: #fff;
+		background-color: #FF1E1E;
 	}
 
 	/* =================================================
@@ -3085,7 +3086,7 @@
 	}
 	.course_mix_btn button {
 		font-size: 12px;
-		text-align: left;
+		text-align: center;
 	}
 	.course_mix_btn button span {
 		padding-top: 6px;
@@ -3101,7 +3102,7 @@
 				Info Part Start
 	================================================= */
 	#info {
-		margin-top: 80px;
+		/* margin-top: 80px; */
 	}
 
 	.counte_item {
@@ -3126,6 +3127,9 @@
 	================================================= */
 	#student_success {
 		padding-bottom: 4px;
+	}
+	.success_item{
+		margin-bottom: 30px!important;
 	}
 
 	.student_story_item {

@@ -63,7 +63,7 @@ export default function FreeSeminar({data}){
                                         {seminar.seminar_meta.seminarTime.timeS ? seminar.seminar_meta.seminarTime.timeS :'00'} টা</p>
                                       </div>
                                       <div class="join_btn">
-                                          <Link to="/register_for_free_seminar">জয়েন</Link>
+                                          <Link to="/register-for-free-seminar">জয়েন</Link>
                                       </div>
                                   </div>
                                 </li>

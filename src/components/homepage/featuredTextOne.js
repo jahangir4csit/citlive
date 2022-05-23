@@ -14,7 +14,7 @@ const FeaturedTextOne = ()=>{
             <div class="row align-items-center">
                 <div class="col-lg-5 col-md-6">
                     <div class="practical_project_img"
-                    data-sal="slide-left"
+                    data-sal="slide-down"
                     data-sal-delay="500"
                     data-sal-duration="900"
                     data-sal-easing="ease"
@@ -29,7 +29,7 @@ const FeaturedTextOne = ()=>{
                 </div>
                 <div class="col-lg-6 offset-lg-1 col-md-6">
                     <div class="practical_project_text"
-                    data-sal="slide-right"
+                    data-sal="slide-up"
                     data-sal-delay="500"
                     data-sal-duration="800"
                     data-sal-easing="ease"
