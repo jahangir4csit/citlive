@@ -12,13 +12,23 @@ const MgtBrief = (data)=>{
             <div class="container">
                 <div class="row align-items-center g-5">
                     <div class="col-md-6">
-                        <div class="ceo_StaticImage">
+                        <div class="ceo_StaticImage"
+                        data-sal="slide-left"
+                        data-sal-delay="300"
+                        data-sal-duration="1000"
+                        data-sal-easing="ease" 
+                        >
                             {mgtBrief.photo !==null ? 
                             <img class="img-fluid w-100" src={mgtBrief.photo.sourceUrl} alt={mgtBrief.photo.altText ? mgtBrief.photo.altText : 'CEO|Creative IT Institute'} />
                             : ''}
                         </div>
                     </div>
-                    <div class="col-md-6">
+                    <div class="col-md-6"
+                    data-sal="slide-right"
+                    data-sal-delay="300"
+                    data-sal-duration="1000"
+                    data-sal-easing="ease" 
+                    >
                         <div class="ceo_text">
                             <h3>{mgtBrief.name}</h3>
                             <h4>{mgtBrief.designation}</h4>

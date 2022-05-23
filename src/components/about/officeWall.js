@@ -7,10 +7,9 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 function SampleNextArrow(props) {
     const { style, onClick } = props;
     return (
-        <div className="nextarrow">
+        <div className="nextarrow" onClick={onClick}>
             <FontAwesomeIcon icon={faChevronRight}
                 style={{ ...style, fontSize: "14px", display: "inline" }}
-                onClick={onClick}
             />
         </div>
     );
@@ -19,10 +18,9 @@ function SampleNextArrow(props) {
   function SamplePrevArrow(props) {
     const { className, style, onClick } = props;
     return (
-        <div className="prevarrow">
+        <div className="prevarrow" onClick={onClick}>
             <FontAwesomeIcon icon={faChevronLeft}
                 style={{ ...style, fontSize: "14px", display: "inline" }}
-                onClick={onClick}
             />
         </div>
     );
@@ -38,7 +36,7 @@ export default function OfficeWall(data){
     const settingsOfficeWallThumb = {
 
         className: "row office_and_traning_slider_for",
-        autoplay:false,
+        autoplay:true,
         slidesToShow:5,
         slidesToScroll:1,
         focusOnSelect:true,
