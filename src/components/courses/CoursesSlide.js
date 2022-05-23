@@ -95,6 +95,7 @@ const settingsCourseItem = {
     };
     const settingsCategoryBody = {
         ...settings,
+        variableWidth: true,
         className: "course_body_slider",
     };
 
