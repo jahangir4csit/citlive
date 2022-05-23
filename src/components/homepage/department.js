@@ -8,10 +8,11 @@ import Slider from "react-slick";
 function SampleNextArrow(props) {
     const { className, style, onClick } = props;
     return (
-        <div  className={className} onClick={onClick}>
-            <FontAwesomeIcon 
-            icon={faChevronRight}
-            style={{ ...style, fontSize: "14px", display: "inline" }} />
+        <div  className={className}>
+            <FontAwesomeIcon icon={faChevronRight}
+                style={{ ...style, fontSize: "14px", display: "inline" }}
+                onClick={onClick}
+            />
         </div>
     );
   }
@@ -19,9 +20,10 @@ function SampleNextArrow(props) {
   function SamplePrevArrow(props) {
     const { className, style, onClick } = props;
     return (
-        <div className={className} onClick={onClick}>
+        <div className={className}>
             <FontAwesomeIcon icon={faChevronLeft}
-            style={{ ...style, fontSize: "14px", display: "inline" }}
+                style={{ ...style, fontSize: "14px", display: "inline" }}
+                onClick={onClick}
             />
         </div>
     );
@@ -72,12 +74,7 @@ export default function  DepartmentSlider(data){
 
       return (
         <section id="course_department">
-            <div class="container"
-                    data-sal="slide-up"
-                    data-sal-delay="500"
-                    data-sal-duration="800"
-                    data-sal-easing="ease"
-            >
+            <div class="container">
 
                 <Slider {...settings}>
                     {courseCat.map(

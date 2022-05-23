@@ -5,7 +5,7 @@ const CitIsoCertified = (data) => {
     const Description = data.desc;
     
     return(
-        <section id="iso" className={`${data.classes ? data.classes : ''}`}>
+        <section id="iso">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-4 col-md-6">

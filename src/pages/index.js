@@ -1,6 +1,5 @@
 import { graphql } from "gatsby"
 import * as React from "react"
-import LazyLoad from 'react-lazyload';
 import BlogSlider from "../components/blog/blogSlider"
 import CounterUp from "../components/counterUp"
 import AdmissionCourses from "../components/courses/admissionCourses"
@@ -31,20 +30,13 @@ export default function HomePage({data}){
 
   return(
     <Layout>
-      <Seo 
-      title="Professional IT Training Institute in Bangladesh - Creative IT"
-      description="Develop your professional personal skills through Creative IT Institute We provide
-    Graphic Design, Web Software, Digital Marketing, Networking, Film Media,
-    Robotics Automation Training etc affordable price. Call +880 162 4666000"
-       />
-      <HomeBanner/>
-      <DepartmentSlider 
-      courseCatInfo={courseData} 
-      />
+      <Seo title="Home" />
+      <HomeBanner />
+      <DepartmentSlider courseCatInfo={courseData} />
       <CourseSlide 
       secHeading={homeData.homeFavouriteCourseSecHeading} 
       secDesc={homeData.homeFavouriteCourseSecDesc} 
-      coursSlide={courseData}
+      coursSlide={courseData} 
       />
       <CitInfoSlider />
       <StudentSuccess 
@@ -62,9 +54,7 @@ export default function HomePage({data}){
       secDesc={homeData.homeCommentsSecDesc}
       data={reviewsData}
       />
-      <LazyLoad once>
-        <VirtualTour vData={vitrualTour} />
-      </LazyLoad>
+      <VirtualTour vData={vitrualTour} />
       <AdmissionCourses 
       secHeading={homeData.homeAdmissionSecHeading} 
       secDesc={homeData.homeAdmissionSecDesc}
@@ -85,10 +75,10 @@ export default function HomePage({data}){
       secDesc={homeData.homePartnersSecDesc}
       partnersData={homeData.citPartners}
       />
-      {/* <BlogSlider 
+      <BlogSlider 
       secHeading={homeData.homeBlogSecHeading} 
       secDesc={homeData.homeBlogSecDesc}
-      /> */}
+      />
     </Layout>
   )
 }

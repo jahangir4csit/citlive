@@ -6,9 +6,10 @@ import Slider from "react-slick";
 function SampleNextArrow(props) {
     const { style, onClick } = props;
     return (
-        <div className="nextarrow" onClick={onClick}>
+        <div className="nextarrow">
             <FontAwesomeIcon icon={faChevronRight}
                 style={{ ...style, fontSize: "14px", display: "inline" }}
+                onClick={onClick}
             />
         </div>
     );
@@ -17,9 +18,10 @@ function SampleNextArrow(props) {
   function SamplePrevArrow(props) {
     const { className, style, onClick } = props;
     return (
-        <div className="prevarrow" onClick={onClick}>
+        <div className="prevarrow">
             <FontAwesomeIcon icon={faChevronLeft}
                 style={{ ...style, fontSize: "14px", display: "inline" }}
+                onClick={onClick}
             />
         </div>
     );
@@ -34,7 +36,7 @@ export default function FeedbackSliderOne(data){
 
     const settings = {
     className: "feedback_1_slider",
-    autoplay:true,
+    autoplay:false,
     slidesToShow:2,
     slidesToScroll:1,
     arrows:true,

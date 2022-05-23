@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: ``,
+    title: `Professional IT Training Institute in Bangladesh - Creative IT`,
     description: `Develop your professional personal skills through Creative IT Institute We provide
     Graphic Design, Web Software, Digital Marketing, Networking, Film Media,
     Robotics Automation Training etc affordable price. Call +880 162 4666000`,
@@ -9,7 +9,7 @@ module.exports = {
   },
   plugins: [
     {
-      resolve: `gatsby-source-wordpress`,  
+      resolve: `gatsby-source-wordpress`,
       options: {
         //url: `https://bangladeshigf.org/cit/graphql`,
         //url: `http://cit.creativejuniors.com/graphql`,
@@ -42,7 +42,7 @@ module.exports = {
         start_url: `/`,
         background_color: `#663399`,
         display: `minimal-ui`,
-        icon: `src/images/index.png`, 
+        icon: `src/images/gatsby-icon.png`, 
       },
     },
     {
@@ -50,8 +50,7 @@ module.exports = {
       options: {
         fonts: [
           `Hind+Siliguri:300,400,500,600,700`, `source sans pro:300,400,500,600,700`,
-          `Roboto:300,400,500,700,900`,
-          // `Open+Sans:300,400,500,600`
+          `Roboto:300,400,500,700,900`
         ],
         display: 'swap'
       }

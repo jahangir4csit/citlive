@@ -1,6 +1,5 @@
 import React from "react"
 import { graphql } from "gatsby"
-import LazyLoad from 'react-lazyload';
 import Seo from "../components/seo"
 import Layout from "../components/layout"
 import AboutDesc from "../components/about/aboutDesc"
@@ -14,7 +13,6 @@ import CITStatFull from "../components/citStatFull"
 import Branch from "../components/about/branch"
 import DepartmentGrid from "../components/departmentGrid"
 import OfficeWall from "../components/about/officeWall"
-
 
 export default function AboutUs({data}) {
 
@@ -34,18 +32,14 @@ export default function AboutUs({data}) {
       title={seo.metaTitle} 
       description={seo.metaDescription} />
       <AboutDesc data={pageData} />
-      <LazyLoad once>
-        <VirtualTour vData={vitrualTour} />
-      </LazyLoad>
+      <VirtualTour vData={vitrualTour} />
       <FeaturedTextTwo />
       <CounterUp />
       <MgtBrief data={mgtData} />
       <CITAchievements data={certified} />
       <CITMisionVision data={statementData} />
       <CITStatFull data={initiatives} />
-      <LazyLoad once>
-        <OfficeWall data={photoWall} />
-      </LazyLoad>
+      <OfficeWall data={photoWall} />
       <Branch data={branchInfo} />
       <DepartmentGrid title="ট্রেইনিং ডিপার্টমেণ্ট" />
     </Layout>

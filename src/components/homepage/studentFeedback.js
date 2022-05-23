@@ -6,7 +6,6 @@ import RecommendsIcon from '../../images/Recommends.png'
 import { faStar } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import googleLogo from '../../images/google_text_icon.png';
-import LazyLoad from 'react-lazyload';
 
 const StudentFeedback = (data)=>{
 
@@ -14,18 +13,15 @@ const StudentFeedback = (data)=>{
     const fbReviews = data.data.crbThemeOptions.crbFacebookReviews;
     const googleReviewsCount = data.data.crbThemeOptions.citReviewsGoogle;
     const googleReviews = data.data.crbThemeOptions.crbGooogleReviews;
+    console.log(fbReviews, 'fb reviews');
 
     return(
         <section id="student_feedback">
             <div class="container">
-                <FeedbackHeading 
-                secHeading={data.secHeading} 
-                secDesc={data.secDesc} />
+                <FeedbackHeading secHeading={data.secHeading} secDesc={data.secDesc} />
                 <div class="col-12">
                     {fbReviews.length > 0 &&
-                    <LazyLoad once>
-                        <FeedbackSliderOne fbreviews={fbReviews} />
-                    </LazyLoad>
+                    <FeedbackSliderOne fbreviews={fbReviews} />
                     }
                 </div>
                 <div class="col-12">
@@ -35,9 +31,7 @@ const StudentFeedback = (data)=>{
                 </div>
                 {googleReviews.length > 0 &&
                 <div class="col-12">
-                    <LazyLoad once>
-                        <FeedbackSliderTwo googlereviews={googleReviews} />
-                    </LazyLoad>
+                    <FeedbackSliderTwo googlereviews={googleReviews} />
                 </div>
                 }
                 {googleReviews.length > 0 &&

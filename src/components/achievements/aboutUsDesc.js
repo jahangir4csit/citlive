@@ -8,12 +8,12 @@ const AboutUsDesc = (data) =>{
         <section id="about_top" className="mt-0">
         <div class="container">
 
-            <div class="row align-items-center">
-                <div className="col-lg-12 facilities_heading">
-                    <h2>{data.title}</h2>
-                </div>
-                <div class="col-lg-7 facilities_desc">
-                    <div className="dtails" dangerouslySetInnerHTML={{ __html: data.desc }} />
+            <div class="row">
+                <div class="col-lg-7">
+                    <div class="facilities_heading  ">
+                        <h2>{data.title}</h2>
+                        <div className="dtails" dangerouslySetInnerHTML={{ __html: data.desc }} />
+                    </div>
                 </div>
                 <div class="col-lg-5">
                     <div class="about_top_img">

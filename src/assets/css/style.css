@@ -114,50 +114,9 @@ div.success_menu ul.common_slider_class li {
   text-align: left;
   margin-right: 0;
 }
-/*===========Brand Style================*/
-.cit_radius{
-  border-radius: 24px;
-}
+
 /*===========Spacing================*/
-/* **** Padding Spacing **** */
-.pb-6{
-  padding-bottom: 60px;
-}
-.pt9{
-  padding-top: 90px!important;
-}
-.py9{
-  padding-top: 90px!important;
-  padding-bottom: 90px!important;
-}
-.pt45{
-  padding-top: 45px!important;
-}
-.pb45{
-  padding-bottom: 45px!important;
-}
-.py45{
-  padding-top: 45px!important;
-  padding-bottom: 45px!important;
-}
-/* **** Margin Spacing **** */
-.mt9{
-  margin-top: 90px!important;
-}
-.my9{
-  margin-top: 90px!important;
-  margin-bottom: 90px!important;
-}
-.mt45{
-  margin-top: 45px!important;
-}
-.mb45{
-  margin-bottom: 45px!important;
-}
-.my45{
-  margin-top: 45px!important;
-  margin-bottom: 45px!important;
-}
+
 
 /*Common Menu Slider End*/
 /*=========All Common Css End=========*/
@@ -262,7 +221,6 @@ div.success_menu ul.common_slider_class li {
 
 .main_menu li.nav-item {
   margin-right: 48px;
-  align-self: center;
 }
 
 .main_menu li.nav-item a.nav-link {
@@ -270,14 +228,9 @@ div.success_menu ul.common_slider_class li {
   font-family: Hind Siliguri;
   font-size: 16px;
   font-weight: 600;
-  line-height: 14px;
+  line-height: 24px;
   letter-spacing: 0.20000000298023224px;
   text-align: center;
-  align-self: center;
-  padding-top: 0;
-  padding-bottom: 0;
-  margin-bottom: 0;
-  margin-top: 0;
 }
 
 .navbar_btn a,.navbar-nav .nav-item:last-child a {
@@ -363,11 +316,6 @@ div.success_menu ul.common_slider_class li {
 .offcanvas-body .main_menu li {
   margin-bottom: 10px;
   margin-right: 0;
-}
-.offcanvas-body .main_menu li a.nav-link{
-  line-height: 24px;
-  padding-top: .5rem;
-  padding-bottom: .5rem;
 }
 
 .btn-close:focus {
@@ -474,9 +422,9 @@ div.success_menu ul.common_slider_class li {
 
 .banner_text h1 {
   font-family: Hind Siliguri;
-  font-size: 42px;
+  font-size: 50px;
   font-weight: 700;
-  line-height: 46px;
+  line-height: 58px;
   letter-spacing: 0.20000000298023224px;
   padding-top: 17px;
   padding-bottom: 18px;
@@ -496,14 +444,14 @@ div.success_menu ul.common_slider_class li {
 
 .banner_text h1 span {
   display: block;
-  font-size: 52px;
+  font-size: 62px;
   background: #ffffff;
   background: -webkit-linear-gradient(15deg, #ff1e1e 35%, #ff8079 100%);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   padding-top: 10px;
-  line-height: 54px;
+  line-height: 64px;
 }
 
 .banner_text > p {
@@ -786,7 +734,7 @@ div.success_menu ul.common_slider_class li {
   text-align: center;
   line-height: 39px;
   position: absolute;
-  left: -32px;
+  left: -12px;
   top: 50%;
   top: 50%;
   transform: translateY(-50%);
@@ -801,7 +749,6 @@ div.success_menu ul.common_slider_class li {
   -o-transition: all linear .3s;
   z-index: 10;
   color: rgba(0, 0, 0, 0.3);
-  border: 1px solid #FF1E1E;
 }
 
 .course_slider_top .slick-next {
@@ -816,8 +763,7 @@ div.success_menu ul.common_slider_class li {
   text-align: center;
   line-height: 39px;
   position: absolute;
-  /* right: -12px; */
-  right: -32px;
+  right: -12px;
   top: 50%;
   top: 50%;
   transform: translateY(-50%);
@@ -832,7 +778,6 @@ div.success_menu ul.common_slider_class li {
   -o-transition: all linear .3s;
   z-index: 10;
   color: rgba(0, 0, 0, 0.3);
-  border: 1px solid #FF1E1E;
 }
 
 .course_slider_top .slick-next:before,
@@ -879,7 +824,7 @@ div.success_menu ul.common_slider_class li {
   padding-top: 46px;
 }
 
-.section_heading p{
+.section_heading p {
   color: #605F62;
   font-family: Ruposhi Bangla Unicode;
   font-size: 18px;
@@ -893,21 +838,7 @@ div.success_menu ul.common_slider_class li {
   text-align: center;
   padding-bottom: 58px;
 }
-.section_heading2 h2{
-  padding-bottom: 20px!important;
-}
-.section_heading2 p{
-  color: #605F62;
-  font-family: Ruposhi Bangla Unicode;
-  font-size: 18px;
-  font-weight: 400;
-  line-height: 28px;
-  letter-spacing: 0.20000000298023224px;
-  padding-bottom: 40px!important;
-}
-.facilities_heading h2{
-  padding-bottom: 20px;
-}
+
 .course_slider_top {
   z-index: 5;
 }
@@ -945,10 +876,10 @@ div.success_menu ul.common_slider_class li {
   color: #CF0000;
   border-bottom: 3px solid #CF0000;
 }
-.course_catagory_item .course_slider_item{
-  margin: 0 8px;
-}
+
 .course_single_item {
+  margin: 0 8px;
+  margin-bottom: 16px;
   position: relative;
   background: #FFFFFF;
   border: 0.5px solid rgba(0, 0, 0, 0.1);
@@ -1027,7 +958,6 @@ div.success_menu ul.common_slider_class li {
 }
 .course_category_slider{
   overflow: hidden;
-  padding: 0 40px;
 }
 .prevarrow {
   width: 39px;
@@ -1039,9 +969,9 @@ div.success_menu ul.common_slider_class li {
   -ms-border-radius: 50%;
   -o-border-radius: 50%;
   text-align: center;
-  line-height: 36px;
+  line-height: 39px;
   position: absolute;
-  left: -30px;
+  left: -10px;
   top: 50%;
   transform: translateY(-50%);
   -webkit-transform: translateY(-50%);
@@ -1070,9 +1000,9 @@ div.success_menu ul.common_slider_class li {
   -ms-border-radius: 50%;
   -o-border-radius: 50%;
   text-align: center;
-  line-height: 36px;
+  line-height: 39px;
   position: absolute;
-  right: -30px;
+  right: -10px;
   top: 50%;
   transform: translateY(-50%);
   -webkit-transform: translateY(-50%);
@@ -1090,25 +1020,15 @@ div.success_menu ul.common_slider_class li {
   z-index: 99999999999999;
   color: rgba(0, 0, 0, 0.3);
 }
-.prevarrow,.nextarrow {
-  border: 1px solid #CF0000;
-}
+
 .prevarrow svg,.nextarrow svg{
   width: 100%!important;
   display: inline-block;
 }
 .prevarrow:hover,
 .nextarrow:hover {
-  /* color: #CF0000; */
+  color: #CF0000;
   cursor: pointer;
-  color: #fff;
-  background-color: #FF1E1E;
-}
-.course_catagory_item .prevarrow{
-  left: 0px;
-}
-.course_catagory_item .nextarrow{
-  right: 0px;
 }
 
 .course_catagory_item.slick-slide {
@@ -1128,7 +1048,7 @@ div.success_menu ul.common_slider_class li {
 
 .story_text_slider {
   position: relative;
-  /* margin-top: 95px; */
+  margin-top: 95px;
 }
 
 .counte_item {
@@ -1726,6 +1646,7 @@ div.success_menu ul.common_slider_class li {
 }
 
 .admission_item.course_single_item {
+  margin-bottom: 44px;
   margin-left: 0;
   margin-right: 0;
   -webkit-transition: all linear .3s;
@@ -2657,7 +2578,7 @@ del {
   letter-spacing: 0.20000000298023224px;
 }
 .copy .copy_text p a{
-  color: #fff;
+  color: violet;
 }
 .copy .copy_social_link {
   text-align: right;
@@ -2678,15 +2599,6 @@ del {
   font-size: 16px;
   background: transparent;
   margin-left: 12px;
-  transition: all linear .3s;
-  -webkit-transition: all linear .3s;
-  -moz-transition: all linear .3s;
-  -ms-transition: all linear .3s;
-  -o-transition: all linear .3s;
-}
-.copy .copy_social_link a:hover{
-  background: rgb(255, 30, 30);
-  border-color: rgb(255, 30, 30);
 }
 
 /* =================================
@@ -2957,7 +2869,7 @@ Course-Landing Left (7 column) Overviwe  Area Start
 
 .pgc_curriculum > ul > li {
   position: relative;
-  /* padding-left: 25px; */
+  padding-left: 25px;
   padding-bottom: 30px;
 }
 
@@ -2972,7 +2884,7 @@ Course-Landing Left (7 column) Overviwe  Area Start
   bottom: 0;
 }
 
-/* .pgc_curriculum > ul > li::before {
+.pgc_curriculum > ul > li::before {
   position: absolute;
   content: '';
   width: 20px;
@@ -2982,7 +2894,7 @@ Course-Landing Left (7 column) Overviwe  Area Start
   left: -10px;
   top: 0;
   bottom: 0;
-} */
+}
 
 .pgc_curriculum > ul > li:last-child::after {
   display: none;
@@ -3005,9 +2917,9 @@ Course-Landing Left (7 column) Overviwe  Area Start
 
 .pgc_inner_text ul li {
   color: #605F62;
-  font-family: 'Roboto', sans-serif;
+  font-family: Ruposhi Bangla Unicode;
   font-size: 16px;
-  font-weight: 500;
+  font-weight: 700;
   letter-spacing: 0.20000000298023224px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -3055,10 +2967,9 @@ Course-Landing Left (7 column) Overviwe  Area Start
 
 .pgc_item .pgcs_text p {
   color: #605F62;
-  /* font-family: Hind Siliguri; */
-  font-family: 'Roboto', sans-serif;
-  font-size: 20px;
-  font-weight: 700;
+  font-family: Hind Siliguri;
+  font-size: 22px;
+  font-weight: 600;
   line-height: 33px;
   letter-spacing: 0.20000000298023224px;
 }
@@ -3204,10 +3115,10 @@ Course-Landing Left (7 column) Overviwe  Area Start
 
 .job_item ul li {
   color: #605F62;
-  font-family: 'Roboto', sans-serif;
-  font-size: 20px;
+  font-family: Ruposhi Bangla Unicode;
+  font-size: 22px;
   font-weight: 700;
-  line-height: 32px;
+  line-height: 33px;
   letter-spacing: 0.20000000298023224px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -4046,10 +3957,6 @@ Our facilities_item Area Start
   line-height: 33px;
   letter-spacing: 0.20000000298023224px;
   padding-bottom: 20px;
-}
-.jobplacement_partner p {
-  font-family: Ruposhi Bangla Unicode;
-  margin-bottom: 15px;
 }
 
 .jobplacement_partner ul {
@@ -5164,10 +5071,11 @@ form.student_form select {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  padding-top: 35px;
 }
 
 #about_top .about_top_img .single_img {
-  margin: 0 40px;
+  margin: 41px;
 }
 
 /*==================================
@@ -5177,7 +5085,7 @@ form.student_form select {
         About Page CEO Part Start
 ================================== */
 #ceo {
-  margin-top: 90px;
+  margin-top: 93px;
 }
 
 #ceo > .container > .row:nth-child(even) {
@@ -5213,9 +5121,7 @@ form.student_form select {
   padding-bottom: 15px;
 }
 
-.ceo_text p,.facilities_desc .dtails,
-.facilities_desc .dtails p
-{
+.ceo_text p {
   color: #605F62;
   font-family: 'Ruposhi Bangla Unicode';
   font-size: 18px;
@@ -5341,10 +5247,7 @@ form.student_form select {
   display: block;
   padding: 10px 0;
 }
-.iso_style2{
-  background-color: #FBFDF2;
-  padding: 90px 0;
-}
+
 /*==================================
         About Page ISO Part Start
 ================================== */
@@ -5512,9 +5415,9 @@ About Page Office and training  Part Start
   margin-top: 14px;
 }
 
-/* .office_and_traning_slider .slick-slide {
+.office_and_traning_slider .slick-slide {
   padding: 0 7px;
-} */
+}
 
 .trainingPrevArrow.slick-arrow {
   position: absolute;
@@ -5565,16 +5468,6 @@ About Page Office and training  Part Start
 /*=======================================
 About Page Office and training  Part End
 ======================================= */
-.office_and_traning_slider_for .prevarrow{
-  left: -20px;
-}
-.office_and_traning_slider_for .nextarrow{
-  right: -20px;
-}
-.traning_slider_item{
-  padding: 0 3px;
-}
-
 /*=======================================
 About Page Branch  Part Start
 ======================================= */
@@ -6366,8 +6259,8 @@ form.student_form .form_heading h3 {
 }
 
 #letest_poet .prevarrow {
-  width: 45px;
-  height: 45px;
+  width: 39px;
+  height: 39px;
   background: #FAF9FD;
   border-radius: 50%;
   -webkit-border-radius: 50%;
@@ -6375,9 +6268,9 @@ form.student_form .form_heading h3 {
   -ms-border-radius: 50%;
   -o-border-radius: 50%;
   text-align: center;
-  line-height: 44px;
+  line-height: 39px;
   position: absolute;
-  left: -30px;
+  left: -20px;
   top: 50%;
   transform: translateY(-50%);
   -webkit-transform: translateY(-50%);
@@ -6395,8 +6288,8 @@ form.student_form .form_heading h3 {
 }
 
 #letest_poet .nextarrow {
-  width: 45px;
-  height: 45px;
+  width: 39px;
+  height: 39px;
   background: #FAF9FD;
   border-radius: 50%;
   -webkit-border-radius: 50%;
@@ -6404,9 +6297,9 @@ form.student_form .form_heading h3 {
   -ms-border-radius: 50%;
   -o-border-radius: 50%;
   text-align: center;
-  line-height: 44px;
+  line-height: 39px;
   position: absolute;
-  right: -30px;
+  right: -12px;
   top: 50%;
   transform: translateY(-50%);
   -webkit-transform: translateY(-50%);

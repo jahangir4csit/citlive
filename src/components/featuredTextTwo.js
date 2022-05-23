@@ -14,42 +14,25 @@ const FeaturedTextTwo = (data)=>{
             <div class="container">
                 <div class="row">
                     <div class="col-lg-6">
-                        <div class="glory_text"
-                        data-sal="slide-left"
-                        data-sal-delay="500"
-                        data-sal-duration="800"
-                        data-sal-easing="ease"
-                        >
+                        <div class="glory_text">
                             <h5 dangerouslySetInnerHTML={{ __html: ftTwo.citFeaturedTextSubheading }} />
                             <h2 dangerouslySetInnerHTML={{ __html: ftTwo.title }} />
                             <div dangerouslySetInnerHTML={{ __html: ftTwo.citFeaturedTextDesc }} />
-                            <div class="glory_btn"
-                            data-sal="flip-right"
-                            data-sal-delay="500"
-                            data-sal-duration="800"
-                            data-sal-easing="ease"
-                            >
+                            <div class="glory_btn">
                                 {aboutBtn ? 
                                     ftTwo.featuredTextBtn.map(
                                         btn=>(
-                                            <Link 
-                                            to={btn.button_url}>{btn.button_title}</Link>
+                                            <Link href={btn.button_url}>{btn.button_title}</Link>
                                         )
                                     )
-                                    :<Link 
-                                    to="/our-courses">ব্রাউজ কোর্স</Link>
+                                    :<Link href="/our-courses">ব্রাউজ কোর্স</Link>
                                 }
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-6">
-                        <div class="glory_img"
-                        data-sal="slide-right"
-                        data-sal-delay="600"
-                        data-sal-duration="1000"
-                        data-sal-easing="ease"
-                        >
-                            <img class="img-fluid cit_radius" src={ftTwo.featuredImage.node.sourceUrl} alt={ftTwo.featuredImage.node.altText ? ftTwo.featuredImage.node.altText : 'Creative IT Institute'} />
+                        <div class="glory_img">
+                            <img class="img-fluid" src={ftTwo.featuredImage.node.sourceUrl} alt={ftTwo.featuredImage.node.altText ? ftTwo.featuredImage.node.altText : 'Creative IT Institute'} />
                         </div>
                     </div>
                 </div>

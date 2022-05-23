@@ -13,12 +13,7 @@ const CITMisionVision = (data) =>{
     const statements = data.data;
     return(
 
-    <section id="mission"
-    data-sal="slide-up"
-    data-sal-delay="300"
-    data-sal-duration="1000"
-    data-sal-easing="ease" 
-    >
+    <section id="mission">
             <div class="container">
                 <Tab.Container id="left-tabs-example" defaultActiveKey={'tab'+statements[0].cit_state_title.split(" ")[0]}>
                     <Row className="align-items-center">
