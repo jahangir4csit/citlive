@@ -3,7 +3,7 @@ import { graphql } from "gatsby"
 import Seo from "../components/seo"
 import Layout from "../components/layout"
 import PageDesc from '../components/pageDesc'
-import FeaturedTextTwo from "../components/featuredTextTwo"
+import FeaturedTextAchv from "../components/achievements/featuredTextAchv"
 import CounterUp2 from "../components/counterUp2"
 import TopRatedFreelancer from '../components/achievements/topRatedFreelancer'
 import AboutUsDesc from '../components/achievements/aboutUsDesc'
@@ -16,6 +16,7 @@ export default function OurAchievements({data}) {
     const pageData = data.allWpPage.nodes[0];
     const seo = pageData.pageMeta;
     const topRatedCase = data.allWpSuccessStories.nodes;
+    const featuredText = pageData.featuredTextAchivements;
     const sectionsData = data.allWpSection.nodes;
     // const initiatives = pageData.initiatives;
     console.log(sectionsData, 'achievements page');
@@ -26,7 +27,7 @@ export default function OurAchievements({data}) {
             title={seo.metaTitle} 
             description={seo.metaDescription} />
             <PageDesc data={pageData} />
-            <FeaturedTextTwo />
+            <FeaturedTextAchv ftData={featuredText} />
             <CounterUp2 boxbg />
             <TopRatedFreelancer cases={topRatedCase} />
             {sectionsData.map(
@@ -48,9 +49,10 @@ export default function OurAchievements({data}) {
                   case "cit_iso_certified": return <CitIsoCertified 
                   title={section.citIsoCertifiedTitle}
                   desc={section.citIsoCertifiedDesc}
-                  image={section.citIsoCertifiedImage} 
+                  image={section.citIsoCertifiedImage}
+                  classes={'iso_style2 mt9 mb45'} 
                   key={index} />
-                  case "cit_initiatives": return <CITinitiatives marginBottom data={section.citInitiatives} key={index} />
+                  case "cit_initiatives": return <CITinitiatives classes={'pt45 pb45'} data={section.citInitiatives} key={index} />
                   default: return ''              
                 }
               }
@@ -70,6 +72,15 @@ export const pageQuery = graphql`
           metaTitle
           metaDescription
         }
+        featuredTextAchivements {
+          title
+          subheading
+          description
+          image {
+            altText
+            sourceUrl
+          }
+        }
       }
     }
     allWpSuccessStories(
@@ -87,7 +98,7 @@ export const pageQuery = graphql`
         }
       }
     }
-    allWpSection(filter: {citShowSection: {value: {in: $in}}}) {
+    allWpSection(sort: {order: DESC, fields: date}, filter: {citShowSection: {value: {in: $in}}}) {
       nodes {
         citAboutDescTitle
         citAboutDescContent

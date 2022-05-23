@@ -9,7 +9,7 @@ const FrForWhome = (data) =>{
             <div class="container">
                 <div class="row">
                     <div class="pgc_for_whom">
-                <h3>এই কোর্স যাদের জন্য</h3>
+                <h3>ফ্রিল্যান্সিং যাদের জন্য</h3>
                     <div class="row">
                         {forWhomes.map(
                                     whome=>(

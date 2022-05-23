@@ -41,7 +41,8 @@ export default function FacilityItemTwo(data){
                 </div>
                 <div class="col-md-6">
                     <div class="jobplacement_partner">
-                        <h3>ফ্রিল্যান্সং মার্কেটপ্লেস</h3>
+                        <h3>ফ্রিল্যান্স মার্কেটপ্লেস</h3>
+                        <p>ফ্রিল্যান্স কাজের জন্য রয়েছে বিভিন্ন মার্কেটপ্লেস। আন্তর্জাতিক এসব মার্কেটপ্লেসের প্রত্যেকটি ভিন্ন ভিন্ন নিয়ম মেনে চললেও কাজের সুবিধা রয়েছে সবখানেই। </p>
                         <ul>
                             {facilityDetails.cit_facelity_js_items.length > 0 &&
                                 facilityDetails.cit_facelity_js_items.slice(0, 11).map(
