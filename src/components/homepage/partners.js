@@ -16,10 +16,20 @@ const Partners = (data)=>{
                 <div class="row">
                     <div class="col-12">
                         <div class="company_heading">
-                            <h2 dangerouslySetInnerHTML={{ __html: data.secHeading ? data.secHeading : 'আমরা ৭০০+ কোম্পানি ও সংস্থার সাথে কানেক্টেড' }} />
+                            <h2 dangerouslySetInnerHTML={{ __html: data.secHeading ? data.secHeading : 'আমরা ৭০০+ কোম্পানি ও সংস্থার সাথে কানেক্টেড' }} 
+                            data-sal="slide-left"
+                            data-sal-delay="200"
+                            data-sal-duration="800"
+                            data-sal-easing="ease"
+                            />
                         </div>
                     </div>
-                    <div class="col-12">
+                    <div class="col-12"
+                    data-sal="slide-up"
+                    data-sal-delay="300"
+                    data-sal-duration="900"
+                    data-sal-easing="ease"
+                    >
                         <TabContainer id="partners" defaultActiveKey="tab_0">
                             <div className='company_menu'>
                                 <Nav variant="tabs" className="dflex" as="ul">

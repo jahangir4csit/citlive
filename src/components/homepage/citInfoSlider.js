@@ -7,10 +7,9 @@ import {useJobPlacementStats } from '../hooks/useJobPlacementStats'
 function SampleNextArrow(props) {
   const { style, onClick } = props;
   return (
-      <div className="nextarrow">
+      <div className="nextarrow" onClick={onClick}>
           <FontAwesomeIcon icon={faChevronRight}
               style={{ ...style, fontSize: "14px", display: "inline" }}
-              onClick={onClick}
           />
       </div>
   );
@@ -19,10 +18,9 @@ function SampleNextArrow(props) {
 function SamplePrevArrow(props) {
   const { className, style, onClick } = props;
   return (
-      <div className="prevarrow">
+      <div className="prevarrow" onClick={onClick}>
           <FontAwesomeIcon icon={faChevronLeft}
               style={{ ...style, fontSize: "14px", display: "inline" }}
-              onClick={onClick}
           />
       </div>
   );
@@ -65,7 +63,12 @@ export default function CitInfoSlider(){
       };
 
       return (
-        <section id="info">
+        <section id="info"
+        data-sal="slide-up"
+        data-sal-delay="300"
+        data-sal-duration="1000"
+        data-sal-easing="ease" 
+        >
             <div class="container">
                 <div class="row">
                     <div class="col-12 d-none d-sm-block">

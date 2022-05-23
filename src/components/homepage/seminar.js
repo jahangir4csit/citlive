@@ -11,7 +11,12 @@ const Seminar = (data)=>{
             <div class="container seminar">
                 <div class="row align-items-center">
                     <div class="col-lg-6">
-                        <div class="seminar_content">
+                        <div class="seminar_content"
+                        data-sal="slide-left"
+                        data-sal-delay="500"
+                        data-sal-duration="800"
+                        data-sal-easing="ease"
+                        >
                             <h2 dangerouslySetInnerHTML={{ __html: data.secHeading ? data.secHeading : 'জয়েন ফ্রি সেমিনার' }} />
                             <p dangerouslySetInnerHTML={{ __html: data.secDesc }} />
                             <h3>আপকামিং ফ্রি সেমিনার</h3>
@@ -32,7 +37,7 @@ const Seminar = (data)=>{
                                         {seminar.seminar_meta.seminarTime.timeS ? seminar.seminar_meta.seminarTime.timeS :'00'} টা</p>
                                       </div>
                                       <div class="join_btn">
-                                          <Link href="/register_for_free_seminar">জয়েন</Link>
+                                          <Link to="/register-for-free-seminar">জয়েন</Link>
                                       </div>
                                   </div>
                                 </li>
@@ -41,14 +46,26 @@ const Seminar = (data)=>{
                                 
                             </ul>
                             <div class="seminar_btn">
-                                <Link to="/free-seminar">সকল সেমিনারের সময় সূচি </Link>
+                                <Link
+                                data-sal="flip-up"
+                                data-sal-delay="600"
+                                data-sal-duration="800"
+                                data-sal-easing="ease"
+                                to="/free-seminar">সকল সেমিনারের সময় সূচি </Link>
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-6">
                         <div class="free_seminar_img">
                             {seminarBanner.sourceUrl &&
-                            <img class="img-fluid w-100" src={seminarBanner.sourceUrl} alt={seminarBanner.altText ? seminarBanner.altText : 'Creative IT Institute'} />
+                            <img class="img-fluid w-100" 
+                            src={seminarBanner.sourceUrl} 
+                            alt={seminarBanner.altText ? seminarBanner.altText : 'Creative IT Institute'} 
+                            data-sal="slide-right"
+                            data-sal-delay="600"
+                            data-sal-duration="1000"
+                            data-sal-easing="ease"
+                            />
                             }
                             <div class="seminar_dots">
                                 <StaticImage class="img-fluid" src="../../images/seminar-dots.png" alt="victor dots" />

@@ -10,7 +10,12 @@ const Facilities = (data)=>{
             <div class="container">
                 <div class="row">
                     <div class="col-12">
-                        <div class="section_heading">
+                        <div class="section_heading"
+                        data-sal="slide-up"
+                        data-sal-delay="300"
+                        data-sal-duration="800"
+                        data-sal-easing="ease" 
+                        >
                             <h2 dangerouslySetInnerHTML={{ __html: data.secHeading ? data.secHeading : 'ক্রিয়েটিভ আইটির বিশেষ সেবা' }} />
                             <p dangerouslySetInnerHTML={{ __html: data.secDesc }} />
                         </div>
@@ -19,7 +24,12 @@ const Facilities = (data)=>{
                     {facilityItems.map(
                         facility=>(
                         <div class="col-lg-4 col-md-6">
-                            <div class="more_facilities_item more_facilities_item_1" style={{ 'backgroundColor': facility.facilityBoxBg }}>
+                            <div class="more_facilities_item more_facilities_item_1" style={{ 'backgroundColor': facility.facilityBoxBg }}
+                            data-sal="flip-left"
+                            data-sal-delay="300"
+                            data-sal-duration="800"
+                            data-sal-easing="ease"
+                            >
                                 {facility.featuredImage !== null ?
                                 <img src={facility.featuredImage.node.sourceUrl} alt={facility.featuredImage.node.title} />
                                 : ''}
@@ -31,7 +41,12 @@ const Facilities = (data)=>{
                     )}
                     <div class="col-12">
                         <div class="more_facilities_btn text-center">
-                            <Link to="/our-facilities">অন্যান্য সুবিধা দেখুন</Link>
+                            <Link to="/our-facilities"
+                            data-sal="flip-up"
+                            data-sal-delay="500"
+                            data-sal-duration="800"
+                            data-sal-easing="ease"
+                            >অন্যান্য সুবিধা দেখুন</Link>
                         </div>
                     </div>
                 </div>
