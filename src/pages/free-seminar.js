@@ -16,6 +16,7 @@ export default function FreeSeminar({data}){
     const page = data.allWpPage.nodes[0];
     const courseData = data.allWpCourseCategory.nodes;
     const seminarData = data.allWpSeminar.nodes;
+    console.log(seminarData, 'seminar data');
     const seo = page.pageMeta;
     const [isOpen, setOpen] = useState(false);
     
@@ -63,7 +64,10 @@ export default function FreeSeminar({data}){
                                         {seminar.seminar_meta.seminarTime.timeS ? seminar.seminar_meta.seminarTime.timeS :'00'} টা</p>
                                       </div>
                                       <div class="join_btn">
-                                          <Link to="/register-for-free-seminar">জয়েন</Link>
+                                          <Link 
+                                          to={`/register-for-free-seminar/`} 
+                                          state={{ id: seminar.seminar_meta.course[0].databaseId }}
+                                          >জয়েন</Link>
                                       </div>
                                   </div>
                                 </li>
@@ -176,7 +180,12 @@ export const query = graphql`
         nodes {
           title
           seminar_meta {
-            course
+            course {
+              ... on WpCourse {
+                title
+                databaseId
+              }
+            }
             venueOthers
             venue
             seminarDate {

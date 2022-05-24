@@ -193,7 +193,12 @@ query CourseData
     nodes {
       title
       seminar_meta {
-        course
+        course {
+          ... on WpCourse {
+            title
+            databaseId
+          }
+        }
         venueOthers
         venue
         seminarDate {

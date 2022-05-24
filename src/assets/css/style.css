@@ -290,6 +290,8 @@ div.success_menu ul.common_slider_class li {
   padding-bottom: 0;
   margin-bottom: 0;
   margin-top: 0;
+  padding-left: 0!important;
+  padding-right: 0!important;
 }
 
 .navbar_btn a,.navbar-nav .nav-item:last-child a {

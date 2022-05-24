@@ -7,6 +7,7 @@ export const useCourses = () => {
       allWpCourse {
         nodes {
           title
+          databaseId
         }
       }
     }

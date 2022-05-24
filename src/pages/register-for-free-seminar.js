@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import Row from 'react-bootstrap/Row'
+import Col from 'react-bootstrap/Col'
 import gql from 'graphql-tag';
 //import { Mutation } from 'react-apollo';
 import Layout from "../components/layout";
@@ -21,18 +23,21 @@ const SEMINAR_MUTATION = gql`
   }
 `
 
-const RegSeminar = () => {
+const RegSeminar = ({location}) => {
 
   const courseslists = useCourses();
+  // const { courseId } = useParams();
+  // console.log(location.state.id, 'Course ID');
 
   const [nameVal, setNameValue] = useState('')
   const [mobileVal, setMobileValue] = useState('')
   const [emailVal, setEmailValue] = useState('')
   const [addressVal, setAddressValue] = useState('')
   const [courseVal, setCourseValue] = useState('')
+  
 
   const [createSubmission, { loading, error, data }] = useMutation(SEMINAR_MUTATION);
-
+  // courseslists.allWpCourse.nodes.filter(c=>c.id ==location.state.id?setCourseValue(c.title):setCourseValue('') )
   if (loading) return 'Submitting...';
   if (error) return `Submission error! ${error.message}`;
 
@@ -109,37 +114,26 @@ const RegSeminar = () => {
                           }} 
                           />
                         </FloatingLabel>
-
-                        <FloatingLabel 
-                        controlId="floatingSelect" 
-                        label="কোর্স সিলেক্ট করুন"
-                        className="mb-3"
-                        >
+                        <Row className="g-2 mb-3 align-items-center">
+                        <Col md={3}>
+                          <Form.Label htmlFor="select-label"
+                          >কোর্স সিলেক্ট করুন</Form.Label>
+                        </Col>
+                        <Col md={9}>
                           <Form.Select 
-                          aria-label="Floating label select example"
-                          value={courseVal}
-                          onChange={event => {
-                            setCourseValue(event.target.value)
-                          }}
-                          >
-                        {courseslists.allWpCourse.nodes.map(
-                          course=> <option>{course.title}</option>
-                        )}
-                        <option>ওয়েব ডিজাইন</option>
-                        <option>পাইথন জ্যাঙ্গো</option>
-                        <option>পাইথন মেশিন লার্নিং</option>
-                        <option>অ্যাপ ডেভেলপমেন্ট</option>
-                        <option>ওয়ার্ডপ্রেস থিম কাস্টমাইজেশন</option>
-                        <option>মার্ন স্ট্যাক ডেভেলপমেন্ট</option>
-                        <option>ওয়েব ডেভেলপমেন্ট</option>
-                        <option>অ্যাডোবি ফটোশপ</option>
-                        <option>অ্যাডোবি ইলাস্ট্রেটর</option>
-                        <option>মোশন গ্রাফিক্স</option>
-                        <option>প্রফেশনাল ওয়েব ডেভেলপমেন্ট</option>
-                        <option>UX/UI ডিজাইন</option>
-                        <option>UX/UI ডিজাইন</option> 
+                              aria-label="Floating"
+                              size="lg" 
+                              value={location.state.id}
+                              onChange={event => {
+                                setCourseValue(event.target.value)
+                              }}
+                              >
+                              {courseslists.allWpCourse.nodes.map(
+                                course => <option value={course.databaseId} >{course.title}</option>
+                              )}
                           </Form.Select>
-                        </FloatingLabel>
+                        </Col>
+                        </Row>
                         
                         <FloatingLabel controlId="floatingTextarea2" label="আপনার ঠিকানা">
                           <Form.Control

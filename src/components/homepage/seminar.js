@@ -37,7 +37,10 @@ const Seminar = (data)=>{
                                         {seminar.seminar_meta.seminarTime.timeS ? seminar.seminar_meta.seminarTime.timeS :'00'} টা</p>
                                       </div>
                                       <div class="join_btn">
-                                          <Link to="/register-for-free-seminar">জয়েন</Link>
+                                          <Link 
+                                          to={`/register-for-free-seminar/`} 
+                                          state={{ id: seminar.seminar_meta.course[0].databaseId }}
+                                          >জয়েন</Link>
                                       </div>
                                   </div>
                                 </li>
