@@ -5,7 +5,7 @@ import { Link } from "gatsby"
 const Seminar = (data)=>{
     const seminarDataUpcoming = data.upcomming;
     const seminarBanner = data.secBanner[0];
-    console.log(seminarBanner, 'Seminar Banner');
+    console.log(seminarDataUpcoming, 'Seminar up');
     return(
         <section id="seminar">
             <div class="container seminar">
@@ -39,7 +39,7 @@ const Seminar = (data)=>{
                                       <div class="join_btn">
                                           <Link 
                                           to={`/register-for-free-seminar/`} 
-                                          state={{ id: seminar.seminar_meta.course[0].databaseId }}
+                                          state={{ id: seminar.seminar_meta.course.databaseId }}
                                           >জয়েন</Link>
                                       </div>
                                   </div>

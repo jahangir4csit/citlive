@@ -26,8 +26,10 @@ const SEMINAR_MUTATION = gql`
 const RegSeminar = ({location}) => {
 
   const courseslists = useCourses();
-  // const { courseId } = useParams();
-  // console.log(location.state.id, 'Course ID');
+  //const courseId = location ? location.state.id : '0';
+  console.log(location, 'location');
+
+  //console.log(courseId, 'Course ID');
 
   const [nameVal, setNameValue] = useState('')
   const [mobileVal, setMobileValue] = useState('')
@@ -37,7 +39,7 @@ const RegSeminar = ({location}) => {
   
 
   const [createSubmission, { loading, error, data }] = useMutation(SEMINAR_MUTATION);
-  // courseslists.allWpCourse.nodes.filter(c=>c.id ==location.state.id?setCourseValue(c.title):setCourseValue('') )
+
   if (loading) return 'Submitting...';
   if (error) return `Submission error! ${error.message}`;
 
@@ -123,7 +125,7 @@ const RegSeminar = ({location}) => {
                           <Form.Select 
                               aria-label="Floating"
                               size="lg" 
-                              value={location.state.id}
+                              value={location.state ? location.state.id  : ''} 
                               onChange={event => {
                                 setCourseValue(event.target.value)
                               }}

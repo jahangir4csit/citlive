@@ -17,6 +17,7 @@ export default function FreeSeminar({data}){
     const courseData = data.allWpCourseCategory.nodes;
     const seminarData = data.allWpSeminar.nodes;
     console.log(seminarData, 'seminar data');
+
     const seo = page.pageMeta;
     const [isOpen, setOpen] = useState(false);
     
@@ -66,7 +67,7 @@ export default function FreeSeminar({data}){
                                       <div class="join_btn">
                                           <Link 
                                           to={`/register-for-free-seminar/`} 
-                                          state={{ id: seminar.seminar_meta.course[0].databaseId }}
+                                          state={{ id: seminar.seminar_meta.course.databaseId }}
                                           >জয়েন</Link>
                                       </div>
                                   </div>
