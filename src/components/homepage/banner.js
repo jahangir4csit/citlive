@@ -28,7 +28,7 @@ const HomeBanner = ()=>{
     const [isOpen, setOpen] = useState(false);
 
     return(
-    <section id="banner">
+    <section id="banner" className='home_banner'>
         <div class="red_shadow">
             <img class="img-fluid" src={redShadow} alt="shadow" />
         </div>
