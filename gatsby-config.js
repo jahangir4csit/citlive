@@ -11,7 +11,7 @@ module.exports = {
     {
       resolve: `gatsby-source-wordpress`,
       options: {
-        url: `http://43.204.196.113/graphql`,
+        url: `https://app.creativeitinstitute.com/`,
         //url: `https://bangladeshigf.org/cit/graphql`,
         //url: `http://cit.creativejuniors.com/graphql`,  
         //url: `http://localhost/citbd/graphql`
