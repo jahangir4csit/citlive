@@ -6,6 +6,8 @@ import { Link } from 'gatsby'
 import React from "react"
 import { useFooterMenuQuery } from "../hooks/useMenuFooter"
 import { useFooterData } from "../hooks/useFooterData"
+import ftLogo from '../../images/cit_logo_transparent.png';
+import ftDots from '../../images/footer-dots.png';
 
 const Footer = ()=>{
 
@@ -15,8 +17,8 @@ const Footer = ()=>{
     return(
         <footer>
             <section id="footer">
-                <StaticImage class="footer_left img-fluid" src="../../images/footer-dots.png" alt="image" />
-                <StaticImage class="footer_right img-fluid" src="../../images/footer-dots.png" alt="image" />
+                <img class="footer_left img-fluid" src={ftDots} alt="CIT" />
+                <img class="footer_right img-fluid" src={ftDots} alt="Creative IT" />
                 <div class="container">
                     <div class="row">
                         <div class="col-12">
@@ -143,7 +145,8 @@ const Footer = ()=>{
                                     data-sal-duration="800"
                                     data-sal-easing="ease"
                                     >
-                                        <StaticImage src="../../images/cit_logo_transparent.png" alt="Creative IT Institute" />
+                                        <img src={ftLogo} alt="Creative IT Institute" />
+
                                     </div> 
                                 </div>
                                 <div class="col-md-6 copy_text_sm_last"
