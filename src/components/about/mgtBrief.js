@@ -8,7 +8,7 @@ const MgtBrief = (data)=>{
     const mgtBrief = data.data;
 
     return(
-        <section id="ceo">
+        <section id="ceo" className={`${data.classes ? data.classes : ''}`}>
             <div class="container">
                 <div class="row align-items-center g-5">
                     <div class="col-md-6">

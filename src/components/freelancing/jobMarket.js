@@ -15,18 +15,18 @@ const FrJobMarkets = (data) =>{
                 
                     {marketPlaces.map(
                     jobMarket=>(
-                        <div class="col-sm-4">
+                        <div class="col-sm-2">
                             <div class="marketplace_item">
                                 <div class="icon">
                                     {jobMarket.featuredImage !=null && 
                                     <img src={jobMarket.featuredImage.node.sourceUrl} alt={jobMarket.title}/>
                                     }
                                 </div>
-                                {jobMarket.content !=null &&
+                                {/* {jobMarket.content !=null &&
                                 <div class="text">
                                     <div dangerouslySetInnerHTML={{ __html: jobMarket.content }} />
                                 </div>
-                                }
+                                } */}
                             </div>
                         </div>
                         )

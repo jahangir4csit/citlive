@@ -65,7 +65,7 @@ export default function DepartmentGrid(data){
                             {catData.allWpCourseCategory.nodes.map(
                                  (item, index)=>(
 
-                                <Link to={`https://preview-cit.gtsb.io/course-cat/`+item.slug} style={boxShadow ? styles.boxStyle.a : styles.boxStyle.none}
+                                <Link to={`/course-cat/`+item.slug} style={boxShadow ? styles.boxStyle.a : styles.boxStyle.none}
                                 data-sal="slide-left"
                                 data-sal-delay={index*=300}
                                 data-sal-duration="900"

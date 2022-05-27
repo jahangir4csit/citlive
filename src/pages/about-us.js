@@ -34,12 +34,12 @@ export default function AboutUs({data}) {
       title={seo.metaTitle} 
       description={seo.metaDescription} />
       <AboutDesc data={pageData} />
+      <MgtBrief data={mgtData} classes={'mt-0 mb9'} />
       <LazyLoad once>
         <VirtualTour vData={vitrualTour} />
       </LazyLoad>
       <FeaturedTextTwo />
       <CounterUp />
-      <MgtBrief data={mgtData} />
       <CITAchievements data={certified} />
       <CITMisionVision data={statementData} />
       <CITStatFull data={initiatives} />

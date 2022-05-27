@@ -144,6 +144,9 @@ div.success_menu ul.common_slider_class li {
 .mt9{
   margin-top: 90px!important;
 }
+.mb9{
+  margin-bottom: 90px;
+}
 .my9{
   margin-top: 90px!important;
   margin-bottom: 90px!important;
@@ -3624,7 +3627,21 @@ Course-Landing right side bar Position Stiky  Area Start
   letter-spacing: 0.20000000298023224px;
   text-align: center;
 }
-
+.modal_item_wrap{
+  position: relative;
+}
+.mission_body  ul{
+  list-style:circle;
+  margin-left: 15px;
+  margin-top: 15px;
+}
+.mission_body  ul li::marker{
+  color: #CF0000;
+}
+.mission_body  ul li{
+  margin-bottom: 15px;
+  line-height: 1.3;
+}
 /* =================================
 Course-Landing right side bar Position Stiky  Area End
 =================================== */

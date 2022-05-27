@@ -5,7 +5,7 @@ import {
 } from "@apollo/client";
 
 export const client = new ApolloClient({
-  uri: `https://bangladeshigf.org/cit/graphql`,
+  uri: `https://app.creativeitinstitute.com/graphql`,
   //uri: `http://localhost/citbd/graphql`,
   cache: new InMemoryCache()
 })

@@ -3,8 +3,7 @@ import { ModalVid } from "../utils/modal";
 
 export default function CaseItem(data){
     const caseData = data.data;
-    const mb = data.marginBottom
-    console.log(caseData, 'case data achv');
+    const mb = data.marginBottom;
 
     return(        
         <div class="col-md-6">

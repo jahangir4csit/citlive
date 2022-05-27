@@ -12,10 +12,7 @@ module.exports = {
       resolve: `gatsby-source-wordpress`,
       options: {
         url: `https://app.creativeitinstitute.com/graphql`,
-        //url: `https://bangladeshigf.org/cit/graphql`,
-        //url: `http://cit.creativejuniors.com/graphql`,  
         //url: `http://localhost/citbd/graphql`
-        //url: `https://www.creativeitinstitute.com/citdev21/graphql`,
       },
     },
     {
@@ -75,7 +72,7 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-apollo',
       options: {
-        uri: 'https://bangladeshigf.org/cit/graphql'
+        uri: 'https://app.creativeitinstitute.com/graphql'
       }
     },
     `gatsby-plugin-smoothscroll`

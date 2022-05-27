@@ -15,7 +15,7 @@ export default function JpDepartmentGrid(data){
                 <div class="training_department_main">
                     {departments.map(
                             department=>(
-                            <Link to={`https://preview-cit.gtsb.io/course-cat/`+department.slug}>
+                            <Link to={`/course-cat/`+department.slug}>
                                 <div className="training_department_item">
                                     <div class="couse_icon">
                                         <img src={department.categoryThumb.categoryThumbnail.sourceUrl ? department.categoryThumb.categoryThumbnail.sourceUrl : ''} 
