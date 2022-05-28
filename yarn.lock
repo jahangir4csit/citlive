@@ -5627,6 +5627,15 @@ fs-extra@^4.0.2:
     jsonfile "^4.0.0"
     universalify "^0.1.0"
 
+fs-extra@^7.0.0:
+  version "7.0.1"
+  resolved "https://registry.yarnpkg.com/fs-extra/-/fs-extra-7.0.1.tgz#4f189c44aa123b895f722804f55ea23eadc348e9"
+  integrity sha512-YJDaCJZEnBmcbw13fvdAM9AwNOJwOzrE4pqMqBq5nFiEqXUqHwlK4B+3pUw6JNvfSPtX05xFHtYy/1ni01eGCw==
+  dependencies:
+    graceful-fs "^4.1.2"
+    jsonfile "^4.0.0"
+    universalify "^0.1.0"
+
 fs-monkey@1.0.3:
   version "1.0.3"
   resolved "https://registry.yarnpkg.com/fs-monkey/-/fs-monkey-1.0.3.tgz#ae3ac92d53bb328efe0e9a1d9541f6ad8d48e2d3"
@@ -5807,6 +5816,13 @@ gatsby-plugin-catch-links@^4.10.0:
   dependencies:
     "@babel/runtime" "^7.15.4"
     escape-string-regexp "^1.0.5"
+
+gatsby-plugin-client-side-redirect@^1.1.0:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-client-side-redirect/-/gatsby-plugin-client-side-redirect-1.1.0.tgz#6c83e749e24d4e8be195d4ee470b30bf4d58f336"
+  integrity sha512-ox3QpfQynNmH4SgBedMxi9WdEFVI/fQep0cpAu5mPSIQElIJmy+TF5fDZc56Ra+cvr/dz45sw+tUzE41aMlLfw==
+  dependencies:
+    fs-extra "^7.0.0"
 
 gatsby-plugin-gatsby-cloud@^4.10.1:
   version "4.10.1"
@@ -6527,7 +6543,7 @@ graphql-playground-middleware-express@^1.7.22:
   dependencies:
     graphql-playground-html "^1.6.30"
 
-graphql-tag@^2.12.3:
+graphql-tag@^2.12.3, graphql-tag@^2.12.6:
   version "2.12.6"
   resolved "https://registry.yarnpkg.com/graphql-tag/-/graphql-tag-2.12.6.tgz#d441a569c1d2537ef10ca3d1633b48725329b5f1"
   integrity sha512-FdSNcu2QQcWnM2VNvSCCDCVS5PpPqpzgFT8+GXzqJuoDd0CBncxCY278u4mhRO7tMgo2JjgJA5aZ+nWSQ/Z+xg==

@@ -1,6 +1,6 @@
 import React from "react";
-import { StaticImage } from "gatsby-plugin-image"
 import { useFeaturedText } from '../hooks/useFeaturedTextOne';
+import practicalDot from '../../images/prectical-dot.png';
 
 const FeaturedTextOne = ()=>{
 
@@ -23,7 +23,7 @@ const FeaturedTextOne = ()=>{
                         src={ftOne.featuredImage.node.sourceUrl} 
                         alt={ftOne.featuredImage.node.altText ? ftOne.featuredImage.node.altText : 'Creative IT Institute'} />
                         <div class="prectical_dots">
-                            <StaticImage src="../../images/prectical-dot.png" alt="victor-dots" />
+                            <img src={practicalDot} alt="victor-dots" />
                         </div>
                     </div>
                 </div>
