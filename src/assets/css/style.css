@@ -3169,15 +3169,17 @@ Course-Landing Left (7 column) Overviwe  Area Start
 }
 
 .pg_marketplace2 .marketplace_item{
-  padding-top: 18px;
-  padding-left: 32px;
-  padding-right: 32px;
-  padding-bottom: 24px;
+  /* padding-top: 18px;
+  padding-bottom: 24px; */
   margin-bottom: 27px;
   border: 1px solid #D4D4D4;
   border-radius: 15px;
+  display: flex;
+  justify-content: center;
 }
-
+.pg_marketplace2 .marketplace_item .icon{
+  padding: 20px 0;
+}
 .pg_marketplace .marketplace_item {
   padding-top: 18px;
   padding-left: 32px;
