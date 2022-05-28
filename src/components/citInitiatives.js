@@ -9,7 +9,7 @@ const CITinitiatives = (data) =>{
     return(
         <section id="counter_up" className={`${data.classes ? data.classes+' about_counter_up ' : 'about_counter_up'}`} style={{ marginBottom: MarginBottom ? '3rem' : '' }}>
             <div class="container">
-                <h2>{data.title ? data.title : 'অসাধারণ কিছু উদ্যোগ'}</h2>
+                <h2>{data.title ? data.title : 'অসাধারণ কিছু অর্জন'}</h2>
                 <div class="row">
                     {initiativeData.map(
                         initiative=>(
