@@ -5342,6 +5342,9 @@ form.student_form select {
 .follow_on ul li .twitter {
   background: #55ACEE;
 }
+.ceo_StaticImage img{
+  border-radius: 24px;
+}
 
 /*==================================
         About Page CEO Part Start

@@ -7,7 +7,7 @@ const CitIsoCertified = (data) => {
     return(
         <section id="iso" className={`${data.classes ? data.classes : ''}`}>
             <div class="container">
-                <div class="row">
+                <div class="row align-items-center">
                     <div class="col-lg-4 col-md-6">
                         {data.image.length > 0 ? 
                         <div class="iso_image">
