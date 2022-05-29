@@ -21,15 +21,12 @@ const RegSeminar = ({location}) => {
 
   const courseslists = useCourses();
   //const courseId = location ? location.state.id : '0';
-  console.log(location, 'location');
 
-  //console.log(courseId, 'Course ID');
-
-  const [nameVal, setNameValue] = useState('jamal')
-  const [mobileVal, setMobileValue] = useState('324345')
+  const [nameVal, setNameValue] = useState('')
+  const [mobileVal, setMobileValue] = useState('')
   const [emailVal, setEmailValue] = useState('')
-  const [addressVal, setAddressValue] = useState('sadfasdf')
-  const [courseVal, setCourseValue] = useState('gp')
+  const [addressVal, setAddressValue] = useState('')
+  const [courseVal, setCourseValue] = useState('')
 
   const SEMINAR_MUTATION = gql`
   mutation CreateSubmissionMutation{

@@ -7,7 +7,7 @@ import Nav from 'react-bootstrap/Nav'
 import Navbar from 'react-bootstrap/Navbar'
 import Offcanvas from 'react-bootstrap/Offcanvas'
 import BookButton from '../../images/Button-book.png'
-import Logo from '../../images/Logo.png'
+import Logo from '../../images/cit_logo.png'
 import ScrollTop from "../utils/scrollTop"
 import { useMenuQuery } from "./menuQuery"
 
