@@ -1,6 +1,6 @@
 import React from 'react';
 //import { ApolloProvider } from 'react-apollo';
-import { client } from './src/context/ApolloContext';
+import client from './src/context/ApolloContext';
 //import client from './src/gatsby-plugin-apollo/client';
 
 import {

@@ -1,7 +1,6 @@
 import React,{Fragment, useEffect, useState} from 'react'
 import Slider from "react-slick";
 import { graphql, Link } from "gatsby"; 
-import { StaticImage } from "gatsby-plugin-image"
 import { faStar, faStarHalfAlt } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Layout from "../components/layout"
@@ -19,6 +18,11 @@ import Nav from 'react-bootstrap/Nav'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 import StudentProjects from '../components/courses/studentProjects'
+
+import shape1 from '../images/course-landing/Pg_banner_shape1.png'
+import shape2 from '../images/course-landing/Pg_banner_shape2.png'
+import shape3 from '../images/course-landing/Pg_banner_shape3.png'
+import shape4 from '../images/course-landing/Pg_banner_shape4.png'
 
 export default function SingleCourse({data}){
 
@@ -62,13 +66,13 @@ export default function SingleCourse({data}){
 
           <section id="profe_graphic_banner">
             <div class="pink_shape">
-                <StaticImage class="img-fluid" src="../images/course-landing/Pg_banner_shape2.png" alt="pink color victor shape" />
+                <img class="img-fluid" src={shape2} alt="pink color victor shape" />
             </div>
             <div class="white_dots">
-                <StaticImage class="img-fluid" src="../images/course-landing/Pg_banner_shape4.png" alt="white color dots victor" />
+                <img class="img-fluid" src={shape4} alt="white color dots victor" />
             </div>
             <div class="yellow_shape">
-                <iStaticImage class="img-fluid" src="../images/course-landing/Pg_banner_shape1.png" alt="Yellow color victor shape" />
+                <img class="img-fluid" src={shape1} alt="Yellow color victor shape" />
             </div>
 
 
@@ -130,8 +134,8 @@ export default function SingleCourse({data}){
                             alt={post.featuredImage.node.altText ? post.featuredImage.node.altText : 'Creative IT Institute'} />
                             }
                         </div>
-                        <div class="yellow_dots_right"><StaticImage src="../images/course-landing/Pg_banner_shape3.png" alt="Yellow color dots" /></div>
-                        <div class="yellow_dot_left"><StaticImage src="../images/course-landing/Pg_banner_shape3.png" alt="Yellow color dots" /></div>
+                        <div class="yellow_dots_right"><img src={shape3} alt="Yellow color dots" /></div>
+                        <div class="yellow_dot_left"><img src={shape3} alt="Yellow color dots" /></div>
                     </div>
                 </div>
             </div>

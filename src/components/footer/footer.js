@@ -6,7 +6,7 @@ import { Link } from 'gatsby'
 import React from "react"
 import { useFooterMenuQuery } from "../hooks/useMenuFooter"
 import { useFooterData } from "../hooks/useFooterData"
-import ftLogo from '../../images/cit_logo_transparent.png';
+import ftLogo from '../../images/cit_logo_white.png';
 import ftDots from '../../images/footer-dots.png';
 
 const Footer = ()=>{
