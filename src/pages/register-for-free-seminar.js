@@ -43,8 +43,6 @@ const RegSeminar = ({location}) => {
   if (loading) return 'Submitting...';
   if (error) return `Submission error! ${error.message}`;
 
-  console.log(nameVal, 'nam val');
-
   return (
     <Layout>
       <section id="admission" className='mt-5 pt-5 pb-5'>
