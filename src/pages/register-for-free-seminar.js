@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
-//import gql from 'graphql-tag';
+import gql from 'graphql-tag';
 //import { Mutation } from 'react-apollo';
 import Layout from "../components/layout";
 import Form from 'react-bootstrap/Form'
@@ -10,7 +10,7 @@ import FloatingLabel from 'react-bootstrap/FloatingLabel'
 import { useCourses } from "../components/hooks/useCourses";
 
 import {
-  gql,
+  //gql,
   useMutation
 } from "@apollo/client";
 
@@ -38,7 +38,7 @@ const RegSeminar = ({location}) => {
   const [courseVal, setCourseValue] = useState('')
   
 
-  const [createSubmission, { loading, error, data }] = useMutation(SEMINAR_MUTATION);
+  const [createSubmission, { data, loading, error, reset }] = useMutation(SEMINAR_MUTATION);
 
   if (loading) return 'Submitting...';
   if (error) return `Submission error! ${error.message}`;

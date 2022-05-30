@@ -139,12 +139,3 @@ exports.createPages = async ({ graphql, actions }) => {
 
   })
 }
-
-exports.createPages = ({ graphql, actions }) => {
-  const { createRedirect } = actions
-  createRedirect({ fromPath: '/old', toPath: '/new-url', isPermanent: true })
-  createRedirect({ fromPath: '/url', toPath: '/zn-CH/url', Language: 'zn' })
-  createRedirect({ fromPath: '/not_so-pretty_url', toPath: '/pretty/url', statusCode: 200 })
-
-  // Create pages
-}
