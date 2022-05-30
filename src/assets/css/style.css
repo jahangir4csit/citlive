@@ -1924,7 +1924,7 @@ del {
 .seminar_content ul li .text_main .text p {
   color: #605F62;
   font-family: Ruposhi Bangla Unicode;
-  font-size: 12px;
+  font-size: 14px;
   font-weight: 700;
   line-height: 29px;
   letter-spacing: 0.20000000298023224px;
@@ -2660,6 +2660,21 @@ del {
   opacity: 0.7;
 }
 
+.payment_item{
+  margin-bottom: 15px;
+}
+.payment_item .py_number{
+  color:#fff;
+  font-family: "Hind";
+  opacity: 0.7;
+}
+.payment_item .py_logo{
+  margin-right: 10px;
+}
+.payment_item .py_logo img{
+  width: 60px;
+}
+
 .copy {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -3169,15 +3184,17 @@ Course-Landing Left (7 column) Overviwe  Area Start
 }
 
 .pg_marketplace2 .marketplace_item{
-  padding-top: 18px;
-  padding-left: 32px;
-  padding-right: 32px;
-  padding-bottom: 24px;
+  /* padding-top: 18px;
+  padding-bottom: 24px; */
   margin-bottom: 27px;
   border: 1px solid #D4D4D4;
   border-radius: 15px;
+  display: flex;
+  justify-content: center;
 }
-
+.pg_marketplace2 .marketplace_item .icon{
+  padding: 20px 0;
+}
 .pg_marketplace .marketplace_item {
   padding-top: 18px;
   padding-left: 32px;
@@ -5339,6 +5356,9 @@ form.student_form select {
 
 .follow_on ul li .twitter {
   background: #55ACEE;
+}
+.ceo_StaticImage img{
+  border-radius: 24px;
 }
 
 /*==================================

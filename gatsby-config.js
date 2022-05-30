@@ -73,6 +73,7 @@ module.exports = {
       resolve: 'gatsby-plugin-apollo',
       options: {
         uri: 'https://app.creativeitinstitute.com/graphql'
+        //uri: `http://localhost/citbd/graphql`
       }
     },
     `gatsby-plugin-smoothscroll`

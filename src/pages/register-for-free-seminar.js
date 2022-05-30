@@ -14,28 +14,28 @@ import {
   useMutation
 } from "@apollo/client";
 
-const SEMINAR_MUTATION = gql`
-  mutation CreateSubmissionMutation($clientMutationId: String!, $name: String!, $mobile: String!, $email: String!, $address: String!, $course: String!){
-    createSubmission(input: {clientMutationId: $clientMutationId, name: $name, mobile: $mobile,  email: $email, address: $address, course: $course}) {
-      success
-      data
-    }
-  }
-`
 
 const RegSeminar = ({location}) => {
 
+  let input;
+
   const courseslists = useCourses();
   //const courseId = location ? location.state.id : '0';
-  console.log(location, 'location');
 
-  //console.log(courseId, 'Course ID');
+  const [nameVal, setNameValue] = useState(' ')
+  const [mobileVal, setMobileValue] = useState(' ')
+  const [emailVal, setEmailValue] = useState(' ')
+  const [addressVal, setAddressValue] = useState(' ')
+  const [courseVal, setCourseValue] = useState(' ')
 
-  const [nameVal, setNameValue] = useState('')
-  const [mobileVal, setMobileValue] = useState('')
-  const [emailVal, setEmailValue] = useState('')
-  const [addressVal, setAddressValue] = useState('')
-  const [courseVal, setCourseValue] = useState('')
+  const SEMINAR_MUTATION = gql`
+  mutation CreateSubmissionMutation{
+    createSubmission(input: {clientMutationId: "seminarEntry", name: "${nameVal}", mobile: "${mobileVal}",  email: "${emailVal}", address: "${addressVal}", course: "${courseVal}" }) {
+      data
+      success
+    }
+  }
+`;
   
 
   const [createSubmission, { loading, error, data }] = useMutation(SEMINAR_MUTATION);
@@ -70,6 +70,7 @@ const RegSeminar = ({location}) => {
                           })
                         }}
                       >
+
                       <Form.Group className="mb-3" controlId="formBasicEmail">
                         <FloatingLabel
                           controlId="floatingInput"

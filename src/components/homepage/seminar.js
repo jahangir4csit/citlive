@@ -1,6 +1,6 @@
 import React from "react";
-import { StaticImage } from "gatsby-plugin-image"
 import { Link } from "gatsby"
+import seminarDot from '../../images/seminar-dots.png';
 
 const Seminar = (data)=>{
     const seminarDataUpcoming = data.upcomming;
@@ -71,7 +71,7 @@ const Seminar = (data)=>{
                             />
                             }
                             <div class="seminar_dots">
-                                <StaticImage class="img-fluid" src="../../images/seminar-dots.png" alt="victor dots" />
+                                <img class="img-fluid" src={seminarDot} alt="victor dots" />
                             </div>
                         </div>
                     </div>
