@@ -1,5 +1,4 @@
 import React from "react";
-import Image from 'react-bootstrap/Image'
 
 const FrJobMarkets = (data) =>{
 
@@ -7,23 +6,20 @@ const FrJobMarkets = (data) =>{
 
     return(
         <section id="pg_course_overviwe pb-0">
-            <div className="container">
-                <div className="pg_marketplace2 section_heading2">
+            <div class="container">
+                <div class="pg_marketplace2 section_heading2">
                     <h2>আপনি যেখানে কাজ করতে পারেন</h2>
                     <p>বিভিন্ন লোকাল বা রিমোট জবের পাশাপাশি আপনি ফ্রিল্যান্সিং মার্কেটপ্লেস বেছে নিতে পারেন কাজের জন্য।<br/>
                      স্মার্ট স্যালারি আর স্বচ্ছন্দে কাজের সুযোগ থাকায় যেকোনো এক বা একাধিক মার্কেটপ্লেসের অংশ হতে পারেন সহজেই। </p>
-                    <div className="row">
+                    <div class="row">
                 
-                        {marketPlaces.map(
-                        jobMarket=>(
-                        <div className="col-sm-6 col-md-2 col-6">
-                            <div className="marketplace_item">
-                                <div className="icon">
+                    {marketPlaces.map(
+                    jobMarket=>(
+                        <div class="col-sm-2">
+                            <div class="marketplace_item">
+                                <div class="icon">
                                     {jobMarket.featuredImage !=null && 
-                                    <Image 
-                                    fluid={true} 
-                                    src={jobMarket.featuredImage.node.sourceUrl} 
-                                    alt={jobMarket.title}/>
+                                    <img src={jobMarket.featuredImage.node.sourceUrl} alt={jobMarket.title}/>
                                     }
                                 </div>
                                 {/* {jobMarket.content !=null &&
