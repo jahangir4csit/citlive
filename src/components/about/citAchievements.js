@@ -7,7 +7,7 @@ const CITAchievements = (data) => {
     return(
         <section id="iso">
             <div class="container">
-                <div class="row">
+                <div class="row align-items-center">
                     <div class="col-lg-4 col-md-6"
                     data-sal="slide-up"
                     data-sal-delay="300"
