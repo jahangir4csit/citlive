@@ -2992,7 +2992,13 @@
 	/* =================================================
 				Banner Part End
 	================================================= */
-
+	.training_department_main{
+		justify-content: center;
+	}
+	.training_department_main a{
+		width: 42%!important;
+		margin: 0 12px 24px 12px!important;
+	}
 
 	/* =================================================
 			Course Department Area Start
@@ -4002,8 +4008,8 @@
 
 	.pgcf_whom_item .pgcf_whom_item_icon {
 		margin-left: 0;
-		width: 66px;
-		height: 66px;
+		width: 80px!important;
+		height: 80px;
 		background: linear-gradient(229.69deg, #FDF3FD 3.63%, rgba(253, 243, 253, 0.29) 98.73%);
 		border-radius: 22px;
 		overflow: hidden;
@@ -4013,14 +4019,14 @@
 	}
 
 	.pgcf_whom_item .pgcf_whom_item_icon img {
-		width: 65%;
+		width: 85%;
 	}
 
 	.pgcf_whom_item .pgcf_whom_item_text p {
 		font-size: 16px;
 		line-height: 32px;
 		padding-top: 15px;
-		text-align: left;
+		text-align: center;
 	}
 
 	.pg_marketplace {

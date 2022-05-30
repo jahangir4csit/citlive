@@ -11,8 +11,8 @@ module.exports = {
     {
       resolve: `gatsby-source-wordpress`,
       options: {
-        url: `https://app.creativeitinstitute.com/graphql`,
-        //url: `http://localhost/citbd/graphql`
+        //url: `https://app.creativeitinstitute.com/graphql`,
+        url: `http://localhost/citbd/graphql`
       },
     },
     {
@@ -76,7 +76,8 @@ module.exports = {
         //uri: `http://localhost/citbd/graphql`
       }
     },
-    `gatsby-plugin-smoothscroll`
+    `gatsby-plugin-smoothscroll`,
+    `gatsby-plugin-client-side-redirect` // keep it in last in list
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
