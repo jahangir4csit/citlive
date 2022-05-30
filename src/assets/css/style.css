@@ -1924,7 +1924,7 @@ del {
 .seminar_content ul li .text_main .text p {
   color: #605F62;
   font-family: Ruposhi Bangla Unicode;
-  font-size: 12px;
+  font-size: 14px;
   font-weight: 700;
   line-height: 29px;
   letter-spacing: 0.20000000298023224px;
@@ -2658,6 +2658,21 @@ del {
   line-height: 14px;
   letter-spacing: 0.20000000298023224px;
   opacity: 0.7;
+}
+
+.payment_item{
+  margin-bottom: 15px;
+}
+.payment_item .py_number{
+  color:#fff;
+  font-family: "Hind";
+  opacity: 0.7;
+}
+.payment_item .py_logo{
+  margin-right: 10px;
+}
+.payment_item .py_logo img{
+  width: 60px;
 }
 
 .copy {

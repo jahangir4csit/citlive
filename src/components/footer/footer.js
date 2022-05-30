@@ -8,6 +8,9 @@ import { useFooterMenuQuery } from "../hooks/useMenuFooter"
 import { useFooterData } from "../hooks/useFooterData"
 import ftLogo from '../../images/cit_logo_white.png';
 import ftDots from '../../images/footer-dots.png';
+import ftBkashLogo from '../../images/bkash_logo.png';
+import ftNagadLogo from '../../images/Nagad_logo.png';
+import ftRoketLogo from '../../images/Rocker_logo.png';
 
 const Footer = ()=>{
 
@@ -84,46 +87,88 @@ const Footer = ()=>{
                             </div>
                         </div>
 
-                        {footerNavs[0] &&
-                            <div class="col-md-3 col-sm-6"
-                            data-sal="slide-left"
-                            data-sal-delay="300"
-                            data-sal-duration="800"
-                            data-sal-easing="ease"
-                            >
-                                <div class="footer_item footer_item_2">
-                                    <h5>{ footerNavs[0].name }</h5>
-                                    <ul>
-                                        {footerNavs[0].menuItems.nodes.map(
-                                            navItems=> <li><Link to={navItems.url}>{navItems.label}</Link></li>
-                                        )}
-                                    </ul>
+                        <div className='col-md-6 col-sm-6'>
+                            <div className='row'>
+                                {footerNavs[0] &&
+                                <div class="col-md-6 col-sm-6"
+                                    // data-sal="slide-left"
+                                    // data-sal-delay="300"
+                                    // data-sal-duration="800"
+                                    // data-sal-easing="ease"
+                                    >
+                                        <div class="footer_item footer_item_2">
+                                            <h5>{ footerNavs[0].name }</h5>
+                                            <ul>
+                                                {footerNavs[0].menuItems.nodes.map(
+                                                    navItems=> <li><Link to={navItems.url}>{navItems.label}</Link></li>
+                                                )}
+                                            </ul>
+                                        </div>
+                                        
+                                    </div>
+                                }
+                                {footerNavs[1] &&
+                                    <div class="col-md-6 col-sm-6"
+                                    // data-sal="slide-left"
+                                    // data-sal-delay="400"
+                                    // data-sal-duration="800"
+                                    // data-sal-easing="ease"
+                                    >
+                                        <div class="footer_item footer_item_2">
+                                            <h5>{ footerNavs[1].name }</h5>
+                                            <ul>
+                                                {footerNavs[1].menuItems.nodes.map(
+                                                    navItems=> <li><Link to={navItems.url}>{navItems.label}</Link></li>
+                                                )}
+                                            </ul>
+                                        </div>
+                                    </div>
+                                }
+                            </div>
+                            <div className='row'>
+                                <div className='col-md-12'>
+                                    <div className='payment_wrap'>
+                                        <div className='payment_item d-flex align-items-center'>
+                                            <div className='py_logo'>
+                                                <img src={ftBkashLogo} alt='bkash' />
+                                            </div>
+                                            <div className='py_number'>
+                                                ০১৯৯০৭৭৯৭৬৬, ০১৯৯০৭৭৯৭৮০
+                                            </div>
+                                        </div>
+                                        <div className='row'>
+                                            <div className='col-6'>
+                                                <div className='payment_item d-flex align-items-center'>
+                                                    <div className='py_logo'>
+                                                        <img src={ftNagadLogo} alt='bkash' />
+                                                    </div>
+                                                    <div className='py_number'>
+                                                        ০১৩০৯০১৪৬১৪
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div className='col-6'>
+                                                <div className='payment_item d-flex align-items-center'>
+                                                    <div className='py_logo'>
+                                                        <img src={ftRoketLogo} alt='bkash' />
+                                                    </div>
+                                                    <div className='py_number'>
+                                                        ০১৩০৯০১৪৬১৪৩
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                    </div>
                                 </div>
                             </div>
-                        }
-                        {footerNavs[1] &&
-                            <div class="col-md-3 col-sm-6"
-                            data-sal="slide-left"
-                            data-sal-delay="400"
-                            data-sal-duration="800"
-                            data-sal-easing="ease"
-                            >
-                                <div class="footer_item footer_item_2">
-                                    <h5>{ footerNavs[1].name }</h5>
-                                    <ul>
-                                        {footerNavs[1].menuItems.nodes.map(
-                                            navItems=> <li><Link to={navItems.url}>{navItems.label}</Link></li>
-                                        )}
-                                    </ul>
-                                </div>
-                            </div>
-                        }
+                        </div>
                         {footerNavs[2] &&
                             <div class="col-md-2 col-sm-6"
-                            data-sal="slide-left"
-                            data-sal-delay="500"
-                            data-sal-duration="800"
-                            data-sal-easing="ease"
+                            // data-sal="slide-left"
+                            // data-sal-delay="500"
+                            // data-sal-duration="800"
+                            // data-sal-easing="ease"
                             >
                                 <div class="footer_item footer_item_2">
                                     <h5>{ footerNavs[2].name }</h5>
@@ -135,7 +180,9 @@ const Footer = ()=>{
                                 </div>
                             </div>
                         }
-
+                        <div className='col-12'>
+                            
+                        </div>
                         <div class="col-12">
                             <div class="row copy">
                                 <div class="col-md-3 col-sm-6 padding_0">
