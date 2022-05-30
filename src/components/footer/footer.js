@@ -91,10 +91,10 @@ const Footer = ()=>{
                             <div className='row'>
                                 {footerNavs[0] &&
                                 <div class="col-md-6 col-sm-6"
-                                    // data-sal="slide-left"
-                                    // data-sal-delay="300"
-                                    // data-sal-duration="800"
-                                    // data-sal-easing="ease"
+                                    data-sal="slide-left"
+                                    data-sal-delay="300"
+                                    data-sal-duration="800"
+                                    data-sal-easing="ease"
                                     >
                                         <div class="footer_item footer_item_2">
                                             <h5>{ footerNavs[0].name }</h5>
@@ -109,10 +109,10 @@ const Footer = ()=>{
                                 }
                                 {footerNavs[1] &&
                                     <div class="col-md-6 col-sm-6"
-                                    // data-sal="slide-left"
-                                    // data-sal-delay="400"
-                                    // data-sal-duration="800"
-                                    // data-sal-easing="ease"
+                                    data-sal="slide-left"
+                                    data-sal-delay="400"
+                                    data-sal-duration="800"
+                                    data-sal-easing="ease"
                                     >
                                         <div class="footer_item footer_item_2">
                                             <h5>{ footerNavs[1].name }</h5>
@@ -165,10 +165,10 @@ const Footer = ()=>{
                         </div>
                         {footerNavs[2] &&
                             <div class="col-md-2 col-sm-6"
-                            // data-sal="slide-left"
-                            // data-sal-delay="500"
-                            // data-sal-duration="800"
-                            // data-sal-easing="ease"
+                            data-sal="slide-left"
+                            data-sal-delay="500"
+                            data-sal-duration="800"
+                            data-sal-easing="ease"
                             >
                                 <div class="footer_item footer_item_2">
                                     <h5>{ footerNavs[2].name }</h5>
