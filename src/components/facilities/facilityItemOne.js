@@ -43,7 +43,7 @@ export default function FacilityItemOne(data){
                         <h3>ক্যারিয়ার প্লেসমেন্ট পার্টনার</h3>
                         <ul>
                             {facilityDetails.cit_facelity_jp_items.length > 0 &&
-                                facilityDetails.cit_facelity_jp_items.slice(0, 18).map(
+                                facilityDetails.cit_facelity_jp_items.slice(0, 17).map(
                                     item=>
                                     <li>
                                         {item.featuredImage != null ?
