@@ -45,7 +45,7 @@ export default function FacilityItemTwo(data){
                         <p>ফ্রিল্যান্স কাজের জন্য রয়েছে বিভিন্ন মার্কেটপ্লেস। আন্তর্জাতিক এসব মার্কেটপ্লেসের প্রত্যেকটি ভিন্ন ভিন্ন নিয়ম মেনে চললেও কাজের সুবিধা রয়েছে সবখানেই। </p>
                         <ul>
                             {facilityDetails.cit_facelity_js_items.length > 0 &&
-                                facilityDetails.cit_facelity_js_items.slice(0, 11).map(
+                                facilityDetails.cit_facelity_js_items.slice(0, 12).map(
                                     item=>
                                     <li>
                                         {item.featuredImage != null ?
@@ -55,13 +55,13 @@ export default function FacilityItemTwo(data){
                                 )
                             }
                             
-                            {facilityDetails.cit_facelity_js_items.length > 11 &&
+                            {/* {facilityDetails.cit_facelity_js_items.length > 11 &&
                             
                             <li>
                                 <p>+<NumberBn number={facilityDetails.cit_facelity_js_items.length - 11} />
                                  <span>প্রতিষ্টান</span></p>
                             </li>
-                            }
+                            } */}
                         </ul>
                     </div>
                 </div>
