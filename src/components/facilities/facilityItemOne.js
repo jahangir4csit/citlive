@@ -43,7 +43,7 @@ export default function FacilityItemOne(data){
                         <h3>জবপ্লেসমেন্ট পার্টনার</h3>
                         <ul>
                             {facilityDetails.cit_facelity_jp_items.length > 0 &&
-                                facilityDetails.cit_facelity_jp_items.slice(0, 17).map(
+                                facilityDetails.cit_facelity_jp_items.slice(0, 18).map(
                                     item=>
                                     <li>
                                         {item.featuredImage != null ?
@@ -53,13 +53,13 @@ export default function FacilityItemOne(data){
                                 )
                             }
                             
-                            {facilityDetails.cit_facelity_jp_items.length > 17 &&
+                            {/* {facilityDetails.cit_facelity_jp_items.length > 17 &&
                             
                             <li>
                                 <p>+<NumberBn number={facilityDetails.cit_facelity_jp_items.length - 17} />
                                  <span>প্রতিষ্টান</span></p>
                             </li>
-                            }
+                            } */}
                         </ul>
                     </div>
                 </div>
