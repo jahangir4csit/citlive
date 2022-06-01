@@ -40,7 +40,7 @@ export default function FacilityItemOne(data){
                 </div>
                 <div class="col-md-6">
                     <div class="jobplacement_partner">
-                        <h3>জবপ্লেসমেন্ট পার্টনার</h3>
+                        <h3>ক্যারিয়ার প্লেসমেন্ট পার্টনার</h3>
                         <ul>
                             {facilityDetails.cit_facelity_jp_items.length > 0 &&
                                 facilityDetails.cit_facelity_jp_items.slice(0, 18).map(
