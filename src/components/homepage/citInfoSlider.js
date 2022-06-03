@@ -31,8 +31,6 @@ export default function CitInfoSlider(){
   const data = useJobPlacementStats();
   const sectionData = data.allWpSection.nodes[0];
 
-  console.log(sectionData, 'job data')
-
       const settings = {
         className: "story_text_slider",
         centerMode: true,

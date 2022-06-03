@@ -65,7 +65,7 @@ module.exports = {
     {
       resolve: "gatsby-plugin-sitemap",
       options: {
-        output: "/sitemap-creativeitinstitute.xml",
+        output: '/',
         createLinkInHead: true,
         query: `
         {

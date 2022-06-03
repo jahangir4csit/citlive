@@ -10,7 +10,6 @@ const AdmissionCourses = (data)=>{
 
 const courseDataList = data.coursSlide;
 const button = data.button ? data.button : null;
-console.log(courseDataList, 'admission cat');
 const excludeTrmId = 673;
 const courseData = courseDataList.filter(function(item){ return item.termTaxonomyId != excludeTrmId });
 

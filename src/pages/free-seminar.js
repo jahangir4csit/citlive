@@ -1,12 +1,12 @@
 import { graphql, Link } from "gatsby"
 import React,{useState} from 'react'
 import Seo from "../components/seo"
-import { StaticImage } from "gatsby-plugin-image"
 import Layout from "../components/layout"
 import CourseSlide from "../components/courses/CoursesSlide"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {faPlay} from '@fortawesome/free-solid-svg-icons'
 import ModalVideo from 'react-modal-video'
+import BookButton from '../images/Button-book.png';
 
 export default function FreeSeminar({data}){
 
@@ -31,7 +31,10 @@ export default function FreeSeminar({data}){
                 <div class="row">
                     <div class="col-12">
                         <div class="navbar_btn text-center d-md-none">
-                            <a href="#"><StaticImage src="../images/Button-book.png" alt="icon" />ব্রাউজ কোর্স <i class="fa fa-angle-down ps-2"></i></a>
+                            <Link href="/our-courses">
+                              <img src={BookButton} alt="book icon" />ব্রাউজ কোর্স 
+                              <i class="fa fa-angle-down ps-2"></i>
+                            </Link>
                         </div>
 
                         <div class="facilities_heading ">
@@ -176,7 +179,7 @@ export const query = graphql`
         }
       }
     }
-    allWpSeminar {
+    allWpSeminar(sort: {order: ASC, fields: seminar_meta___seminarDate___day}) {
         nodes {
           title
           seminar_meta {
