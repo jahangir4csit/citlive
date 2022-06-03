@@ -10,7 +10,6 @@ import Mentor from "./mentor";
 export default function InstructorsList(){
 
     const mentors = useInstructors();
-    console.log(mentors, 'Mentors');
 
     return(
         <section id="success_story">

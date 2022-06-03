@@ -1,7 +1,7 @@
 import React from "react"
-import { graphql } from "gatsby"
-import CountUp from 'react-countup';
-import { useCountUp } from 'react-countup';
+//import { graphql } from "gatsby"
+//import CountUp from 'react-countup';
+//import { useCountUp } from 'react-countup';
 import Counter from "./utils/counter";
 import { useStatCountUp } from "./hooks/useCounterup";
 import LazyLoad from 'react-lazyload';

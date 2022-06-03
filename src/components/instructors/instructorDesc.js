@@ -4,7 +4,6 @@ import { StaticImage } from "gatsby-plugin-image";
 export default function InstructorDesc(data){
     const instructorData = data.data;
     const departs = data.departData;
-    console.log(departs, 'depart info');
 
     return(
         <section id="instructors_teachers">

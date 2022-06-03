@@ -19,7 +19,6 @@ export default function OurAchievements({data}) {
     const featuredText = pageData.featuredTextAchivements;
     const sectionsData = data.allWpSection.nodes;
     // const initiatives = pageData.initiatives;
-    console.log(sectionsData, 'achievements page');
 
     return(
         <Layout>

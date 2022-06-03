@@ -4,7 +4,7 @@ import Seo from "../components/seo"
 import Layout from "../components/layout"
 import ContactDesc from "../components/contact/contactDesc"
 import ContactOne from "../components/contact/contactOne"
-import ContactTwo from "../components/contact/contactTwo"
+//import ContactTwo from "../components/contact/contactTwo"
 import ContactForm from "../components/contact/contactForm"
 
 export default function ContactUs({data}){
@@ -14,7 +14,6 @@ export default function ContactUs({data}){
   const branches = pageData.contactInfo;
   const courseList = data.allWpCourse.nodes;
 
-  console.log(branches, 'Braches');
   return(
     <Layout>
       <Seo 

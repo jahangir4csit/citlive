@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import Slider from "react-slick";
-import { StaticImage } from "gatsby-plugin-image"
+//import { StaticImage } from "gatsby-plugin-image"
 import { faChevronLeft, faChevronRight} from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 

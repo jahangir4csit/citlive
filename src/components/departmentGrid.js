@@ -1,6 +1,5 @@
 import React from "react";
-import { StaticImage } from "gatsby-plugin-image";
-import { isEmpty } from "lodash";
+//import { isEmpty } from "lodash";
 import { StaticQuery, graphql } from "gatsby"
 import { Link } from "gatsby"
 

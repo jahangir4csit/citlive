@@ -1,7 +1,7 @@
 import { StaticImage } from "gatsby-plugin-image";
 import React,{useState} from 'react'
 //import ModalVideo from 'react-modal-video'
-import { useFeaturedCases } from "../hooks/useSuccessCaseFeatured";
+//import { useFeaturedCases } from "../hooks/useSuccessCaseFeatured";
 import CaseItem from "../successCase/caseItem";
 import { Link } from "gatsby"
 

@@ -2,7 +2,7 @@ import React from "react"
 import { graphql } from "gatsby"
 import Seo from "../components/seo"
 import Layout from "../components/layout"
-import PageDesc from '../components/pageDesc'
+//import PageDesc from '../components/pageDesc'
 
 export default function SiteMap({data}) {
 

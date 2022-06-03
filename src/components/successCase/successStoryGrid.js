@@ -1,7 +1,4 @@
 import React from "react";
-import { StaticImage } from "gatsby-plugin-image"
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import {faPlay, faAngleLeft, faAngleRight} from '@fortawesome/free-solid-svg-icons'
 
 import Tabs from 'react-bootstrap/Tabs'
 import Tab from 'react-bootstrap/Tab'

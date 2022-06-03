@@ -1,7 +1,6 @@
 import { faFacebookF, faLinkedinIn, faYoutube, faInstagram } from '@fortawesome/free-brands-svg-icons'
 import { faEnvelopeOpen, faMapMarkerAlt, faPhoneAlt } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { StaticImage } from "gatsby-plugin-image"
 import { Link } from 'gatsby'
 import React from "react"
 import { useFooterMenuQuery } from "../hooks/useMenuFooter"

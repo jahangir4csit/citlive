@@ -1,7 +1,7 @@
 import React from "react"
 import { graphql } from "gatsby"
-import CountUp from 'react-countup';
-import { useCountUp } from 'react-countup';
+//import CountUp from 'react-countup';
+//import { useCountUp } from 'react-countup';
 import Counter from "./utils/counter";
 import { useStatCountUp } from "./hooks/useCounterup";
 
@@ -11,7 +11,6 @@ const CounterUp2 = (data)=>{
     const statsData = useStatCountUp();
     const stats = statsData.allWpSection.nodes[0];
     const boxbg = data.boxbg;
-    console.log(boxbg, 'box bg');
 
     return(
         <section id="couter_up">

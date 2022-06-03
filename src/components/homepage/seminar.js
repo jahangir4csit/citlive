@@ -5,7 +5,7 @@ import seminarDot from '../../images/seminar-dots.png';
 const Seminar = (data)=>{
     const seminarDataUpcoming = data.upcomming;
     const seminarBanner = data.secBanner[0];
-    console.log(seminarDataUpcoming, 'Seminar up');
+
     return(
         <section id="seminar">
             <div class="container seminar">

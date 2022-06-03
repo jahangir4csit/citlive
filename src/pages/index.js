@@ -1,7 +1,7 @@
 import { graphql } from "gatsby"
 import * as React from "react"
 import LazyLoad from 'react-lazyload';
-import BlogSlider from "../components/blog/blogSlider"
+//import BlogSlider from "../components/blog/blogSlider"
 import CounterUp from "../components/counterUp"
 import AdmissionCourses from "../components/courses/admissionCourses"
 import CourseSlide from "../components/courses/CoursesSlide"
@@ -27,7 +27,6 @@ export default function HomePage({data}){
   const reviewsData = data.allWp.nodes[0];
   const vitrualTour = data.allWpSection.nodes[0];
 
-  console.log(homeData.citPartners, 'CIT Partners');
 
   return(
     <Layout>

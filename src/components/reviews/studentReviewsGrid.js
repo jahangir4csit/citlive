@@ -10,7 +10,6 @@ const StudentReviewsGrid = (data)=>{
     const fbReviews = data.data.crbThemeOptions.crbFacebookReviews;
     const googleReviewsCount = data.data.crbThemeOptions.citReviewsGoogle;
     const googleReviews = data.data.crbThemeOptions.crbGooogleReviews;
-    console.log(fbReviews, 'fb reviews');
 
     return(
         <section id="student_feedback" className="pt-5">

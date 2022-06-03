@@ -1,6 +1,5 @@
 import React from "react"
 import PropTypes from "prop-types"
-import { Link } from "gatsby"
 import Topbar from './topbar'
 import MainNav from "./navbar"
 import JoinSeminar from "../utils/joinSeminar"

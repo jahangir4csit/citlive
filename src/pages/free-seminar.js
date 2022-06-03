@@ -16,7 +16,6 @@ export default function FreeSeminar({data}){
     const page = data.allWpPage.nodes[0];
     const courseData = data.allWpCourseCategory.nodes;
     const seminarData = data.allWpSeminar.nodes;
-    console.log(seminarData, 'seminar data');
 
     const seo = page.pageMeta;
     const [isOpen, setOpen] = useState(false);

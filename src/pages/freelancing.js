@@ -27,8 +27,6 @@ export default function Freelancing({data}) {
     const marketPlaces = pageData.citFacelityJsItems;
     const forWhomesData = pageData.citFrFreelancingItem; 
 
-    console.log(sectionsData, 'Section Data');
-
     return(
       <Layout>
         <Seo 

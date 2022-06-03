@@ -2,8 +2,6 @@ import React from "react";
 
 const AboutUsDesc = (data) =>{
 
-    console.log(data, 'achievements about page');
-
     return(
         <section id="about_top" className="mt-0">
         <div class="container">

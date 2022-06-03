@@ -2,7 +2,6 @@ import React from "react";
 
 export default function InstructorHead(data){
     const head = data.data;
-    console.log(head, 'h data');
 
     return(
         <div class="row m-0 instructor_profile align-items-center">
