@@ -48,6 +48,15 @@ module.exports = {
         },
       },
     },
+    {
+      resolve: 'gatsby-plugin-robots-txt',
+      options: {
+        host: 'https://www.creativeitinstitute.com',
+        sitemap: 'https://www.creativeitinstitute.com/sitemap.xml',
+        policy: [{userAgent: '*', disallow: ['/']}]
+      }
+    },
+    `gatsby-plugin-sitemap`,
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-image`,
     {
