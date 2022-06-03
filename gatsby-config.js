@@ -1,3 +1,4 @@
+const siteUrl = process.env.URL || `https://www.creativeitinstitute.com/`
 module.exports = {
   siteMetadata: {
     title: `Professional IT Training Institute in Bangladesh - Creative IT`,
@@ -5,7 +6,7 @@ module.exports = {
     Graphic Design, Web Software, Digital Marketing, Networking, Film Media,
     Robotics Automation Training etc affordable price. Call +880 162 4666000`,
     author: `@Jahangir Ahmed`,
-    siteUrl: `https://creativeitinstitute.com/`,
+    siteUrl: `https://www.creativeitinstitute.com/`,
   },
   plugins: [
     {
