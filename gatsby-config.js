@@ -57,15 +57,15 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-robots-txt',
       options: {
-        host: 'https://www.creativeitinstitute.com',
         sitemap: 'https://www.creativeitinstitute.com/sitemap.xml',
-        policy: [{userAgent: '*', disallow: ['/']}]
+        policy: [{userAgent: '*', disallow: ['']}]
       }
     },
     {
       resolve: "gatsby-plugin-sitemap",
       options: {
         output: '/',
+        entryLimit: 45000,
         createLinkInHead: true,
         query: `
         {
