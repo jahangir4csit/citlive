@@ -167,6 +167,27 @@ module.exports = {
         //uri: `http://localhost/citbd/graphql`
       }
     },
+    {
+      resolve: `gatsby-plugin-nprogress`,
+      options: {
+        // Setting a color is optional.
+        color: `tomato`,
+        // Disable the loading spinner.
+        showSpinner: false,
+        trickle: false,
+        barLabel: 'fetching data',
+        spinnerSelector: 'div.spin',
+        trickleSpeed: 200,
+        template: "<div class='bar'>...</div>",
+        minimum: 0.8
+      },
+    },
+    {
+      resolve: `gatsby-plugin-facebook-pixel`,
+      options: {
+        pixelId: "383471665939429",
+      },
+    },
     `gatsby-plugin-smoothscroll`
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline

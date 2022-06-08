@@ -1,0 +1,19 @@
+#nprogress {
+    z-index: 10000;
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    top: 0;
+    left: 0;
+    background: rgba(48, 48, 48, 0.9);
+    color: teal;
+  }
+  
+  #nprogress .bar {
+    background: teal;
+  }
+  
+  #nprogress .spinner-icon {
+    border-top-color: teal;
+    border-left-color: teal;
+  }
