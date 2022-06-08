@@ -120,6 +120,9 @@ div.success_menu ul.common_slider_class li {
 }
 /*===========Spacing================*/
 /* **** Padding Spacing **** */
+.pl-0{
+  padding-left: 0!important;
+}
 .pb-6{
   padding-bottom: 60px;
 }
@@ -2660,21 +2663,38 @@ del {
   opacity: 0.7;
 }
 
-.payment_item{
-  margin-bottom: 15px;
+.footer_bottom{
+  background-color: #FFFDFD;
 }
-.payment_item .py_number{
-  color:#fff;
-  font-family: "Hind";
-  opacity: 0.7;
+.payments{
+  padding-top: 90px;
+  padding-bottom: 45px;
 }
-.payment_item .py_logo{
-  margin-right: 10px;
+.payments .payment_heading{
+  display: block;
 }
-.payment_item .py_logo img{
-  width: 60px;
+.payments .payment_heading h3{
+  color: #2D2D2D;
+  font-family: 'Hind Siliguri';
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 40px;
+}
+.payment_logo{
+  max-width: 140px;
+  margin-right: 20px;
+}
+.payment_qr{
+  max-width: 163px;
 }
 
+.payment_qr small {
+    font-family: 'Hind Siliguri';
+    font-weight: 600;
+    padding-left: 9px;
+    font-size: 24px;
+    letter-spacing: 2px;
+}
 .copy {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2685,22 +2705,22 @@ del {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  border-top: 1px solid rgba(255, 255, 255, 0.103);
+  border-top: 1px solid rgba(45, 45, 45, .1);
   padding-top: 30px;
   padding-bottom: 30px;
 }
 
 .copy .copy_text p {
-  color: #ffffff;
+  color: #2D2D2D;
   text-align: center;
-  font-family: Roboto, Ruposhi Bangla Unicode;
+  font-family: 'Roboto';
   font-size: 14px;
   font-weight: 400;
   line-height: 24px;
   letter-spacing: 0.20000000298023224px;
 }
 .copy .copy_text p a{
-  color: #fff;
+  color: #FF1E1E;
 }
 .copy .copy_social_link {
   text-align: right;
@@ -2716,8 +2736,8 @@ del {
   -moz-border-radius: 50%;
   -ms-border-radius: 50%;
   -o-border-radius: 50%;
-  border: 1px solid rgba(255, 255, 255, 0.342);
-  color: #ffffff;
+  border: 1px solid #2D2D2D;
+  color: #2D2D2D;
   font-size: 16px;
   background: transparent;
   margin-left: 12px;
@@ -2730,6 +2750,7 @@ del {
 .copy .copy_social_link a:hover{
   background: rgb(255, 30, 30);
   border-color: rgb(255, 30, 30);
+  color: #fff;
 }
 
 /* =================================

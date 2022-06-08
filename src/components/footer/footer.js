@@ -5,11 +5,16 @@ import { Link } from 'gatsby'
 import React from "react"
 import { useFooterMenuQuery } from "../hooks/useMenuFooter"
 import { useFooterData } from "../hooks/useFooterData"
-import ftLogo from '../../images/cit_logo_white.png';
+import ftLogo from '../../images/cit_logo.png';
 import ftDots from '../../images/footer-dots.png';
-import ftBkashLogo from '../../images/bkash_logo.png';
-import ftNagadLogo from '../../images/Nagad_logo.png';
-import ftRoketLogo from '../../images/Rocker_logo.png';
+
+import ftBkashLogo from '../../images/bkash_marchant.png';
+import ftNagadLogo from '../../images/nagad_marchant.png';
+import ftRoketLogo from '../../images/roket_marchant.png';
+
+import ftBkashQr from '../../images/bkash_qr.png';
+import ftNagadQr from '../../images/nagad_qr.png';
+import ftRoketQr from '../../images/roket_qr.png';
 
 const Footer = ()=>{
 
@@ -85,83 +90,41 @@ const Footer = ()=>{
                                 </ul>
                             </div>
                         </div>
-
-                        <div className='col-md-6 col-sm-6'>
-                            <div className='row'>
-                                {footerNavs[0] &&
-                                <div class="col-md-6 col-sm-6"
-                                    data-sal="slide-left"
-                                    data-sal-delay="300"
-                                    data-sal-duration="800"
-                                    data-sal-easing="ease"
-                                    >
-                                        <div class="footer_item footer_item_2">
-                                            <h5>{ footerNavs[0].name }</h5>
-                                            <ul>
-                                                {footerNavs[0].menuItems.nodes.map(
-                                                    navItems=> <li><Link to={navItems.url}>{navItems.label}</Link></li>
-                                                )}
-                                            </ul>
-                                        </div>
-                                        
-                                    </div>
-                                }
-                                {footerNavs[1] &&
-                                    <div class="col-md-6 col-sm-6"
-                                    data-sal="slide-left"
-                                    data-sal-delay="400"
-                                    data-sal-duration="800"
-                                    data-sal-easing="ease"
-                                    >
-                                        <div class="footer_item footer_item_2">
-                                            <h5>{ footerNavs[1].name }</h5>
-                                            <ul>
-                                                {footerNavs[1].menuItems.nodes.map(
-                                                    navItems=> <li><Link to={navItems.url}>{navItems.label}</Link></li>
-                                                )}
-                                            </ul>
-                                        </div>
-                                    </div>
-                                }
+                        {footerNavs[0] &&
+                        <div class="col-md-3 col-sm-6"
+                            data-sal="slide-left"
+                            data-sal-delay="300"
+                            data-sal-duration="800"
+                            data-sal-easing="ease"
+                            >
+                                <div class="footer_item footer_item_2">
+                                    <h5>{ footerNavs[0].name }</h5>
+                                    <ul>
+                                        {footerNavs[0].menuItems.nodes.map(
+                                            navItems=> <li><Link to={navItems.url}>{navItems.label}</Link></li>
+                                        )}
+                                    </ul>
+                                </div>
+                                
                             </div>
-                            <div className='row'>
-                                <div className='col-md-12'>
-                                    <div className='payment_wrap'>
-                                        <div className='payment_item d-flex align-items-center'>
-                                            <div className='py_logo'>
-                                                <img src={ftBkashLogo} alt='bkash' />
-                                            </div>
-                                            <div className='py_number'>
-                                                ০১৯৯০৭৭৯৭৬৬, ০১৯৯০৭৭৯৭৮০
-                                            </div>
-                                        </div>
-                                        <div className='row'>
-                                            <div className='col-6'>
-                                                <div className='payment_item d-flex align-items-center'>
-                                                    <div className='py_logo'>
-                                                        <img src={ftNagadLogo} alt='bkash' />
-                                                    </div>
-                                                    <div className='py_number'>
-                                                        ০১৩০৯০১৪৬১৪
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div className='col-6'>
-                                                <div className='payment_item d-flex align-items-center'>
-                                                    <div className='py_logo'>
-                                                        <img src={ftRoketLogo} alt='bkash' />
-                                                    </div>
-                                                    <div className='py_number'>
-                                                        ০১৩০৯০১৪৬১৪৩
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        
-                                    </div>
+                        }
+                        {footerNavs[1] &&
+                            <div class="col-md-3 col-sm-6"
+                            data-sal="slide-left"
+                            data-sal-delay="400"
+                            data-sal-duration="800"
+                            data-sal-easing="ease"
+                            >
+                                <div class="footer_item footer_item_2">
+                                    <h5>{ footerNavs[1].name }</h5>
+                                    <ul>
+                                        {footerNavs[1].menuItems.nodes.map(
+                                            navItems=> <li><Link to={navItems.url}>{navItems.label}</Link></li>
+                                        )}
+                                    </ul>
                                 </div>
                             </div>
-                        </div>
+                        }
                         {footerNavs[2] &&
                             <div class="col-md-2 col-sm-6"
                             data-sal="slide-left"
@@ -179,52 +142,90 @@ const Footer = ()=>{
                                 </div>
                             </div>
                         }
-                        <div className='col-12'>
-                            
-                        </div>
-                        <div class="col-12">
-                            <div class="row copy">
-                                <div class="col-md-3 col-sm-6 padding_0">
-                                    <div class="footer_logo"
-                                    data-sal="slide-left"
-                                    data-sal-delay="200"
-                                    data-sal-duration="800"
-                                    data-sal-easing="ease"
-                                    >
-                                        <img src={ftLogo} alt="Creative IT Institute" />
-
-                                    </div> 
+                        
+                    </div>
+                </div>
+                <div className='footer_bottom'>
+                    <div className='container'>
+                        <div className='row justify-content-center payments'>
+                            <div className='col-12 payment_heading text-center'>
+                                <h3>যে সকল মাধ্যমে আমরা পেমেন্ট গ্রহন করি</h3>
+                            </div>
+                            <div className='col-sm-6 col-md-4'>
+                                <div className='payment_item d-flex align-items-center justify-content-center justify-content-md-start'>
+                                    <div className='payment_logo'>
+                                        <img className='img-fluid' src={ftBkashLogo} alt='bkash'/>
+                                    </div>
+                                    <div className='payment_qr'>
+                                        <img className='img-fluid' src={ftBkashQr} alt='bkash qr'/>
+                                        <small>01990779766</small>
+                                    </div>
                                 </div>
-                                <div class="col-md-6 copy_text_sm_last"
-                                data-sal="slide-up"
+                            </div>
+                            <div className='col-sm-6 col-md-4'>
+                                <div className='payment_item d-flex align-items-center justify-content-center'>
+                                    <div className='payment_logo'>
+                                        <img className='img-fluid' src={ftNagadLogo} alt='bkash'/>
+                                    </div>
+                                    <div className='payment_qr'>
+                                        <img className='img-fluid' src={ftNagadQr} alt='bkash qr'/>
+                                        <small>01309014614</small>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className='col-sm-6 col-md-4'>
+                                <div className='payment_item d-flex align-items-center justify-content-center justify-content-md-end'>
+                                    <div className='payment_logo'>
+                                        <img className='img-fluid' src={ftRoketLogo} alt='bkash'/>
+                                    </div>
+                                    <div className='payment_qr'>
+                                        <img className='img-fluid' src={ftRoketQr} alt='bkash qr'/>
+                                        <small className='pl-0'>013090146143</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row copy">
+                            <div class="col-md-3 col-sm-6 padding_0">
+                                <div class="footer_logo"
+                                data-sal="slide-left"
                                 data-sal-delay="200"
                                 data-sal-duration="800"
                                 data-sal-easing="ease"
                                 >
-                                    <div class="copy_text">
-                                        <p dangerouslySetInnerHTML={{ __html: footerData.crbThemeOptions.citCopyrightText ? 'Copyright &copy; '+ footerData.crbThemeOptions.citCopyrightText + `. All right reserved | <a href="/sitemap">Sitemap</a>` : 'Creative IT Institute' }} />
-                                    </div>
+                                    <img src={ftLogo} alt="Creative IT Institute" />
+
+                                </div> 
+                            </div>
+                            <div class="col-md-6 copy_text_sm_last"
+                            data-sal="slide-up"
+                            data-sal-delay="200"
+                            data-sal-duration="800"
+                            data-sal-easing="ease"
+                            >
+                                <div class="copy_text">
+                                    <p dangerouslySetInnerHTML={{ __html: footerData.crbThemeOptions.citCopyrightText ? 'Copyright &copy; '+ footerData.crbThemeOptions.citCopyrightText + `. All right reserved | <a href="/sitemap">Sitemap</a>` : 'Creative IT Institute' }} />
                                 </div>
-                                <div class="col-md-3 col-sm-6">
-                                    <div class="copy_social_link"
-                                    data-sal="slide-right"
-                                    data-sal-delay="300"
-                                    data-sal-duration="800"
-                                    data-sal-easing="ease"
-                                    >
-                                        {footerData.crbThemeOptions.citSmediaFb &&
-                                            <Link to={footerData.crbThemeOptions.citSmediaFb}><FontAwesomeIcon icon={faFacebookF} /></Link>
-                                        }
-                                        {footerData.crbThemeOptions.citSmediaIn &&
-                                            <Link to={footerData.crbThemeOptions.citSmediaIn}><FontAwesomeIcon icon={faLinkedinIn} /></Link>
-                                        }
-                                        {footerData.crbThemeOptions.citSmediaTweet &&
-                                            <Link to={footerData.crbThemeOptions.citSmediaTweet}><FontAwesomeIcon icon={faYoutube} /></Link>
-                                        }
-                                        {footerData.crbThemeOptions.citSmediaInsta &&
-                                            <Link to={footerData.crbThemeOptions.citSmediaInsta}><FontAwesomeIcon icon={faInstagram} /></Link>
-                                        }
-                                    </div>
+                            </div>
+                            <div class="col-md-3 col-sm-6">
+                                <div class="copy_social_link"
+                                data-sal="slide-right"
+                                data-sal-delay="300"
+                                data-sal-duration="800"
+                                data-sal-easing="ease"
+                                >
+                                    {footerData.crbThemeOptions.citSmediaFb &&
+                                        <Link to={footerData.crbThemeOptions.citSmediaFb}><FontAwesomeIcon icon={faFacebookF} /></Link>
+                                    }
+                                    {footerData.crbThemeOptions.citSmediaIn &&
+                                        <Link to={footerData.crbThemeOptions.citSmediaIn}><FontAwesomeIcon icon={faLinkedinIn} /></Link>
+                                    }
+                                    {footerData.crbThemeOptions.citSmediaTweet &&
+                                        <Link to={footerData.crbThemeOptions.citSmediaTweet}><FontAwesomeIcon icon={faYoutube} /></Link>
+                                    }
+                                    {footerData.crbThemeOptions.citSmediaInsta &&
+                                        <Link to={footerData.crbThemeOptions.citSmediaInsta}><FontAwesomeIcon icon={faInstagram} /></Link>
+                                    }
                                 </div>
                             </div>
                         </div>

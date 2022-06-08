@@ -28,40 +28,6 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-plugin-google-gtag`,
-      options: {
-        // You can add multiple tracking ids and a pageview event will be fired for all of them.
-        trackingIds: [
-          "UA-93245109-2", // Google Analytics / GA
-        ],
-        // This object gets passed directly to the gtag config command
-        // This config will be shared across all trackingIds
-        gtagConfig: {
-          //optimize_id: "UA-93245109-2",
-          anonymize_ip: true,
-          cookie_expires: 0,
-        },
-        // This object is used for configuration specific to this plugin
-        pluginConfig: {
-          // Puts tracking script in the head instead of the body
-          head: true,
-          // Setting this parameter is also optional
-          respectDNT: true,
-          // Avoids sending pageview hits from custom paths
-          exclude: ["/preview/**", "/do-not-track/me/too/"],
-          // Defaults to https://www.googletagmanager.com
-          //origin: "YOUR_SELF_HOSTED_ORIGIN",
-        },
-      },
-    },
-    {
-      resolve: 'gatsby-plugin-robots-txt',
-      options: {
-        sitemap: 'https://www.creativeitinstitute.com/sitemap.xml',
-        policy: [{userAgent: '*', disallow: ['']}]
-      }
-    },
-    {
       resolve: "gatsby-plugin-sitemap",
       options: {
         output: '/',
@@ -181,6 +147,40 @@ module.exports = {
         template: "<div class='bar'>...</div>",
         minimum: 0.8
       },
+    },
+    {
+      resolve: `gatsby-plugin-google-gtag`,
+      options: {
+        // You can add multiple tracking ids and a pageview event will be fired for all of them.
+        trackingIds: [
+          "UA-93245109-2", // Google Analytics / GA
+        ],
+        // This object gets passed directly to the gtag config command
+        // This config will be shared across all trackingIds
+        gtagConfig: {
+          //optimize_id: "UA-93245109-2",
+          anonymize_ip: true,
+          cookie_expires: 0,
+        },
+        // This object is used for configuration specific to this plugin
+        pluginConfig: {
+          // Puts tracking script in the head instead of the body
+          head: true,
+          // Setting this parameter is also optional
+          respectDNT: true,
+          // Avoids sending pageview hits from custom paths
+          exclude: ["/preview/**", "/do-not-track/me/too/"],
+          // Defaults to https://www.googletagmanager.com
+          //origin: "YOUR_SELF_HOSTED_ORIGIN",
+        },
+      },
+    },
+    {
+      resolve: 'gatsby-plugin-robots-txt',
+      options: {
+        sitemap: 'https://www.creativeitinstitute.com/sitemap.xml',
+        policy: [{userAgent: '*', disallow: ['']}]
+      }
     },
     {
       resolve: `gatsby-plugin-facebook-pixel`,

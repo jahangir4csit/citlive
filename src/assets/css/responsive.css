@@ -4232,7 +4232,14 @@
 	}
 
 	.copy .copy_social_link {
-		text-align: center;
+		text-align: center!important;
+	}
+	.footer_heading .footer_btn a{
+		margin-bottom: 15px!important;
+	}
+	.glory_text .glory_btn a:first-child{
+		margin-right: 0!important;
+		margin-bottom: 15px!important;
 	}
 
 	/* =================================================
