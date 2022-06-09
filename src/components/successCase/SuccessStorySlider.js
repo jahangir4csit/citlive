@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { Fragment, useState } from 'react';
 import { ModalVid } from '../utils/modal';
 import { Link } from "gatsby";
 import Carousel from 'react-bootstrap/Carousel' 
@@ -7,8 +7,11 @@ import Carousel from 'react-bootstrap/Carousel'
 export default function SuccessStorySlider(data){
 
     const sData = data.sdata;
+    console.log(sData, 'sdata');    
 
     return(
+        <Fragment>
+        {sData != null &&
         <div class="pg_succsess_story">
             <div class="heading">
                 <h4><span>সাকসেস স্টোরি</span> <span><Link to="/success-story">আরও দেখুন</Link></span></h4>
@@ -30,5 +33,7 @@ export default function SuccessStorySlider(data){
                 </Carousel>
             </div>
         </div>
+        }
+        </Fragment>
     )
 }
