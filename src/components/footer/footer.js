@@ -27,7 +27,7 @@ const Footer = ()=>{
                 <img class="footer_left img-fluid" src={ftDots} alt="CIT" />
                 <img class="footer_right img-fluid" src={ftDots} alt="Creative IT" />
                 <div class="container">
-                    <div class="row">
+                    <div class="row footer-top">
                         <div class="col-12">
                             <div class="footer_heading"
                             data-sal="zoom-in"

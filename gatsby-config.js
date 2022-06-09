@@ -32,7 +32,7 @@ module.exports = {
       options: {
         output: '/',
         entryLimit: 45000,
-        createLinkInHead: true,
+        createLinkInHead: false,
         query: `
         {
           allSitePage {
@@ -129,8 +129,8 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-apollo',
       options: {
-        uri: 'https://app.creativeitinstitute.com/graphql'
-        //uri: `http://localhost/citbd/graphql`
+        //uri: 'https://app.creativeitinstitute.com/graphql'
+        uri: `http://localhost/citbd/graphql`
       }
     },
     {

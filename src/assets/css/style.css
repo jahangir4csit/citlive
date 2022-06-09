@@ -870,6 +870,20 @@ div.success_menu ul.common_slider_class li {
 /* =================================
         Populer Courses Area Satrt
 =================================== */
+.carousel-indicators [data-bs-target]{
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: #ebebeb;
+  border: 0;
+}
+.carousel-indicators{
+  margin-bottom: 0;
+  bottom: -21px;
+}
+.carousel-indicators .active{
+  background: #ff1e1e;
+}
 #courseslide {
   padding-bottom: 40px;
   overflow: hidden;
@@ -2661,6 +2675,9 @@ del {
   line-height: 14px;
   letter-spacing: 0.20000000298023224px;
   opacity: 0.7;
+}
+.footer-top{
+  padding-bottom: 50px;
 }
 
 .footer_bottom{
