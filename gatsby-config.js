@@ -97,7 +97,8 @@ module.exports = {
         start_url: `/`,
         background_color: `#663399`,
         display: `minimal-ui`,
-        icon: `src/images/index.png`,  
+        icon: `src/images/index.png`, 
+        crossOrigin: `use-credentials`, 
       },
     },
     {
@@ -129,8 +130,8 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-apollo',
       options: {
-        //uri: 'https://app.creativeitinstitute.com/graphql'
-        uri: `http://localhost/citbd/graphql`
+        uri: 'https://app.creativeitinstitute.com/graphql'
+        //uri: `http://localhost/citbd/graphql`
       }
     },
     {

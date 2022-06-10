@@ -1,6 +1,9 @@
-import React, { useState } from "react";
+import React, { Fragment, useState } from "react";
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
+import Spinner from 'react-bootstrap/Spinner';
+import Alert from 'react-bootstrap/Alert';
+
 //import gql from 'graphql-tag';
 //import { Mutation } from 'react-apollo';
 import Layout from "../components/layout";
@@ -21,6 +24,12 @@ const RegSeminar = ({location}) => {
 
   const courseslists = useCourses();
   //const courseId = location ? location.state.id : '0';
+  const resetInput = () => {
+    setNameValue('');
+    setMobileValue('');
+    setEmailValue('');
+    setAddressValue('');
+  };
 
   const [nameVal, setNameValue] = useState(' ')
   const [mobileVal, setMobileValue] = useState(' ')
@@ -38,10 +47,12 @@ const RegSeminar = ({location}) => {
 `;
   
 
-  const [createSubmission, { loading, error, data }] = useMutation(SEMINAR_MUTATION);
+  const [createSubmission, { loading, error, data }] = useMutation(SEMINAR_MUTATION,{
+    onCompleted: resetInput
+  });
 
-  if (loading) return 'Submitting...';
-  if (error) return `Submission error! ${error.message}`;
+  //if (loading) return 'Submitting...';
+  //if (error) return `Submission error! ${error.message}`;
 
   return (
     <Layout>
@@ -152,16 +163,30 @@ const RegSeminar = ({location}) => {
 
                       </Form.Group>
                       <Button className="btn-formSend" variant="primary" type="submit">
-                        সাবমিট 
+                        সাবমিট
+                        {loading &&
+                        <Fragment>
+                          <Spinner
+                            as="span"
+                            animation="grow"
+                            size="sm"
+                            role="status"
+                            aria-hidden="true"
+                          />
+                        </Fragment>
+                        }
                       </Button>
                     </Form> 
-                    <div style={{ padding: '20px' }}>
-                      {loading && <p>Loading...</p>}
                       {error && (
+                        <Alert variant="danger" className="mt-3">
                         <p>An unknown error has occured, please try again later...</p>
+                        </Alert>
                       )}
-                      {data && <p>ধন্যবাদ, শীঘ্রই আপনার সাথে যোগাযোগ করা হবে </p>}
-                    </div>
+                      {data &&
+                      <Alert variant="success" className="mt-3">
+                        <p>ধন্যবাদ, শীঘ্রই আপনার সাথে যোগাযোগ করা হবে </p>
+                      </Alert>
+                      }
                     </React.Fragment>
                     {/* )}
                     </Mutation>  */}
