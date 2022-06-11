@@ -30,9 +30,15 @@ module.exports = {
     {
       resolve: "gatsby-plugin-sitemap",
       options: {
-        output: '/',
-        entryLimit: 45000,
-        createLinkInHead: false,
+        output: '.',
+        exclude: [
+          `/using-ssr/*`,
+          `/using-typescript/*`,
+          `/student-login/*`,
+          `/courses_cat-slug/*`,
+          `/certificate/*`,
+          `/course-cat/*`
+        ],
         query: `
         {
           allSitePage {
@@ -40,13 +46,13 @@ module.exports = {
               path
             }
           }
-          allWpContentNode(filter: {nodeType: {in: ["Post", "Page"]}}) {
+          allWpContentNode(filter: {nodeType: {in: ["Course", "Page"]}}) {
             nodes {
-              ... on WpPost {
+              ... on WpPage {
                 uri
                 modifiedGmt
               }
-              ... on WpPage {
+              ... on WpCourse {
                 uri
                 modifiedGmt
               }
@@ -71,12 +77,19 @@ module.exports = {
           })
         },
         serialize: ({ path, modifiedGmt }) => {
+          let priority = 0.8
+          if ('/' === path) {
+            priority = 1.0
+            modifiedGmt = '2022-06-11T02:04:41.000Z'
+          }
           return {
             url: path,
             lastmod: modifiedGmt,
+            changefreq: 'always',
+            priority: priority
           }
         },
-      },
+       },
     },
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-image`,
@@ -85,7 +98,7 @@ module.exports = {
       options: {
         name: `images`,
         path: `${__dirname}/src/images`,
-      },
+      }
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
@@ -97,7 +110,8 @@ module.exports = {
         start_url: `/`,
         background_color: `#663399`,
         display: `minimal-ui`,
-        icon: `src/images/index.png`, 
+        icon: `src/images/index.png`,
+        sitemap: `src/sitemap/sitemap.xml`,  
         crossOrigin: `use-credentials`, 
       },
     },
@@ -179,6 +193,7 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-robots-txt',
       options: {
+        host: null,
         sitemap: 'https://www.creativeitinstitute.com/sitemap.xml',
         policy: [{userAgent: '*', disallow: ['']}]
       }
