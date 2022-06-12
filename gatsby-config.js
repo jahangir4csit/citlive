@@ -14,9 +14,6 @@ module.exports = {
       options: {
         url: `https://app.creativeitinstitute.com/graphql`,
         //url: `http://localhost/citbd/graphql`,
-        schema: {
-          timeout: 350000
-        },
       },
     },
     {
