@@ -13,7 +13,12 @@ module.exports = {
       resolve: `gatsby-source-wordpress`,
       options: {
         url: `https://app.creativeitinstitute.com/graphql`,
-        //url: `http://localhost/citbd/graphql`
+        //url: `http://localhost/citbd/graphql`,
+        schema: {
+          timeout: 350000,
+          perPage: 50,
+          requestConcurrency: 10,
+        },
       },
     },
     {
