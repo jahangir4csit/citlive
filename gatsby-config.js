@@ -16,7 +16,7 @@ module.exports = {
         //url: `http://localhost/citbd/graphql`,
         schema: {
           timeout: 350000,
-          perPage: 50,
+          perPage: 100,
           requestConcurrency: 15
         }
       },
