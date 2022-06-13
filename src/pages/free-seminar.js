@@ -69,7 +69,7 @@ export default function FreeSeminar({data}){
                                       <div class="join_btn">
                                           <Link 
                                           to={`/register-for-free-seminar/`} 
-                                          state={{ id: seminar.seminar_meta.course.databaseId }}
+                                          state={{ id: seminar.seminar_meta.course ? seminar.seminar_meta.course.databaseId : 0 }}
                                           >জয়েন</Link>
                                       </div>
                                   </div>
