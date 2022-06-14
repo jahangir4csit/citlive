@@ -45,7 +45,7 @@ export default function SingleCourse({data}){
     const [scroll, setScroll] = useState(false);
 
     // get options data from wp
-    //const [getDetails, setDetails] = useState([]);
+    const [getDetails, setDetails] = useState([]);
     // get software 
     const [getSoftData, setSoftData] = useState([]);
     // get forwhome 
@@ -60,6 +60,7 @@ export default function SingleCourse({data}){
     const [getSuccessCase, setSuccessCase] = useState([]);
     
     //console.log(getDetails, 'Course Details');
+    //console.log(getSuccessCase, 'get case');
 
     useEffect(() => {
         window.addEventListener("scroll", () => {
@@ -73,54 +74,74 @@ export default function SingleCourse({data}){
 
       // GET
       apiFetch( { path: `${WPApi}/courses/${postId}` } ).then( ( coursedetails ) => {
-        //setDetails(coursedetails);
+        setDetails(coursedetails);
+        
         //get software data
         const sofData = Promise.all(
+          coursedetails.software_for_course ?
           coursedetails.software_for_course.map(async (itemId) => await (await fetch(`${WPApi}/citoptions/${itemId}`)).json())
+          :  setSoftData(0)
         )
         .then((values) => {
           setSoftData(values);
-        });
+        })
+        .catch(err => console.error(err));
 
         //get forwhome data
         const forWhomeData = Promise.all(
+          coursedetails.course_for_whome ?
           coursedetails.course_for_whome.map(async (itemId) => await (await fetch(`${WPApi}/citoptions/${itemId}`)).json())
+          : setForWhome(0)
         )
         .then((values) => {
           setForWhome(values);
-        });
+        })
+        .catch(err => console.error(err));
 
         //get Marketplace data
         const marketPlaces = Promise.all(
+          coursedetails.job_market ?
           coursedetails.job_market.map(async (itemId) => await (await fetch(`${WPApi}/citoptions/${itemId}`)).json())
+          : setJobMarket(0)
         )
         .then((values) => {
           setJobMarket(values);
-        });
+        })
+        .catch(err => console.error(err));
 
         //get position data
         const positions = Promise.all(
+          coursedetails.job_position ?
           coursedetails.job_position.map(async (itemId) => await (await fetch(`${WPApi}/citoptions/${itemId}`)).json())
+          :  setPosition(0)
         )
         .then((values) => {
           setPosition(values);
-        });
+        })
+        .catch(err => console.error(err));
 
         //get position data
         const facilities = Promise.all(
+          coursedetails.course_facilities ?
           coursedetails.course_facilities.map(async (itemId) => await (await fetch(`${WPApi}/citoptions/${itemId}`)).json())
+          :  setFacilities(0)
         )
         .then((values) => {
           setFacilities(values);
-        });
+        })
+        .catch(err => console.error(err));
 
         //get success case data
         const successCase = Promise.all(
+          coursedetails.success_case_link ? 
           coursedetails.success_case_link.map(async (itemId) => await (await fetch(`${WPApi}/successcase/${itemId}`)).json())
+          : setSuccessCase(0)
         )
         .then((values) => {
           setSuccessCase(values);
-        });
+        })
+        .catch(err => console.error(err));
+
 
       } );
 
@@ -332,7 +353,7 @@ export default function SingleCourse({data}){
                         </div>
                         }
                         {getSoftData != null && getSoftData.length > 0 &&
-                        getSoftData[0].title !== 'Empty' ? 
+                        getSoftData[0].title.rendered !== 'Empty' ? 
                         <div class="pgc_software">
                             <h3>যেসব সফটওয়্যার শেখানো হয়</h3>
                             <div class="row">
@@ -363,7 +384,7 @@ export default function SingleCourse({data}){
                         </div>
                         : '' }
                         {getForWhome !=null && getForWhome.length > 0 &&
-                        getForWhome[0].title !== 'Empty' ?
+                        getForWhome[0].title.rendered !== 'Empty' ?
                         <div class="pgc_for_whom">
                             <h3>এই কোর্স যাদের জন্য</h3>
                             <div class="row">
@@ -394,7 +415,7 @@ export default function SingleCourse({data}){
                         </div>
                         : '' }
                         {getJobMarket !=null && getJobMarket.length > 0 &&
-                        getJobMarket[0].title !== 'Empty' ?
+                        getJobMarket[0].title.rendered !== 'Empty' ?
                         <div class="pg_marketplace">
                             <h2>আপনি যেখানে কাজ করতে পারেন</h2>
                             <div class="row">
@@ -426,7 +447,7 @@ export default function SingleCourse({data}){
                         </div>
                         : '' }
                         {getPosition !=null && getPosition.length > 0 &&
-                        getPosition[0].title !== 'Empty' ?
+                        getPosition[0].title.rendered !== 'Empty' ?
                         <div class="pg_job">
                             <h3> যে সকল পজিশনে জব করতে পারবেন </h3>
                             <div class="row g-0">
@@ -452,7 +473,7 @@ export default function SingleCourse({data}){
                         </div>
                         : '' }
                         {getFacilities !=null && getFacilities.length > 0 &&
-                        getFacilities[0].title !== 'Empty' ?
+                        getFacilities[0].title.rendered !== 'Empty' ?
                         <div class="pgs_facilitice">
                             <h3>ক্রিয়েটিভ আইটির বিশেষ সেবা</h3>
                             <div class="row">
