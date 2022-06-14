@@ -29,68 +29,68 @@ export default function SiteMap({data}) {
               <div class="col-md-4 col-12 col-sm-6">
                 <h5>ডিজাইন এন্ড মাল্টিমিডিয়া</h5>
                 <ul>
-                  <li><a href="/courses/professional-graphics-design-course/">প্রফেশনাল গ্রাফিক ডিজাইন</a></li>
-                  <li><a href="/courses/ux-ui-design-course/">UX/UI ডিজাইন</a></li>
-                  <li><a href="/courses/motion-graphics-course/">মোশন গ্রাফিক্স</a></li>
-                  <li><a href="/courses/image-editing-course/">ইমেজ এডিটিং</a></li>
-                  <li><a href="/courses/adobe-illustrator-course/">অ্যাডোবি ইলাস্ট্রেটর</a></li>
+                  <li><a href="/courses/professional-graphics-design/">প্রফেশনাল গ্রাফিক ডিজাইন</a></li>
+                  <li><a href="/courses/ux-ui-design/">UX/UI ডিজাইন</a></li>
+                  <li><a href="/courses/motion-graphics/">মোশন গ্রাফিক্স</a></li>
+                  <li><a href="/courses/image-editing/">ইমেজ এডিটিং</a></li>
+                  <li><a href="/courses/adobe-illustrator/">অ্যাডোবি ইলাস্ট্রেটর</a></li>
                 </ul>
               </div>
               <div class="col-md-4 col-12 col-sm-6">
                   <h5>ওয়েব এন্ড সফটওয়্যার ডেভেলপমেন্ট</h5>
                   <ul>
-                      <li><a href="/courses/web-design-course/">ওয়েব ডিজাইন</a></li>
-                      <li><a href="/courses/professional-web-development-course/">ওয়েব ডেভেলপমেন্ট</a></li>
-                      <li><a href="/courses/app-development-course/">অ্যাপ ডেভেলপমেন্ট</a></li>
-                      <li><a href="/courses/mern-stack-development-course/">মার্ন স্ট্যাক ডেভেলপমেন্ট</a></li>
+                      <li><a href="/courses/web-design/">ওয়েব ডিজাইন</a></li>
+                      <li><a href="/courses/professional-web-development/">ওয়েব ডেভেলপমেন্ট</a></li>
+                      <li><a href="/courses/app-development/">অ্যাপ ডেভেলপমেন্ট</a></li>
+                      <li><a href="/courses/mern-stack-development/">মার্ন স্ট্যাক ডেভেলপমেন্ট</a></li>
                   </ul>
               </div>
               <div class="col-md-4 col-12 col-sm-6">
                   <h5>ডিজিটাল মার্কেটিং</h5>
                   <ul>
-                      <li><a href="/courses/digital-marketing-course/">ডিজিটাল মার্কেটিং</a></li>
-                      <li><a href="/courses/affiliate-marketing-course/">এফিলিয়েট মার্কেটিং</a></li>
-                      <li><a href="/courses/social-media-marketing-course/">সোশ্যাল মিডিয়া মার্কেটিং (SMM)</a></li>
+                      <li><a href="/courses/digital-marketing/">ডিজিটাল মার্কেটিং</a></li>
+                      <li><a href="/courses/affiliate-marketing/">এফিলিয়েট মার্কেটিং</a></li>
+                      <li><a href="/courses/social-media-marketing/">সোশ্যাল মিডিয়া মার্কেটিং (SMM)</a></li>
                   </ul>
               </div>
               <div class="col-md-4 col-12 col-sm-6">
                   <h5>3D অ্যানিমেশন এন্ড ভিজ্যুয়ালাইজেশন</h5>
                   <ul>
-                      <li><a href="/courses/professional-interior-exterior-design-course/">ইন্টেরিয়র ও এক্সটেরিয়র ডিজাইন</a></li>
-                      <li><a href="/courses/professional-3d-animation-course/">প্রফেশনাল 3D অ্যানিমেশন</a></li>
+                      <li><a href="/courses/professional-interior-exterior-design/">ইন্টেরিয়র ও এক্সটেরিয়র ডিজাইন</a></li>
+                      <li><a href="/courses/professional-3d-animation">প্রফেশনাল 3D অ্যানিমেশন</a></li>
                   </ul>
               </div>
               <div class="col-md-4 col-12 col-sm-6">
                   <h5>নেটওয়ার্কিং টেকনোলজি</h5>
                   <ul>
-                      <li><a href="/courses/comptia-network-course/">CompTIA নেটওয়ার্ক+</a></li>
-                      <li><a href="/courses/ccna-course/">সিসকো সিসিএনএ</a></li>
-                      <li><a href="/courses/mikrotik-course/">মাইক্রোটিক</a></li>
+                      <li><a href="/courses/comptia-network/">CompTIA নেটওয়ার্ক+</a></li>
+                      <li><a href="/courses/ccna/">সিসকো সিসিএনএ</a></li>
+                      <li><a href="/courses/mikrotik/">মাইক্রোটিক</a></li>
                   </ul>
               </div>
               <div class="col-md-4 col-12 col-sm-6">
                   <h5>ফিল্ম এন্ড মিডিয়া</h5>
                   <ul>
-                      <li><a href="/courses/video-editing-course/">প্রফেশনাল ভিডিও এডিটিং</a></li>
+                      <li><a href="courses/video-editing/">প্রফেশনাল ভিডিও এডিটিং</a></li>
                   </ul>
               </div>
               <div class="col-md-4 col-12 col-sm-6">
                   <h5>রোবটিক্স এন্ড অটোমেশন</h5>
                   <ul>
-                      <li><a href="/robotics-training-in-bangladesh">Robotics</a></li>
+                      <li><a href="#">Robotics</a></li>
                   </ul>
               </div>
               <div class="col-md-4 col-12 col-sm-6">
                   <h5>Others Training</h5>
                   <ul>
-                      <li><a href="/courses/business-english-course">বিজনেস ইংলিশ</a></li>
+                      <li><a href="/courses/business-english/">বিজনেস ইংলিশ</a></li>
                   </ul>
               </div>
               <div class="col-md-4 col-12 col-sm-6">
                   <h5>Admission</h5>
                   <ul>
-                      <li><a href="/admission-form">Get Admission</a></li>
-                      <li><a href="/admission-procedure">Admission Procedure</a></li>
+                      <li><a href="#">Get Admission</a></li>
+                      <li><a href="#">Admission Procedure</a></li>
                   </ul>
               </div>
               <div class="col-md-4 col-12 col-sm-6">
