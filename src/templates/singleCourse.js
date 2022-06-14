@@ -5,7 +5,7 @@ import { faStar, faStarHalfAlt } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Layout from "../components/layout"
 import StudentFeedback from "../components/homepage/studentFeedback"
-import SuccessStorySlider from '../components/successCase/SuccessStorySlider'
+import SuccessStorySlider from '../components/successCase/courseSuccess'
 import {faPlay} from '@fortawesome/free-solid-svg-icons'
 import ModalVideo from 'react-modal-video'
 import Seo from "../components/seo"
@@ -24,28 +24,108 @@ import shape2 from '../images/course-landing/Pg_banner_shape2.png'
 import shape3 from '../images/course-landing/Pg_banner_shape3.png'
 import shape4 from '../images/course-landing/Pg_banner_shape4.png'
 
+import apiFetch from '@wordpress/api-fetch';
+
 export default function SingleCourse({data}){
+
+  const WPApi = 'https://app.creativeitinstitute.com/wp-json/wp/v2';
 
     if (typeof window === 'undefined') {
         global.window = {}
     }
-
-
     const post = data.allWpCourse.nodes[0];
+    const postId = post.databaseId
     const seo = post.pageMeta;
     const reviewsData = data.allWp.nodes[0];
-    console.log(post, 'Single Course');
+    //console.log(post, 'Single Course');
     const projects = post.courseProjects;
 
     const [isOpen, setOpen] = useState(false);
 
     const [scroll, setScroll] = useState(false);
 
+    // get options data from wp
+    //const [getDetails, setDetails] = useState([]);
+    // get software 
+    const [getSoftData, setSoftData] = useState([]);
+    // get forwhome 
+    const [getForWhome, setForWhome] = useState([]);
+    // get jobmarket 
+    const [getJobMarket, setJobMarket] = useState([]);
+    // get job positions 
+    const [getPosition, setPosition] = useState([]);
+    // get job facility 
+    const [getFacilities, setFacilities] = useState([]);
+    // get success case 
+    const [getSuccessCase, setSuccessCase] = useState([]);
+    
+    //console.log(getDetails, 'Course Details');
+
     useEffect(() => {
         window.addEventListener("scroll", () => {
           setScroll(window.scrollY > 850);
         });
       }, []);
+
+      
+
+    useEffect(() => {
+
+      // GET
+      apiFetch( { path: `${WPApi}/courses/${postId}` } ).then( ( coursedetails ) => {
+        //setDetails(coursedetails);
+        //get software data
+        const sofData = Promise.all(
+          coursedetails.software_for_course.map(async (itemId) => await (await fetch(`${WPApi}/citoptions/${itemId}`)).json())
+        )
+        .then((values) => {
+          setSoftData(values);
+        });
+
+        //get forwhome data
+        const forWhomeData = Promise.all(
+          coursedetails.course_for_whome.map(async (itemId) => await (await fetch(`${WPApi}/citoptions/${itemId}`)).json())
+        )
+        .then((values) => {
+          setForWhome(values);
+        });
+
+        //get Marketplace data
+        const marketPlaces = Promise.all(
+          coursedetails.job_market.map(async (itemId) => await (await fetch(`${WPApi}/citoptions/${itemId}`)).json())
+        )
+        .then((values) => {
+          setJobMarket(values);
+        });
+
+        //get position data
+        const positions = Promise.all(
+          coursedetails.job_position.map(async (itemId) => await (await fetch(`${WPApi}/citoptions/${itemId}`)).json())
+        )
+        .then((values) => {
+          setPosition(values);
+        });
+
+        //get position data
+        const facilities = Promise.all(
+          coursedetails.course_facilities.map(async (itemId) => await (await fetch(`${WPApi}/citoptions/${itemId}`)).json())
+        )
+        .then((values) => {
+          setFacilities(values);
+        });
+
+        //get success case data
+        const successCase = Promise.all(
+          coursedetails.success_case_link.map(async (itemId) => await (await fetch(`${WPApi}/successcase/${itemId}`)).json())
+        )
+        .then((values) => {
+          setSuccessCase(values);
+        });
+
+      } );
+
+    }, [])
+
 
     const settingsProjectsSlider = {
       className: "pgp_slider",
@@ -173,7 +253,7 @@ export default function SingleCourse({data}){
 
                         <div class="sm_device-show d-block d-sm-none">
                             
-                          <SuccessStorySlider sdata={post.courseSuccessCase.successCaseLink} />
+                          <SuccessStorySlider sdata={getSuccessCase} />
                             <div class="pg_wait">
                                 <h3>ভর্তি চলছে!</h3>
                                 <p>অফলাইন (সরাসরি ইন্সটিটিউটে) বা অনলাইন (লাইভ ক্লাস)- যে কোন ব্যাচে সুবিধামতো সময় বেছে নিয়ে ভর্তি হতে পারেন এখনই। </p>
@@ -251,26 +331,26 @@ export default function SingleCourse({data}){
                             </Tab.Container>
                         </div>
                         }
-                        {post.course_options.softwareForCourse != null && post.course_options.softwareForCourse.length > 0 &&
-                        post.course_options.softwareForCourse[0].title !== 'Empty' ? 
+                        {getSoftData != null && getSoftData.length > 0 &&
+                        getSoftData[0].title !== 'Empty' ? 
                         <div class="pgc_software">
                             <h3>যেসব সফটওয়্যার শেখানো হয়</h3>
                             <div class="row">
-                            {post.course_options.softwareForCourse.map(
+                            {getSoftData.map(
                                           softwareItem=>(
 
                                 <div class="col-6">
                                     <div class="pgc_item d-flex align-items-center">
-                                        {softwareItem.featuredImage !=null &&
+                                        {softwareItem.better_featured_image !=null &&
                                         <div class="pgcs_icon">
                                           <img class="img-fluid w-100" 
-                                          src={softwareItem.featuredImage.node.sourceUrl} 
-                                          alt={softwareItem.featuredImage.node.altText ? softwareItem.featuredImage.node.altText : 'Creative IT Institute'} />
+                                          src={softwareItem.better_featured_image.source_url} 
+                                          alt={softwareItem.better_featured_image.altText ? softwareItem.better_featured_image.altText : 'Creative IT Institute'} />
                                         </div>
                                         }
                                         {softwareItem.title !=null &&
                                         <div class="pgcs_text">
-                                          <p>{softwareItem.title}</p>
+                                          <p>{softwareItem.title.rendered}</p>
                                         </div>
                                         }
                                     </div>
@@ -282,27 +362,27 @@ export default function SingleCourse({data}){
                             </div>
                         </div>
                         : '' }
-                        {post.course_options.courseForWhome !=null && post.course_options.courseForWhome.length > 0 &&
-                        post.course_options.courseForWhome[0].title !== 'Empty' ?
+                        {getForWhome !=null && getForWhome.length > 0 &&
+                        getForWhome[0].title !== 'Empty' ?
                         <div class="pgc_for_whom">
                             <h3>এই কোর্স যাদের জন্য</h3>
                             <div class="row">
 
-                            {post.course_options.courseForWhome.map(
+                            {getForWhome.map(
                                           courseforWItem=>(
 
                                 <div class="col-6">
                                     <div class="pgcf_whom_item">
                                         <div class="pgcf_whom_item_icon">
-                                            {courseforWItem.featuredImage !=null && 
+                                            {courseforWItem.better_featured_image !=null && 
                                             <img class="img-fluid" 
-                                            src={courseforWItem.featuredImage.node.sourceUrl} 
-                                            alt={courseforWItem.featuredImage.node.altText ? courseforWItem.featuredImage.node.altText : 'Creative IT Institute'} />
+                                            src={courseforWItem.better_featured_image.source_url} 
+                                            alt={courseforWItem.better_featured_image.altText ? courseforWItem.better_featured_image.altText : 'Creative IT Institute'} />
                                             }
                                         </div>
                                         {courseforWItem.title !=null &&
                                         <div class="pgcf_whom_item_text">
-                                            <p>{courseforWItem.title}</p>
+                                            <p>{courseforWItem.title.rendered}</p>
                                         </div>
                                         }
                                     </div>
@@ -313,27 +393,27 @@ export default function SingleCourse({data}){
                             </div>
                         </div>
                         : '' }
-                        {post.course_options.jobMarket !=null && post.course_options.jobMarket.length > 0 &&
-                        post.course_options.jobMarket[0].title !== 'Empty' ?
+                        {getJobMarket !=null && getJobMarket.length > 0 &&
+                        getJobMarket[0].title !== 'Empty' ?
                         <div class="pg_marketplace">
                             <h2>আপনি যেখানে কাজ করতে পারেন</h2>
                             <div class="row">
                               
-                            {post.course_options.jobMarket.map(
+                            {getJobMarket.map(
                                           jobMarket=>(
 
                                 <div class="col-sm-6">
                                     <div class="marketplace_item">
                                         <div class="icon">
-                                            {jobMarket.featuredImage !=null && 
+                                            {jobMarket.better_featured_image !=null && 
                                             <img 
-                                            src={jobMarket.featuredImage.node.sourceUrl} 
-                                            alt={jobMarket.featuredImage.node.altText ? jobMarket.featuredImage.node.altText : 'Creative IT Institute'}/>
+                                            src={jobMarket.better_featured_image.source_url} 
+                                            alt={jobMarket.better_featured_image.altText ? jobMarket.better_featured_image.altText : 'Creative IT Institute'}/>
                                             }
                                         </div>
                                         {jobMarket.content !=null &&
                                         <div class="text">
-                                            <div dangerouslySetInnerHTML={{ __html: jobMarket.content }} />
+                                            <div dangerouslySetInnerHTML={{ __html: jobMarket.content.rendered }} />
                                         </div>
                                         }
                                     </div>
@@ -345,20 +425,20 @@ export default function SingleCourse({data}){
                             </div>
                         </div>
                         : '' }
-                        {post.course_options.jobPosition !=null && post.course_options.jobPosition.length > 0 &&
-                        post.course_options.jobPosition[0].title !== 'Empty' ?
+                        {getPosition !=null && getPosition.length > 0 &&
+                        getPosition[0].title !== 'Empty' ?
                         <div class="pg_job">
                             <h3> যে সকল পজিশনে জব করতে পারবেন </h3>
                             <div class="row g-0">
 
-                            {post.course_options.jobPosition.map(
+                            {getPosition.map(
                                           jobPosition=>(
                                               <>
                                             {jobPosition.title !=null && 
                                             <div class="col-6">
                                                 <div class="job_item">
                                                     <ul>
-                                                        <li><svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="9" cy="9" r="8" stroke="#FF7E31" stroke-width="2"/></svg>{jobPosition.title}</li>
+                                                        <li><svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="9" cy="9" r="8" stroke="#FF7E31" stroke-width="2"/></svg>{jobPosition.title.rendered}</li>
                                                     </ul>
                                                 </div>
                                             </div>
@@ -371,24 +451,24 @@ export default function SingleCourse({data}){
                             </div>
                         </div>
                         : '' }
-                        {post.course_options.courseFacilities !=null && post.course_options.courseFacilities.length > 0 &&
-                        post.course_options.courseFacilities[0].title !== 'Empty' ?
+                        {getFacilities !=null && getFacilities.length > 0 &&
+                        getFacilities[0].title !== 'Empty' ?
                         <div class="pgs_facilitice">
                             <h3>ক্রিয়েটিভ আইটির বিশেষ সেবা</h3>
                             <div class="row">
 
-                            {post.course_options.courseFacilities.map(
+                            {getFacilities.map(
                                           courseFacility=>(
                                 <div class="col-md-6">
                                     <div class="pg_more_facilities_item pg_more_facilities_item_1" style={{ 'backgroundColor': courseFacility.facilityBoxBg }}>
-                                        {courseFacility.featuredImage !=null && 
+                                        {courseFacility.better_featured_image !=null && 
                                         <img 
-                                        src={courseFacility.featuredImage.node.sourceUrl} 
-                                        alt={courseFacility.featuredImage.node.altText ? courseFacility.featuredImage.node.altText : 'Creative IT Institute'} />
+                                        src={courseFacility.better_featured_image.source_url} 
+                                        alt={courseFacility.better_featured_image.altText ? courseFacility.better_featured_image.altText : 'Creative IT Institute'} />
                                         }
-                                        {courseFacility.title !=null && <h3>{courseFacility.title}</h3>}
+                                        {courseFacility.title !=null && <h3>{courseFacility.title.rendered}</h3>}
                                         {courseFacility.content !=null &&
-                                        <div dangerouslySetInnerHTML={{ __html: courseFacility.content }} />
+                                        <div dangerouslySetInnerHTML={{ __html: courseFacility.content.rendered }} />
                                         }
                                     </div>
                                 </div>
@@ -412,7 +492,7 @@ data={reviewsData}
                     </div>
 
                     <div id="sidebar" class="col-lg-5 d-none d-sm-block">
-                        <SuccessStorySlider sdata={post.courseSuccessCase.successCaseLink} />
+                        <SuccessStorySlider sdata={getSuccessCase} />
 
                         <div className={'pg_wait_wrap ' + (scroll ? "nav_sticky" : "")}>
                             <div className="pg_wait">
@@ -456,6 +536,7 @@ export const query = graphql`
         slug
         uri
         id
+        databaseId
         content
         pageMeta {
           metaTitle
@@ -502,63 +583,7 @@ export const query = graphql`
             sourceUrl
             altText
           }
-          softwareForCourse {
-            ... on WpCitoption {
-              id
-              title
-              featuredImage {
-                node {
-                  sourceUrl
-                  altText
-                }
-              }
-            }
-          }
-          jobPosition {
-            ... on WpCitoption {
-              id
-              title
-            }
-          }
-          jobMarket {
-            ... on WpCitoption {
-              id
-              title
-              content
-              featuredImage {
-                node {
-                  sourceUrl
-                  altText
-                }
-              }
-            }
-          }
-          courseForWhome {
-            ... on WpCitoption {
-              title
-              id
-              featuredImage {
-                node {
-                  sourceUrl
-                  altText
-                }
-              }
-            }
-          }
-          courseFacilities {
-            ... on WpCitoption {
-              id
-              title
-              content
-              facilityBoxBg
-              featuredImage {
-                node {
-                  sourceUrl
-                  altText
-                }
-              }
-            }
-          }
+          
         }
         courseProjects {
           video_id
@@ -571,21 +596,7 @@ export const query = graphql`
         studentProjects {
             url
           }
-          courseSuccessCase {
-            successCaseLink {
-              ... on WpSuccessStories {
-                successStoryLink {
-                  successStoryLink
-                }
-                featuredImage {
-                    node {
-                      sourceUrl
-                      altText
-                    }
-                }
-              }
-            }
-        }
+
       }
     }
     allWp {

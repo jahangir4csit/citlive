@@ -40,58 +40,7 @@ exports.createPages = async ({ graphql, actions }) => {
             courseVideoThumbnail {
               sourceUrl
             }
-            softwareForCourse {
-              ... on WpCitoption {
-                id
-                title
-                featuredImage {
-                  node {
-                    sourceUrl
-                  }
-                }
-              }
-            }
-            jobPosition {
-              ... on WpCitoption {
-                id
-                title
-              }
-            }
-            jobMarket {
-              ... on WpCitoption {
-                id
-                title
-                content
-                featuredImage {
-                  node {
-                    sourceUrl
-                  }
-                }
-              }
-            }
-            courseForWhome {
-              ... on WpCitoption {
-                title
-                id
-                featuredImage {
-                  node {
-                    sourceUrl
-                  }
-                }
-              }
-            }
-            courseFacilities {
-              ... on WpCitoption {
-                id
-                title
-                content
-                featuredImage {
-                  node {
-                    sourceUrl
-                  }
-                }
-              }
-            }
+            
           }
         }
       }
