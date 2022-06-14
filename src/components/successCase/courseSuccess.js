@@ -11,7 +11,7 @@ export default function CourseSuccessCase(data){
 
     return(
         <Fragment>
-        {sData != null &&
+        {(sData != null && sData.length > 0) &&
         <div class="pg_succsess_story">
             <div class="heading">
                 <h4><span>সাকসেস স্টোরি</span> <span><Link to="/success-story">আরও দেখুন</Link></span></h4>
