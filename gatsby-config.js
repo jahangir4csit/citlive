@@ -19,14 +19,6 @@ module.exports = {
           queryDepth: 100,
           requestConcurrency: 50
         },
-        type: {
-          __all: {
-            limit: null,
-          },
-          Page: {
-            nodeInterface: true,
-          },
-        }
       },
     },
     {
