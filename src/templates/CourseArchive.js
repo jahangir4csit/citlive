@@ -33,8 +33,8 @@ export default function Courses(data){
                 <div class="container">
                     <div class="row">
                         <div class="col-12">
-                            <div class="section_heading mb-5">
-                                <h2 dangerouslySetInnerHTML={{ __html: secheading }} />
+                            <div class="section_heading course_cat_heading mb-5">
+                                <h1 dangerouslySetInnerHTML={{ __html: secheading }} />
                             </div>
                         </div>
 

@@ -9,8 +9,10 @@ export default function SiteMap({data}) {
     return(
       <Layout>
         <Seo 
-        title="Sitemap" 
-        description="CIT Site map" />
+        title="Sitemap | Professional IT Training Institute in Bangladesh - Creative IT" 
+        description="Study with us completing a certificate course in Graphic Design, Digital Marketing,
+        Web Design &amp; Development, 3d Animation Training etc grow your business or start
+        your career. Call 880 162 4666000" />
         <section id="instructors_teachers" class="free_seminer_schedule">
             <div class="container">
                 <div class="row">

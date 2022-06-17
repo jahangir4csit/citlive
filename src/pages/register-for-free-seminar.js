@@ -3,6 +3,7 @@ import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 import Spinner from 'react-bootstrap/Spinner';
 import Alert from 'react-bootstrap/Alert';
+import Seo from "../components/seo"
 
 //import gql from 'graphql-tag';
 //import { Mutation } from 'react-apollo';
@@ -56,6 +57,11 @@ const RegSeminar = ({location}) => {
 
   return (
     <Layout>
+      <Seo 
+      title="Free Seminar Registration - Creative IT Institute" 
+      description="Join our free seminar learn get an idea about Graphic Design, Web Software, Digital
+      Marketing, Networking, Film Media, Robotics Automation etc Call 880 1624666000
+      for registration" />
       <section id="admission" className='mt-5 pt-5 pb-5'>
           <div class="container">
             <div class="row">

@@ -1,5 +1,5 @@
 import React from "react"
-import { graphql } from "gatsby"
+import { graphql, Link } from "gatsby"
 import Seo from "../components/seo"
 import Layout from "../components/layout"
 import PageDesc from '../components/pageDesc'
@@ -33,7 +33,7 @@ export default function JobPlacement({data}) {
                 </div>
                 <div class="col-12">
                     <div class="course_free_facilities_btn text-center mt-0">
-                        <a href="#">ক্লিক করুন</a>
+                        <a href="https://itechcv.com/login" target="_blank">ক্লিক করুন</a>
                     </div>
                 </div>
             </div>

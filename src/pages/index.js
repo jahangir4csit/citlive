@@ -32,9 +32,8 @@ export default function HomePage({data}){
     <Layout>
       <Seo 
       title="Professional IT Training Institute in Bangladesh - Creative IT"
-      description="Develop your professional personal skills through Creative IT Institute We provide
-    Graphic Design, Web Software, Digital Marketing, Networking, Film Media,
-    Robotics Automation Training etc affordable price. Call +880 162 4666000"
+      description="Develop your professional skills through CIT. We provide Graphic Design, Digital
+      Marketing, Web Design &amp; Development, 3d Animation, etc. Call 880 1624 666 000"
        />
       <HomeBanner/>
       <DepartmentSlider 

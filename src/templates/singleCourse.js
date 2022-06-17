@@ -300,6 +300,7 @@ export default function SingleCourse({data}){
                                 </div>
                             </div>
                         </div>
+                        {console.log(post.crmModuleEntry, 'Curiculamn')}
                         {post.crmModuleEntry.length > 0 &&
                         <div class="pgc_curriculum_wrap">
                             <Tab.Container id="left-tabs-example" defaultActiveKey={post.crmModuleEntry[0].crm_module_entry_title.split(' ').join('-')}>
