@@ -27,7 +27,7 @@ export default function FacilityItemTwo(data){
                             <li><h3 dangerouslySetInnerHTML={{ __html: facilityDetails.facility_sec_title }} /></li>
                             <li dangerouslySetInnerHTML={{ __html: facilityDetails.facility_sec_sub_title }} />
                         </ul>
-                        <p dangerouslySetInnerHTML={{ __html: facilityDetails.facility_sec_description }} />
+                        <article dangerouslySetInnerHTML={{ __html: facilityDetails.facility_sec_description }} />
                     </div>
                     <div class="job_placement_contant_img">
                         <img class="img-fluid w-100" src={facilityDetails.facility_sec_video_thumb} alt="image" />
