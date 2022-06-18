@@ -48,8 +48,8 @@ const Layout = ({ children }) => {
             "https://www.linkedin.com/company/creativeitinstitute",
             "https://www.facebook.com/CreativeITInstitute"
           ],
-          "logo": "https://www.creativeitinstitute.com/icons/icon-512x512.png",
-          "image": "https://app.creativeitinstitute.com/wp-content/uploads/2021/12/CIT-13-Years.jpg",
+          "logo": "https://www.creativeitinstitute.com/logo.png",
+          "image": "https://www.creativeitinstitute.com/banner.jpg",
           "description": "Creative IT is an institution where empowering the community for an excellent standard of learning is what we desire. We endeavor for the continuous improvement of our leaders who will work for constructing a better future. The institute is dedicated to serving the quality training programs under ISO 9001: 2008 certification which remarks us in the IT world.",
           "address": {
             "@type": "PostalAddress",

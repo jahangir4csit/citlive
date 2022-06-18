@@ -324,7 +324,7 @@ export default function SingleCourse({data}){
                                             {moduleContent.crm_module_meta.map(
                                                 module=>
                                             <li>
-                                                {/* {module.crm_module_opt_title && <h4>{module.crm_module_opt_title} <span>{module.crm_module_opt_duration}</span></h4>} */}
+                                                {module.crm_module_opt_title && <h4>{module.crm_module_opt_title} <span>{module.crm_module_opt_duration}</span></h4>} 
                                                 <div class="row">
                                                     {module.crm_module_items.map(
                                                         moduleItems=>

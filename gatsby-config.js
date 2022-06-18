@@ -15,9 +15,7 @@ module.exports = {
         url: `https://app.creativeitinstitute.com/graphql`,
         //url: `http://localhost/citbd/graphql`,
         schema: {
-          timeout: 350000,
-          queryDepth: 100,
-          requestConcurrency: 50
+          timeout: 350000
         },
       },
     },
@@ -26,71 +24,6 @@ module.exports = {
       options: {
         siteUrl: `https://www.creativeitinstitute.com/`,
       },
-    },
-    {
-      resolve: "gatsby-plugin-sitemap",
-      options: {
-        output: '.',
-        createLinkInHead: false,
-        exclude: [
-          `/using-ssr/*`,
-          `/using-typescript/*`,
-          `/student-login/*`,
-          `/courses_cat-slug/*`,
-          `/certificate/*`,
-          `/course-cat/*`
-        ],
-        query: `
-        {
-          allSitePage {
-            nodes {
-              path
-            }
-          }
-          allWpContentNode(filter: {nodeType: {in: ["Course", "Page"]}}) {
-            nodes {
-              ... on WpPage {
-                uri
-                modifiedGmt
-              }
-              ... on WpCourse {
-                uri
-                modifiedGmt
-              }
-            }
-          }
-        }
-      `,
-        resolveSiteUrl: () => siteUrl,
-        resolvePages: ({
-          allSitePage: { nodes: allPages },
-          allWpContentNode: { nodes: allWpNodes },
-        }) => {
-          const wpNodeMap = allWpNodes.reduce((acc, node) => {
-            const { uri } = node
-            acc[uri] = node
-
-            return acc
-          }, {})
-
-          return allPages.map(page => {
-            return { ...page, ...wpNodeMap[page.path] }
-          })
-        },
-        serialize: ({ path, modifiedGmt }) => {
-          let priority = 0.8
-          if ('/' === path) {
-            priority = 1.0
-            modifiedGmt = '2022-06-11T02:04:41.000Z'
-          }
-          return {
-            url: path,
-            lastmod: modifiedGmt,
-            changefreq: 'always',
-            priority: priority
-          }
-        },
-       },
     },
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-image`,
@@ -112,7 +45,7 @@ module.exports = {
         background_color: `#663399`,
         display: `minimal-ui`,
         icon: `src/images/index.png`,
-        sitemap: `src/sitemap/sitemap.xml`,  
+        sitemap: `/sitemap.xml`,  
         crossOrigin: `use-credentials`, 
       },
     },
@@ -190,14 +123,6 @@ module.exports = {
           //origin: "YOUR_SELF_HOSTED_ORIGIN",
         },
       },
-    },
-    {
-      resolve: 'gatsby-plugin-robots-txt',
-      options: {
-        host: null,
-        sitemap: 'https://www.creativeitinstitute.com/sitemap.xml',
-        policy: [{userAgent: '*', disallow: ['']}]
-      }
     },
     {
       resolve: `gatsby-plugin-facebook-pixel`,
