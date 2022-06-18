@@ -16,7 +16,7 @@ const CITinitiatives = (data) =>{
                         <div class="col-lg-3 col-md-4 col-sm-6 col-6">
                             <div class="counter_up_item">
                                 <h5><span class="counter"><Counter data={initiative.initiv_data} /> </span>+</h5>
-                                <p>{initiative.initiv_title}</p>
+                                <p dangerouslySetInnerHTML={{ __html: initiative.initiv_title }} />
                             </div>
                         </div>
                         )

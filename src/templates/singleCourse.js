@@ -319,12 +319,12 @@ export default function SingleCourse({data}){
                                 <Tab.Content>
                                     {post.crmModuleEntry.map(
                                         moduleContent=>
-                                    <Tab.Pane className='pgc_curriculum' eventKey={moduleContent.crm_module_entry_title.split(' ').join('-')}>
+                                    <Tab.Pane className={"pgc_curriculum" + (moduleContent.crm_module_meta.length > 1 ? ' pgc_curriculum_child' : '')} eventKey={moduleContent.crm_module_entry_title.split(' ').join('-')}>
                                         <ul>
                                             {moduleContent.crm_module_meta.map(
                                                 module=>
                                             <li>
-                                                {module.crm_module_opt_title && <h4>{module.crm_module_opt_title} <span>{module.crm_module_opt_duration}</span></h4>} 
+                                                {(moduleContent.crm_module_meta.length > 1 && module.crm_module_opt_title) && <h4>{module.crm_module_opt_title} <span>{module.crm_module_opt_duration}</span></h4>} 
                                                 <div class="row">
                                                     {module.crm_module_items.map(
                                                         moduleItems=>

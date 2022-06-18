@@ -3017,7 +3017,7 @@ Course-Landing Left (7 column) Overviwe  Area Start
 
 /* */
 .pgc_curriculum_wrap {
-  margin-top: 90px;
+  margin-top: 50px;
   background: #FAF9FD;
   border-radius: 25px;
   padding: 40px;
@@ -3037,9 +3037,13 @@ Course-Landing Left (7 column) Overviwe  Area Start
 }
 
 .pgc_curriculum > ul > li {
-  position: relative;
-  /* padding-left: 25px; */
+  position: static;
+  padding-left: 0;
   padding-bottom: 30px;
+}
+.pgc_curriculum_child ul > li{
+  position: relative;
+  padding-left: 25px;
 }
 
 .pgc_curriculum > ul > li::after {
@@ -3053,7 +3057,7 @@ Course-Landing Left (7 column) Overviwe  Area Start
   bottom: 0;
 }
 
-/* .pgc_curriculum > ul > li::before {
+.pgc_curriculum > ul > li::before {
   position: absolute;
   content: '';
   width: 20px;
@@ -3063,7 +3067,7 @@ Course-Landing Left (7 column) Overviwe  Area Start
   left: -10px;
   top: 0;
   bottom: 0;
-} */
+}
 
 .pgc_curriculum > ul > li:last-child::after {
   display: none;
@@ -3093,9 +3097,7 @@ Course-Landing Left (7 column) Overviwe  Area Start
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  padding-left: 0;
 }
 
 .pgc_inner_text ul li span {
@@ -3108,7 +3110,7 @@ Course-Landing Left (7 column) Overviwe  Area Start
   padding: 56px 69px;
   background: #FAF9FD;
   border-radius: 25px;
-  margin-top: 49px;
+  margin-top: 45px;
 }
 
 .pgc_software h3 {
@@ -3269,7 +3271,7 @@ Course-Landing Left (7 column) Overviwe  Area Start
 
 /* ==========যে সকল পজিশনে জব করতে পারবেন========== */
 .pg_job {
-  margin-top: 50px;
+  margin-top: 45px;
   background: rgba(255, 247, 235, 0.6);
   border-radius: 25px;
   padding: 56px 59px;
@@ -3307,7 +3309,7 @@ Course-Landing Left (7 column) Overviwe  Area Start
 
 /*======== শিক্ষার্থিদের আরও যে সকল সুবিধা দিয়ে থাকি ========*/
 .pgs_facilitice {
-  margin-top: 97px;
+  margin-top: 65px;
 }
 
 .pgs_facilitice h3 {
