@@ -15,7 +15,7 @@ export default function FacilityItemDefault(data){
         <div class="col-md-6">
             <div class="intarnship support_item" style={{ backgroundColor: facilityDetails.facility_sec_bg}}>
                 <h3 dangerouslySetInnerHTML={{ __html: facilityDetails.facility_sec_title }} />
-                <p dangerouslySetInnerHTML={{ __html: facilityDetails.facility_sec_description }} />
+                <article dangerouslySetInnerHTML={{ __html: facilityDetails.facility_sec_description }} />
                 {facilityDetails.facility_sec_video_id &&
                 <div class="support_item_img">
                     <img class="img-fluid w-100" src={facilityDetails.facility_sec_video_thumb} alt="image" />
