@@ -14,6 +14,7 @@ export default function JobPlacement({data}) {
     const seo = pageData.pageMeta;
     const facilitiesData = pageData.citMoreFacilities;
     const successStories = data.allWpSuccessStories.nodes;
+    console.log(facilitiesData, 'facility data');
 
     return(
       <Layout>

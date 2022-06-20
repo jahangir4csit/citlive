@@ -5859,6 +5859,9 @@ form.student_form .form_heading h3 {
   margin-bottom: 54px;
 }
 
+.seminar-form .form-select-lg{
+  opacity: .65;
+}
 #seminar .seminar_content .text_main {
   width: 90%;
 }

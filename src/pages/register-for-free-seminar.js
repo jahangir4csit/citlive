@@ -88,7 +88,7 @@ const RegSeminar = ({location}) => {
                         }}
                       >
 
-                      <Form.Group className="mb-3" controlId="formBasicEmail">
+                      <Form.Group className="mb-3 seminar-form" controlId="formBasicEmail">
                         <FloatingLabel
                           controlId="floatingInput"
                           label="আপনার নাম"
@@ -126,7 +126,7 @@ const RegSeminar = ({location}) => {
                         >
                           <Form.Control 
                           size="lg" 
-                          type="email" 
+                          type="text" 
                           placeholder="ইমেইল"
                           value={emailVal}
                           onChange={event => {

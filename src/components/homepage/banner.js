@@ -82,7 +82,7 @@ const HomeBanner = ()=>{
                             ব্রাউজ কোর্স 
                             <span class="ms-2 angle"><i class="fa fa-angle-down"></i></span>
                         </Link>
-                        <Link class="join_btn" to="/free-seminer-schedule"
+                        <Link class="join_btn" to="/register-for-free-seminar/"
                         data-sal="slide-right"
                         data-sal-delay="300"
                         data-sal-duration="800"
