@@ -10,6 +10,7 @@ export default function OurFacilities({data}) {
     const pageData = data.allWpPage.nodes[0];
     const seo = pageData.pageMeta;
     const facilitiesData = pageData.citMoreFacilities;
+    console.log(facilitiesData, 'Facility Data');
 
     return(
       <Layout>
