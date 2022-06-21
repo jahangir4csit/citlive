@@ -81,12 +81,12 @@ export default function MilestoneSlider(data){
                                 <Card className="cit_milestone">
                                     <div class="row g-0 align-items-center">
                                         <div class="col-md-5">
-                                            <Card.Img className="img-fluid" variant="top" src={milestoneData[0].milst_image} />
+                                            <Card.Img className="img-fluid" variant="top" src={item.milst_image} />
                                         </div>
                                         <div class="col-md-7">
                                             <Card.Body>
-                                              <Card.Title dangerouslySetInnerHTML={{ __html: milestoneData[0].milst_title }} />
-                                              <Card.Text dangerouslySetInnerHTML={{ __html: milestoneData[0].milst_desc }} />
+                                              <Card.Title dangerouslySetInnerHTML={{ __html: item.milst_title }} />
+                                              <Card.Text dangerouslySetInnerHTML={{ __html: item.milst_desc }} />
                                             </Card.Body>
                                         </div>
                                     </div>
