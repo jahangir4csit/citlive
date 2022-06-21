@@ -2,6 +2,8 @@ const path = require(`path`)
 
 exports.createPages = async ({ graphql, actions }) => {
   const { createPage } = actions
+  const {createRedirect} = actions 
+
   return await graphql(`
     {
       allWpCourse(sort: {fields: date}) {
@@ -70,6 +72,7 @@ exports.createPages = async ({ graphql, actions }) => {
           id: node.id,
         },
       })
+
     })
     //highlight-end
     result.data.allWpCourseCategory.nodes.forEach(node => {
@@ -85,5 +88,9 @@ exports.createPages = async ({ graphql, actions }) => {
         },
       })
     })
+    
+
   })
 }
+
+

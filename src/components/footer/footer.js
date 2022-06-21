@@ -215,16 +215,16 @@ const Footer = ()=>{
                                 data-sal-easing="ease"
                                 >
                                     {footerData.crbThemeOptions.citSmediaFb &&
-                                        <Link to={footerData.crbThemeOptions.citSmediaFb}><FontAwesomeIcon icon={faFacebookF} /></Link>
+                                        <a target="_blank" to={footerData.crbThemeOptions.citSmediaFb}><FontAwesomeIcon icon={faFacebookF} /></a>
                                     }
                                     {footerData.crbThemeOptions.citSmediaIn &&
-                                        <Link to={footerData.crbThemeOptions.citSmediaIn}><FontAwesomeIcon icon={faLinkedinIn} /></Link>
+                                        <a target="_blank" to={footerData.crbThemeOptions.citSmediaIn}><FontAwesomeIcon icon={faLinkedinIn} /></a>
                                     }
                                     {footerData.crbThemeOptions.citSmediaTweet &&
-                                        <Link to={footerData.crbThemeOptions.citSmediaTweet}><FontAwesomeIcon icon={faYoutube} /></Link>
+                                        <a target="_blank" to={footerData.crbThemeOptions.citSmediaTweet}><FontAwesomeIcon icon={faYoutube} /></a>
                                     }
                                     {footerData.crbThemeOptions.citSmediaInsta &&
-                                        <Link to={footerData.crbThemeOptions.citSmediaInsta}><FontAwesomeIcon icon={faInstagram} /></Link>
+                                        <a target="_blank" to={footerData.crbThemeOptions.citSmediaInsta}><FontAwesomeIcon icon={faInstagram} /></a>
                                     }
                                 </div>
                             </div>

@@ -902,7 +902,7 @@ div.success_menu ul.common_slider_class li {
   text-align: center;
 }
 
-.section_heading h2,.course_cat_heading h1 {
+.section_heading h2,.course_cat_heading h1,.section_heading3 h2 {
   color: #1F1E1E;
   font-family: 'Hind Siliguri';
   font-weight: 600;
@@ -925,10 +925,10 @@ div.success_menu ul.common_slider_class li {
   text-align: center;
   padding-bottom: 58px;
 }
-.section_heading2 h2{
+.section_heading2 h2,.section_heading3 h2{
   padding-bottom: 20px!important;
 }
-.section_heading2 p{
+.section_heading2 p,.section_heading3 p{
   color: #605F62;
   font-family: Ruposhi Bangla Unicode;
   font-size: 18px;
@@ -936,6 +936,9 @@ div.success_menu ul.common_slider_class li {
   line-height: 28px;
   letter-spacing: 0.20000000298023224px;
   padding-bottom: 40px!important;
+}
+.section_heading3 p{
+ max-width: 85%;
 }
 .facilities_heading h2{
   padding-bottom: 20px;
@@ -4050,7 +4053,9 @@ Our facilities_item Area Start
 #about_top {
   margin-top: 125px;
 }
-
+.cit_milestone{
+  border-radius: 1.5rem;
+}
 .job_placement {
   padding-top: 50px;
   padding-bottom: 50px;
@@ -5276,6 +5281,29 @@ form.student_form select {
 /*==================================
         About Page CEO Part Start
 ================================== */
+.milestone_slider_bg{
+  background-color: #FBFDF2;
+  padding: 40px;
+}
+.milestone_slider .prevarrow{
+  left: -54px;
+  border: 1px solid #E3E3E3;
+}
+.milestone_slider .nextarrow{
+  right: -54px;
+  border: 1px solid #E3E3E3;
+}
+.milestone_slider .card-body{
+  padding-left: 85px;
+  padding-right: 65px;
+}
+.milestone_slider .card-body .card-title{
+  margin-bottom: 1rem;
+  font-family: 'Hind Siliguri';
+  font-size: 22px;
+  font-weight: 600;
+}
+
 #ceo {
   margin-top: 90px;
 }
