@@ -4056,6 +4056,10 @@ Our facilities_item Area Start
 .cit_milestone{
   border-radius: 1.5rem;
 }
+.cit_milestone .slick-slide img{
+  border-bottom-left-radius: 1.5rem;
+  border-top-left-radius: 1.5rem;
+}
 .job_placement {
   padding-top: 50px;
   padding-bottom: 50px;

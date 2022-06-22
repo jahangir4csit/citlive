@@ -6,9 +6,11 @@ import Spinner from 'react-bootstrap/Spinner';
 
 export default function Certificate({ location }) {
 
-    useEffect(() => {
-    window.location.href = `https://www.certificate.creativeit.xyz/${location.search}`;
-    }, []);
+    // useEffect(() => {
+    // window.location.href = `https://www.certificate.creativeit.xyz/${location.search}`;
+    // }, []);
+
+    console.log(location, 'Location param');
 
     return (
         <Layout>
