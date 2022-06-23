@@ -2,9 +2,12 @@ import React from "react";
 import { Link } from "gatsby"
 import seminarDot from '../../images/seminar-dots.png';
 
+import SeminarItem from '../seminar/seminarItem'
+
 const Seminar = (data)=>{
     const seminarDataUpcoming = data.upcomming;
     const seminarBanner = data.secBanner[0];
+    const currentDate = new Date();
 
     return(
         <section id="seminar">
@@ -21,29 +24,50 @@ const Seminar = (data)=>{
                             <p dangerouslySetInnerHTML={{ __html: data.secDesc }} />
                             <h3>আপকামিং ফ্রি সেমিনার</h3>
                             <ul>
-                              {seminarDataUpcoming.length > 0 ? 
-                              seminarDataUpcoming.map(
-                                seminar=>
-                                <li>
-                                  <div class="date">{seminar.seminar_meta.seminarDate.day ? seminar.seminar_meta.seminarDate.day : ''} 
-                                  <span>{seminar.seminar_meta.seminarDate.month ? seminar.seminar_meta.seminarDate.month : ''}, 
-                                  {seminar.seminar_meta.seminarDate.year ? ' '+seminar.seminar_meta.seminarDate.year : ''}</span></div>
-                                  <div class="text_main">
-                                      <div class="text">
-                                        <h4 dangerouslySetInnerHTML={{ __html: seminar.title }} />
-                                        <p>{seminar.seminar_meta.venue ? seminar.seminar_meta.venue : seminar.seminar_meta.venueOthers}, 
-                                        সময়ঃ {seminar.seminar_meta.seminarTime.timeSlot ? seminar.seminar_meta.seminarTime.timeSlot : ''} 
-                                        {seminar.seminar_meta.seminarTime.timeH ? ' '+seminar.seminar_meta.seminarTime.timeH :''}:
-                                        {seminar.seminar_meta.seminarTime.timeS ? seminar.seminar_meta.seminarTime.timeS :'00'} টা</p>
-                                      </div>
-                                      <div class="join_btn">
-                                          <Link 
-                                          to={`/register-for-free-seminar/`} 
-                                          state={{ id: seminar.seminar_meta.course ? seminar.seminar_meta.course.databaseId : 0 }}
-                                          >জয়েন</Link>
-                                      </div>
-                                  </div>
-                                </li>
+                              {seminarDataUpcoming.length > 0 ?
+                              seminarDataUpcoming.filter(
+                                seminar=>{
+                                const dateTime = new Date(seminar.seminar_meta.scheduleDate);
+
+                                return (currentDate-(1 * 24 * 60 * 60 * 1000)) < dateTime
+
+                                }
+                              ).slice(0, 2).map(
+                                (seminar, index)=>{
+
+                                const dateTime = new Date(seminar.seminar_meta.scheduleDate);
+                                const year = dateTime.getUTCFullYear();
+                                const day = dateTime.getUTCDate() + 1;
+                                const month = dateTime.getUTCMonth() + 1;
+                                return <SeminarItem day={day} year={year} month={month} seminarData={seminar} key={index} />
+                                }
+
+                                // if (currentDate < dateTime || (currentDate-(1 * 24 * 60 * 60 * 1000)) < dateTime) {
+                                //     return <SeminarItem day={day} year={year} month={month} seminarData={seminar} key={index} />
+                                // }
+
+                                // <li>
+                                //   <div class="date">{seminar.seminar_meta.seminarDate.day ? seminar.seminar_meta.seminarDate.day : ''} 
+                                //   <span>{seminar.seminar_meta.seminarDate.month ? seminar.seminar_meta.seminarDate.month : ''}, 
+                                //   {seminar.seminar_meta.seminarDate.year ? ' '+seminar.seminar_meta.seminarDate.year : ''}</span></div>
+                                //   <div class="text_main">
+                                //       <div class="text">
+                                //         <h4 dangerouslySetInnerHTML={{ __html: seminar.title }} />
+                                //         <p>{seminar.seminar_meta.venue ? seminar.seminar_meta.venue : seminar.seminar_meta.venueOthers}, 
+                                //         সময়ঃ {seminar.seminar_meta.seminarTime.timeSlot ? seminar.seminar_meta.seminarTime.timeSlot : ''} 
+                                //         {seminar.seminar_meta.seminarTime.timeH ? ' '+seminar.seminar_meta.seminarTime.timeH :''}:
+                                //         {seminar.seminar_meta.seminarTime.timeS ? seminar.seminar_meta.seminarTime.timeS :'00'} টা</p>
+                                //       </div>
+                                //       <div class="join_btn">
+                                //           <Link 
+                                //           to={`/register-for-free-seminar/`} 
+                                //           state={{ id: seminar.seminar_meta.course ? seminar.seminar_meta.course.databaseId : 0 }}
+                                //           >জয়েন</Link>
+                                //       </div>
+                                //   </div>
+                                // </li>
+
+                                
                               )
                               : <p>No Seminar Found</p> }
                                 

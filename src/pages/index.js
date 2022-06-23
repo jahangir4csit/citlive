@@ -187,10 +187,12 @@ query CourseData
       }
     }
   }
-  allWpSeminar(limit: 2, sort: {order: DESC, fields: date}) {
+
+  allWpSeminar(sort: {order: ASC, fields: seminar_meta___scheduleDate}) {
     nodes {
       title
       seminar_meta {
+        scheduleDate
         course {
           ... on WpCourse {
             title

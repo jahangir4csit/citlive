@@ -183,7 +183,7 @@ export const query = graphql`
         }
       }
     }
-    allWpSeminar(sort: {order: ASC, fields: seminar_meta___seminarDate___day}) {
+    allWpSeminar(sort: {order: ASC, fields: seminar_meta___scheduleDate}) {
         nodes {
           title
           seminar_meta {
