@@ -2,7 +2,6 @@ import React from 'react'
 import reactStringReplace from 'react-string-replace';
 
 export default function NumberBn(data){
-    console.log(data,'numb')
     return(
         reactStringReplace(data.number.toString(), /([0,1,2,3,4,5,6,7,8,9])/g, (match, i) => 
         {

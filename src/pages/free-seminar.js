@@ -7,18 +7,23 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {faPlay} from '@fortawesome/free-solid-svg-icons'
 import ModalVideo from 'react-modal-video'
 import BookButton from '../images/Button-book.png';
+import SeminarItem from '../components/seminar/seminarItem'
 
 export default function FreeSeminar({data}){
 
     if (typeof window === 'undefined') {
       global.window = {}
     }
+
+    const currentDate = new Date();
     const page = data.allWpPage.nodes[0];
     const courseData = data.allWpCourseCategory.nodes;
     const seminarData = data.allWpSeminar.nodes;
 
     const seo = page.pageMeta;
     const [isOpen, setOpen] = useState(false);
+
+    console.log(currentDate, 'c date');
     
     return(
         <React.Fragment>
@@ -51,30 +56,29 @@ export default function FreeSeminar({data}){
                     <div class="col-lg-12">
                         <div class="seminar_content">
                             <ul>
-                              {seminarData.length > 0 ? 
+                              {
+                              
+                              seminarData.length > 0 ? 
                               seminarData.map(
-                                seminar=>
-                                <li>
-                                  <div class="date">{seminar.seminar_meta.seminarDate.day ? seminar.seminar_meta.seminarDate.day : ''} 
-                                  <span>{seminar.seminar_meta.seminarDate.month ? seminar.seminar_meta.seminarDate.month : ''}, 
-                                  {seminar.seminar_meta.seminarDate.year ? ' '+seminar.seminar_meta.seminarDate.year : ''}</span></div>
-                                  <div class="text_main">
-                                      <div class="text">
-                                        <h4 dangerouslySetInnerHTML={{ __html: seminar.title }} />
-                                        <p>{seminar.seminar_meta.venue ? seminar.seminar_meta.venue : seminar.seminar_meta.venueOthers}, 
-                                        সময়ঃ {seminar.seminar_meta.seminarTime.timeSlot ? seminar.seminar_meta.seminarTime.timeSlot : ''} 
-                                        {seminar.seminar_meta.seminarTime.timeH ? ' '+seminar.seminar_meta.seminarTime.timeH :''}:
-                                        {seminar.seminar_meta.seminarTime.timeS ? seminar.seminar_meta.seminarTime.timeS :'00'} টা</p>
-                                      </div>
-                                      <div class="join_btn">
-                                          <Link 
-                                          to={`/register-for-free-seminar/`} 
-                                          state={{ id: seminar.seminar_meta.course ? seminar.seminar_meta.course.databaseId : 0 }}
-                                          >জয়েন</Link>
-                                      </div>
-                                  </div>
-                                </li>
-                              )
+                                (seminar)=>{
+                                  const dateTime = new Date(seminar.seminar_meta.scheduleDate);
+                                  // console.log(dateTime, 'Date time map');
+                                  // console.log(seminar, 's data');
+                                  // console.log(seminar.seminar_meta.scheduleDate, 'Original Date');
+
+                                  const year = dateTime.getUTCFullYear();
+                                  const day = dateTime.getUTCDate() + 1;
+                                  const month = dateTime.getUTCMonth() + 1;
+
+                                  // console.log(dateTime.getUTCFullYear(),'Get Year');
+                                  // console.log(dateTime.getUTCDate() + 1,'Get day');
+                                  // console.log(dateTime.getUTCMonth() + 1,'Get Month');
+                                  
+                                  if (currentDate < dateTime || (currentDate-(1 * 24 * 60 * 60 * 1000)) < dateTime) {
+                                    return <SeminarItem day={day} year={year} month={month} seminarData={seminar} />
+                                  }
+                                
+                              })
                               : <p>No Seminar Found</p> }
                                 
                             </ul>
@@ -183,6 +187,7 @@ export const query = graphql`
         nodes {
           title
           seminar_meta {
+            scheduleDate
             course {
               ... on WpCourse {
                 title
