@@ -36,6 +36,7 @@ export default function SiteMap({data}) {
                   <li><a href="/courses/motion-graphics/">মোশন গ্রাফিক্স</a></li>
                   <li><a href="/courses/image-editing/">ইমেজ এডিটিং</a></li>
                   <li><a href="/courses/adobe-illustrator/">অ্যাডোবি ইলাস্ট্রেটর</a></li>
+                  <li><a href="/courses/adobe-photoshop/">অ্যাডোবি ফটোশপ</a></li>
                 </ul>
               </div>
               <div class="col-md-4 col-12 col-sm-6">
@@ -45,6 +46,8 @@ export default function SiteMap({data}) {
                       <li><a href="/courses/professional-web-development/">ওয়েব ডেভেলপমেন্ট</a></li>
                       <li><a href="/courses/app-development/">অ্যাপ ডেভেলপমেন্ট</a></li>
                       <li><a href="/courses/mern-stack-development/">মার্ন স্ট্যাক ডেভেলপমেন্ট</a></li>
+                      <li><a href="/courses/python-machine-learning/">পাইথন মেশিন লার্নিং</a></li>
+                      <li><a href="/courses/python-django/">পাইথন জ্যাঙ্গো</a></li>
                   </ul>
               </div>
               <div class="col-md-4 col-12 col-sm-6">
@@ -53,6 +56,9 @@ export default function SiteMap({data}) {
                       <li><a href="/courses/digital-marketing/">ডিজিটাল মার্কেটিং</a></li>
                       <li><a href="/courses/affiliate-marketing/">এফিলিয়েট মার্কেটিং</a></li>
                       <li><a href="/courses/social-media-marketing/">সোশ্যাল মিডিয়া মার্কেটিং (SMM)</a></li>
+                      <li><a href="/courses/google-adsense/">গুগল এডসেন্স</a></li>
+                      <li><a href="/courses/content-marketing/">কনটেন্ট মার্কেটিং</a></li>
+                      <li><a href="/courses/search-engine-optimization/">সার্চ ইঞ্জিন অপটিমাইজেশন (SEO)</a></li>
                   </ul>
               </div>
               <div class="col-md-4 col-12 col-sm-6">
@@ -60,6 +66,8 @@ export default function SiteMap({data}) {
                   <ul>
                       <li><a href="/courses/professional-interior-exterior-design/">ইন্টেরিয়র ও এক্সটেরিয়র ডিজাইন</a></li>
                       <li><a href="/courses/professional-3d-animation">প্রফেশনাল 3D অ্যানিমেশন</a></li>
+                      <li><a href="/courses/3d-floor-plan/">3D ফ্লোর প্ল্যান</a></li>
+                      <li><a href="/courses/3d-product-modeling/">3D প্রোডাক্ট মডেলিং</a></li>
                   </ul>
               </div>
               <div class="col-md-4 col-12 col-sm-6">
@@ -79,13 +87,16 @@ export default function SiteMap({data}) {
               <div class="col-md-4 col-12 col-sm-6">
                   <h5>রোবটিক্স এন্ড অটোমেশন</h5>
                   <ul>
-                      <li><a href="#">Robotics</a></li>
+                      <li><a href="https://www.creativeitinstitute.com/">Robotics</a></li>
                   </ul>
               </div>
               <div class="col-md-4 col-12 col-sm-6">
                   <h5>Others Training</h5>
                   <ul>
-                      <li><a href="/courses/business-english/">বিজনেস ইংলিশ</a></li>
+                    <li><a href="/courses/cyber-security/">সাইবার সিকিউরিটি</a></li>
+                    <li><a href="/courses/aws/">অ্যামাজন ওয়েব সার্ভিস (AWS)</a></li>
+                    <li><a href="/courses/business-english/">বিজনেস ইংলিশ</a></li>
+                    <li><a href="/courses/spoken-english/">স্পোকেন ইংলিশ</a></li>
                   </ul>
               </div>
               <div class="col-md-4 col-12 col-sm-6">
