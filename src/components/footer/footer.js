@@ -147,7 +147,7 @@ const Footer = ()=>{
                 </div>
                 <div className='footer_bottom'>
                     <div className='container'>
-                        <div className='row justify-content-center payments'>
+                        {/* <div className='row justify-content-center payments'>
                             <div className='col-12 payment_heading text-center'>
                                 <h3>যে সকল মাধ্যমে আমরা পেমেন্ট গ্রহন করি</h3>
                             </div>
@@ -184,7 +184,7 @@ const Footer = ()=>{
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </div> */}
                         <div class="row copy">
                             <div class="col-md-3 col-sm-6 padding_0">
                                 <div class="footer_logo"
@@ -215,16 +215,16 @@ const Footer = ()=>{
                                 data-sal-easing="ease"
                                 >
                                     {footerData.crbThemeOptions.citSmediaFb &&
-                                        <a target="_blank" to={footerData.crbThemeOptions.citSmediaFb}><FontAwesomeIcon icon={faFacebookF} /></a>
+                                        <a target="_blank" href={footerData.crbThemeOptions.citSmediaFb}><FontAwesomeIcon icon={faFacebookF} /></a>
                                     }
                                     {footerData.crbThemeOptions.citSmediaIn &&
-                                        <a target="_blank" to={footerData.crbThemeOptions.citSmediaIn}><FontAwesomeIcon icon={faLinkedinIn} /></a>
+                                        <a target="_blank" href={footerData.crbThemeOptions.citSmediaIn}><FontAwesomeIcon icon={faLinkedinIn} /></a>
                                     }
                                     {footerData.crbThemeOptions.citSmediaTweet &&
-                                        <a target="_blank" to={footerData.crbThemeOptions.citSmediaTweet}><FontAwesomeIcon icon={faYoutube} /></a>
+                                        <a target="_blank" href={footerData.crbThemeOptions.citSmediaTweet}><FontAwesomeIcon icon={faYoutube} /></a>
                                     }
                                     {footerData.crbThemeOptions.citSmediaInsta &&
-                                        <a target="_blank" to={footerData.crbThemeOptions.citSmediaInsta}><FontAwesomeIcon icon={faInstagram} /></a>
+                                        <a target="_blank" href={footerData.crbThemeOptions.citSmediaInsta}><FontAwesomeIcon icon={faInstagram} /></a>
                                     }
                                 </div>
                             </div>
