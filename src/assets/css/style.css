@@ -7142,3 +7142,22 @@ Blog Dtails Sidebar Page Area End
 .carousel-inner{
   border-radius: 25px;
 }
+
+
+/* =========== CIT Discount Modal show =========== */
+.cit_discount_modal .modal-dialog{
+  max-width: 400px;
+}
+.cit_discount_modal .modal-body{
+  border-radius: 1rem;
+}
+.cit_discount_modal .modal-content{
+background-color: transparent;
+border: none;
+}
+.cit_discount_header{
+  position: absolute;
+  right: 0;
+  border: none;
+  z-index: 9999999;
+}
