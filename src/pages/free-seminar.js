@@ -196,11 +196,6 @@ export const query = graphql`
             }
             venueOthers
             venue
-            seminarDate {
-              day
-              month
-              year
-            }
             seminarTime {
               timeH
               timeS

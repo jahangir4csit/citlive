@@ -201,11 +201,6 @@ query CourseData
         }
         venueOthers
         venue
-        seminarDate {
-          day
-          month
-          year
-        }
         seminarTime {
           timeH
           timeS
