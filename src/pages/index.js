@@ -18,7 +18,6 @@ import StudentSuccess from "../components/homepage/studentSuccess"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 import VirtualTour from "../components/virtualTour"
-import ModalPopup from '../components/homepage/modalPopup'
 
 export default function HomePage({data}){
 
@@ -88,7 +87,6 @@ export default function HomePage({data}){
       secHeading={homeData.homeBlogSecHeading} 
       secDesc={homeData.homeBlogSecDesc}
       /> */}
-      <ModalPopup />
     </Layout>
   )
 }

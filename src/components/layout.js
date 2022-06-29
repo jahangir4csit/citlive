@@ -9,6 +9,7 @@ import { graphql, useStaticQuery } from "gatsby"
 import {Helmet} from "react-helmet";
 import PropTypes from "prop-types"
 import * as React from "react"
+import ModalPopup from '../components/homepage/modalPopup'
 import "../assets/css/responsive.css"
 /* ** Importing style *** */
 import "../assets/css/style.css"
@@ -80,7 +81,8 @@ const Layout = ({ children }) => {
         }}
       >
         <main>{children}</main>
-      <Footer />  
+      <Footer />
+      <ModalPopup />
       </div>
     </>
   )
