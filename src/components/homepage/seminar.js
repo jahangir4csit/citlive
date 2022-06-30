@@ -37,7 +37,7 @@ const Seminar = (data)=>{
 
                                 const dateTime = new Date(seminar.seminar_meta.scheduleDate);
                                 const year = dateTime.getUTCFullYear();
-                                const day = dateTime.getUTCDate() + 1;
+                                const day = dateTime.getUTCDate();
                                 const month = dateTime.getUTCMonth() + 1;
                                 return <SeminarItem day={day} year={year} month={month} seminarData={seminar} key={index} />
                                 }

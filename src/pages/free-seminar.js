@@ -67,12 +67,12 @@ export default function FreeSeminar({data}){
                                   // console.log(seminar.seminar_meta.scheduleDate, 'Original Date');
 
                                   const year = dateTime.getUTCFullYear();
-                                  const day = dateTime.getUTCDate() + 1;
+                                  const day = dateTime.getUTCDate();
                                   const month = dateTime.getUTCMonth() + 1;
 
                                   // console.log(dateTime.getUTCFullYear(),'Get Year');
-                                  // console.log(dateTime.getUTCDate() + 1,'Get day');
-                                  // console.log(dateTime.getUTCMonth() + 1,'Get Month');
+                                  // console.log(dateTime.getUTCDate(),'Get day');
+                                  // console.log(dateTime.getUTCMonth(),'Get Month');
                                   
                                   if (currentDate < dateTime || (currentDate-(1 * 24 * 60 * 60 * 1000)) < dateTime) {
                                     return <SeminarItem day={day} year={year} month={month} seminarData={seminar} />
