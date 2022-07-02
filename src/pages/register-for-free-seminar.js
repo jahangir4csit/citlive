@@ -150,8 +150,8 @@ const RegSeminar = ({location}) => {
                                 setCourseValue(event.target.value)
                               }}
                               >
-                              {!location.state.id &&
-                                <option value='select'>Select Course</option>
+                              {location.state && !location.state.id ?
+                                <option value='select'>Select Course</option> : ''
                               }
                               {courseslists.allWpCourse.nodes.map(
                                 course => <option value={course.databaseId} >{course.title}</option>
