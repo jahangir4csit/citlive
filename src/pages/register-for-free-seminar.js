@@ -55,7 +55,7 @@ const RegSeminar = ({location}) => {
   //if (loading) return 'Submitting...';
   //if (error) return `Submission error! ${error.message}`;
 
-  console.log(location.state.id, 'location state');
+  //console.log(location.state.id, 'location state');
 
   return (
     <Layout>
