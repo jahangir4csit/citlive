@@ -55,6 +55,8 @@ const RegSeminar = ({location}) => {
   //if (loading) return 'Submitting...';
   //if (error) return `Submission error! ${error.message}`;
 
+  console.log(location.state.id, 'location state');
+
   return (
     <Layout>
       <Seo 
@@ -143,11 +145,14 @@ const RegSeminar = ({location}) => {
                           <Form.Select 
                               aria-label="Floating"
                               size="lg" 
-                              value={location.state ? location.state.id  : ''} 
+                              value={location.state ? location.state.id  : 'select'} 
                               onChange={event => {
                                 setCourseValue(event.target.value)
                               }}
                               >
+                              {!location.state.id &&
+                                <option value='select'>Select Course</option>
+                              }
                               {courseslists.allWpCourse.nodes.map(
                                 course => <option value={course.databaseId} >{course.title}</option>
                               )}

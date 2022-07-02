@@ -23,7 +23,7 @@ export default function FreeSeminar({data}){
     const seo = page.pageMeta;
     const [isOpen, setOpen] = useState(false);
 
-    console.log(currentDate, 'c date');
+    //console.log(currentDate, 'c date');
     
     return(
         <React.Fragment>
@@ -64,7 +64,7 @@ export default function FreeSeminar({data}){
                                   const dateTime = new Date(seminar.seminar_meta.scheduleDate);
                                   // console.log(dateTime, 'Date time map');
                                   // console.log(seminar, 's data');
-                                  // console.log(seminar.seminar_meta.scheduleDate, 'Original Date');
+                                  console.log(seminar.seminar_meta.scheduleDate, 'Original Date');
 
                                   const year = dateTime.getUTCFullYear();
                                   const day = dateTime.getUTCDate();
@@ -74,7 +74,8 @@ export default function FreeSeminar({data}){
                                   // console.log(dateTime.getUTCDate(),'Get day');
                                   // console.log(dateTime.getUTCMonth(),'Get Month');
                                   
-                                  if (currentDate < dateTime || (currentDate-(1 * 24 * 60 * 60 * 1000)) < dateTime) {
+                                  //if (currentDate < dateTime || (currentDate-(1 * 24 * 60 * 60 * 1000)) < dateTime) {
+                                  if (currentDate < dateTime) {
                                     return <SeminarItem day={day} year={year} month={month} seminarData={seminar} />
                                   }
                                 

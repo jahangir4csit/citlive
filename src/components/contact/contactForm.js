@@ -97,6 +97,7 @@ const ContactForm = (data)=>{
                                                     setCourseValue(event.target.value)
                                                 }}
                                                 >
+                                                <option value='select'>Select Course</option>
                                                 {courseslists.allWpCourse.nodes.map(
                                                     course => <option value={course.databaseId} >{course.title}</option>
                                                 )}

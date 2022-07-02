@@ -5176,8 +5176,8 @@ Our facilities_item Area End
 =================================== */
 form.student_form .form-floating label {
   color: #605F62;
-  font-family: Ruposhi Bangla Unicode;
-  font-size: 13px;
+  font-family: 'Ruposhi Bangla Unicode';
+  font-size: 16px;
   font-weight: 400;
   line-height: 21px;
   letter-spacing: 0.002em;
@@ -5216,7 +5216,7 @@ form.student_form input.form-control:focus {
 form.student_form select {
   color: #605F62;
   font-family: Ruposhi Bangla Unicode;
-  font-size: 13px;
+  font-size: 16px;
   font-weight: 400;
   line-height: 21px;
   letter-spacing: 0.002em;
