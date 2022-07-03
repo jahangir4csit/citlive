@@ -5,15 +5,12 @@ import Spinner from 'react-bootstrap/Spinner';
 
 
 export default function Certificate({ location }) {
-    // console.log("==================================");
-    // console.log('Razib-Jahangir: ',location);
-    // console.log("==================================");
-
+    console.log(location, 'Location');
     useEffect(() => {
-    window.location.replace(`https://www.certificate.creativeit.xyz/${location.search}`);
+    window.location.href = `https://www.certificate.creativeit.xyz/${location.search}`;
     }, []);
 
-    console.log(location.search, 'Location search');
+    //console.log(location.search, 'Location search');
 
     return (
         <Layout>

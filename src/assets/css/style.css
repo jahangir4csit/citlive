@@ -5893,6 +5893,7 @@ form.student_form .form_heading h3 {
 
 .seminar-form .form-select-lg{
   opacity: .65;
+  font-size: 1rem;
 }
 #seminar .seminar_content .text_main {
   width: 90%;

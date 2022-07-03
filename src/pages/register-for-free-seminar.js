@@ -24,7 +24,8 @@ const RegSeminar = ({location}) => {
   let input;
 
   const courseslists = useCourses();
-  //const courseId = location ? location.state.id : '0';
+
+  const courseId = location.state ? location.state.id : '0';
   const resetInput = () => {
     setNameValue('');
     setMobileValue('');
@@ -32,6 +33,7 @@ const RegSeminar = ({location}) => {
     setAddressValue('');
   };
 
+  const [getLocation, setLocation] = useState(courseId)
   const [nameVal, setNameValue] = useState(' ')
   const [mobileVal, setMobileValue] = useState(' ')
   const [emailVal, setEmailValue] = useState(' ')
@@ -145,9 +147,10 @@ const RegSeminar = ({location}) => {
                           <Form.Select 
                               aria-label="Floating"
                               size="lg" 
-                              value={location.state ? location.state.id  : 'select'} 
+                              value={getLocation} 
                               onChange={event => {
                                 setCourseValue(event.target.value)
+                                setLocation(event.target.value)
                               }}
                               >
                               {location.state && !location.state.id ?
