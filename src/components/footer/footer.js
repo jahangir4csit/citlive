@@ -147,44 +147,41 @@ const Footer = ()=>{
                 </div>
                 <div className='footer_bottom'>
                     <div className='container'>
-                        {/* <div className='row justify-content-center payments'>
+                        <div className='row justify-content-center payments'>
                             <div className='col-12 payment_heading text-center'>
                                 <h3>যে সকল মাধ্যমে আমরা পেমেন্ট গ্রহন করি</h3>
                             </div>
                             <div className='col-sm-6 col-md-4'>
-                                <div className='payment_item d-flex align-items-center justify-content-center justify-content-md-start'>
-                                    <div className='payment_logo'>
+                                <div className='payment_item align-items-center'>
+                                    <div className='payment_logo mx-auto'>
                                         <img className='img-fluid' src={ftBkashLogo} alt='bkash'/>
                                     </div>
-                                    <div className='payment_qr'>
-                                        <img className='img-fluid' src={ftBkashQr} alt='bkash qr'/>
+                                    <div className='payment_qr mx-auto'>
                                         <small>01990779766</small>
                                     </div>
                                 </div>
                             </div>
                             <div className='col-sm-6 col-md-4'>
-                                <div className='payment_item d-flex align-items-center justify-content-center'>
-                                    <div className='payment_logo'>
+                                <div className='payment_item align-items-center'>
+                                    <div className='payment_logo mx-auto'>
                                         <img className='img-fluid' src={ftNagadLogo} alt='bkash'/>
                                     </div>
-                                    <div className='payment_qr'>
-                                        <img className='img-fluid' src={ftNagadQr} alt='bkash qr'/>
+                                    <div className='payment_qr mx-auto'>
                                         <small>01309014614</small>
                                     </div>
                                 </div>
                             </div>
                             <div className='col-sm-6 col-md-4'>
-                                <div className='payment_item d-flex align-items-center justify-content-center justify-content-md-end'>
-                                    <div className='payment_logo'>
+                                <div className='payment_item align-items-center'>
+                                    <div className='payment_logo mx-auto'>
                                         <img className='img-fluid' src={ftRoketLogo} alt='bkash'/>
                                     </div>
-                                    <div className='payment_qr'>
-                                        <img className='img-fluid' src={ftRoketQr} alt='bkash qr'/>
+                                    <div className='payment_qr mx-auto'>
                                         <small className='pl-0'>013090146143</small>
                                     </div>
                                 </div>
                             </div>
-                        </div> */}
+                        </div>
                         <div class="row copy">
                             <div class="col-md-3 col-sm-6 padding_0">
                                 <div class="footer_logo"
