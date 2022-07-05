@@ -82,7 +82,7 @@ const Layout = ({ children }) => {
       >
         <main>{children}</main>
       <Footer />
-      <ModalPopup />
+      {/* <ModalPopup /> */}
       </div>
     </>
   )
