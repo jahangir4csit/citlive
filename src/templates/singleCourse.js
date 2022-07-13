@@ -37,7 +37,7 @@ export default function SingleCourse({data}){
     const postId = post.databaseId
     const seo = post.pageMeta;
     const reviewsData = data.allWp.nodes[0];
-    //console.log(post, 'Single Course');
+    console.log(post, 'Single Course');
     const projects = post.courseProjects;
 
     const [isOpen, setOpen] = useState(false);
@@ -189,7 +189,7 @@ export default function SingleCourse({data}){
                                 <li>প্রজেক্ট<span>{post.course_options.classPerWeek !=null ? post.course_options.classPerWeek : ''}</span></li>
                             </ul>
                             {post.content !=null &&
-                            <div className='course_desc_article' dangerouslySetInnerHTML={{ __html: post.content }} />
+                            <div className="course_desc_article" dangerouslySetInnerHTML={{ __html: post.content }} />
                             }
                             <div class="pg_banner_btn">
                                 <Link href="#">ভর্তি</Link>
@@ -300,7 +300,6 @@ export default function SingleCourse({data}){
                                 </div>
                             </div>
                         </div>
-                        {console.log(post.crmModuleEntry, 'Curiculamn')}
                         {post.crmModuleEntry.length > 0 &&
                         <div class="pgc_curriculum_wrap">
                             <Tab.Container id="left-tabs-example" defaultActiveKey={post.crmModuleEntry[0].crm_module_entry_title.split(' ').join('-')}>
