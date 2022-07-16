@@ -27,6 +27,7 @@ export default function HomePage({data}){
   const reviewsData = data.allWp.nodes[0];
   const vitrualTour = data.allWpSection.nodes[0];
 
+  console.log(homeData, 'Home');
 
   return(
     <Layout>
