@@ -37,7 +37,6 @@ export default function SingleCourse({data}){
     const postId = post.databaseId
     const seo = post.pageMeta;
     const reviewsData = data.allWp.nodes[0];
-    console.log(post, 'Single Course');
     const projects = post.courseProjects;
 
     const [isOpen, setOpen] = useState(false);
@@ -192,7 +191,7 @@ export default function SingleCourse({data}){
                             <div className="course_desc_article" dangerouslySetInnerHTML={{ __html: post.content }} />
                             }
                             <div class="pg_banner_btn">
-                                <Link href="#">ভর্তি</Link>
+                                <Link to="/contact-us/">ভর্তি</Link>
                                 <Link to="/free-seminar">ফ্রি সেমিনার</Link>
                             </div>
                             <div class="stars">
@@ -360,7 +359,7 @@ export default function SingleCourse({data}){
                             {getSoftData.map(
                                           softwareItem=>(
 
-                                <div class="col-6">
+                                <div class="col-12 col-sm-6">
                                     <div class="pgc_item d-flex align-items-center">
                                         {softwareItem.better_featured_image !=null &&
                                         <div class="pgcs_icon">
@@ -456,7 +455,7 @@ export default function SingleCourse({data}){
                                           jobPosition=>(
                                               <>
                                             {jobPosition.title !=null && 
-                                            <div class="col-6">
+                                            <div class="col-12 col-sm-6">
                                                 <div class="job_item">
                                                     <ul>
                                                         <li><svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="9" cy="9" r="8" stroke="#FF7E31" stroke-width="2"/></svg>{jobPosition.title.rendered}</li>

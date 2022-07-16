@@ -1,16 +1,33 @@
-import React from "react"
+import React,{useEffect, useState} from 'react'
 import { graphql } from "gatsby"
 import Seo from "../components/seo"
 import Layout from "../components/layout"
 import PageDesc from '../components/pageDesc'
 import FacilityItems from '../components/facilities/facilityItems'
 
+import apiFetch from '@wordpress/api-fetch';
+
 export default function OurFacilities({data}) {
+
+  const WPApi = 'https://app.creativeitinstitute.com/wp-json/wp/v2';
 
     const pageData = data.allWpPage.nodes[0];
     const seo = pageData.pageMeta;
-    const facilitiesData = pageData.citMoreFacilities;
-    console.log(facilitiesData, 'Facility Data');
+    //const facilitiesData = pageData.citMoreFacilities;
+    const postId = pageData.databaseId;
+
+    // get options data from wp
+    const [pageDetails, setPageDetails] = useState([]);
+
+
+    useEffect(() => {
+
+      // GET
+      apiFetch( { path: `${WPApi}/pages/${postId}` } ).then( ( pageDetails ) => {
+        setPageDetails(pageDetails);
+      } );
+
+    }, [])
 
     return(
       <Layout>
@@ -18,7 +35,7 @@ export default function OurFacilities({data}) {
         title={seo.metaTitle} 
         description={seo.metaDescription} />
         <PageDesc data={pageData} />
-        <FacilityItems data={facilitiesData} /> 
+        <FacilityItems data={pageDetails.cit_more_facilities} /> 
       </Layout>
     )
   
@@ -29,40 +46,14 @@ export default function OurFacilities({data}) {
     allWpPage(filter: {slug: {eq: "our-facilities"}}) {
       nodes {
         id
+        databaseId
         title
         content
         pageMeta {
           metaTitle
           metaDescription
         }
-        citMoreFacilities {
-          cit_facility_type {
-            value
-          }
-          facility_sec_title
-          facility_sec_sub_title
-          facility_sec_description
-          facility_sec_video_thumb
-          facility_sec_video_id
-          facility_sec_bg
-          cit_facelity_js_items {
-            title
-            facilityBoxBg
-            featuredImage {
-              node {
-                sourceUrl
-              }
-            }
-          }
-          cit_facelity_jp_items {
-            title
-            featuredImage {
-              node {
-                sourceUrl
-              }
-            }
-          }
-        }
+        
       }
     }
   }

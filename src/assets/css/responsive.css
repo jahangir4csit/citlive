@@ -120,6 +120,9 @@
 		padding-left: 15px;
 		padding-bottom: 10px;
 		}
+		.partner_all ul li{
+			width: 15.3%;
+		  }
 	/*========================================= Our Facilities Page End======================================== */
 
 	/*========================================= Jony Responsive Start======================================== */
@@ -1010,7 +1013,7 @@
 				Trainning Department Start
      ================================================== */
 	.training_department_main a {
-		width: 47%;
+		width: 42%!important;
 	}
 
 	/* =================================================
@@ -1401,6 +1404,9 @@
 		width: 31%;
 		margin-bottom: 8px;
 		}
+		.partner_all ul li{
+			width: 15.3%;
+		  }
 	/*========================================= Our Facilities Page End======================================== */
 
 
@@ -1503,7 +1509,9 @@
 	.side_text {
 		display: none;
 	}
-
+	.partner_all ul li{
+		width: 22%;
+	  }
 	/* =================================================
 			Section heading Part Start
      ================================================== */
@@ -2184,7 +2192,7 @@
 	}
 
 	.training_department_main a {
-		width: 47%;
+		width: 42%;
 		box-shadow: 5px 5px 60px rgba(0, 0, 0, 0.06);
 		border: none;
 	}
@@ -3784,11 +3792,14 @@
 		line-height: 33px;
 		margin-bottom: 22px;
 	}
-
+	.training_department_main{
+		justify-content: space-evenly;
+	}
 	.training_department_main a {
-		width: 47%;
+		width: 42%;
 		box-shadow: 5px 5px 60px rgba(0, 0, 0, 0.06);
 		border: none;
+		margin-right: 0;
 	}
 	.training_department_main a .training_department_item {
 		padding: 12px;

@@ -4195,13 +4195,26 @@ Our facilities_item Area Start
   border: none;
 }
 
-.jobplacement_partner ul li p {
+.partner_all{
+  padding: 0;
+  margin: 0;
+}
+
+.partner_all ul li:last-child {
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.jobplacement_partner ul li a{
+  display: inline-block;
+}
+.jobplacement_partner ul li a p {
   font-family: Ruposhi Bangla Unicode;
   color: #FF7E31;
   font-size: 24px;
   font-weight: 700;
   line-height: 25px;
   letter-spacing: 0em;
+  margin-bottom: 0;
 }
 
 .jobplacement_partner ul li p span {

@@ -10,9 +10,9 @@ import {Helmet} from "react-helmet";
 import PropTypes from "prop-types"
 import * as React from "react"
 import ModalPopup from '../components/homepage/modalPopup'
-import "../assets/css/responsive.css"
 /* ** Importing style *** */
 import "../assets/css/style.css"
+import "../assets/css/responsive.css"
 import Footer from "./footer/footer"
 import Header from "./headers/header"
 import "./layout.css"
