@@ -29,7 +29,7 @@ const Seminar = (data)=>{
                                 seminar=>{
                                 const dateTime = new Date(seminar.seminar_meta.scheduleDate);
 
-                                return (currentDate-(1 * 24 * 60 * 60 * 1000)) < dateTime
+                                return currentDate < dateTime
 
                                 }
                               ).slice(0, 2).map(

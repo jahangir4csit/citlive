@@ -64,7 +64,7 @@ export default function FreeSeminar({data}){
                                   const dateTime = new Date(seminar.seminar_meta.scheduleDate);
                                   // console.log(dateTime, 'Date time map');
                                   // console.log(seminar, 's data');
-                                  console.log(seminar.seminar_meta.scheduleDate, 'Original Date');
+                                  // console.log(seminar.seminar_meta.scheduleDate, 'Original Date');
 
                                   const year = dateTime.getUTCFullYear();
                                   const day = dateTime.getUTCDate();
