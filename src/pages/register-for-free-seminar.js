@@ -39,10 +39,11 @@ const RegSeminar = ({location}) => {
   const [emailVal, setEmailValue] = useState(' ')
   const [addressVal, setAddressValue] = useState(' ')
   const [courseVal, setCourseValue] = useState(' ')
+  const submitDate = new Date().toLocaleDateString();
 
   const SEMINAR_MUTATION = gql`
   mutation CreateSubmissionMutation{
-    createSubmission(input: {clientMutationId: "seminarEntry", name: "${nameVal}", mobile: "${mobileVal}",  email: "${emailVal}", address: "${addressVal}", course: "${courseVal}" }) {
+    createSubmission(input: {clientMutationId: "seminarEntry", name: "${nameVal}", mobile: "${mobileVal}",  email: "${emailVal}", address: "${addressVal}", course: "${courseVal}", submitted: "${submitDate}" }) {
       data
       success
     }
@@ -86,7 +87,8 @@ const RegSeminar = ({location}) => {
                               mobile: mobileVal,
                               email: emailVal,
                               address: addressVal,
-                              course: courseVal
+                              course: courseVal,
+                              submitted: submitDate
                             }
                           })
                         }}

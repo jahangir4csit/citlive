@@ -12,10 +12,6 @@ import ftBkashLogo from '../../images/bkash_marchant.png';
 import ftNagadLogo from '../../images/nagad_marchant.png';
 import ftRoketLogo from '../../images/roket_marchant.png';
 
-import ftBkashQr from '../../images/bkash_qr.png';
-import ftNagadQr from '../../images/nagad_qr.png';
-import ftRoketQr from '../../images/roket_qr.png';
-
 const Footer = ()=>{
 
     const footerNavs = useFooterMenuQuery();

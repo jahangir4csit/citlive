@@ -16,17 +16,7 @@ module.exports = {
         //url: `http://localhost/citbd/graphql`,
         schema: {
           timeout: 350000
-        },
-        perPage: 500,
-        concurrentRequests: 15,
-        excludedRoutes: [
-          "/*/*/categories",
-          "/*/*/posts",
-          "/*/*/tags",
-          "/*/*/taxonomies",
-          "/*/*/users",
-          "/*/*/comments"
-        ],
+        }
       },
     },
     {
