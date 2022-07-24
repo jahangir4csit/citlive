@@ -18,4 +18,3 @@ export const useMenuQuery = () => {
   )
   return menu.wpMenu.menuItems.nodes
 }
-

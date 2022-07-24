@@ -20,7 +20,7 @@ export default function Counter(props) {
     <>
       <CountUp
         end={props.data}
-        duration="10"
+        duration="3"
         onStart={onStart}
         onEnd={onEnd}
         containerProps={containerProps}

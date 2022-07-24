@@ -35,12 +35,12 @@ const Footer = ()=>{
                                 <p dangerouslySetInnerHTML={{ __html: footerData.crbThemeOptions.citFtDesc ? footerData.crbThemeOptions.citFtDesc : '' }} />
                                 <div class="footer_btn">
                                     {footerData.crbThemeOptions.citFtButton1Title &&
-                                    <Link 
-                                    to={footerData.crbThemeOptions.citFtButton1Url} >
-                                    {footerData.crbThemeOptions.citFtButton1Title}</Link>
+                                    <a target={'_blank'} 
+                                    href={footerData.crbThemeOptions.citFtButton1Url} >
+                                    {footerData.crbThemeOptions.citFtButton1Title}</a>
                                     }
                                     {footerData.crbThemeOptions.citFtButton2Title &&
-                                    <Link to={footerData.crbThemeOptions.citFtButton2Url} >{footerData.crbThemeOptions.citFtButton2Title}</Link>
+                                    <a target={'_blank'} href={footerData.crbThemeOptions.citFtButton2Url} >{footerData.crbThemeOptions.citFtButton2Title}</a>
                                     }
                                 </div>
                             </div>

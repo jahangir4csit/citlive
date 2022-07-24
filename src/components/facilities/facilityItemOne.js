@@ -58,10 +58,10 @@ export default function FacilityItemOne(data){
                         </article>
                     </div>
                     <div class="job_placement_contant_img">
-                        <img class="img-fluid w-100" src={facilityDetails.facility_sec_video_thumb} alt="image" />
+                        <ModalVideo channel='youtube' autoplay isOpen={isOpen} videoId={facilityDetails.facility_sec_video_id} onClose={() => setOpen(false)} />
+                        <img class="img-fluid w-100" src={facilityDetails.facility_sec_video_thumb} alt="image" onClick={()=> setOpen(true)} />
                         <div class="overly_icon">
-                            <ModalVideo channel='youtube' autoplay isOpen={isOpen} videoId={facilityDetails.facility_sec_video_id} onClose={() => setOpen(false)} />
-                            <button className="modalvidwrap" onClick={()=> setOpen(true)}>
+                            <button className="modalvidwrap">
                                 <FontAwesomeIcon icon={faPlay} />
                             </button>
                         </div>

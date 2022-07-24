@@ -219,12 +219,12 @@ export default function SingleCourse({data}){
                         <div class="pg_banner_img position-relative">
                             {post.course_options.courseVideoThumbnail !=null ?
                             <Fragment>
-                              <img class="img-fluid w-100" 
+                              <ModalVideo channel='youtube' autoplay isOpen={isOpen} videoId={post.course_options.courseVideoUrl !== null ? post.course_options.courseVideoUrl : '1PDg90odyVY'} onClose={() => setOpen(false)} />
+                              <img class="img-fluid w-100" onClick={()=> setOpen(true)}
                               src={post.course_options.courseVideoThumbnail.sourceUrl} 
                               alt={post.course_options.courseVideoThumbnail.altText ? post.course_options.courseVideoThumbnail.altText : 'Creative IT Institute'} />
                               <div class="overly_icon">
-                                  <ModalVideo channel='youtube' autoplay isOpen={isOpen} videoId={post.course_options.courseVideoUrl !== null ? post.course_options.courseVideoUrl : '1PDg90odyVY'} onClose={() => setOpen(false)} />
-                                  <button className="modalvidwrap" onClick={()=> setOpen(true)}>
+                                  <button className="modalvidwrap">
                                       <FontAwesomeIcon icon={faPlay} />
                                   </button>
                               </div>

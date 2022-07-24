@@ -57,7 +57,7 @@ const HomeBanner = ()=>{
                         />
                         <p dangerouslySetInnerHTML={{ __html: banner.homeBannerData.bannerShortDesc }} />
 
-                        <Link to="/our-courses" 
+                        <a target={'_blank'} href="/our-courses" 
                         class="browse_btn"
                         data-sal="slide-left"
                         data-sal-delay="300"
@@ -68,8 +68,8 @@ const HomeBanner = ()=>{
                                 <img src={buttonBook} alt="icon" />
                             </span>
                             ব্রাউজ কোর্স
-                        </Link>
-                        <Link to="/our-courses"  
+                        </a>
+                        <a target={'_blank'} href="/our-courses"  
                         class="d-inline-block d-sm-none"
                         data-sal="slide-left"
                         data-sal-delay="300"
@@ -81,8 +81,8 @@ const HomeBanner = ()=>{
                             </span>
                             ব্রাউজ কোর্স 
                             <span class="ms-2 angle"><i class="fa fa-angle-down"></i></span>
-                        </Link>
-                        <Link class="join_btn" to="/register-for-free-seminar/"
+                        </a>
+                        <a target={'_blank'} class="join_btn" href="/register-for-free-seminar/"
                         data-sal="slide-right"
                         data-sal-delay="300"
                         data-sal-duration="800"
@@ -92,7 +92,7 @@ const HomeBanner = ()=>{
                                 <img src={buttonBook} alt="icon" />
                             </span>
                             জয়েন ফ্রি সেমিনার
-                        </Link>
+                        </a>
                         <ul>
                             <li>
                                 <img src={isoLogo} alt="logo" />
@@ -112,11 +112,11 @@ const HomeBanner = ()=>{
                         data-sal-duration="700"
                         data-sal-easing="ease"
                         />
-                        <div class="banner_img_overly">
+                        <ModalVideo channel='youtube' autoplay isOpen={isOpen} videoId={banner.homeBannerData.videoId} onClose={() => setOpen(false)} />
+                        <div class="banner_img_overly" onClick={()=> setOpen(true)}>
                             {banner.homeBannerData.videoId !=null &&
                             <div class="overly_icon">
-                                <ModalVideo channel='youtube' autoplay isOpen={isOpen} videoId={banner.homeBannerData.videoId} onClose={() => setOpen(false)} />
-                                <button className="modalvidwrap" onClick={()=> setOpen(true)}>
+                                <button className="modalvidwrap" >
                                     <FontAwesomeIcon icon={faPlay} />
                                 </button>
                             </div>

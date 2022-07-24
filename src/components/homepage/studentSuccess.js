@@ -10,8 +10,6 @@ const StudentSuccess = (data)=>{
     //const successStoryHome = useFeaturedCases();
     //const ftStoryItem = successStoryHome.allWpSuccessStories.nodes;
 
-    const [isOpen, setOpen] = useState(false)
-
      return(
         <section id="student_success">
             <div class="container">
