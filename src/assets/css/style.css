@@ -613,7 +613,7 @@ div.success_menu ul.common_slider_class li {
 
 .banner_img {
   position: relative;
-  z-index: 1;
+  z-index: 999999999999999;
 }
 
 .banner_img .banner_pic_bg {
