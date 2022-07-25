@@ -3,6 +3,7 @@ import { Link } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {faAngleDown} from '@fortawesome/free-solid-svg-icons'
+import bookIcon from '../../images/Button-book.png';
 
 const AboutDesc = (data) =>{
     const aboutData = data.data;
@@ -16,30 +17,30 @@ const AboutDesc = (data) =>{
         >
             <div class="container">
                 <div class="navbar_btn text-center d-md-none">
-                    <Link to="/our-courses"><StaticImage src="../../images/Button-book.png" alt="icon" />ব্রাউজ কোর্স <FontAwesomeIcon icon={faAngleDown} className="ps-2" /></Link>
+                    <Link to="/our-courses"><img src={bookIcon} alt="icon" />ব্রাউজ কোর্স <FontAwesomeIcon icon={faAngleDown} className="ps-2" /></Link>
                 </div>
 
                 <div class="row">
-                    <div class="col-lg-7">
+                    <div class="col-lg-8">
                         <div class="facilities_heading  ">
                             <h1>{aboutData.title}</h1>
                             <div className="dtails" dangerouslySetInnerHTML={{ __html: aboutData.content }} />
                         </div>
                     </div>
-                    <div class="col-lg-5">
+                    {/* <div class="col-lg-5">
                         <div class="about_top_img">
-                            {aboutData.pageSection.aboutLogo ?
+                            {aboutData.pageSection.aboutLogo !=null ?
                             <div class="single_img">
                                 <img class="img-fluid" src={aboutData.pageSection.aboutLogo.aboutLogo.sourceUrl} alt="about" />
                             </div>
                             : ''}
-                            {aboutData.pageSection.aboutLogo2 ?
+                            {aboutData.pageSection.aboutLogo2 !=null ?
                             <div class="single_img">
                                 <img class="img-fluid" src={aboutData.pageSection.aboutLogo.aboutLogo2.sourceUrl} alt="about" />
                             </div>
                             : ''}
                         </div>
-                    </div>
+                    </div> */}
                 </div>
             </div>
         </section>

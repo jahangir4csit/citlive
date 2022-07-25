@@ -45,7 +45,7 @@ export default function OurAchievements({data}) {
 }
 
 export const pageQuery = graphql`
-  query($in: [String] = ["cit_iso_certified", "cit_about_desc", "cit_ceo_brief", "cit_milestone", "cit_initiatives"]) {
+  query($in: [String] = ["cit_milestone", "cit_initiatives"]) {
     allWpPage(filter: {slug: {eq: "our-achievements"}}) {
       nodes {
         id
