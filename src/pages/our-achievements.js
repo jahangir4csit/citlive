@@ -10,6 +10,7 @@ import AboutUsDesc from '../components/achievements/aboutUsDesc'
 import CitIsoCertified from '../components/citIsoCertified'
 import CEObrief from '../components/ceoBrief'
 import CITinitiatives from '../components/citInitiatives'
+import MilestoneSlider from '../components/about/milestoneSlider'
 
 
 export default function OurAchievements({data}) {
@@ -27,41 +28,24 @@ export default function OurAchievements({data}) {
             description={seo.metaDescription} />
             <PageDesc data={pageData} />
             <FeaturedTextAchv ftData={featuredText} />
-            <CounterUp2 boxbg />
-            <TopRatedFreelancer cases={topRatedCase} />
             {sectionsData.map(
               (section,index)=> 
               {
                 switch(section.citShowSection.value){
-                  case "cit_about_desc": return <AboutUsDesc 
-                  title={section.citAboutDescTitle} 
-                  desc={section.citAboutDescContent}
-                  images={section.citAboutDescImages}
-                  key={index} />
-                  case "cit_ceo_brief": return <CEObrief
-                  name={section.citCeoName}
-                  dsg={section.citCeoDesg}
-                  desc={section.citCeoDescription}
-                  image={section.citCeoImage}
-                  smedia={section.citCeoSocialMedia}
-                   key={index} />
-                  case "cit_iso_certified": return <CitIsoCertified 
-                  title={section.citIsoCertifiedTitle}
-                  desc={section.citIsoCertifiedDesc}
-                  image={section.citIsoCertifiedImage}
-                  classes={'iso_style2 mt9 mb45'} 
-                  key={index} />
+                  case "cit_milestone": return <MilestoneSlider milestoneData={section.citMilestones} key={index} />
                   case "cit_initiatives": return <CITinitiatives classes={'pt45 pb45'} data={section.citInitiatives} key={index} />
                   default: return ''              
                 }
               }
             )}
+            <CounterUp2 boxbg />
+            <TopRatedFreelancer cases={topRatedCase} />
         </Layout>
         )
 }
 
 export const pageQuery = graphql`
-  query($in: [String] = ["cit_iso_certified", "cit_about_desc", "cit_ceo_brief", "cit_initiatives"]) {
+  query($in: [String] = ["cit_iso_certified", "cit_about_desc", "cit_ceo_brief", "cit_milestone", "cit_initiatives"]) {
     allWpPage(filter: {slug: {eq: "our-achievements"}}) {
       nodes {
         id
@@ -99,34 +83,17 @@ export const pageQuery = graphql`
     }
     allWpSection(sort: {order: DESC, fields: date}, filter: {citShowSection: {value: {in: $in}}}) {
       nodes {
-        citAboutDescTitle
-        citAboutDescContent
-        citAboutDescImages {
-          altText
-          sourceUrl
-        }
-        citIsoCertifiedDesc
-        citIsoCertifiedImage
-        citIsoCertifiedTitle
-        citShowSection {
-          value
-        }
-        citCeoName
-        citCeoImage{
-          altText
-          sourceUrl
-        }
-        citCeoDesg
-        citCeoDescription
-        citCeoSocialMedia {
-          url
-          smedia_type {
-            label
-          }
+        citMilestones {
+          milst_desc
+          milst_image
+          milst_title
         }
         citInitiatives {
           initiv_data
           initiv_title
+        }
+        citShowSection {
+          value
         }
       }
     }
