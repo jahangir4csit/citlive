@@ -27,7 +27,7 @@ export default function OurFacilities({data}) {
         setPageDetails(pageDetails);
       } );
 
-    }, [])
+    }, [postId])
 
     return(
       <Layout>

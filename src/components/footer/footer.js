@@ -97,7 +97,7 @@ const Footer = ()=>{
                                     <h5>{ footerNavs[0].name }</h5>
                                     <ul>
                                         {footerNavs[0].menuItems.nodes.map(
-                                            navItems=> <li><Link to={navItems.url}>{navItems.label}</Link></li>
+                                            navItems=> <li><a target={'_blank'} href={navItems.url}>{navItems.label}</a></li>
                                         )}
                                     </ul>
                                 </div>
@@ -115,7 +115,7 @@ const Footer = ()=>{
                                     <h5>{ footerNavs[1].name }</h5>
                                     <ul>
                                         {footerNavs[1].menuItems.nodes.map(
-                                            navItems=> <li><Link to={navItems.url}>{navItems.label}</Link></li>
+                                            navItems=> <li><a target={'_blank'} href={navItems.url}>{navItems.label}</a></li>
                                         )}
                                     </ul>
                                 </div>
@@ -132,7 +132,7 @@ const Footer = ()=>{
                                     <h5>{ footerNavs[2].name }</h5>
                                     <ul>
                                         {footerNavs[2].menuItems.nodes.map(
-                                            navItems=> <li><Link to={navItems.url}>{navItems.label}</Link></li>
+                                            navItems=> <li><a target={'_blank'} href={navItems.url}>{navItems.label}</a></li>
                                         )}
                                     </ul>
                                 </div>

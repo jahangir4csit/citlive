@@ -71,8 +71,8 @@ const RegSeminar = ({location}) => {
           <div class="container">
             <div class="row">
                 <div class="col-xl-8 col-lg-12 m-auto">
-                    <div class="section_heading mb-5">
-                        <h2>জয়েন ফ্রি সেমিনার</h2>
+                    <div class="section_heading mb-5 pt-5">
+                        <h1 className="font-600">জয়েন ফ্রি সেমিনার</h1>
                     </div>
                     {/* <Mutation mutation={useMutation(SEMINAR_MUTATION)}> */}
                     {/* {(createSubmission, { loading, error, data }) => ( */}
