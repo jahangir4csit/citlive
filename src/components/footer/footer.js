@@ -160,7 +160,7 @@ const Footer = ()=>{
                             <div className='col-sm-6 col-md-4'>
                                 <div className='payment_item align-items-center'>
                                     <div className='payment_logo mx-auto'>
-                                        <img className='img-fluid' src={ftNagadLogo} alt='bkash'/>
+                                        <img className='img-fluid' src={ftNagadLogo} alt='Nagad'/>
                                     </div>
                                     <div className='payment_qr mx-auto'>
                                         <small>01309014614</small>
@@ -170,7 +170,7 @@ const Footer = ()=>{
                             <div className='col-sm-6 col-md-4'>
                                 <div className='payment_item align-items-center'>
                                     <div className='payment_logo mx-auto'>
-                                        <img className='img-fluid' src={ftRoketLogo} alt='bkash'/>
+                                        <img className='img-fluid' src={ftRoketLogo} alt='Rocket'/>
                                     </div>
                                     <div className='payment_qr mx-auto'>
                                         <small className='pl-0'>013090146143</small>
