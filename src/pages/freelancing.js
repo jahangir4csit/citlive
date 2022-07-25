@@ -1,4 +1,4 @@
-import React from "react"
+import React,{useEffect, useState} from 'react'
 import { graphql } from "gatsby"
 import LazyLoad from 'react-lazyload';
 import Seo from "../components/seo"
@@ -13,7 +13,11 @@ import FrForWhome from '../components/freelancing/forWhome'
 import FrJobMarkets from '../components/freelancing/jobMarket'
 import PhotoWall from "../components/photoWall"
 
+import apiFetch from '@wordpress/api-fetch';
+
 export default function Freelancing({data}) {
+
+  const WPApi = 'https://app.creativeitinstitute.com/wp-json/wp/v2';
 
     const pageData = data.allWpPage.nodes[0];
     const seo = pageData.pageMeta;
@@ -25,7 +29,22 @@ export default function Freelancing({data}) {
     const initiativeData = sectionsData[1].citInitiatives;
 
     const marketPlaces = pageData.citFacelityJsItems;
-    const forWhomesData = pageData.citFrFreelancingItem; 
+    const forWhomesData = pageData.citFrFreelancingItem;
+
+    const postId = pageData.databaseId;
+    // get options data from wp
+    const [pageDetails, setPageDetails] = useState([]);
+    
+    useEffect(() => {
+
+      // GET
+      apiFetch( { path: `${WPApi}/pages/${postId}` } ).then( ( pageDetails ) => {
+        setPageDetails(pageDetails);
+      } );
+
+    }, [postId])
+
+    console.log(pageDetails, 'freel');
 
     return(
       <Layout>
@@ -33,7 +52,7 @@ export default function Freelancing({data}) {
         title={seo.metaTitle} 
         description={seo.metaDescription} />
         <PageDesc data={pageData} />
-        <FacilityItems data={facilitiesData} />
+        <FacilityItems data={pageDetails.cit_more_facilities} /> 
         <CounterUp />
         {forWhomesData.length > 0 &&
         <FrForWhome data={forWhomesData} />
@@ -60,6 +79,7 @@ query($in: [String] = ["cit_initiatives", "cit_photoWall"]) {
   allWpPage(filter: {slug: {eq: "freelancing"}}) {
     nodes {
       id
+      databaseId
       title
       content
       pageMeta {
@@ -83,34 +103,7 @@ query($in: [String] = ["cit_initiatives", "cit_photoWall"]) {
           }
         }
       }
-      citMoreFacilities {
-        cit_facility_type {
-          value
-        }
-        facility_sec_title
-        facility_sec_sub_title
-        facility_sec_description
-        facility_sec_video_thumb
-        facility_sec_video_id
-        facility_sec_bg
-        cit_facelity_js_items {
-          title
-          facilityBoxBg
-          featuredImage {
-            node {
-              sourceUrl
-            }
-          }
-        }
-        cit_facelity_jp_items {
-          title
-          featuredImage {
-            node {
-              sourceUrl
-            }
-          }
-        }
-      }
+      
       jobDeptTitle
       citJpDepartment {
         name
