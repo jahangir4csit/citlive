@@ -33,7 +33,7 @@ export default function OurAchievements({data}) {
               {
                 switch(section.citShowSection.value){
                   case "cit_milestone": return <MilestoneSlider milestoneData={section.citMilestones} key={index} />
-                  case "cit_initiatives": return <CITinitiatives classes={'pt45 pb45'} data={section.citInitiatives} key={index} />
+                  case "cit_initiatives": return <CITinitiatives classes={'pb45'} data={section.citInitiatives} key={index} />
                   default: return ''              
                 }
               }
@@ -99,3 +99,5 @@ export const pageQuery = graphql`
     }
   }
 `
+
+

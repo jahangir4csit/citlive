@@ -1,4 +1,4 @@
-import React from "react";
+import React,{Fragment, useEffect, useState} from 'react'
 import { StaticImage } from "gatsby-plugin-image"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {faPlay, faAngleLeft, faAngleRight} from '@fortawesome/free-solid-svg-icons'
@@ -6,11 +6,35 @@ import {faPlay, faAngleLeft, faAngleRight} from '@fortawesome/free-solid-svg-ico
 import Tabs from 'react-bootstrap/Tabs'
 import Tab from 'react-bootstrap/Tab'
 import GalleryItem from "./galleryItem";
+import apiFetch from '@wordpress/api-fetch';
 
 
 const GalleryGrid = (data)=>{
 
     const gallary = data.gallaryData;
+
+    const WPApi = 'https://app.creativeitinstitute.com/wp-json/wp/v2';
+    const [getgItems, setgItems] = useState([]);
+
+
+    useEffect(() => {
+ 
+        gallary ?
+        gallary.map(
+                gtabs =>{
+                    const galleryArr = Promise.all(
+                        gtabs.crb_media_gallery.map(async (itemId) => await (await fetch(`${WPApi}/media/${itemId}`)).json())
+                   )
+                   .then((values) => { setgItems(values) })
+                   .catch(err => console.error(err));
+                }
+            )
+        : setgItems(0)
+
+      }, [gallary]);
+
+      console.log(gallary, 'gallery');
+      console.log(getgItems, 'gallery items');
 
     return(
         <section id="success_story" className="pt-4" >
@@ -24,7 +48,7 @@ const GalleryGrid = (data)=>{
                                     <Tab eventKey={galleryItems.title} title={galleryItems.title}>
                                         <div class="col-12" id={galleryItems.title}>
                                             <div class="row g-4">
-                                                {galleryItems.crb_media_gallery.map(
+                                                {getgItems.map(
                                                     galleryItem=>(
                                                         <GalleryItem data={galleryItem} />
                                                     )

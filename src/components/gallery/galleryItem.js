@@ -6,7 +6,7 @@ export default function GalleryItem(data){
 
     return(        
         <div class="col-md-4">
-            {galleryItemData.sourceUrl ? 
+            {galleryItemData.source_url ? 
                 <ImgModal imgData={galleryItemData} />
             : 'Blank Item'}
         </div>
