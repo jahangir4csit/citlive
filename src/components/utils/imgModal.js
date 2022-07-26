@@ -16,7 +16,7 @@ export const ImgModal = (data) => {
     <React.Fragment>
         {open && 
         <Lightbox
-        medium={imgSingle.media_details.sizes.medium.source_url}
+        medium={imgSingle.media_details.sizes.full.source_url}
         large={imgSingle.media_details.sizes.large.source_url}
         alt={imgSingle.alt_text}
         hideDownload
@@ -24,7 +24,7 @@ export const ImgModal = (data) => {
         />
         }
       <div className="modalImgWrap img-hover-zoom">
-        <img class="img-fluid w-100" src={imgSingle.media_details.sizes.medium.source_url} alt={imgSingle.alt_text ? imgSingle.alt_text : 'Gallery Image'} />
+        <img class="img-fluid w-100" src={imgSingle.media_details.sizes.large.source_url} alt={imgSingle.alt_text ? imgSingle.alt_text : 'Gallery Image'} />
         <button class="img-overlay" onClick={()=> setOpen(true)}></button>
       </div>
     </React.Fragment>

@@ -224,7 +224,7 @@ export default function SingleCourse({data}){
                               src={post.course_options.courseVideoThumbnail.sourceUrl} 
                               alt={post.course_options.courseVideoThumbnail.altText ? post.course_options.courseVideoThumbnail.altText : 'Creative IT Institute'} />
                               <div class="overly_icon">
-                                  <button className="modalvidwrap">
+                                  <button className="modalvidwrap" onClick={()=> setOpen(true)}>
                                       <FontAwesomeIcon icon={faPlay} />
                                   </button>
                               </div>
