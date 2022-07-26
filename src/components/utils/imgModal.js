@@ -16,15 +16,15 @@ export const ImgModal = (data) => {
     <React.Fragment>
         {open && 
         <Lightbox
-        medium={imgSingle.media_details.sizes.full.source_url}
-        large={imgSingle.media_details.sizes.large.source_url}
-        alt={imgSingle.alt_text}
+        medium={imgSingle.sourceUrl}
+        large={imgSingle.sourceUrl}
+        alt={imgSingle.title}
         hideDownload
         onClose={() => setOpen(false)}
         />
         }
-      <div className="modalImgWrap img-hover-zoom">
-        <img class="img-fluid w-100" src={imgSingle.media_details.sizes.large.source_url} alt={imgSingle.alt_text ? imgSingle.alt_text : 'Gallery Image'} />
+      <div className="modalImgWrap img-hover-zoom" >
+        <img class="img-fluid w-100" src={imgSingle.sourceUrl} alt={imgSingle.title ? imgSingle.title : 'Gallery Image'} />
         <button class="img-overlay" onClick={()=> setOpen(true)}></button>
       </div>
     </React.Fragment>
