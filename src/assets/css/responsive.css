@@ -1509,7 +1509,7 @@
 	.side_text {
 		display: none;
 	}
-	.partner_all ul li{
+	.partner_all ul li,.jp_partners .jobplacement_partner ul li{
 		width: 22%;
 	  }
 	/* =================================================

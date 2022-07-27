@@ -61,7 +61,7 @@ export default function FacilityItemOne(data){
                         <ModalVideo channel='youtube' autoplay isOpen={isOpen} videoId={facilityDetails.facility_sec_video_id} onClose={() => setOpen(false)} />
                         <img class="img-fluid w-100" src={facilityDetails.facility_sec_video_thumb} alt="image" onClick={()=> setOpen(true)} />
                         <div class="overly_icon">
-                            <button className="modalvidwrap">
+                            <button className="modalvidwrap" onClick={()=> setOpen(true)}>
                                 <FontAwesomeIcon icon={faPlay} />
                             </button>
                         </div>

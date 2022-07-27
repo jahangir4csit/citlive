@@ -2,11 +2,12 @@ import React from "react"
 import { graphql, Link } from "gatsby"
 import Seo from "../components/seo"
 import Layout from "../components/layout"
-import PageDesc from '../components/pageDesc'
+import JpPageDesc from '../components/jobplacement/jpPageDesc'
 import FacilityItems from '../components/facilities/facilityItems'
 import JpSuccessStories from '../components/jobplacement/successStories'
 import JpDepartmentGrid from "../components/jobplacement/jobDepartments"
 import JpOverview from '../components/jobplacement/overview'
+import JpPartners from '../components/jobplacement/jpPartners'
 
 export default function JobPlacement({data}) {
 
@@ -20,9 +21,9 @@ export default function JobPlacement({data}) {
         <Seo 
         title={seo.metaTitle} 
         description={seo.metaDescription} />
-        <PageDesc data={pageData} />
+        <JpPageDesc data={pageData} />
         <JpOverview data={pageData.crmJpOverviewEntry} />
-        <FacilityItems data={facilitiesData} />
+        <JpPartners />
         <JpDepartmentGrid title={pageData.jobDeptTitle} data={pageData.citJpDepartment} />
         <JpSuccessStories data={successStories} secHeading={pageData.jpSuccessCaseTitle} />
         <div className="container">
@@ -54,37 +55,19 @@ export const query = graphql`
         metaTitle
         metaDescription
       }
-      citMoreFacilities {
-        cit_facility_type {
-          value
-        }
-        facility_sec_title
-        facility_sec_sub_title
-        facility_sec_description
-        facility_sec_video_thumb
-        facility_sec_video_id
-        facility_sec_bg
-        cit_facelity_js_items {
-          title
-          facilityBoxBg
-          featuredImage {
-            node {
-              sourceUrl
-            }
-          }
-        }
-        cit_facelity_jp_items {
-          title
-          featuredImage {
-            node {
-              sourceUrl
-            }
-          }
+      jobplacementDescription {
+        jpPageVideoId
+        jpPageButtonLink
+        videoThumb {
+          sourceUrl
+          altText
         }
       }
+      
       crmJpOverviewEntry {
-        overview_desc
         title
+        overview_desc
+        overview_img
       }
       jobDeptTitle
       citJpDepartment {

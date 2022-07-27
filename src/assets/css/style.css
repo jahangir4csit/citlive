@@ -4222,6 +4222,33 @@ Our facilities_item Area Start
   font-size: 14px;
   color: #000000;
 }
+#jp_overview .row:nth-child(1) .col-md-8 .jp_overview_content_wrap{
+  background-color: rgba(255, 247, 235, 0.6);
+}
+#jp_overview .row:nth-child(2) .col-md-8 .jp_overview_content_wrap{
+  background-color: rgba(253, 243, 253, 0.6);
+}
+#jp_overview .row:nth-child(3) .col-md-8 .jp_overview_content_wrap{
+  background-color: rgba(233, 249, 252, 0.6);
+}
+.jp_overview_content_wrap ul{
+  margin-left: 24px;
+}
+.jp_overview_content_wrap ul li{
+  list-style-type: circle;
+}
+.jp_overview_content_wrap ul li::marker{
+  color: #FF7E31;
+  font-size: 1.5em;
+  font-weight: bold;
+}
+.jp_partners .jobplacement_partner{
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+.jp_partners .jobplacement_partner ul li{
+  width: 15.3%;
+}
 
 .freelancing p {
   padding-bottom: 25px;
