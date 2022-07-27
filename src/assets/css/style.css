@@ -4222,15 +4222,21 @@ Our facilities_item Area Start
   font-size: 14px;
   color: #000000;
 }
-#jp_overview .row:nth-child(1) .col-md-8 .jp_overview_content_wrap{
-  background-color: rgba(255, 247, 235, 0.6);
-}
-#jp_overview .row:nth-child(2) .col-md-8 .jp_overview_content_wrap{
+
+
+#jp_overview .container .row .col-md-8 .jp_overview_content_wrap{
   background-color: rgba(253, 243, 253, 0.6);
 }
-#jp_overview .row:nth-child(3) .col-md-8 .jp_overview_content_wrap{
+#jp_overview .container .row:nth-child(1) .col-md-8 .jp_overview_content_wrap{
+  background-color: rgba(255, 247, 235, 0.6);
+}
+#jp_overview .container .row:nth-child(2) .col-md-8 .jp_overview_content_wrap{
+  background-color: rgba(255, 247, 235, 0.6);
+}
+#jp_overview .container .row:nth-child(3) .col-md-8 .jp_overview_content_wrap{
   background-color: rgba(233, 249, 252, 0.6);
 }
+
 .jp_overview_content_wrap ul{
   margin-left: 24px;
 }
