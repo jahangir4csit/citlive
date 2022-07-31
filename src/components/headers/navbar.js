@@ -47,7 +47,7 @@ const MainNav = ()=>{
                                 data-sal-duration="800"
                                 data-sal-easing="ease"
                                 >
-                                    <Nav.Link href={menu.url}>{menu.label}</Nav.Link>
+                                    <a target={'_blank'} href={menu.url}>{menu.label}</a>
                                 </Nav.Item>
                             )}
                             <Nav.Item class="navbar_btn">
@@ -85,7 +85,7 @@ const MainNav = ()=>{
                                 {menuItem.map(
                                     menu=>                         
                                     <Nav.Item as="li">
-                                        <Nav.Link href={menu.url}>{menu.label}</Nav.Link>
+                                        <a target={'_blank'} href={menu.url}>{menu.label}</a>
                                     </Nav.Item>
                                 )}
                                 <Nav.Item class="navbar_btn text-center">
