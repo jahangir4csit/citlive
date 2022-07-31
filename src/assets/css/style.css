@@ -4255,6 +4255,12 @@ Our facilities_item Area Start
 }
 .jp_overview_content_wrap ul li{
   list-style-type: circle;
+  font-family: Roboto,'Ruposhi Bangla Unicode';
+  font-size: 1.13rem;
+}
+.jp_overview_content_wrap article,
+.jp_overview_content_wrap article p{
+  font-size: 1.13rem;
 }
 .jp_overview_content_wrap ul li::marker{
   color: #FF7E31;
