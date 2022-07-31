@@ -24,27 +24,13 @@ export default function JpPartners(data){
     const [getFacilities, setFacilities] = useState([]);
 
     useEffect(async() => {
-          
-        //get Facility data
-        //   const faciData = Promise.all(
-        //     async () =>
-        //      await (await fetch(`${WPApi}/partners?partners-category=3528`)).json()
-        //     )
-        //   .then((values) => {
-        //     setFacilities(values);
-        //     setLoading(false);
-        //   })
-        //   .catch(err => console.error(err));
-
         await apiFetch( { path: `${WPApi}/partners?partners-category=2799` } ).then( ( items ) => {
             setFacilities(items);
             setLoading(false);
         } );
 
-
     }, []);
 
-    console.log(getFacilities, 'get jp');
 
     return(
         <section className='jp_partners mb-5'>

@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react"
-import { StaticImage } from "gatsby-plugin-image"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {faPlay, faAngleLeft, faAngleRight} from '@fortawesome/free-solid-svg-icons'
 

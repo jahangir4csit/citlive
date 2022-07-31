@@ -2,9 +2,8 @@ import React from "react";
 
 import Tabs from 'react-bootstrap/Tabs'
 import Tab from 'react-bootstrap/Tab'
-import CaseItem from "./caseItem";
 import { useSuccessCases } from "../hooks/useSuccessCases";
-
+import CaseTabItem from './caseTabItem'
 
 const SuccessStoryGrid = ()=>{
 
@@ -20,15 +19,7 @@ const SuccessStoryGrid = ()=>{
                             {cases.allWpSuccessCaseCategory.nodes.map(
                                 catItem=>(
                                 <Tab eventKey={catItem.slug} title={catItem.name}>
-                                    <div class="col-12" id="graphics">
-                                        <div class="row success_body g-4">
-                                            {catItem.successStory.nodes.map(
-                                                storyItem=>(
-                                                    <CaseItem data={storyItem} />
-                                                )
-                                            )}
-                                        </div>
-                                    </div>
+                                    <CaseTabItem data={catItem.successStory.nodes} />
                                 </Tab>
                                 )
                             )}
