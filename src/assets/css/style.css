@@ -2696,6 +2696,11 @@ del {
   padding-top: 90px;
   padding-bottom: 45px;
 }
+.payments .payment_item{
+  box-shadow: 0 4px 16px rgb(0 0 0 / 6%);
+  padding: 1.3rem;
+  margin: .3rem;
+}
 .payments .payment_heading{
   display: block;
 }
@@ -2708,16 +2713,12 @@ del {
 }
 .payment_logo{
   max-width: 140px;
-  margin-right: 20px;
-}
-.payment_qr{
-  max-width: 163px;
+  margin-bottom: 7px;
 }
 
 .payment_qr small {
     font-family: 'Hind Siliguri';
     font-weight: 600;
-    padding-left: 9px;
     font-size: 24px;
     letter-spacing: 2px;
 }

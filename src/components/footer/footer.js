@@ -145,35 +145,39 @@ const Footer = ()=>{
                     <div className='container'>
                         <div className='row justify-content-center payments'>
                             <div className='col-12 payment_heading text-center'>
-                                <h3>যে সকল মাধ্যমে আমরা পেমেন্ট গ্রহন করি</h3>
+                                <h3>যে সকল মার্চেন্ট নাম্বার এর মাধ্যমে আমরা পেমেন্ট গ্রহন করি</h3>
                             </div>
-                            <div className='col-sm-6 col-md-4'>
-                                <div className='payment_item align-items-center'>
-                                    <div className='payment_logo mx-auto'>
-                                        <img className='img-fluid' src={ftBkashLogo} alt='bkash'/>
+                            <div className='col-12 col-md-9'>
+                                <div className='row'>
+                                    <div className='col-sm-6 col-md-4'>
+                                        <div className='payment_item align-items-center text-center'>
+                                            <div className='payment_logo mx-auto'>
+                                                <img className='img-fluid' src={ftBkashLogo} alt='bkash'/>
+                                            </div>
+                                            <div className='payment_qr mx-auto'>
+                                                <small>01990779766</small>
+                                            </div>
+                                        </div>
                                     </div>
-                                    <div className='payment_qr mx-auto'>
-                                        <small>01990779766</small>
+                                    <div className='col-sm-6 col-md-4'>
+                                        <div className='payment_item align-items-center text-center'>
+                                            <div className='payment_logo mx-auto'>
+                                                <img className='img-fluid' src={ftNagadLogo} alt='Nagad'/>
+                                            </div>
+                                            <div className='payment_qr mx-auto'>
+                                                <small>01309014614</small>
+                                            </div>
+                                        </div>
                                     </div>
-                                </div>
-                            </div>
-                            <div className='col-sm-6 col-md-4'>
-                                <div className='payment_item align-items-center'>
-                                    <div className='payment_logo mx-auto'>
-                                        <img className='img-fluid' src={ftNagadLogo} alt='Nagad'/>
-                                    </div>
-                                    <div className='payment_qr mx-auto'>
-                                        <small>01309014614</small>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className='col-sm-6 col-md-4'>
-                                <div className='payment_item align-items-center'>
-                                    <div className='payment_logo mx-auto'>
-                                        <img className='img-fluid' src={ftRoketLogo} alt='Rocket'/>
-                                    </div>
-                                    <div className='payment_qr mx-auto'>
-                                        <small className='pl-0'>013090146143</small>
+                                    <div className='col-sm-6 col-md-4'>
+                                        <div className='payment_item align-items-center text-center'>
+                                            <div className='payment_logo mx-auto'>
+                                                <img className='img-fluid' src={ftRoketLogo} alt='Rocket'/>
+                                            </div>
+                                            <div className='payment_qr mx-auto'>
+                                                <small className='pl-0'>013090146143</small>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
