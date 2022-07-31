@@ -96,6 +96,9 @@ body {
 .video_icon a i {
   color: #F03210;
 }
+.video_thumb:hover{
+  cursor: pointer;
+}
 
 /*Common Menu Slider Start*/
 .common_slider_class {
@@ -614,6 +617,9 @@ div.success_menu ul.common_slider_class li {
 .banner_img {
   position: relative;
   z-index: 999999999999999;
+}
+.banner_img:hover{
+  cursor: pointer;
 }
 
 .banner_img .banner_pic_bg {

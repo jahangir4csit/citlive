@@ -220,7 +220,7 @@ export default function SingleCourse({data}){
                             {post.course_options.courseVideoThumbnail !=null ?
                             <Fragment>
                               <ModalVideo channel='youtube' autoplay isOpen={isOpen} videoId={post.course_options.courseVideoUrl !== null ? post.course_options.courseVideoUrl : '1PDg90odyVY'} onClose={() => setOpen(false)} />
-                              <img class="img-fluid w-100" onClick={()=> setOpen(true)}
+                              <img class="img-fluid w-100 video_thumb" onClick={()=> setOpen(true)}
                               src={post.course_options.courseVideoThumbnail.sourceUrl} 
                               alt={post.course_options.courseVideoThumbnail.altText ? post.course_options.courseVideoThumbnail.altText : 'Creative IT Institute'} />
                               <div class="overly_icon">

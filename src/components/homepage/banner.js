@@ -104,7 +104,7 @@ const HomeBanner = ()=>{
                 <div class="col-lg-7">
                     <div class="banner_img">
                         <img 
-                        class="img-fluid homebanner-thumb" 
+                        class="img-fluid homebanner-thumb video_thumb" 
                         src={banner.featuredImage.node.sourceUrl} 
                         alt="Home Banner" 
                         data-sal="zoom-in"
