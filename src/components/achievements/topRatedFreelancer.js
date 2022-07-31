@@ -11,7 +11,7 @@ const TopRatedFreelancer = (data)=>{
      return(
         <section id="student_success" className='section'>
             <div class="container">
-                <h2 className='pb-5 font-600' dangerouslySetInnerHTML={{ __html: data.secHeading ? data.secHeading : 'ক্রিয়েটিভ  আইটি এর টপ রেটেড ফ্রিল্যান্সার' }} />
+                <h2 className='pb-5 font-600' dangerouslySetInnerHTML={{ __html: data.secHeading ? data.secHeading : '১৩ বছরের প্রাপ্তি' }} />
                 <div class="row">
                     {data.cases.map(
                         storyItem=>(
