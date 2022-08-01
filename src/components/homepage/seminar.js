@@ -11,10 +11,10 @@ const Seminar = (data)=>{
 
     return(
         <section id="seminar">
-            <div class="container seminar">
-                <div class="row align-items-center">
-                    <div class="col-lg-6">
-                        <div class="seminar_content"
+            <div className="container seminar">
+                <div className="row align-items-center">
+                    <div className="col-lg-6">
+                        <div className="seminar_content"
                         data-sal="slide-left"
                         data-sal-delay="500"
                         data-sal-duration="800"
@@ -47,18 +47,18 @@ const Seminar = (data)=>{
                                 // }
 
                                 // <li>
-                                //   <div class="date">{seminar.seminar_meta.seminarDate.day ? seminar.seminar_meta.seminarDate.day : ''} 
+                                //   <div className="date">{seminar.seminar_meta.seminarDate.day ? seminar.seminar_meta.seminarDate.day : ''} 
                                 //   <span>{seminar.seminar_meta.seminarDate.month ? seminar.seminar_meta.seminarDate.month : ''}, 
                                 //   {seminar.seminar_meta.seminarDate.year ? ' '+seminar.seminar_meta.seminarDate.year : ''}</span></div>
-                                //   <div class="text_main">
-                                //       <div class="text">
+                                //   <div className="text_main">
+                                //       <div className="text">
                                 //         <h4 dangerouslySetInnerHTML={{ __html: seminar.title }} />
                                 //         <p>{seminar.seminar_meta.venue ? seminar.seminar_meta.venue : seminar.seminar_meta.venueOthers}, 
                                 //         সময়ঃ {seminar.seminar_meta.seminarTime.timeSlot ? seminar.seminar_meta.seminarTime.timeSlot : ''} 
                                 //         {seminar.seminar_meta.seminarTime.timeH ? ' '+seminar.seminar_meta.seminarTime.timeH :''}:
                                 //         {seminar.seminar_meta.seminarTime.timeS ? seminar.seminar_meta.seminarTime.timeS :'00'} টা</p>
                                 //       </div>
-                                //       <div class="join_btn">
+                                //       <div className="join_btn">
                                 //           <Link 
                                 //           to={`/register-for-free-seminar/`} 
                                 //           state={{ id: seminar.seminar_meta.course ? seminar.seminar_meta.course.databaseId : 0 }}
@@ -72,7 +72,7 @@ const Seminar = (data)=>{
                               : <p>No Seminar Found</p> }
                                 
                             </ul>
-                            <div class="seminar_btn">
+                            <div className="seminar_btn">
                                 <Link
                                 data-sal="flip-up"
                                 data-sal-delay="600"
@@ -82,10 +82,10 @@ const Seminar = (data)=>{
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-6">
-                        <div class="free_seminar_img">
+                    <div className="col-lg-6">
+                        <div className="free_seminar_img">
                             {seminarBanner.sourceUrl &&
-                            <img class="img-fluid w-100" 
+                            <img className="img-fluid w-100" 
                             src={seminarBanner.sourceUrl} 
                             alt={seminarBanner.altText ? seminarBanner.altText : 'Creative IT Institute'} 
                             data-sal="slide-right"
@@ -94,8 +94,8 @@ const Seminar = (data)=>{
                             data-sal-easing="ease"
                             />
                             }
-                            <div class="seminar_dots">
-                                <img class="img-fluid" src={seminarDot} alt="victor dots" />
+                            <div className="seminar_dots">
+                                <img className="img-fluid" src={seminarDot} alt="victor dots" />
                             </div>
                         </div>
                     </div>

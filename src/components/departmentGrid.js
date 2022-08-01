@@ -52,7 +52,7 @@ export default function DepartmentGrid(data){
             render={catData => (
                 
                 <section id="training_department" style={{ marginTop: secMarginTop, marginBottom: secMarginBottom}}>
-                    <div class="container">
+                    <div className="container">
                         {title ? <h2
                         data-sal="slide-left"
                         data-sal-delay="300"
@@ -60,11 +60,11 @@ export default function DepartmentGrid(data){
                         data-sal-easing="ease"
                         >{title}</h2> : ''}
 
-                        <div class="training_department_main">
+                        <div className="training_department_main">
                             {catData.allWpCourseCategory.nodes.map(
                                  (item, index)=>(
 
-                                <Link to={`/course-cat/`+item.slug} style={boxShadow ? styles.boxStyle.a : styles.boxStyle.none}
+                                <Link key={index} to={`/course-cat/`+item.slug} style={boxShadow ? styles.boxStyle.a : styles.boxStyle.none}
                                 data-sal="slide-left"
                                 data-sal-delay={index*=300}
                                 data-sal-duration="900"
@@ -72,11 +72,11 @@ export default function DepartmentGrid(data){
                                 >
                                     <div className="training_department_item" 
                                     style={boxShadow ? styles.boxStyle.shadow : styles.boxStyle.none}>
-                                        <div class="couse_icon">
+                                        <div className="couse_icon">
                                             <img src={item.categoryThumb.categoryThumbnail.sourceUrl ? item.categoryThumb.categoryThumbnail.sourceUrl : ''} 
                                                 alt={item.name} />
                                         </div>
-                                        <div class="couse_text">
+                                        <div className="couse_text">
                                             <h3>{item.name}</h3>
                                         </div>
                                     </div>

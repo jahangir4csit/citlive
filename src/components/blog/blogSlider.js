@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 import { faChevronLeft, faChevronRight } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Slider from "react-slick";
@@ -19,7 +19,7 @@ function SampleNextArrow(props) {
   }
   
   function SamplePrevArrow(props) {
-    const { className, style, onClick } = props;
+    const { style, onClick } = props;
     return (
         <div className="prevarrow">
             <FontAwesomeIcon icon={faChevronLeft}
@@ -61,29 +61,29 @@ export default function BlogSlider(secData) {
 
     return(
         <section id="blog">
-            <div class="container">
-                <div class="row">
-                    <div class="col-12">
-                        <div class="blog_heading">
+            <div className="container">
+                <div className="row">
+                    <div className="col-12">
+                        <div className="blog_heading">
                             <h2 dangerouslySetInnerHTML={{ __html: secData.secHeading ? secData.secHeading : 'ব্লগ এবং প্রেস রিলিজ' }} />
                         </div>
                     </div>
-                    <div class="col-12">
+                    <div className="col-12">
                         <Slider {...settings}>
 
                             {data.allWpPost.edges.map(
-                                blogdata=>(
-                                <div>
-                                    <div class="blog_slide_item">
-                                        <div class="blog_item">
-                                            <div class="blog_img">
+                                (blogdata,index)=>(
+                                <div key={index}>
+                                    <div className="blog_slide_item">
+                                        <div className="blog_item">
+                                            <div className="blog_img">
                                                 {console.log(blogdata.node.featuredImage, 'blog featured img')}
                                                 {blogdata.node.featuredImage ?
                                                 
-                                                <img class="img-fluid w-100" src={blogdata.node.featuredImage.node.sourceUrl} alt="image" />
+                                                <img className="img-fluid w-100" src={blogdata.node.featuredImage.node.sourceUrl} alt="image" />
                                                 : '' }
                                             </div>
-                                            <div class="blog_text">
+                                            <div className="blog_text">
                                                 <h6><span>{blogdata.node.categories.nodes[0].name}</span>
                                                 <img src={calenderIcon} alt="image" />
                                                 {blogdata.node.date}</h6>

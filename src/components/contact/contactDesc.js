@@ -3,11 +3,11 @@ import React from "react";
 const ContactDesc = (data)=>{
     const contactData = data.data;
     return(
-        <section id="instructors_teachers" class="free_seminer_schedule">
-            <div class="container">
-                <div class="row">
-                    <div class="col-12">
-                        <div class="facilities_heading ">
+        <section id="instructors_teachers" className="free_seminer_schedule">
+            <div className="container">
+                <div className="row">
+                    <div className="col-12">
+                        <div className="facilities_heading ">
                             <h1>{contactData.title}</h1>
                             <div className="dtails" dangerouslySetInnerHTML={{ __html: contactData.content }} />
                         </div>

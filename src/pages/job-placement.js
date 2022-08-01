@@ -1,9 +1,9 @@
 import React from "react"
-import { graphql, Link } from "gatsby"
+import { graphql } from "gatsby"
 import Seo from "../components/seo"
 import Layout from "../components/layout"
 import JpPageDesc from '../components/jobplacement/jpPageDesc'
-import FacilityItems from '../components/facilities/facilityItems'
+//import FacilityItems from '../components/facilities/facilityItems'
 import JpSuccessStories from '../components/jobplacement/successStories'
 import JpDepartmentGrid from "../components/jobplacement/jobDepartments"
 import JpOverview from '../components/jobplacement/overview'
@@ -13,7 +13,7 @@ export default function JobPlacement({data}) {
 
     const pageData = data.allWpPage.nodes[0];
     const seo = pageData.pageMeta;
-    const facilitiesData = pageData.citMoreFacilities;
+    //const facilitiesData = pageData.citMoreFacilities;
     const successStories = data.allWpSuccessStories.nodes;
 
     return(
@@ -27,13 +27,13 @@ export default function JobPlacement({data}) {
         <JpDepartmentGrid title={pageData.jobDeptTitle} data={pageData.citJpDepartment} />
         <JpSuccessStories data={successStories} secHeading={pageData.jpSuccessCaseTitle} />
         <div className="container">
-            <div class="col-12">
-                <div class="section_heading">
+            <div className="col-12">
+                <div className="section_heading">
                     <h2 style={{ fontSize: '38px' }} dangerouslySetInnerHTML={{ __html: 'তাই আর অপেক্ষা কেনো? পাঠিয়ে দিন আপনার সিভি' }} />
                     <p className="pb-3" dangerouslySetInnerHTML={{ __html: "এই কোর্সে দুটি পদ্ধতিতে ক্লাস হবে, অফলাইন (সরাসরি ইনিষ্টিটিউটে ), অনলাইন (লাইভ ক্লাস) তুমি যে কোন একটি পদ্ধতিতে ভর্তি হতে পারো " }} />
                 </div>
-                <div class="col-12">
-                    <div class="course_free_facilities_btn text-center mt-0">
+                <div className="col-12">
+                    <div className="course_free_facilities_btn text-center mt-0">
                         <a href="https://itechcv.com/login" target="_blank">ক্লিক করুন</a>
                     </div>
                 </div>

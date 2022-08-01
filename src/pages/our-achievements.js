@@ -6,9 +6,9 @@ import PageDesc from '../components/pageDesc'
 import FeaturedTextAchv from "../components/achievements/featuredTextAchv"
 import CounterUp2 from "../components/counterUp2"
 import TopRatedFreelancer from '../components/achievements/topRatedFreelancer'
-import AboutUsDesc from '../components/achievements/aboutUsDesc'
-import CitIsoCertified from '../components/citIsoCertified'
-import CEObrief from '../components/ceoBrief'
+//import AboutUsDesc from '../components/achievements/aboutUsDesc'
+//import CitIsoCertified from '../components/citIsoCertified'
+//import CEObrief from '../components/ceoBrief'
 import CITinitiatives from '../components/citInitiatives'
 import MilestoneSlider from '../components/about/milestoneSlider'
 

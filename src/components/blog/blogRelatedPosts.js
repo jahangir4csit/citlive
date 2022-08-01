@@ -18,7 +18,7 @@ function SampleNextArrow(props) {
   }
   
   function SamplePrevArrow(props) {
-    const { className, style, onClick } = props;
+    const { style, onClick } = props;
     return (
         <div className="prevarrow">
             <FontAwesomeIcon icon={faChevronLeft}
@@ -71,19 +71,19 @@ const BlogRelatedPosts = () =>{
 
 
     return(
-        <section id="letest_poet" class="related_post">
-            <div class="container">
-                <div class="lelest_post_heading">
+        <section id="letest_poet" className="related_post">
+            <div className="container">
+                <div className="lelest_post_heading">
                     <h3>রিলেটেড পোস্ট</h3>
                 </div>
                 <Slider {...settings}>
                 <div>
                         <a href="#">
-                            <div class="post_item">
-                                <div class="image">
+                            <div className="post_item">
+                                <div className="image">
                                     <StaticImage class="img-fluid w-100" src="../../images/blog/post-1.png" alt="Image" />
                                 </div>
-                                <div class="text">
+                                <div className="text">
                                     <h5>সৃজনাত্মক আইটি ব্লগ <span class="date">জুন 26, 2021</span> <span>0 মন্তব্য</span></h5>
                                     <h3>গ্রাফিক্স ডিজাইনে ক্যারিয়ার ও চাকরির সুযোগ করার জন্য কি কি!</h3>
                                     <p>গ্রাফিক্স ডিজাইন হচ্ছে এমন এক ধরনের শিল্পকর্ম যেখানে একজন শিল্পী তার দক্ষতা, নৈপুণ্যতা ও
@@ -94,11 +94,12 @@ const BlogRelatedPosts = () =>{
                     </div>
                     <div>
                         <a href="#">
-                            <div class="post_item">
-                                <div class="image">
-                                    <StaticImage class="img-fluid w-100" src="../../images/blog/post-1.png" alt="Image" />
+                            <div className="post_item">
+                                <div className="image">
+                                    <StaticImage className="img-fluid w-100" 
+                                    src="../../images/blog/post-1.png" alt="Image" />
                                 </div>
-                                <div class="text">
+                                <div className="text">
                                     <h5>সৃজনাত্মক আইটি ব্লগ <span class="date">জুন 26, 2021</span> <span>0 মন্তব্য</span></h5>
                                     <h3>গ্রাফিক্স ডিজাইনে ক্যারিয়ার ও চাকরির সুযোগ করার জন্য কি কি!</h3>
                                     <p>গ্রাফিক্স ডিজাইন হচ্ছে এমন এক ধরনের শিল্পকর্ম যেখানে একজন শিল্পী তার দক্ষতা, নৈপুণ্যতা ও
@@ -109,11 +110,12 @@ const BlogRelatedPosts = () =>{
                     </div>
                     <div>
                         <a href="#">
-                            <div class="post_item">
-                                <div class="image">
-                                    <StaticImage class="img-fluid w-100" src="../../images/blog/post-2.png" alt="Image" />
+                            <div className="post_item">
+                                <div className="image">
+                                    <StaticImage className="img-fluid w-100" 
+                                    src="../../images/blog/post-2.png" alt="Image" />
                                 </div>
-                                <div class="text">
+                                <div className="text">
                                     <h5>সৃজনাত্মক আইটি ব্লগ <span class="date">জুন 26, 2021</span> <span>0 মন্তব্য</span></h5>
                                     <h3>ওয়েব ডেভেলপমেন্ট করার জন্য কি শেখা প্রয়োজন করার জন্য কি?</h3>
                                     <p>গ্রাফিক্স ডিজাইন হচ্ছে এমন এক ধরনের শিল্পকর্ম যেখানে একজন শিল্পী তার দক্ষতা, নৈপুণ্যতা ও
@@ -124,11 +126,12 @@ const BlogRelatedPosts = () =>{
                     </div>
                     <div>
                         <a href="#">
-                            <div class="post_item">
-                                <div class="image">
-                                    <StaticImage class="img-fluid w-100" src="../../images/blog/post-3.png" alt="Image" />
+                            <div className="post_item">
+                                <div className="image">
+                                    <StaticImage className="img-fluid w-100" 
+                                    src="../../images/blog/post-3.png" alt="Image" />
                                 </div>
-                                <div class="text">
+                                <div className="text">
                                     <h5>সৃজনাত্মক আইটি ব্লগ <span class="date">জুন 26, 2021</span> <span>0 মন্তব্য</span></h5>
                                     <h3>ডিজিটাল মার্কেটিং করে ২ লাখ ডলার আয় করলেন ক্রিয়েটিভ আইটির!</h3>
                                     <p>গ্রাফিক্স ডিজাইন হচ্ছে এমন এক ধরনের শিল্পকর্ম যেখানে একজন শিল্পী তার দক্ষতা, নৈপুণ্যতা ও
@@ -139,11 +142,11 @@ const BlogRelatedPosts = () =>{
                     </div>
                     <div>
                         <a href="#">
-                            <div class="post_item">
-                                <div class="image">
-                                    <StaticImage class="img-fluid w-100" src="../../images/blog/post-1.png" alt="Image" />
+                            <div className="post_item">
+                                <div className="image">
+                                    <StaticImage className="img-fluid w-100" src="../../images/blog/post-1.png" alt="Image" />
                                 </div>
-                                <div class="text">
+                                <div className="text">
                                     <h5>সৃজনাত্মক আইটি ব্লগ <span class="date">জুন 26, 2021</span> <span>0 মন্তব্য</span></h5>
                                     <h3>গ্রাফিক্স ডিজাইনে ক্যারিয়ার ও চাকরির সুযোগ করার জন্য কি কি!</h3>
                                     <p>গ্রাফিক্স ডিজাইন হচ্ছে এমন এক ধরনের শিল্পকর্ম যেখানে একজন শিল্পী তার দক্ষতা, নৈপুণ্যতা ও

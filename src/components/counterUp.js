@@ -19,14 +19,14 @@ const CounterUp = ()=>{
         // data-sal-easing="ease" 
         >
             <LazyLoad once>
-                <div class="container">
-                    <div class="row">
+                <div className="container">
+                    <div className="row">
                         {
                             stats.citAchvData.map(
-                                statsItem=>(
-                                    <div class="col-lg-2 col-md-4 col-6">
-                                        <div class="counter_up_item">
-                                            <h5 class="counter"><Counter data={statsItem.achv_val} />{statsItem.achv_ntype.label}</h5>
+                                (statsItem, index)=>(
+                                    <div className="col-lg-2 col-md-4 col-6" key={index}>
+                                        <div className="counter_up_item">
+                                            <h5 className="counter"><Counter data={statsItem.achv_val} />{statsItem.achv_ntype.label}</h5>
                                             <p>{statsItem.achv_title}</p>
                                         </div>
                                     </div>

@@ -6,8 +6,8 @@ export default function CaseItem(data){
     const mb = data.marginBottom;
 
     return(        
-        <div class="col-md-6">
-            <div class="success_item" style={{ marginBottom: mb ? '30px' : '0' }}
+        <div className="col-md-6">
+            <div className="success_item" style={{ marginBottom: mb ? '30px' : '0' }}
             // data-sal="slide-right"
             // data-sal-delay="300"
             // data-sal-duration="800"

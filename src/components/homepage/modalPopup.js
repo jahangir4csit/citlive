@@ -1,6 +1,5 @@
 import React, { useEffect } from "react";
 import Modal from 'react-bootstrap/Modal'
-import Button from 'react-bootstrap/Button'
 import DiscountImg from '../../images/cit_discount.png'
 
 function MyVerticallyCenteredModal(props) {

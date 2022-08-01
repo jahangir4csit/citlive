@@ -6,13 +6,11 @@ import Dot1 from '../../assets/images/home/Dot1.png'
 import Dot2 from '../../assets/images/home/Dot2.png'
 import Dot3 from '../../assets/images/home/Dot3.png'
 import Plus from '../../assets/images/home/Plus.png'
-import Banner1 from '../../assets/images/home/banner1.png'
 import buttonBook from '../../assets/images/home/Button-book.png'
 import isoLogo from '../../assets/images/home/iso.png'
 import ModalVideo from 'react-modal-video'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {faPlay} from '@fortawesome/free-solid-svg-icons'
-import { Link } from "gatsby"
 import { useHomeBanner } from '../hooks/useHomeBanner'
 
 
@@ -29,17 +27,17 @@ const HomeBanner = ()=>{
 
     return(
     <section id="banner" className='home_banner'>
-        <div class="red_shadow">
-            <img class="img-fluid" src={redShadow} alt="shadow" />
+        <div className="red_shadow">
+            <img className="img-fluid" src={redShadow} alt="shadow" />
         </div>
-        <div class="green_shadow">
-            <img class="img-fluid" src={rightGreenShadow} alt="shadow" />
+        <div className="green_shadow">
+            <img className="img-fluid" src={rightGreenShadow} alt="shadow" />
         </div>
 
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-lg-5">
-                    <div class="banner_text">
+        <div className="container">
+            <div className="row align-items-center">
+                <div className="col-lg-5">
+                    <div className="banner_text">
                         <h5
                         data-sal="slide-left"
                         data-sal-delay="200"
@@ -58,7 +56,7 @@ const HomeBanner = ()=>{
                         <p dangerouslySetInnerHTML={{ __html: banner.homeBannerData.bannerShortDesc }} />
 
                         <a target={'_blank'} href="/our-courses" 
-                        class="browse_btn"
+                        className="browse_btn"
                         data-sal="slide-left"
                         data-sal-delay="300"
                         data-sal-duration="800"
@@ -70,7 +68,7 @@ const HomeBanner = ()=>{
                             ব্রাউজ কোর্স
                         </a>
                         <a target={'_blank'} href="/our-courses"  
-                        class="d-inline-block d-sm-none"
+                        className="d-inline-block d-sm-none"
                         data-sal="slide-left"
                         data-sal-delay="300"
                         data-sal-duration="800"
@@ -80,9 +78,9 @@ const HomeBanner = ()=>{
                                 <img src={buttonBook} alt="icon" />
                             </span>
                             ব্রাউজ কোর্স 
-                            <span class="ms-2 angle"><i class="fa fa-angle-down"></i></span>
+                            <span className="ms-2 angle"><i className="fa fa-angle-down"></i></span>
                         </a>
-                        <a target={'_blank'} class="join_btn" href="/register-for-free-seminar/"
+                        <a target={'_blank'} className="join_btn" href="/register-for-free-seminar/"
                         data-sal="slide-right"
                         data-sal-delay="300"
                         data-sal-duration="800"
@@ -101,10 +99,10 @@ const HomeBanner = ()=>{
                         </ul>
                     </div>
                 </div>
-                <div class="col-lg-7">
-                    <div class="banner_img">
+                <div className="col-lg-7">
+                    <div className="banner_img">
                         <img 
-                        class="img-fluid homebanner-thumb video_thumb" 
+                        className="img-fluid homebanner-thumb video_thumb" 
                         src={banner.featuredImage.node.sourceUrl} 
                         alt="Home Banner" 
                         data-sal="zoom-in"
@@ -113,26 +111,26 @@ const HomeBanner = ()=>{
                         data-sal-easing="ease"
                         />
                         <ModalVideo channel='youtube' autoplay isOpen={isOpen} videoId={banner.homeBannerData.videoId} onClose={() => setOpen(false)} />
-                        <div class="banner_img_overly" onClick={()=> setOpen(true)}>
+                        <div className="banner_img_overly" onClick={()=> setOpen(true)}>
                             {banner.homeBannerData.videoId !=null &&
-                            <div class="overly_icon">
+                            <div className="overly_icon">
                                 <button className="modalvidwrap" >
                                     <FontAwesomeIcon icon={faPlay} />
                                 </button>
                             </div>
                             }
-                            <div class="overly_text">
+                            <div className="overly_text">
                                 <h4>{banner.homeBannerData.homeBannerSubTitle2}</h4>
                             </div>
                         </div>
-                        <div class="plus">
-                            <img class="img-fluid" src={Plus} alt="Victor plus" />
+                        <div className="plus">
+                            <img className="img-fluid" src={Plus} alt="Victor plus" />
                         </div>
-                        <div class="dot_2">
-                            <img class="img-fluid" src={Dot2} alt="victor dot" />
+                        <div className="dot_2">
+                            <img className="img-fluid" src={Dot2} alt="victor dot" />
                         </div>
-                        <div class="dot_3">
-                            <img class="img-fluid" src={Dot3} alt="victor dot" />
+                        <div className="dot_3">
+                            <img className="img-fluid" src={Dot3} alt="victor dot" />
                         </div>
                     </div>
                 </div>

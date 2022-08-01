@@ -7,7 +7,6 @@ import AboutDesc from "../components/about/aboutDesc"
 import VirtualTour from '../components/about/VirtualTour' 
 import FeaturedTextTwo from "../components/featuredTextTwo"
 import CounterUp from "../components/counterUp"
-import MgtBrief from "../components/about/mgtBrief"
 import CITAchievements from "../components/about/citAchievements"
 import CITMisionVision from "../components/about/citMisionVision"
 import CITStatFull from "../components/citStatFull"
@@ -21,7 +20,6 @@ export default function AboutUs({data}) {
 
   const pageData = data.allWpPage.nodes[0];
   const seo = pageData.pageMeta;
-  const mgtData = pageData.pageSection.ceoBrief;
   const certified = pageData.pageSection.citCertified;
   const branchInfo = pageData.branchInfo;
   const initiatives = pageData.initiatives;
@@ -39,7 +37,7 @@ export default function AboutUs({data}) {
         (section,index)=> {
           switch(section.citShowSection.value){
             case "cit_milestone": return <MilestoneSlider milestoneData={section.citMilestones} key={index} />
-            case "cit_Virtual_tour": return <LazyLoad once>
+            case "cit_Virtual_tour": return <LazyLoad once key={index}>
             <VirtualTour vData={section.citVirtualTourIframe} key={index} />
           </LazyLoad>
             default: return ''

@@ -7,10 +7,10 @@ const Facilities = (data)=>{
 
     return(
         <section id="more_facilities">
-            <div class="container">
-                <div class="row">
-                    <div class="col-12">
-                        <div class="section_heading"
+            <div className="container">
+                <div className="row">
+                    <div className="col-12">
+                        <div className="section_heading"
                         data-sal="slide-up"
                         data-sal-delay="300"
                         data-sal-duration="800"
@@ -22,9 +22,9 @@ const Facilities = (data)=>{
                     </div>
 
                     {facilityItems.map(
-                        facility=>(
-                        <div class="col-lg-4 col-md-6">
-                            <div class="more_facilities_item more_facilities_item_1" style={{ 'backgroundColor': facility.facilityBoxBg }}
+                        (facility, index)=>(
+                        <div className="col-lg-4 col-md-6" key={index}>
+                            <div className="more_facilities_item more_facilities_item_1" style={{ 'backgroundColor': facility.facilityBoxBg }}
                             data-sal="flip-left"
                             data-sal-delay="300"
                             data-sal-duration="800"
@@ -39,8 +39,8 @@ const Facilities = (data)=>{
                         </div>
                         )
                     )}
-                    <div class="col-12">
-                        <div class="more_facilities_btn text-center">
+                    <div className="col-12">
+                        <div className="more_facilities_btn text-center">
                             <Link to="/our-facilities"
                             data-sal="flip-up"
                             data-sal-delay="500"

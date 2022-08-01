@@ -1,6 +1,6 @@
 import { faChevronLeft, faChevronRight } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import React, { Component } from "react";
+import React from "react";
 import Slider from "react-slick";
 import {useJobPlacementStats } from '../hooks/useJobPlacementStats'
 
@@ -67,14 +67,14 @@ export default function CitInfoSlider(){
         data-sal-duration="1000"
         data-sal-easing="ease" 
         >
-            <div class="container">
-                <div class="row">
-                    <div class="col-12 d-none d-sm-block">
+            <div className="container">
+                <div className="row">
+                    <div className="col-12 d-none d-sm-block">
                         <Slider {...settings}>
                           {sectionData.jobPlacementStats.map( 
-                          item =>(
-                            <div>
-                              <div class="counte_item" style={{ backgroundColor: item.color}}>
+                          (item,index) =>(
+                            <div key={index}>
+                              <div className="counte_item" style={{ backgroundColor: item.color}}>
                                     <h4 style={{ color: item.numberTitleColor ? item.numberTitleColor : '#ED8345' }} dangerouslySetInnerHTML={{ __html: item.number }} />
                                     <h3 dangerouslySetInnerHTML={{ __html: item.title }} />
                                     <p dangerouslySetInnerHTML={{ __html: item.description }} />

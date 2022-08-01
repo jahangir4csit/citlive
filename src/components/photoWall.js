@@ -73,7 +73,7 @@ export default function PhotoWall(data){
 
     return(
         <section id="office_and_traning">
-            <div class="container">
+            <div className="container">
                 <h2>অফিস এবং প্রশিক্ষণের স্থান</h2>
 
 
@@ -83,10 +83,10 @@ export default function PhotoWall(data){
                 ref={(slider1) => setNav1(slider1)}
                 >
                     {photogallery.map(
-                        photo=>(
-                    <div class="col">
-                        <div class="office_slide_item">
-                            <img class="img-fluid w-100" src={photo.sourceUrl} alt="photo" />
+                        (photo, index)=>(
+                    <div className="col" key={index}>
+                        <div className="office_slide_item">
+                            <img className="img-fluid w-100" src={photo.sourceUrl} alt="photo" />
                         </div>
                     </div>
                         )
@@ -103,9 +103,9 @@ export default function PhotoWall(data){
                     focusOnSelect={true}
                     >
                     {photogallery.map(
-                        photothumb=>(
-                    <div class="traning_slider_item">
-                        <img class="img-fluid w-100" src={photothumb.sourceUrl} alt="photo" />
+                        (photothumb, index)=>(
+                    <div className="traning_slider_item" key={index}>
+                        <img className="img-fluid w-100" src={photothumb.sourceUrl} alt="photo" />
                     </div>
                         )
                     )}

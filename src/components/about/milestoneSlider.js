@@ -1,6 +1,6 @@
 import { faChevronLeft, faChevronRight } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import React, { Component } from "react";
+import React from "react";
 import Slider from "react-slick";
 import Card from 'react-bootstrap/Card'
 
@@ -16,7 +16,7 @@ function SampleNextArrow(props) {
 }
 
 function SamplePrevArrow(props) {
-  const { className, style, onClick } = props;
+  const { style, onClick } = props;
   return (
       <div className="prevarrow" onClick={onClick}>
           <FontAwesomeIcon icon={faChevronLeft}
@@ -67,23 +67,24 @@ export default function MilestoneSlider(data){
         data-sal-duration="1000"
         data-sal-easing="ease" 
         >
-            <div class="container">
+            <div className="container">
                 <div className='section_heading3'>
                   <h2>আমাদের মাইলফলক</h2>
                   <p>দীর্ঘ ১৩ বছর ধরে কর্মসংস্থান সৃষ্টি সহ দেশের সব শ্রেণি-পেশার মানুষকে মানসম্মত তথ্যপ্রযুক্তির প্রশিক্ষণ প্রদানের পাশাপাশি  ৪২ হাজারেরও বেশি মানুষকে সফলভাবে আইটি প্রশিক্ষণ প্রদান করেছে ক্রিয়েটিভ আইটি ইনস্টিটিউট। তারই স্বীকৃতি স্বরূপ প্রতিষ্ঠানের সম্মানিত প্রতিষ্ঠাতা ও সিইও মনির হোসেনের অর্জনের আলোকিত কিছু মুহূর্ত। </p>
                 </div>
-                <div class="row">
-                    <div class="col-12 milestone_slider_bg">
+                <div className="row">
+                    <div className="col-12 milestone_slider_bg">
                         <Slider {...settings}>
                           {milestoneData.map( 
-                          item =>(
-                            <div>
+                          (item,index) =>(
+                            <div key={index}>
                                 <Card className="cit_milestone">
-                                    <div class="row g-0 align-items-center">
-                                        <div class="col-md-5">
-                                            <Card.Img className="img-fluid" variant="top" src={item.milst_image} />
+                                    <div className="row g-0 align-items-center">
+                                        <div className="col-md-5">
+                                            <Card.Img className="img-fluid" variant="top" 
+                                            src={item.milst_image} />
                                         </div>
-                                        <div class="col-md-7">
+                                        <div className="col-md-7">
                                             <Card.Body>
                                               <Card.Title dangerouslySetInnerHTML={{ __html: item.milst_title }} />
                                               <Card.Text dangerouslySetInnerHTML={{ __html: item.milst_desc }} />

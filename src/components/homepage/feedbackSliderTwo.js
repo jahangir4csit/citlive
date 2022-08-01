@@ -56,16 +56,16 @@ export default class FeedbackSliderOne extends Component {
         return(
             <Slider {...settings}>
                 <div>
-                    <div class="feedback_item">
-                        <div class="student_feedback_item student_feedback_item_1">
+                    <div className="feedback_item">
+                        <div className="student_feedback_item student_feedback_item_1">
                             <ul>
                                 <li>
-                                    <div class="student_pic">
+                                    <div className="student_pic">
                                         <StaticImage src="../../images/feedback_1.png" alt="image" />
                                     </div>
-                                    <div class="student_name">
+                                    <div className="student_name">
                                         <h5>Arif Shibly 
-                                        <span class="star">
+                                        <span className="star">
                                             <FontAwesomeIcon icon={faStar} />
                                             <FontAwesomeIcon icon={faStar} />
                                             <FontAwesomeIcon icon={faStar} />
@@ -77,8 +77,8 @@ export default class FeedbackSliderOne extends Component {
                                         <h6>Octobar 21, 2020</h6>
                                     </div>
                                 </li>
-                                <div class="student_social_link">
-                                    <StaticImage class="img-fluid" src="../../images/google.png" alt="google" />
+                                <div className="student_social_link">
+                                    <StaticImage className="img-fluid" src="../../images/google.png" alt="google" />
                                 </div>
                             </ul>
                             <p>Creative IT Institute is one of the most professional institute where a student can learn
@@ -87,16 +87,16 @@ export default class FeedbackSliderOne extends Component {
                     </div>
                 </div>
                 <div>
-                    <div class="feedback_item">
-                        <div class="student_feedback_item student_feedback_item_1">
+                    <div className="feedback_item">
+                        <div className="student_feedback_item student_feedback_item_1">
                             <ul>
                                 <li>
-                                    <div class="student_pic">
+                                    <div className="student_pic">
                                         <StaticImage src="../../images/feedback_2.png" alt="image" />
                                     </div>
-                                    <div class="student_name">
+                                    <div className="student_name">
                                         <h5>ফাহাদ বিন্ ফয়েজ 
-                                        <span class="star">
+                                        <span className="star">
                                             <FontAwesomeIcon icon={faStar} />
                                             <FontAwesomeIcon icon={faStar} />
                                             <FontAwesomeIcon icon={faStar} />
@@ -108,8 +108,8 @@ export default class FeedbackSliderOne extends Component {
                                         <h6>Octobar 21, 2020</h6>
                                     </div>
                                 </li>
-                                <div class="student_social_link">
-                                    <StaticImage class="img-fluid" src="../../images/google.png" alt="google" />
+                                <div className="student_social_link">
+                                    <StaticImage className="img-fluid" src="../../images/google.png" alt="google" />
                                 </div>
                             </ul>
                             <p>Creative IT Institute is one of the most professional institute where a student can learn
@@ -118,16 +118,16 @@ export default class FeedbackSliderOne extends Component {
                     </div>
                 </div>
                 <div>
-                    <div class="feedback_item">
-                        <div class="student_feedback_item student_feedback_item_1">
+                    <div className="feedback_item">
+                        <div className="student_feedback_item student_feedback_item_1">
                             <ul>
                                 <li>
-                                    <div class="student_pic">
+                                    <div className="student_pic">
                                         <StaticImage src="../../images/feedback_1.png" alt="image" />
                                     </div>
-                                    <div class="student_name">
+                                    <div className="student_name">
                                         <h5>Arif Shibly 
-                                        <span class="star">
+                                        <span className="star">
                                             <FontAwesomeIcon icon={faStar} />
                                             <FontAwesomeIcon icon={faStar} />
                                             <FontAwesomeIcon icon={faStar} />
@@ -139,8 +139,8 @@ export default class FeedbackSliderOne extends Component {
                                         <h6>Octobar 21, 2020</h6>
                                     </div>
                                 </li>
-                                <div class="student_social_link">
-                                    <StaticImage class="img-fluid" src="../../images/google.png" alt="google" />
+                                <div className="student_social_link">
+                                    <StaticImage className="img-fluid" src="../../images/google.png" alt="google" />
                                 </div>
                             </ul>
                             <p>Creative IT Institute is one of the most professional institute where a student can learn

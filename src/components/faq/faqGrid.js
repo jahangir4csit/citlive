@@ -1,11 +1,6 @@
 import React from "react";
-import { StaticImage } from "gatsby-plugin-image"
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import {faPlay, faAngleLeft, faAngleRight} from '@fortawesome/free-solid-svg-icons'
 import Accordion from 'react-bootstrap/Accordion'
-import Tabs from 'react-bootstrap/Tabs'
-import Tab from 'react-bootstrap/Tab'
-import FaqItem from "./faqItem";
+
 
 
 const FaqGrid = (data)=>{
@@ -14,18 +9,18 @@ const FaqGrid = (data)=>{
 
     return(
         <section id="success_story" className="pt-4" >
-            <div class="container">
-                <div class="row">
-                    <div class="col-12">
-                        <div class="success_tabs pt-4">
+            <div className="container">
+                <div className="row">
+                    <div className="col-12">
+                        <div className="success_tabs pt-4">
                             {/* <Tabs defaultActiveKey={faqs[0].title} id="uncontrolled-tab-example" className="success_menu"> */}
                                 {faqs.map(
-                                    faqItems=>( 
+                                    (faqItems,index)=>( 
                                     // <Tab eventKey={faqItems.title} title={faqItems.title} >
-                                        <div class="col-12" id={faqItems.title}>
-                                            <div class="row g-4">
+                                        <div className="col-12" id={faqItems.title} key={index}>
+                                            <div className="row g-4">
                                                 
-                                                <div class="col-md-12">
+                                                <div className="col-md-12">
                                                     <Accordion defaultActiveKey={0} className="row">
                                                             
                                                         {faqItems.faqs_item.map(
@@ -51,19 +46,19 @@ const FaqGrid = (data)=>{
                         </div>
                     </div>
                     
-                    {/* <div class="col-lg-12 ss_pagination d-none d-md-block">
+                    {/* <div className="col-lg-12 ss_pagination d-none d-md-block">
                         <nav aria-label="Page navigation example">
-                            <ul class="pagination justify-content-end">
-                            <li class="page-item disabled">
-                                <a class="page-link" href="#" tabindex="-1" aria-disabled="true"><i class="fa fa-angle-left"></i><FontAwesomeIcon icon={faAngleLeft} /></a>
+                            <ul className="pagination justify-content-end">
+                            <li className="page-item disabled">
+                                <a className="page-link" href="#" tabindex="-1" aria-disabled="true"><i className="fa fa-angle-left"></i><FontAwesomeIcon icon={faAngleLeft} /></a>
                             </li>
-                            <li class="page-item"><a class="page-link" href="#">১</a></li>
-                            <li class="page-item"><a class="page-link" href="#">২</a></li>
-                            <li class="page-item"><a class="page-link" href="#">...</a></li>
-                            <li class="page-item"><a class="page-link" href="#">৯</a></li>
-                            <li class="page-item"><a class="page-link" href="#">১০</a></li>
-                            <li class="page-item">
-                                <a class="page-link" href="#"><FontAwesomeIcon icon={faAngleRight} /></a>
+                            <li className="page-item"><a className="page-link" href="#">১</a></li>
+                            <li className="page-item"><a className="page-link" href="#">২</a></li>
+                            <li className="page-item"><a className="page-link" href="#">...</a></li>
+                            <li className="page-item"><a className="page-link" href="#">৯</a></li>
+                            <li className="page-item"><a className="page-link" href="#">১০</a></li>
+                            <li className="page-item">
+                                <a className="page-link" href="#"><FontAwesomeIcon icon={faAngleRight} /></a>
                             </li>
                             </ul>
                         </nav>

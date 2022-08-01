@@ -1,6 +1,6 @@
-import { faChevronLeft, faChevronRight, faStar, faStarHalfAlt } from '@fortawesome/free-solid-svg-icons';
+import { faStar, faStarHalfAlt } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import React, { Component } from "react";
+import React from "react";
 import { Link } from 'gatsby';
 
 
@@ -11,15 +11,15 @@ export default function CourseItemSlider(data){
       return (
 
         <Link className="course_slider_item" to={`/courses/${courseItem.slug}`} >
-                <div class="course_single_item" >
-                    <div class="course_image">
+                <div className="course_single_item" >
+                    <div className="course_image">
                       {courseItem.featuredImage !== null ?
-                        <img class="img-fluid w-100" src={courseItem.featuredImage.node.sourceUrl} alt={courseItem.title} />
+                        <img className="img-fluid w-100" src={courseItem.featuredImage.node.sourceUrl} alt={courseItem.title} />
                         : '' }
                     </div>
-                    <div class="course_text">
+                    <div className="course_text">
                         <h6>{courseItem.courseCategories.nodes[0].name}</h6>
-                        <Link to={`/courses/${courseItem.slug}`}>{courseItem.title}</Link>
+                        <h3>{courseItem.title}</h3>
                         <ul>
                             <li>
                                 <span>
@@ -29,7 +29,7 @@ export default function CourseItemSlider(data){
                                     <FontAwesomeIcon icon={faStar} />
                                     <FontAwesomeIcon icon={faStarHalfAlt} />
                                     {courseItem.course_options.reviewsCount ? courseItem.course_options.reviewsCount : '0'} রিভিউস</span>
-                                <span class="stu">{courseItem.course_options.studentsIn ? courseItem.course_options.studentsIn : 0} স্টুডেন্ট</span>
+                                <span className="stu">{courseItem.course_options.studentsIn ? courseItem.course_options.studentsIn : 0} স্টুডেন্ট</span>
                             </li>
                         </ul>
                         <p>

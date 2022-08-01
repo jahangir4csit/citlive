@@ -4,8 +4,8 @@ const PartnerItem = (data)=>{
     return(
         <ul>
             {data.partnersinfo.map(
-                item=>(
-                    <li>
+                (item,index)=>(
+                    <li key={index}>
                         <img src={item.sourceUrl} alt={item.altText ? item.altText : 'CIT Partner'} />
                     </li>
                 )

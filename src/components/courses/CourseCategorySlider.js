@@ -5,10 +5,10 @@ export default function CourseCategorySlider(data){
     const courseCategoryItems = data.categoryItem;
     return(
 
-        <div class="course_catagory_item">
+        <div className="course_catagory_item">
             {courseCategoryItems.courses.nodes.map(
-                courseItem=>(
-                <CourseItemSlider singleItem={courseItem} />
+                (courseItem,index)=>(
+                <CourseItemSlider singleItem={courseItem} key={index} />
                 )
             )}
         </div>

@@ -19,7 +19,6 @@ export default function FreelanceMarketPlace() {
     useEffect(() => {
         // GET
         apiFetch( { path: `${WPApi}/pages/3431` } ).then( ( pageDetails ) => {
-            console.log(pageDetails);
             //get Facility data
             const faciData = Promise.all(
             pageDetails.cit_more_facilities ?
@@ -44,15 +43,15 @@ export default function FreelanceMarketPlace() {
         description={'CIT Career Placement Partners'} />
         <PageDesc data={ pageMeta } />
         <div className="container">
-            <div class="jobplacement_partner partner_all mt-3 mb-5  text-center">
+            <div className="jobplacement_partner partner_all mt-3 mb-5  text-center">
                 {loading ? <Spinner className='text-center' animation="grow" variant="danger" /> :
                 <ul >
                     {getFacilities.length > 0 &&
                         getFacilities.map(
-                            item=>
-                            <li>
+                            (item, index)=>
+                            <li key={index}>
                                 {item.better_featured_image != null ?
-                                <img class="img-fluid" src={item.better_featured_image.source_url} alt={item.alt_text} />
+                                <img className="img-fluid" src={item.better_featured_image.source_url} alt={item.alt_text} />
                                 : item.title }
                             </li>
                         )

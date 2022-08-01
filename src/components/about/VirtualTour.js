@@ -5,10 +5,10 @@ const VirtualTour = (data)=>{
 
     return(
         <section id="virtual">
-            <div class="container">
-                <div class="virtual">
+            <div className="container">
+                <div className="virtual">
                     <span dangerouslySetInnerHTML={{ __html: vtour }} />
-                    <div class="virtual_text">
+                    <div className="virtual_text">
                         <h6>ভার্চুয়াল ট্যুর</h6>
                         <p>ক্রিয়েটিভ আইটি অফিস</p>
                     </div>

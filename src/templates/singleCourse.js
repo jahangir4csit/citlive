@@ -1,5 +1,4 @@
 import React,{Fragment, useEffect, useState} from 'react'
-import Slider from "react-slick";
 import { graphql, Link } from "gatsby"; 
 import { faStar, faStarHalfAlt } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -9,14 +8,8 @@ import SuccessStorySlider from '../components/successCase/courseSuccess'
 import {faPlay} from '@fortawesome/free-solid-svg-icons'
 import ModalVideo from 'react-modal-video'
 import Seo from "../components/seo"
-import Tabs from 'react-bootstrap/Tabs'
 import Tab from 'react-bootstrap/Tab'
-import TabContainer from 'react-bootstrap/TabContainer'
-import TabContent from 'react-bootstrap/TabContent'
-import TabPane from 'react-bootstrap/TabPane'
 import Nav from 'react-bootstrap/Nav'
-import Row from 'react-bootstrap/Row'
-import Col from 'react-bootstrap/Col'
 import StudentProjects from '../components/courses/studentProjects'
 
 import shape1 from '../images/course-landing/Pg_banner_shape1.png'
@@ -43,8 +36,6 @@ export default function SingleCourse({data}){
 
     const [scroll, setScroll] = useState(false);
 
-    // get options data from wp
-    const [getDetails, setDetails] = useState([]);
     // get software 
     const [getSoftData, setSoftData] = useState([]);
     // get forwhome 
@@ -73,7 +64,6 @@ export default function SingleCourse({data}){
 
       // GET
       apiFetch( { path: `${WPApi}/courses/${postId}` } ).then( ( coursedetails ) => {
-        setDetails(coursedetails);
         
         //get software data
         const sofData = Promise.all(
@@ -165,23 +155,23 @@ export default function SingleCourse({data}){
         description={seo.metaDescription} />
 
           <section id="profe_graphic_banner">
-            <div class="pink_shape">
-                <img class="img-fluid" src={shape2} alt="pink color victor shape" />
+            <div className="pink_shape">
+                <img className="img-fluid" src={shape2} alt="pink color victor shape" />
             </div>
-            <div class="white_dots">
-                <img class="img-fluid" src={shape4} alt="white color dots victor" />
+            <div className="white_dots">
+                <img className="img-fluid" src={shape4} alt="white color dots victor" />
             </div>
-            <div class="yellow_shape">
-                <img class="img-fluid" src={shape1} alt="Yellow color victor shape" />
+            <div className="yellow_shape">
+                <img className="img-fluid" src={shape1} alt="Yellow color victor shape" />
             </div>
 
 
-            <div class="container">
-                <div class="row align-items-center">
-                    <div class="col-lg-5">
-                        <div class="pg_banner_text">
+            <div className="container">
+                <div className="row align-items-center">
+                    <div className="col-lg-5">
+                        <div className="pg_banner_text">
                             <h4>{post.course_options.courseSubTitle ? post.course_options.courseSubTitle : ''}</h4>
-                            <h1>{post.title ? post.title : ''}<span class="d-block d-sm-none">স্কিল এর সাথে</span></h1>
+                            <h1>{post.title ? post.title : ''}<span className="d-block d-sm-none">স্কিল এর সাথে</span></h1>
                             <ul>
                                 <li>কোর্সের মেয়াদ<span>{post.course_options.courseDuration !=null ? post.course_options.courseDuration : ''}</span></li>
                                 <li>লেকচার<span>{post.course_options.totalLecture !=null ? post.course_options.totalLecture : ''}</span></li>
@@ -190,11 +180,11 @@ export default function SingleCourse({data}){
                             {post.content !=null &&
                             <div className="course_desc_article" dangerouslySetInnerHTML={{ __html: post.content }} />
                             }
-                            <div class="pg_banner_btn">
+                            <div className="pg_banner_btn">
                                 <Link to="/contact-us/">ভর্তি</Link>
                                 <Link to="/free-seminar">ফ্রি সেমিনার</Link>
                             </div>
-                            <div class="stars">
+                            <div className="stars">
                                 <p>
                                     {post.course_options.reviewsCount &&
                                     <Fragment>
@@ -209,51 +199,51 @@ export default function SingleCourse({data}){
                                     <span>{post.course_options.studentsIn} স্টুডেন্ট</span>}
                                 </p>
                             </div>
-                            {/* <div class="countdown_sm_device">
+                            {/* <div className="countdown_sm_device">
                                 <p>৩০% ছাড়ের <span id="day"></span><span id="hour"></span><span id="min"></span> বাকি!</p>
                             </div> */}
 
                         </div>
                     </div>
-                    <div class="col-lg-7 pg_banner_img_col">
-                        <div class="pg_banner_img position-relative">
+                    <div className="col-lg-7 pg_banner_img_col">
+                        <div className="pg_banner_img position-relative">
                             {post.course_options.courseVideoThumbnail !=null ?
                             <Fragment>
                               <ModalVideo channel='youtube' autoplay isOpen={isOpen} videoId={post.course_options.courseVideoUrl !== null ? post.course_options.courseVideoUrl : '1PDg90odyVY'} onClose={() => setOpen(false)} />
-                              <img class="img-fluid w-100 video_thumb" onClick={()=> setOpen(true)}
+                              <img className="img-fluid w-100 video_thumb" onClick={()=> setOpen(true)}
                               src={post.course_options.courseVideoThumbnail.sourceUrl} 
                               alt={post.course_options.courseVideoThumbnail.altText ? post.course_options.courseVideoThumbnail.altText : 'Creative IT Institute'} />
-                              <div class="overly_icon">
+                              <div className="overly_icon">
                                   <button className="modalvidwrap" onClick={()=> setOpen(true)}>
                                       <FontAwesomeIcon icon={faPlay} />
                                   </button>
                               </div>
                             </Fragment>
-                            : <img class="img-fluid w-100" 
+                            : <img className="img-fluid w-100" 
                             src={post.featuredImage.node.sourceUrl} 
                             alt={post.featuredImage.node.altText ? post.featuredImage.node.altText : 'Creative IT Institute'} />
                             }
                         </div>
-                        <div class="yellow_dots_right"><img src={shape3} alt="Yellow color dots" /></div>
-                        <div class="yellow_dot_left"><img src={shape3} alt="Yellow color dots" /></div>
+                        <div className="yellow_dots_right"><img src={shape3} alt="Yellow color dots" /></div>
+                        <div className="yellow_dot_left"><img src={shape3} alt="Yellow color dots" /></div>
                     </div>
                 </div>
             </div>
           </section>
 
           <section id="pg_course_overviwe">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-7">
-                        <div class="course_overviwe_text">
+            <div className="container">
+                <div className="row">
+                    <div className="col-lg-7">
+                        <div className="course_overviwe_text">
                             <h2> কোর্স ওভারভিউ </h2>
                             {post.courseOverview !=null && 
                             <div className='course_overview_article' dangerouslySetInnerHTML={{ __html: post.courseOverview }} />
                             }
-                            <div class="row">
+                            <div className="row">
                                 {post.crvListItems.map(
-                                    overviewListItem =>
-                                    <div class="col-md-6">
+                                    (overviewListItem, index) =>
+                                    <div className="col-md-6" key={index}>
                                         <ul>
                                             {overviewListItem.title != null &&
                                             <li>
@@ -271,15 +261,15 @@ export default function SingleCourse({data}){
                             </div> 
                         </div>
 
-                        <div class="sm_device-show d-block d-sm-none">
+                        <div className="sm_device-show d-block d-sm-none">
                             
                           <SuccessStorySlider sdata={getSuccessCase} />
-                            <div class="pg_wait">
+                            <div className="pg_wait">
                                 <h3>ভর্তি চলছে!</h3>
                                 <p>অফলাইন (সরাসরি ইন্সটিটিউটে) বা অনলাইন (লাইভ ক্লাস)- যে কোন ব্যাচে সুবিধামতো সময় বেছে নিয়ে ভর্তি হতে পারেন এখনই। </p>
 
                                 {post.course_options.courseFee != null ?
-                                <div class="join_offline">
+                                <div className="join_offline">
                                     <h4>কোর্স ফী (অফলাইন)</h4>
                                     <p>৳ {post.course_options.courseFee} টাকা</p>
                                     <Link to="/contact-us">Enroll Now</Link>
@@ -287,28 +277,28 @@ export default function SingleCourse({data}){
                                 : ''}
 
                                 {post.course_options.courseFeeOnline != null ?
-                                <div class="join_offline">
+                                <div className="join_offline">
                                     <h4>কোর্স ফী (অনলাইন)</h4>
                                     <p>৳ {post.course_options.courseFeeOnline} টাকা</p>
                                     <Link to="/contact-us">Enroll Now</Link>
                                 </div>
                                 : ''}
 
-                                <div class="wait_btn text-center">
+                                <div className="wait_btn text-center">
                                   <Link to="/free-seminar">ফ্রি সেমিনার</Link>
                                 </div>
                             </div>
                         </div>
                         {post.crmModuleEntry.length > 0 &&
-                        <div class="pgc_curriculum_wrap">
+                        <div className="pgc_curriculum_wrap">
                             <Tab.Container id="left-tabs-example" defaultActiveKey={post.crmModuleEntry[0].crm_module_entry_title.split(' ').join('-')}>
-                                <div class="pgc_curriculum_header d-flex align-items-center justify-content-between">
+                                <div className="pgc_curriculum_header d-flex align-items-center justify-content-between">
                                     <h3>কোর্স কারিকুলাম</h3>
                                     <Nav variant="pills" defaultActiveKey={post.crmModuleEntry[0].crm_module_entry_title.split(' ').join('-')}>
                                         {post.crmModuleEntry.length > 1 && 
                                         post.crmModuleEntry.map(
-                                            modulesNav =>
-                                        <Nav.Item className='navbar_btn'>
+                                            (modulesNav, index) =>
+                                        <Nav.Item className='navbar_btn' key={index}>
                                             <Nav.Link eventKey={modulesNav.crm_module_entry_title.split(' ').join('-')} className=''>{modulesNav.crm_module_entry_title}</Nav.Link>
                                         </Nav.Item>
                                         )}
@@ -320,14 +310,14 @@ export default function SingleCourse({data}){
                                     <Tab.Pane className={"pgc_curriculum" + (moduleContent.crm_module_meta.length > 1 ? ' pgc_curriculum_child' : '')} eventKey={moduleContent.crm_module_entry_title.split(' ').join('-')}>
                                         <ul>
                                             {moduleContent.crm_module_meta.map(
-                                                module=>
-                                            <li>
+                                                (module, index)=>
+                                            <li key={index}>
                                                 {(moduleContent.crm_module_meta.length > 1 && module.crm_module_opt_title) && <h4>{module.crm_module_opt_title} <span>{module.crm_module_opt_duration}</span></h4>} 
-                                                <div class="row">
+                                                <div className="row">
                                                     {module.crm_module_items.map(
                                                         moduleItems=>
-                                                    <div class="col-sm-6">
-                                                        <div class="pgc_inner_text">
+                                                    <div className="col-sm-6">
+                                                        <div className="pgc_inner_text">
                                                             <ul>
                                                                 <li>
                                                                     <span>
@@ -353,23 +343,23 @@ export default function SingleCourse({data}){
                         }
                         {getSoftData != null && getSoftData.length > 0 &&
                         getSoftData[0].title.rendered !== 'Empty' ? 
-                        <div class="pgc_software">
+                        <div className="pgc_software">
                             <h3>যেসব সফটওয়্যার শেখানো হয়</h3>
-                            <div class="row">
+                            <div className="row">
                             {getSoftData.map(
-                                          softwareItem=>(
+                                          (softwareItem, index)=>(
 
-                                <div class="col-12 col-sm-6">
-                                    <div class="pgc_item d-flex align-items-center">
+                                <div className="col-12 col-sm-6" key={index}>
+                                    <div className="pgc_item d-flex align-items-center">
                                         {softwareItem.better_featured_image !=null &&
-                                        <div class="pgcs_icon">
-                                          <img class="img-fluid w-100" 
+                                        <div className="pgcs_icon">
+                                          <img className="img-fluid w-100" 
                                           src={softwareItem.better_featured_image.source_url} 
                                           alt={softwareItem.better_featured_image.altText ? softwareItem.better_featured_image.altText : 'Creative IT Institute'} />
                                         </div>
                                         }
                                         {softwareItem.title !=null &&
-                                        <div class="pgcs_text">
+                                        <div className="pgcs_text">
                                           <p>{softwareItem.title.rendered}</p>
                                         </div>
                                         }
@@ -384,24 +374,24 @@ export default function SingleCourse({data}){
                         : '' }
                         {getForWhome !=null && getForWhome.length > 0 &&
                         getForWhome[0].title.rendered !== 'Empty' ?
-                        <div class="pgc_for_whom">
+                        <div className="pgc_for_whom">
                             <h3>এই কোর্স যাদের জন্য</h3>
-                            <div class="row">
+                            <div className="row">
 
                             {getForWhome.map(
-                                          courseforWItem=>(
+                                          (courseforWItem, index)=>(
 
-                                <div class="col-6">
-                                    <div class="pgcf_whom_item">
-                                        <div class="pgcf_whom_item_icon">
+                                <div className="col-6" key={index}>
+                                    <div className="pgcf_whom_item">
+                                        <div className="pgcf_whom_item_icon">
                                             {courseforWItem.better_featured_image !=null && 
-                                            <img class="img-fluid" 
+                                            <img className="img-fluid" 
                                             src={courseforWItem.better_featured_image.source_url} 
                                             alt={courseforWItem.better_featured_image.altText ? courseforWItem.better_featured_image.altText : 'Creative IT Institute'} />
                                             }
                                         </div>
                                         {courseforWItem.title !=null &&
-                                        <div class="pgcf_whom_item_text">
+                                        <div className="pgcf_whom_item_text">
                                             <p>{courseforWItem.title.rendered}</p>
                                         </div>
                                         }
@@ -415,16 +405,16 @@ export default function SingleCourse({data}){
                         : '' }
                         {getJobMarket !=null && getJobMarket.length > 0 &&
                         getJobMarket[0].title.rendered !== 'Empty' ?
-                        <div class="pg_marketplace">
+                        <div className="pg_marketplace">
                             <h2>আপনি যেখানে কাজ করতে পারেন</h2>
-                            <div class="row">
+                            <div className="row">
                               
                             {getJobMarket.map(
-                                          jobMarket=>(
+                                          (jobMarket, index)=>(
 
-                                <div class="col-sm-6">
-                                    <div class="marketplace_item">
-                                        <div class="icon">
+                                <div className="col-sm-6" key={index}>
+                                    <div className="marketplace_item">
+                                        <div className="icon">
                                             {jobMarket.better_featured_image !=null && 
                                             <img 
                                             src={jobMarket.better_featured_image.source_url} 
@@ -432,7 +422,7 @@ export default function SingleCourse({data}){
                                             }
                                         </div>
                                         {jobMarket.content !=null &&
-                                        <div class="text">
+                                        <div className="text">
                                             <div dangerouslySetInnerHTML={{ __html: jobMarket.content.rendered }} />
                                         </div>
                                         }
@@ -447,16 +437,16 @@ export default function SingleCourse({data}){
                         : '' }
                         {getPosition !=null && getPosition.length > 0 &&
                         getPosition[0].title.rendered !== 'Empty' ?
-                        <div class="pg_job">
+                        <div className="pg_job">
                             <h3> যে সকল পজিশনে জব করতে পারবেন </h3>
-                            <div class="row g-0">
+                            <div className="row g-0">
 
                             {getPosition.map(
-                                          jobPosition=>(
+                                          (jobPosition, index)=>(
                                               <>
                                             {jobPosition.title !=null && 
-                                            <div class="col-12 col-sm-6">
-                                                <div class="job_item">
+                                            <div className="col-12 col-sm-6" key={index}>
+                                                <div className="job_item">
                                                     <ul>
                                                         <li><svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="9" cy="9" r="8" stroke="#FF7E31" stroke-width="2"/></svg>{jobPosition.title.rendered}</li>
                                                     </ul>
@@ -473,14 +463,14 @@ export default function SingleCourse({data}){
                         : '' }
                         {getFacilities !=null && getFacilities.length > 0 &&
                         getFacilities[0].title.rendered !== 'Empty' ?
-                        <div class="pgs_facilitice">
+                        <div className="pgs_facilitice">
                             <h3>ক্রিয়েটিভ আইটির বিশেষ সেবা</h3>
-                            <div class="row">
+                            <div className="row">
 
                             {getFacilities.map(
-                                          courseFacility=>(
-                                <div class="col-md-6">
-                                    <div class="pg_more_facilities_item pg_more_facilities_item_1" style={{ 'backgroundColor': courseFacility.facilityBoxBg }}>
+                                          (courseFacility, index)=>(
+                                <div className="col-md-6" key={index}>
+                                    <div className="pg_more_facilities_item pg_more_facilities_item_1" style={{ 'backgroundColor': courseFacility.facilityBoxBg }}>
                                         {courseFacility.better_featured_image !=null && 
                                         <img 
                                         src={courseFacility.better_featured_image.source_url} 
@@ -511,30 +501,30 @@ data={reviewsData}
 
                     </div>
 
-                    <div id="sidebar" class="col-lg-5 d-none d-sm-block">
+                    <div id="sidebar" className="col-lg-5 d-none d-sm-block">
                         <SuccessStorySlider sdata={getSuccessCase} />
 
                         <div className={'pg_wait_wrap ' + (scroll ? "nav_sticky" : "")}>
                             <div className="pg_wait">
                                 <h3>ভর্তি চলছে!</h3>
                                 <p>অফলাইন (সরাসরি ইন্সটিটিউটে) বা অনলাইন (লাইভ ক্লাস)- যে কোন ব্যাচে সুবিধামতো সময় বেছে নিয়ে ভর্তি হতে পারেন এখনই। </p>
-                                <div class="join_offline_main">
+                                <div className="join_offline_main">
                                     {post.course_options.courseFee !=null ?
-                                    <div class="join_offline">
+                                    <div className="join_offline">
                                         <h4>কোর্স ফী (অফলাইন)</h4>
                                         <p>৳ {post.course_options.courseFee} টাকা</p>
                                         <Link to="/contact-us">Enroll Now</Link>
                                     </div>
                                     : ''}
                                     {post.course_options.courseFeeOnline !=null ?
-                                    <div class="join_offline">
+                                    <div className="join_offline">
                                         <h4>কোর্স ফী (অনলাইন)</h4>
                                         <p>৳ {post.course_options.courseFeeOnline} টাকা</p>
                                         <Link to="/contact-us">Enroll Now</Link>
                                     </div>
                                     : ''}
                                 </div>
-                                <div class="wait_btn text-center">
+                                <div className="wait_btn text-center">
                                     <Link to="/free-seminar">ফ্রি সেমিনার</Link>
                                 </div>
                             </div>

@@ -1,21 +1,19 @@
-import React, {useState } from 'react';
+import React from 'react';
 import Nav from 'react-bootstrap/Nav';
 import TabContainer from 'react-bootstrap/TabContainer';
 import TabContent from 'react-bootstrap/TabContent';
 import TabPane from 'react-bootstrap/TabPane';
 import PartnerItem from './partnerItem';
-import MembersItem from './membersItem';
-import OthersPartner from './othersPartners';
 
 const Partners = (data)=>{
     const partners = data.partnersData;
     return(
 
         <section id="company">
-            <div class="container">
-                <div class="row">
-                    <div class="col-12">
-                        <div class="company_heading">
+            <div className="container">
+                <div className="row">
+                    <div className="col-12">
+                        <div className="company_heading">
                             <h2 dangerouslySetInnerHTML={{ __html: data.secHeading ? data.secHeading : 'আমরা ৭০০+ কোম্পানি ও সংস্থার সাথে কানেক্টেড' }} 
                             data-sal="slide-left"
                             data-sal-delay="200"
@@ -24,7 +22,7 @@ const Partners = (data)=>{
                             />
                         </div>
                     </div>
-                    <div class="col-12"
+                    <div className="col-12"
                     data-sal="slide-up"
                     data-sal-delay="300"
                     data-sal-duration="900"
@@ -35,17 +33,17 @@ const Partners = (data)=>{
                                 <Nav variant="tabs" className="dflex" as="ul">
                                     {partners.map(
                                         (partnerNav, index)=>(
-                                            <Nav.Item as="li">
+                                            <Nav.Item as="li" key={index}>
                                                 <Nav.Link className='company_nav_tab' eventKey={'tab_'+index}>{partnerNav.cit_partners_tab_title}</Nav.Link>
                                             </Nav.Item>
                                         )
                                     )}
                                 </Nav>
                             </div>
-                            <TabContent class="company_body tab-content">
+                            <TabContent className="company_body tab-content">
                                 {partners.map(
                                     (partnerItems, index)=>(
-                                        <TabPane className='company_item' eventKey={'tab_'+index}>
+                                        <TabPane key={index} className='company_item' eventKey={'tab_'+index}>
                                             {partnerItems.partner_logo.length > 0 &&
                                                 <PartnerItem partnersinfo={partnerItems.partner_logo} />
                                             }

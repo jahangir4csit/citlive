@@ -20,14 +20,14 @@ export default function CareerPlacementPartners({data}) {
         description={'CIT Career Placement Partners'} />
         <PageDesc data={ pageMeta } />
         <div className="container">
-            <div class="jobplacement_partner partner_all mt-3 mb-5">
+            <div className="jobplacement_partner partner_all mt-3 mb-5">
                 <ul >
                     {jpItemsData.cit_facility_type.value === "jobplacement" &&
                         jpItemsData.cit_facelity_jp_items.map(
-                            item=>
-                            <li>
+                            (item, index)=>
+                            <li key={index}>
                                 {item.featuredImage != null ?
-                                <img class="img-fluid" src={item.featuredImage.node.sourceUrl} alt={item.title} />
+                                <img className="img-fluid" src={item.featuredImage.node.sourceUrl} alt={item.title} />
                                 : item.title }
                             </li>
                         )

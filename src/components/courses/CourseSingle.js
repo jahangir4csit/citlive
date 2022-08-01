@@ -1,28 +1,28 @@
 import React from "react";
 import { Link } from "gatsby"; 
-import { faChevronLeft, faChevronRight, faStar, faStarHalfAlt } from '@fortawesome/free-solid-svg-icons';
+import { faStar, faStarHalfAlt } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 export default function CourseSingle(data){
     const courseItem = data.singleItem;
     return(
-        <div class="col-lg-4 col-md-6 col-sm-6 pb-6"
+        <div className="col-lg-4 col-md-6 col-sm-6 pb-6"
         data-sal="slide-right"
         data-sal-delay={data.delay}
         data-sal-duration="800"
         data-sal-easing="ease">
             <Link to={`/courses/${courseItem.slug}`}>
-                <div class="course_single_item admission_item">
-                    <div class="course_image">
+                <div className="course_single_item admission_item">
+                    <div className="course_image">
                         {courseItem.featuredImage !== null ?
-                        <img class="img-fluid w-100" src={courseItem.featuredImage.node.sourceUrl} alt={courseItem.title} />
+                        <img className="img-fluid w-100" src={courseItem.featuredImage.node.sourceUrl} alt={courseItem.title} />
                     : '' }
                     </div>
-                    <div class="course_text">
+                    <div className="course_text">
                         {!data.archive &&
                         <h6>{courseItem.courseCategories.nodes[0].name}</h6>
                         }
-                        <Link href={`/courses/${courseItem.slug}`}>{courseItem.title}</Link>
+                        <h3>{courseItem.title}</h3>
                         <ul>
                             <li>
                                 <span>
@@ -32,7 +32,7 @@ export default function CourseSingle(data){
                                 <FontAwesomeIcon icon={faStar} />
                                 <FontAwesomeIcon icon={faStarHalfAlt} />
                                     {courseItem.course_options.reviewsCount ? courseItem.course_options.reviewsCount : '0'} রিভিউস</span>
-                                <span class="stu">{courseItem.course_options.studentsIn ? courseItem.course_options.studentsIn : 0} স্টুডেন্ট</span>
+                                <span className="stu">{courseItem.course_options.studentsIn ? courseItem.course_options.studentsIn : 0} স্টুডেন্ট</span>
                             </li>
                         </ul>
                         <p>

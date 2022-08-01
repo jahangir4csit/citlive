@@ -35,17 +35,17 @@ export default function JpSuccessStories(data) {
 
     return(
         <section id="success_story" className='section'>
-            <div class="container">
+            <div className="container">
                 <h2 className='pb-5 font-600' dangerouslySetInnerHTML={{ __html: data.secHeading ? data.secHeading : 'ক্রিয়েটিভ  আইটি এর টপ রেটেড ফ্রিল্যান্সার' }} />
-                <div class="row">
+                <div className="row">
                     {list.map(
                         (item, index)=> <CaseItem data={item} key={index} marginBottom />
                     )}
                 </div>
                 <div className="row">
-                <div class="col-12 pt-5 text-center">
+                <div className="col-12 pt-5 text-center">
                     {hasMore ? 
-                        (<div class="all_course_btn text-center">
+                        (<div className="all_course_btn text-center">
                             <a onClick={handleLoadMore} to="#"
                             style={{ color: '#fff', cursor: 'pointer'}}>
                             আরো দেখুন</a>

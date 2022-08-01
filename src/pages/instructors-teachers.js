@@ -7,7 +7,7 @@ import CourseSlide from '../components/courses/CoursesSlide'
 import InstructorsList from "../components/instructors/instructorsList"
 
 
-export default function Instructors({data} = JSON.stringify(data, null, 5)) {
+export default function Instructors({data}) {
 
   const pageData = data.allWpPage.nodes[0];
   const seo = pageData.pageMeta;

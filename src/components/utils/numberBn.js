@@ -1,4 +1,4 @@
-import React from 'react'
+
 import reactStringReplace from 'react-string-replace';
 
 export default function NumberBn(data){

@@ -1,14 +1,13 @@
 import React, { useState, useEffect, Fragment } from "react"
-import CaseItem from "./caseItem";
+import GalleryItem from "./galleryItem";
 
-export default function CaseTabItem(data){
+export default function GalleryTabItem(data){
 
-    const caseTabData = data.data;
-    console.log(caseTabData, 'case Tabs');
+    const galleryTabData = data.data;
 
-    const [list, setList] = useState([...caseTabData.slice(0, 6)]);
+    const [list, setList] = useState([...galleryTabData.slice(0, 6)]);
     const [loadMore, setLoadMore] = useState(false);
-    const [hasMore, setHasMore] = useState(caseTabData.length > 6);
+    const [hasMore, setHasMore] = useState(galleryTabData.length > 6);
 
     const handleLoadMore = () => {
         setLoadMore(true)
@@ -19,9 +18,9 @@ export default function CaseTabItem(data){
 
         if (loadMore && hasMore) {
         const currentLength = list.length
-        const isMore = currentLength < caseTabData.length
+        const isMore = currentLength < galleryTabData.length
         const nextResults = isMore
-            ? caseTabData.slice(currentLength, currentLength + 4)
+            ? galleryTabData.slice(currentLength, currentLength + 4)
             : []
         setList([...list, ...nextResults])
         setLoadMore(false)
@@ -31,19 +30,20 @@ export default function CaseTabItem(data){
 
     //Check if there is more
     useEffect(() => {
-        const isMoreCases = list.length < caseTabData.length
-        setHasMore(isMoreCases)
+        const isMoreGallery = list.length < galleryTabData.length
+        setHasMore(isMoreGallery)
 
     }, [list]) //eslint-disable-line
 
 
     return(
         <Fragment>
-            <div className="col-12" id="graphics">
-                <div className="row success_body g-4">
-                    {list.map(
-                        (storyItem, index) =>(
-                            <CaseItem data={storyItem} key={index} />
+            <div className="col-12">
+                <div className="row g-4">
+                    {
+                    list.map(
+                        (galleryItem, index)=>(
+                            <GalleryItem data={galleryItem} key={index} />
                         )
                     )}
                 </div>
@@ -61,4 +61,3 @@ export default function CaseTabItem(data){
         </Fragment>
     )
 }
-

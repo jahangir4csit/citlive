@@ -1,8 +1,6 @@
 import React, { Fragment, useState } from "react";
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
-import Spinner from 'react-bootstrap/Spinner';
-import Alert from 'react-bootstrap/Alert';
 import Form from 'react-bootstrap/Form'
 import Button from 'react-bootstrap/Button'
 import FloatingLabel from 'react-bootstrap/FloatingLabel'
@@ -11,13 +9,6 @@ import { useCourses } from "../hooks/useCourses";
 const ContactForm = (data)=>{
 
     const courseslists = useCourses();
-    const courseTitleLists = data.courseList;
-    const resetInput = () => {
-        setNameValue('');
-        setMobileValue('');
-        setEmailValue('');
-        setAddressValue('');
-      };
     
       const [nameVal, setNameValue] = useState('')
       const [mobileVal, setMobileValue] = useState('')
@@ -27,10 +18,10 @@ const ContactForm = (data)=>{
 
     return(
         <section id="question" className="pb-5 mb-5">
-            <div class="container">
-                <div class="row">
-                    <div class="col-xl-8 col-lg-12 m-auto">
-                        <h3 class="f_Q">আপনার কোন প্রশ্ন থাকলে আমাদের করুন</h3>
+            <div className="container">
+                <div className="row">
+                    <div className="col-xl-8 col-lg-12 m-auto">
+                        <h3 className="f_Q">আপনার কোন প্রশ্ন থাকলে আমাদের করুন</h3>
                         <React.Fragment>
                             <Form className="student_form" action="/contact-us" method="post">
                                 <Form.Group className="mb-3 " controlId="formBasicEmail">

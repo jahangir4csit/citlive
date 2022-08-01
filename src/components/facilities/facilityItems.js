@@ -10,7 +10,7 @@ export default function FacilityItems(data){
     return(
         <section className="facilities-placement">
             <div className="container">
-                <div class="row">
+                <div className="row">
                 {
                     facilityItems.map(
                         (facilityItem, index)=>{

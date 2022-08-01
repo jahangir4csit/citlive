@@ -8,21 +8,21 @@ export default function FacilityItemDefault(data){
     if (typeof window === 'undefined') {
         global.window = {}
     }
-    const caseSingle = data.videoData;
+    //const caseSingle = data.videoData;
     const [isOpen, setOpen] = useState(false)
 
     return(
-        <div class="col-md-6">
-            <div class="intarnship support_item" style={{ backgroundColor: facilityDetails.facility_sec_bg}}>
+        <div className="col-md-6">
+            <div className="intarnship support_item" style={{ backgroundColor: facilityDetails.facility_sec_bg}}>
                 <h3 dangerouslySetInnerHTML={{ __html: facilityDetails.facility_sec_title }} />
                 <article>
                     <p dangerouslySetInnerHTML={{ __html: facilityDetails.facility_sec_description }} />
                 </article>
                 {facilityDetails.facility_sec_video_id &&
-                <div class="support_item_img">
+                <div className="support_item_img">
                     <ModalVideo channel='youtube' autoplay isOpen={isOpen} videoId={facilityDetails.facility_sec_video_id} onClose={() => setOpen(false)} />
-                    <img class="img-fluid w-100" src={facilityDetails.facility_sec_video_thumb} alt="image" onClick={()=> setOpen(true)} />
-                    <div class="overly_icon">
+                    <img className="img-fluid w-100" src={facilityDetails.facility_sec_video_thumb} alt="image" onClick={()=> setOpen(true)} />
+                    <div className="overly_icon">
                         <button className="modalvidwrap"  onClick={()=> setOpen(true)}>
                             <FontAwesomeIcon icon={faPlay} />
                         </button>

@@ -40,8 +40,9 @@ const MainNav = ()=>{
                     <Navbar.Collapse>
                         <Nav className="navbar-nav ms-auto mb-2 mb-lg-0 main_menu" as="ul">
                             {menuItem.map(
-                                menu=>                         
+                                (menu,index)=>                         
                                 <Nav.Item as="li"
+                                key={index}
                                 data-sal="slide-right"
                                 data-sal-delay="300"
                                 data-sal-duration="800"
@@ -50,7 +51,7 @@ const MainNav = ()=>{
                                     <a className='nav-link' target={'_blank'} href={menu.url}>{menu.label}</a>
                                 </Nav.Item>
                             )}
-                            <Nav.Item class="navbar_btn">
+                            <Nav.Item className="navbar_btn">
                                 <Link to="/our-courses"
                                 data-sal="flip-up"
                                 data-sal-delay="300"
@@ -83,13 +84,13 @@ const MainNav = ()=>{
                         <Offcanvas.Body>
                             <Nav className="justify-content-center flex-column text-center ms-auto mb-2 mb-lg-0 main_menu" as="ul">
                                 {menuItem.map(
-                                    menu=>                         
-                                    <Nav.Item as="li">
+                                    (menu,index)=>                         
+                                    <Nav.Item as="li" key={index}>
                                         <a className='nav-link' target={'_blank'} href={menu.url}>{menu.label}</a>
                                     </Nav.Item>
                                 )}
-                                <Nav.Item class="navbar_btn text-center">
-                                    <Link to="/our-courses"><img src={BookButton} alt="icon" />ব্রাউজ কোর্স <i class="fa fa-angle-down ps-2"></i></Link>
+                                <Nav.Item className="navbar_btn text-center">
+                                    <Link to="/our-courses"><img src={BookButton} alt="icon" />ব্রাউজ কোর্স <i className="fa fa-angle-down ps-2"></i></Link>
                                 </Nav.Item>
                             </Nav>
                         </Offcanvas.Body>

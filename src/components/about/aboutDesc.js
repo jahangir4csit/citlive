@@ -1,6 +1,5 @@
 import React from "react";
 import { Link } from "gatsby"
-import { StaticImage } from "gatsby-plugin-image";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {faAngleDown} from '@fortawesome/free-solid-svg-icons'
 import bookIcon from '../../images/Button-book.png';
@@ -15,14 +14,14 @@ const AboutDesc = (data) =>{
         data-sal-duration="1000"
         data-sal-easing="ease" 
         >
-            <div class="container">
-                <div class="navbar_btn text-center d-md-none">
+            <div className="container">
+                <div className="navbar_btn text-center d-md-none">
                     <Link to="/our-courses"><img src={bookIcon} alt="icon" />ব্রাউজ কোর্স <FontAwesomeIcon icon={faAngleDown} className="ps-2" /></Link>
                 </div>
 
-                <div class="row">
-                    <div class="col-lg-8">
-                        <div class="facilities_heading  ">
+                <div className="row">
+                    <div className="col-lg-8">
+                        <div className="facilities_heading  ">
                             <h1>{aboutData.title}</h1>
                             <div className="dtails" dangerouslySetInnerHTML={{ __html: aboutData.content }} />
                         </div>

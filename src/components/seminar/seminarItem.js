@@ -1,5 +1,5 @@
 import React from 'react'
-import { graphql, Link } from "gatsby"
+import { Link } from "gatsby"
 import NumberBn from '../utils/numberBn'
 import MonthBN from '../utils/monthBn'
 
@@ -13,18 +13,18 @@ export default function SeminarItem(data){
 
     return(
         <li>
-            <div class="date">{day} 
+            <div className="date">{day} 
             <span>{month}, 
             {' ' + year}</span></div>
-            <div class="text_main">
-                <div class="text">
+            <div className="text_main">
+                <div className="text">
                 <h4 dangerouslySetInnerHTML={{ __html: seminar.title }} />
                 <p>{seminar.seminar_meta.venue ? seminar.seminar_meta.venue : seminar.seminar_meta.venueOthers}, 
                 সময়ঃ {seminar.seminar_meta.seminarTime.timeSlot ? seminar.seminar_meta.seminarTime.timeSlot : ''} 
                 {seminar.seminar_meta.seminarTime.timeH ? ' '+seminar.seminar_meta.seminarTime.timeH :''}:
                 {seminar.seminar_meta.seminarTime.timeS ? seminar.seminar_meta.seminarTime.timeS :'00'} টা</p>
                 </div>
-                <div class="join_btn">
+                <div className="join_btn">
                     <Link 
                     to={`/register-for-free-seminar/`} 
                     state={{ id: seminar.seminar_meta.course ? seminar.seminar_meta.course.databaseId : 0 }}

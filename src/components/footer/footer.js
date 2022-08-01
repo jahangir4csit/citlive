@@ -1,7 +1,6 @@
 import { faFacebookF, faLinkedinIn, faYoutube, faInstagram } from '@fortawesome/free-brands-svg-icons'
 import { faEnvelopeOpen, faMapMarkerAlt, faPhoneAlt } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { Link } from 'gatsby'
 import React from "react"
 import { useFooterMenuQuery } from "../hooks/useMenuFooter"
 import { useFooterData } from "../hooks/useFooterData"
@@ -20,12 +19,12 @@ const Footer = ()=>{
     return(
         <footer>
             <section id="footer">
-                <img class="footer_left img-fluid" src={ftDots} alt="CIT" />
-                <img class="footer_right img-fluid" src={ftDots} alt="Creative IT" />
-                <div class="container">
-                    <div class="row footer-top">
-                        <div class="col-12">
-                            <div class="footer_heading"
+                <img className="footer_left img-fluid" src={ftDots} alt="CIT" />
+                <img className="footer_right img-fluid" src={ftDots} alt="Creative IT" />
+                <div className="container">
+                    <div className="row footer-top">
+                        <div className="col-12">
+                            <div className="footer_heading"
                             data-sal="zoom-in"
                             data-sal-delay="300"
                             data-sal-duration="800"
@@ -33,7 +32,7 @@ const Footer = ()=>{
                             >
                                 <h2 dangerouslySetInnerHTML={{ __html: footerData.crbThemeOptions.citFtHeading ? footerData.crbThemeOptions.citFtHeading : '' }} />
                                 <p dangerouslySetInnerHTML={{ __html: footerData.crbThemeOptions.citFtDesc ? footerData.crbThemeOptions.citFtDesc : '' }} />
-                                <div class="footer_btn">
+                                <div className="footer_btn">
                                     {footerData.crbThemeOptions.citFtButton1Title &&
                                     <a target={'_blank'} 
                                     href={footerData.crbThemeOptions.citFtButton1Url} >
@@ -46,39 +45,39 @@ const Footer = ()=>{
                             </div>
                         </div>
 
-                        <div class="col-md-4 col-sm-6"
+                        <div className="col-md-4 col-sm-6"
                         data-sal="slide-left"
                         data-sal-delay="200"
                         data-sal-duration="800"
                         data-sal-easing="ease"
                         >
-                            <div class=" footer_item_1">
+                            <div className=" footer_item_1">
                                 <h5>যোগাযোগ</h5>
                                 <ul>
                                     {footerData.crbThemeOptions.citFtAddress &&
                                     <li>
-                                        <div class="footer_icon">
+                                        <div className="footer_icon">
                                             <FontAwesomeIcon icon={faMapMarkerAlt} />
                                         </div>
-                                        <div class="footer_text" dangerouslySetInnerHTML={{ __html: footerData.crbThemeOptions.citFtAddress }} />
+                                        <div className="footer_text" dangerouslySetInnerHTML={{ __html: footerData.crbThemeOptions.citFtAddress }} />
                                     </li>
                                     }
                                     {footerData.crbThemeOptions.citFtContactPhone &&
                                     <li>
-                                        <div class="footer_icon">
+                                        <div className="footer_icon">
                                             <FontAwesomeIcon icon={faPhoneAlt} />
                                         </div>
-                                        <div class="footer_text" 
+                                        <div className="footer_text" 
                                         dangerouslySetInnerHTML={{ __html: footerData.crbThemeOptions.citFtContactPhone }} 
                                         />
                                     </li>
                                     }
                                     {footerData.crbThemeOptions.citFtContactEmail &&
                                     <li>
-                                        <div class="footer_icon">
+                                        <div className="footer_icon">
                                             <FontAwesomeIcon icon={faEnvelopeOpen} />
                                         </div>
-                                        <div class="footer_text">
+                                        <div className="footer_text">
                                             <span><a href={'mailto:'+footerData.crbThemeOptions.citFtContactEmail} >{footerData.crbThemeOptions.citFtContactEmail}</a></span>
                                         </div>
                                     </li>
@@ -87,17 +86,17 @@ const Footer = ()=>{
                             </div>
                         </div>
                         {footerNavs[0] &&
-                        <div class="col-md-3 col-sm-6"
+                        <div className="col-md-3 col-sm-6"
                             data-sal="slide-left"
                             data-sal-delay="300"
                             data-sal-duration="800"
                             data-sal-easing="ease"
                             >
-                                <div class="footer_item footer_item_2">
+                                <div className="footer_item footer_item_2">
                                     <h5>{ footerNavs[0].name }</h5>
                                     <ul>
                                         {footerNavs[0].menuItems.nodes.map(
-                                            navItems=> <li><a target={'_blank'} href={navItems.url}>{navItems.label}</a></li>
+                                            (navItems,index)=> <li key={index}><a target={'_blank'} href={navItems.url}>{navItems.label}</a></li>
                                         )}
                                     </ul>
                                 </div>
@@ -105,34 +104,34 @@ const Footer = ()=>{
                             </div>
                         }
                         {footerNavs[1] &&
-                            <div class="col-md-3 col-sm-6"
+                            <div className="col-md-3 col-sm-6"
                             data-sal="slide-left"
                             data-sal-delay="400"
                             data-sal-duration="800"
                             data-sal-easing="ease"
                             >
-                                <div class="footer_item footer_item_2">
+                                <div className="footer_item footer_item_2">
                                     <h5>{ footerNavs[1].name }</h5>
                                     <ul>
                                         {footerNavs[1].menuItems.nodes.map(
-                                            navItems=> <li><a target={'_blank'} href={navItems.url}>{navItems.label}</a></li>
+                                            (navItems,index)=> <li key={index}><a target={'_blank'} href={navItems.url}>{navItems.label}</a></li>
                                         )}
                                     </ul>
                                 </div>
                             </div>
                         }
                         {footerNavs[2] &&
-                            <div class="col-md-2 col-sm-6"
+                            <div className="col-md-2 col-sm-6"
                             data-sal="slide-left"
                             data-sal-delay="500"
                             data-sal-duration="800"
                             data-sal-easing="ease"
                             >
-                                <div class="footer_item footer_item_2">
+                                <div className="footer_item footer_item_2">
                                     <h5>{ footerNavs[2].name }</h5>
                                     <ul>
                                         {footerNavs[2].menuItems.nodes.map(
-                                            navItems=> <li><a target={'_blank'} href={navItems.url}>{navItems.label}</a></li>
+                                            (navItems,index)=> <li key={index}><a target={'_blank'} href={navItems.url}>{navItems.label}</a></li>
                                         )}
                                     </ul>
                                 </div>
@@ -182,9 +181,9 @@ const Footer = ()=>{
                                 </div>
                             </div>
                         </div>
-                        <div class="row copy">
-                            <div class="col-md-3 col-sm-6 padding_0">
-                                <div class="footer_logo"
+                        <div className="row copy">
+                            <div className="col-md-3 col-sm-6 padding_0">
+                                <div className="footer_logo"
                                 data-sal="slide-left"
                                 data-sal-delay="200"
                                 data-sal-duration="800"
@@ -194,18 +193,18 @@ const Footer = ()=>{
 
                                 </div> 
                             </div>
-                            <div class="col-md-6 copy_text_sm_last"
+                            <div className="col-md-6 copy_text_sm_last"
                             data-sal="slide-up"
                             data-sal-delay="200"
                             data-sal-duration="800"
                             data-sal-easing="ease"
                             >
-                                <div class="copy_text">
+                                <div className="copy_text">
                                     <p dangerouslySetInnerHTML={{ __html: footerData.crbThemeOptions.citCopyrightText ? 'Copyright &copy; '+ footerData.crbThemeOptions.citCopyrightText + `. All right reserved | <a href="/sitemap">Sitemap</a>` : 'Creative IT Institute' }} />
                                 </div>
                             </div>
-                            <div class="col-md-3 col-sm-6">
-                                <div class="copy_social_link"
+                            <div className="col-md-3 col-sm-6">
+                                <div className="copy_social_link"
                                 data-sal="slide-right"
                                 data-sal-delay="300"
                                 data-sal-duration="800"

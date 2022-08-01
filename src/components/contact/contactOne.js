@@ -5,9 +5,9 @@ const ContactOne = (data)=>{
 
     return(
         <section id="office_1">
-            <div class="container">
-                <div class="row align-items-center">
-                    <div class="col-md-5">
+            <div className="container">
+                <div className="row align-items-center">
+                    <div className="col-md-5">
                         <div className="office_map">
                             {data.keyId === 0 ||  data.keyId === 1 ?
                             <svg width="131" height="46" viewBox="0 0 131 46" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -25,24 +25,24 @@ const ContactOne = (data)=>{
                             <div className="mapwrap" dangerouslySetInnerHTML={{ __html: branchData.branch_map }} />
                         </div>
                     </div>
-                    <div class="col-md-7">
-                    <div class="office_address_main">
-                        <div class="address_text">
+                    <div className="col-md-7">
+                    <div className="office_address_main">
+                        <div className="address_text">
                             <h3>{branchData.branch_title}</h3>
                             <div className="dtails" dangerouslySetInnerHTML={{ __html: branchData.branch_address }} />
                         </div>
-                        <div class="row">
-                            <div class="col-sm-4">
-                                <div class="phone_number">
+                        <div className="row">
+                            <div className="col-sm-4">
+                                <div className="phone_number">
                                     <h3>ফোন নাম্বার</h3>
                                     <div className="dtails" dangerouslySetInnerHTML={{ __html: branchData.branch_phone }} />
                                 </div>
                             </div>
-                            <div class="col-sm-8">
-                                <div class="phone_number address_text">
+                            <div className="col-sm-8">
+                                <div className="phone_number address_text">
                                     <h3>অফিস ভিজিটের সময়</h3>
                                     <div className="dtails" dangerouslySetInnerHTML={{ __html: branchData.branch_schedule }} />
-                                    <h3  class="pt-2">ই-মেইল</h3>
+                                    <h3  className="pt-2">ই-মেইল</h3>
                                     <p className="dtails" dangerouslySetInnerHTML={{ __html: branchData.branch_email }} />
                                 </div>
                             </div>

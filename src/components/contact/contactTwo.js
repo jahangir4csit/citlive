@@ -3,10 +3,10 @@ import React from "react";
 const ContactTwo = () =>{
     return(
         <section id="office_2">
-            <div class="container">
-                <div class="row align-items-center">
-                    <div class="col-md-5">
-                        <div class="office_map">
+            <div className="container">
+                <div className="row align-items-center">
+                    <div className="col-md-5">
+                        <div className="office_map">
                             <svg width="131" height="46" viewBox="0 0 131 46" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M16 46L0 34.5V1L16 15V46Z" fill="#367645"/>
                                 <path d="M131 0H0V34H131L119.958 17L131 0Z" fill="#35AB51"/>
@@ -15,9 +15,9 @@ const ContactTwo = () =>{
                             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3652.158799008884!2d90.38029261498116!3d23.74171598459363!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755b8b7a55cd36f%3A0xfcc5b021faff43ea!2sCreative%20IT%20Institute!5e0!3m2!1sen!2sbd!4v1636094719514!5m2!1sen!2sbd" width="100%" height="100%" style={{border: 0}} allowfullscreen="" loading="lazy"></iframe>
                         </div>
                     </div>
-                    <div class="col-md-7">
-                    <div class="office_address_main">
-                        <div class="address_text">
+                    <div className="col-md-7">
+                    <div className="office_address_main">
+                        <div className="address_text">
                             <h3>চিটাগাং অফিস </h3>
                             <ul>
                                 <li>Momtaz Plaza (4th floor)</li>
@@ -25,9 +25,9 @@ const ContactTwo = () =>{
                                 <li>Road#4 Dhanmondi, Dhaka - 1205, Bangladesh</li>
                             </ul>
                         </div>
-                        <div class="row">
-                            <div class="col-sm-4">
-                                <div class="phone_number">
+                        <div className="row">
+                            <div className="col-sm-4">
+                                <div className="phone_number">
                                     <h3>ফোন নাম্বার</h3>
                                     <ul>
                                         <li><a href="tel:+880 1624666000">+880 1624666000</a></li>
@@ -38,14 +38,14 @@ const ContactTwo = () =>{
                                     </ul>
                                 </div>
                             </div>
-                            <div class="col-sm-8">
-                                <div class="phone_number address_text">
+                            <div className="col-sm-8">
+                                <div className="phone_number address_text">
                                     <h3>অফিস সময় এবং দর্শন</h3>
                                     <ul>
                                         <li>শনিবার - শুক্রবার</li>
                                         <li>সকাল 9.00 টা থেকে 8.00 টা</li>
                                     </ul>
-                                    <h3  class="pt-2">ই-মেইল</h3>
+                                    <h3  className="pt-2">ই-মেইল</h3>
                                     <p><a href="#">info@creativeitinstitute.com</a></p>
                                 </div>
                             </div>

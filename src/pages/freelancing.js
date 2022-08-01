@@ -44,7 +44,6 @@ export default function Freelancing({data}) {
 
     }, [postId])
 
-    console.log(pageDetails, 'freel');
 
     return(
       <Layout>

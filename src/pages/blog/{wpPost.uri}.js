@@ -11,49 +11,49 @@ const BlogTemplate = ({data}) => {
 
     return(
         <Layout>
-            <section class="blog_news">
-                <div class="container">
-                    <div class="navbar_btn text-center d-md-none">
-                        <a href="/our-courses"><img src="images/home/Button-book.png" alt="icon" />ব্রাউজ কোর্স <i class="fa fa-angle-down ps-2"></i></a>
+            <section className="blog_news">
+                <div className="container">
+                    <div className="navbar_btn text-center d-md-none">
+                        <a href="/our-courses"><img src="images/home/Button-book.png" alt="icon" />ব্রাউজ কোর্স <i className="fa fa-angle-down ps-2"></i></a>
                     </div>
-                    <div class="blog_menu">
+                    <div className="blog_menu">
                         <ul>
                             <li><a href="#">ওয়েব এন্ড সফটওয়ার</a></li>
                             <li><a href="#">গ্রাফিক্স ডিজাইন</a></li>
                             <li><a href="#">ডিজিটাল মার্কেটিং</a></li>
                             <li><a href="#">এনিমেশন ও ভিজিয়ালাইজেশন</a></li>
-                            <li><a href="#">অন্যান্য <i class="fa fa-angle-down"></i></a></li>
+                            <li><a href="#">অন্যান্য <i className="fa fa-angle-down"></i></a></li>
                         </ul>
 
                     </div>
                 </div>
             </section>
             <section id="blog_dtails_main">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-7">
-                            <div class="blog_dtails">
-                                <div class="heading">
+                <div className="container">
+                    <div className="row">
+                        <div className="col-md-7">
+                            <div className="blog_dtails">
+                                <div className="heading">
                                     <h3>{data.post.categories.nodes[0].name}</h3>
                                     <h2>{data.post.title}</h2>
                                     <p>পোস্ট / {data.post.author.node.name} <span>মে  ২৫, ২০২১</span></p>
                                 </div>
-                                <div class="image">
+                                <div className="image">
                                 {data.post.featuredImage ?
-                                    <img class="img-fluid w-100" src={data.post.featuredImage.node.sourceUrl} alt="image" />
+                                    <img className="img-fluid w-100" src={data.post.featuredImage.node.sourceUrl} alt="image" />
                                 : ''}
                                 </div>
                                 <div className="dtails" dangerouslySetInnerHTML={{ __html: data.post.content }} />
                             </div>
 
-                            <div class="tag_share">
-                                <div class="tag">
+                            <div className="tag_share">
+                                <div className="tag">
                                     <label for="">ট্যাগ</label>
                                     <a href="#">কর্পোরেট</a>
                                     <a href="#">ডিজাইন</a>
                                     <a href="#">ডেভেলপমেন্ট</a>
                                 </div>
-                                <div class="share">
+                                <div className="share">
                                     <label for="">শেয়ার</label>
                                     <a href="#"><FontAwesomeIcon icon={faTwitter} /></a>
                                     <a href="#"><FontAwesomeIcon icon={faFacebookF} /></a>

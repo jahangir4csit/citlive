@@ -21,7 +21,6 @@ import {
 
 const RegSeminar = ({location}) => {
 
-  let input;
 
   const courseslists = useCourses();
 
@@ -68,10 +67,10 @@ const RegSeminar = ({location}) => {
       Marketing, Networking, Film Media, Robotics Automation etc Call 880 1624666000
       for registration" />
       <section id="admission" className='mt-5 pt-5 pb-5 mb-5'>
-          <div class="container">
-            <div class="row">
-                <div class="col-xl-8 col-lg-12 m-auto">
-                    <div class="section_heading mb-5 pt-5">
+          <div className="container">
+            <div className="row">
+                <div className="col-xl-8 col-lg-12 m-auto">
+                    <div className="section_heading mb-5 pt-5">
                         <h1 className="font-600">জয়েন ফ্রি সেমিনার</h1>
                     </div>
                     {/* <Mutation mutation={useMutation(SEMINAR_MUTATION)}> */}
@@ -159,7 +158,7 @@ const RegSeminar = ({location}) => {
                                 <option value='select'>Select Course</option> : ''
                               }
                               {courseslists.allWpCourse.nodes.map(
-                                course => <option value={course.databaseId} >{course.title}</option>
+                                (course, index) => <option key={index} value={course.databaseId} >{course.title}</option>
                               )}
                           </Form.Select>
                         </Col>

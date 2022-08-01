@@ -14,14 +14,14 @@ const CounterUp2 = (data)=>{
 
     return(
         <section id="couter_up">
-            <div class="container">
-                <div class="row">
+            <div className="container">
+                <div className="row">
                     {
                         stats.citAchvData.map(
-                            statsItem=>(
-                                <div class="col-lg-4 col-md-4 col-6">
-                                    <div class="counter_up_item counter_up_style2" style={{ backgroundColor: boxbg ? statsItem.achv_boxbg : '#FAF9FD' }}>
-                                        <h5 class="counter" style={{ color: boxbg ? statsItem.achv_heading_color : '#CF0000' }}><Counter data={statsItem.achv_val} />{statsItem.achv_ntype.label}</h5>
+                            (statsItem, index)=>(
+                                <div className="col-lg-4 col-md-4 col-6" key={index}>
+                                    <div className="counter_up_item counter_up_style2" style={{ backgroundColor: boxbg ? statsItem.achv_boxbg : '#FAF9FD' }}>
+                                        <h5 className="counter" style={{ color: boxbg ? statsItem.achv_heading_color : '#CF0000' }}><Counter data={statsItem.achv_val} />{statsItem.achv_ntype.label}</h5>
                                         <p>{statsItem.achv_title}</p>
                                     </div>
                                 </div>

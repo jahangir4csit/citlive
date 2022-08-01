@@ -6,27 +6,27 @@ const CITAchievements = (data) => {
     
     return(
         <section id="iso">
-            <div class="container">
-                <div class="row align-items-center">
-                    <div class="col-lg-4 col-md-6"
+            <div className="container">
+                <div className="row align-items-center">
+                    <div className="col-lg-4 col-md-6"
                     data-sal="slide-up"
                     data-sal-delay="300"
                     data-sal-duration="1000"
                     data-sal-easing="ease" 
                     >
                         {citCertified.photo !==null ? 
-                        <div class="iso_image">
-                            <img class="img-fluid w-100" src={citCertified.photo.sourceUrl} alt={citCertified.photo.altText ? citCertified.photo.altText : 'CIT|Achievements' }/>
+                        <div className="iso_image">
+                            <img className="img-fluid w-100" src={citCertified.photo.sourceUrl} alt={citCertified.photo.altText ? citCertified.photo.altText : 'CIT|Achievements' }/>
                         </div>
                         : ''}
                     </div>
-                    <div class="col-lg-7 offset-lg-1 col-md-6"
+                    <div className="col-lg-7 offset-lg-1 col-md-6"
                     data-sal="slide-down"
                     data-sal-delay="300"
                     data-sal-duration="1000"
                     data-sal-easing="ease" 
                     >
-                        <div class="iso_text">
+                        <div className="iso_text">
                             <h3 dangerouslySetInnerHTML={{ __html: citCertified.title }} />
                             <p dangerouslySetInnerHTML={{ __html: citCertified.description }} />
                         </div>

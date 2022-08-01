@@ -1,4 +1,4 @@
-import React,{Fragment, useEffect, useState} from 'react'
+import React,{useState} from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {faPlay} from '@fortawesome/free-solid-svg-icons'
 import ModalVideo from 'react-modal-video'
@@ -23,18 +23,18 @@ export default function StudentProjects(data){
       };
 
     return(
-        <div class="pgs_project">
-            <div class="row">
+        <div className="pgs_project">
+            <div className="row">
                 <h2>আমাদের শিক্ষার্থীদের কিছু প্রোজেক্ট</h2>
-                <div class="col-12">
+                <div className="col-12">
                     <Slider {...settingsProjectsSlider}>
                     {projectsItems.map(
-                        item=> (
+                        (item,index)=> (
                             item.video_id !=null ?
-                            <div>
-                                <div class="pgp_slide_item">
-                                    <img class="img-fluid w-100" src={item.video_thumb} alt="Projects" />
-                                    <div class="overly_icon">
+                            <div key={index}>
+                                <div className="pgp_slide_item">
+                                    <img className="img-fluid w-100" src={item.video_thumb} alt="Projects" />
+                                    <div className="overly_icon">
                                         <ModalVideo channel='youtube' autoplay isOpen={isOpen} videoId={item.video_id} onClose={() => setOpen(false)} />
                                         <button className="modalvidwrap" onClick={()=> setOpen(true)}>
                                             <FontAwesomeIcon icon={faPlay} />
@@ -44,10 +44,10 @@ export default function StudentProjects(data){
                             </div>
                             :
                             item.gallery.map(
-                                gitems=>(
-                            <div>
-                                <div class="pgp_slide_item">
-                                    <img class="img-fluid w-100" src={gitems.sourceUrl} alt={gitems.altText ? gitems.altText : 'Student Project'} />
+                                (gitems,index)=>(
+                            <div key={index}>
+                                <div className="pgp_slide_item">
+                                    <img className="img-fluid w-100" src={gitems.sourceUrl} alt={gitems.altText ? gitems.altText : 'Student Project'} />
                                 </div>
                             </div>
                             ))

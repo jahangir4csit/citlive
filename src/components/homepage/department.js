@@ -72,7 +72,7 @@ export default function  DepartmentSlider(data){
 
       return (
         <section id="course_department">
-            <div class="container"
+            <div className="container"
                     data-sal="slide-up"
                     data-sal-delay="500"
                     data-sal-duration="800"
@@ -81,15 +81,15 @@ export default function  DepartmentSlider(data){
 
                 <Slider {...settings}>
                     {courseCat.map(
-                        item=>(
-                            <div>
-                                <div class="course_slider_item">
+                        (item,index)=>(
+                            <div key={index}>
+                                <div className="course_slider_item">
                                     <Link to={`course-cat/`+item.slug}>
-                                        <div class="couse_icon">
+                                        <div className="couse_icon">
                                             <img src={item.categoryThumb.categoryThumbnail.sourceUrl ? item.categoryThumb.categoryThumbnail.sourceUrl : ''} 
                                             alt={item.name} />
                                         </div>
-                                        <div class="couse_text">
+                                        <div className="couse_text">
                                             <h3>{item.name}</h3>
                                         </div>
                                     </Link>

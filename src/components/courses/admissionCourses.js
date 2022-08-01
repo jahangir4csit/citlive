@@ -1,5 +1,4 @@
 import React, { Fragment } from "react";
-import { StaticImage } from "gatsby-plugin-image"
 import CourseSingle from './CourseSingle'
 import CourseCatTitle from './courseCatTitle'
 import { isEmpty } from "lodash";
@@ -15,10 +14,10 @@ const courseData = courseDataList.filter(function(item){ return item.termTaxonom
 
     return(
         <section id="admission">
-            <div class="container">
-                <div class="row">
-                    <div class="col-12">
-                        <div class="section_heading"
+            <div className="container">
+                <div className="row">
+                    <div className="col-12">
+                        <div className="section_heading"
                         data-sal="slide-up"
                         data-sal-delay="300"
                         data-sal-duration="800"
@@ -30,8 +29,8 @@ const courseData = courseDataList.filter(function(item){ return item.termTaxonom
                     </div>
 
                     {courseData.slice(0, 3).map(
-                        courseCatitem=>(
-                            <Fragment>
+                        (courseCatitem,index)=>(
+                            <Fragment key={index}>
                                 {isEmpty(courseCatitem.courses.nodes) ? '' : <CourseCatTitle title={courseCatitem.name} /> }
                                 <div className="course_items_display">
                                     <div className="row"
@@ -39,7 +38,7 @@ const courseData = courseDataList.filter(function(item){ return item.termTaxonom
                                     >
                                         {courseCatitem.courses.nodes.slice(0, 3).map(
                                             (courseItem, index)=>(
-                                            <CourseSingle singleItem={courseItem} delay={index*=400} />
+                                            <CourseSingle singleItem={courseItem} delay={index*=400} key={index} />
                                                 )
                                         )}
                                     </div>
@@ -48,8 +47,8 @@ const courseData = courseDataList.filter(function(item){ return item.termTaxonom
                         )
                     )}             
                     {button != null ?
-                    <div class="col-12">
-                        <div class="all_course_btn text-center">
+                    <div className="col-12">
+                        <div className="all_course_btn text-center">
                             <Link to="/our-courses"
                             data-sal="flip-up"
                             data-sal-delay="300"

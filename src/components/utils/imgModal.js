@@ -1,5 +1,4 @@
 import React,{useState} from 'react'
-import ReactDOM from 'react-dom'
 import { Lightbox } from "react-modal-image";
 
 
@@ -24,8 +23,8 @@ export const ImgModal = (data) => {
         />
         }
       <div className="modalImgWrap img-hover-zoom" >
-        <img class="img-fluid w-100" src={imgSingle.sourceUrl} alt={imgSingle.title ? imgSingle.title : 'Gallery Image'} />
-        <button class="img-overlay" onClick={()=> setOpen(true)}></button>
+        <img className="img-fluid w-100" src={imgSingle.sourceUrl} alt={imgSingle.title ? imgSingle.title : 'Gallery Image'} />
+        <button className="img-overlay" onClick={()=> setOpen(true)}></button>
       </div>
     </React.Fragment>
   )

@@ -1,24 +1,9 @@
-import React,{Fragment, useEffect, useState} from 'react'
-import Seo from "../components/seo"
-import Slider from "react-slick";
-import { graphql, Link } from "gatsby"; 
-import { StaticImage } from "gatsby-plugin-image"
-import { faStar, faStarHalfAlt } from '@fortawesome/free-solid-svg-icons';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import Layout from "../components/layout"
-import {faPlay} from '@fortawesome/free-solid-svg-icons'
-import ModalVideo from 'react-modal-video'
-import Tabs from 'react-bootstrap/Tabs'
-import Tab from 'react-bootstrap/Tab'
-import TabContainer from 'react-bootstrap/TabContainer'
-import TabContent from 'react-bootstrap/TabContent'
-import TabPane from 'react-bootstrap/TabPane'
-import Nav from 'react-bootstrap/Nav'
-import Row from 'react-bootstrap/Row'
-import Col from 'react-bootstrap/Col'
-import { isEmpty } from "lodash";
-import CourseSingle from '../components/courses/CourseSingle'
-import CourseCatTitle from '../components/courses/courseCatTitle'
+import React,{Fragment} from 'react';
+import Seo from "../components/seo";
+import { graphql } from "gatsby"; 
+import Layout from "../components/layout";
+import CourseSingle from '../components/courses/CourseSingle';
+
 
 export default function Courses(data){
 
@@ -30,17 +15,17 @@ export default function Courses(data){
             <Seo title="Our Courses" />
             
             <section id="admission" className='mt-5 pt-5 pb-5'>
-                <div class="container">
-                    <div class="row">
-                        <div class="col-12">
-                            <div class="section_heading course_cat_heading mb-5">
+                <div className="container">
+                    <div className="row">
+                        <div className="col-12">
+                            <div className="section_heading course_cat_heading mb-5">
                                 <h1 dangerouslySetInnerHTML={{ __html: secheading }} />
                             </div>
                         </div>
 
                             {courses.map(
-                                courseCatitem=>(
-                                    <Fragment>
+                                (courseCatitem, index)=>(
+                                    <Fragment key={index}>
                                         {/* {isEmpty(courseCatitem.courses.nodes) ? '' : <CourseCatTitle title={courseCatitem.name} /> } */}
                                         <CourseSingle archive singleItem={courseCatitem} />
                                     </Fragment>

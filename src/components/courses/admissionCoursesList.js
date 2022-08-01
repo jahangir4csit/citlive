@@ -1,5 +1,4 @@
 import React, { Fragment } from "react";
-import { StaticImage } from "gatsby-plugin-image"
 import CourseSingle from './CourseSingle'
 import CourseCatTitle from './courseCatTitle'
 import { isEmpty } from "lodash";
@@ -15,18 +14,18 @@ const courseData = courseDataList.filter(function(item){ return item.termTaxonom
 
     return(
         <section id="admission">
-            <div class="container">
-                <div class="row">
-                    <div class="col-12">
-                        <div class="section_heading">
+            <div className="container">
+                <div className="row">
+                    <div className="col-12">
+                        <div className="section_heading">
                             <h2 dangerouslySetInnerHTML={{ __html: data.secheading }} />
                             <p dangerouslySetInnerHTML={{ __html: data.secdesc }} />
                         </div>
                     </div>
 
                             {courseData.map(
-                                courseCatitem=>(
-                                    <Fragment>
+                                (courseCatitem,index)=>(
+                                    <Fragment key={index}>
                                         {isEmpty(courseCatitem.courses.nodes) ? '' : <CourseCatTitle title={courseCatitem.name} /> }
                                         {courseCatitem.courses.nodes.map(
                                             courseItem=>(
@@ -37,8 +36,8 @@ const courseData = courseDataList.filter(function(item){ return item.termTaxonom
                                 )
                             )} 
                     {button != null ?
-                    <div class="col-12">
-                        <div class="all_course_btn text-center">
+                    <div className="col-12">
+                        <div className="all_course_btn text-center">
                             <Link to="/our-courses">সকল কোর্স দেখুন</Link>
                         </div>
                     </div>

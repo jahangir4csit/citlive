@@ -17,7 +17,7 @@ function SampleNextArrow(props) {
 }
 
 function SamplePrevArrow(props) {
-  const { className, style, onClick } = props;
+  const { style, onClick } = props;
   return (
       <div className="prevarrow" onClick={onClick}>
           <FontAwesomeIcon icon={faChevronLeft}
@@ -34,16 +34,6 @@ export default function CourseSlide(data){
 
   const [nav1, setNav1] = useState();
   const [nav2, setNav2] = useState();
-
-
-//  const [catId, setcatId] = useState(0);
-//   const [courseDataLoad, setCourseDataLoad] = useState('')
-
-//   const handleClick = async(id) => {
-//     setcatId(id)
-//     const data = await axios.get('http://localhost/citbd/wp-json/wp/v2/course-category/120')
-//     setCourseDataLoad(data)
-// }
 
 const settingsCourseItem = {
   className: "course_category_slider",
@@ -127,16 +117,16 @@ const settingsCourseItem = {
 
       return (
         <section id="courseslide">
-            <div class="container 
+            <div className="container 
             populer_courses" 
             style={{ background: data.noBg ? 'transparent' : '' }} >
-                <div class="row">
+                <div className="row">
                     <CourseSlideDesc 
                     secHeading={data.secHeading} 
                     secDesc={data.secDesc} 
                     />
-                    <div class="col-12">
-                        <div class="course_mix_btn">
+                    <div className="col-12">
+                        <div className="course_mix_btn">
                             <Slider {...settings}
                                 asNavFor={nav1}
                                 ref={(slider2) => setNav2(slider2)}
@@ -149,7 +139,7 @@ const settingsCourseItem = {
                             {courseData.map(
                             (item, index)=>(
                               
-                                <button class="course_single_btn"
+                                <button className="course_single_btn" key={index}
                                 // data-sal="slide-left"
                                 // data-sal-delay={index *= 300}
                                 // data-sal-duration="800"
@@ -166,9 +156,9 @@ const settingsCourseItem = {
                     >        
                     {courseData.map(
 
-                          courseCatitem=>(
+                          (courseCatitem,index)=>(
                             
-                            <div class="course_catagory_item">
+                            <div className="course_catagory_item" key={index}>
 
                                       <Slider {...settingsCourseItem}>
 

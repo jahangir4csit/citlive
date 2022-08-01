@@ -1,5 +1,4 @@
 import React from "react";
-import { StaticImage } from "gatsby-plugin-image"
 import { useFeaturedTextTwo } from './hooks/useFeaturedTextTwo';
 import { Link } from "gatsby"
 
@@ -11,10 +10,10 @@ const FeaturedTextTwo = (data)=>{
 
     return(
         <section id="glory">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-6">
-                        <div class="glory_text"
+            <div className="container">
+                <div className="row">
+                    <div className="col-lg-6">
+                        <div className="glory_text"
                         data-sal="slide-left"
                         data-sal-delay="500"
                         data-sal-duration="800"
@@ -23,7 +22,7 @@ const FeaturedTextTwo = (data)=>{
                             <h5 dangerouslySetInnerHTML={{ __html: ftTwo.citFeaturedTextSubheading }} />
                             <h2 dangerouslySetInnerHTML={{ __html: ftTwo.title }} />
                             <div dangerouslySetInnerHTML={{ __html: ftTwo.citFeaturedTextDesc }} />
-                            <div class="glory_btn"
+                            <div className="glory_btn"
                             data-sal="flip-right"
                             data-sal-delay="500"
                             data-sal-duration="800"
@@ -31,8 +30,8 @@ const FeaturedTextTwo = (data)=>{
                             >
                                 {aboutBtn ? 
                                     ftTwo.featuredTextBtn.map(
-                                        btn=>(
-                                            <Link 
+                                        (btn,index)=>(
+                                            <Link key={index} 
                                             to={btn.button_url}>{btn.button_title}</Link>
                                         )
                                     )
@@ -42,14 +41,14 @@ const FeaturedTextTwo = (data)=>{
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-6">
-                        <div class="glory_img"
+                    <div className="col-lg-6">
+                        <div className="glory_img"
                         data-sal="slide-right"
                         data-sal-delay="600"
                         data-sal-duration="1000"
                         data-sal-easing="ease"
                         >
-                            <img class="img-fluid cit_radius" src={ftTwo.featuredImage.node.sourceUrl} alt={ftTwo.featuredImage.node.altText ? ftTwo.featuredImage.node.altText : 'Creative IT Institute'} />
+                            <img className="img-fluid cit_radius" src={ftTwo.featuredImage.node.sourceUrl} alt={ftTwo.featuredImage.node.altText ? ftTwo.featuredImage.node.altText : 'Creative IT Institute'} />
                         </div>
                     </div>
                 </div>

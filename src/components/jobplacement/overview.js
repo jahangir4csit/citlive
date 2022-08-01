@@ -6,7 +6,7 @@ const JpOverview = (data)=>{
 
     return(
         <section id="jp_overview" className="mb-5 mt-5">
-            <div class="container">
+            <div className="container">
                 {overviews.map(
                 (overview, index)=>(
                     <div className={`row py-3 mb-4 align-items-center ovr_item_${index}`}>

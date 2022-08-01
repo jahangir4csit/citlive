@@ -4,7 +4,7 @@ import { graphql } from "gatsby"
 
 export default function BlogPost({ data }) {
   const post = data.allWpPost.nodes[0]
-  console.log(post)
+  
   return (
     <Layout>
       <div>

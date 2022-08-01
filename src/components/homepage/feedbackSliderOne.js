@@ -1,6 +1,6 @@
 import { faChevronLeft, faChevronRight } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import React, { useState } from 'react';
+import React from 'react';
 import Slider from "react-slick";
 
 function SampleNextArrow(props) {
@@ -27,8 +27,6 @@ function SampleNextArrow(props) {
 
 export default function FeedbackSliderOne(data){
 
-    const [nav1, setNav1] = useState();
-    const [nav2, setNav2] = useState();
 
     const reviews = data.fbreviews;
 
@@ -59,9 +57,9 @@ export default function FeedbackSliderOne(data){
     return(
         <Slider {...settings}>
             {reviews.map(
-                review=>(
-                    <div>
-                        <div class="feedback_item">
+                (review,index)=>(
+                    <div key={index}>
+                        <div className="feedback_item">
                             <iframe src={`https://www.facebook.com/plugins/post.php?href=${review.crb_fb_review_url}&show_text=true&appId=191181859164389`} 
                              style={{border:'none', overflow:'hidden', width: '100%', height: '100vh', paddingRight: '1px'}} 
                             scrolling="no" frameborder="0" allowfullscreen="true" 

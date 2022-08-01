@@ -17,42 +17,42 @@ const StudentFeedback = (data)=>{
 
     return(
         <section id="student_feedback">
-            <div class="container">
+            <div className="container">
                 <FeedbackHeading 
                 secHeading={data.secHeading} 
                 secDesc={data.secDesc} />
-                <div class="col-12">
+                <div className="col-12">
                     {fbReviews.length > 0 &&
                     <LazyLoad once>
                         <FeedbackSliderOne fbreviews={fbReviews} />
                     </LazyLoad>
                     }
                 </div>
-                <div class="col-12">
-                    <div class="recommends text-center">
+                <div className="col-12">
+                    <div className="recommends text-center">
                         <h4>{fbReviewsCount} <img src={RecommendsIcon} alt="icon" /> <span>Recommends</span></h4>
                     </div>
                 </div>
                 {googleReviews.length > 0 &&
-                <div class="col-12">
+                <div className="col-12">
                     <LazyLoad once>
                         <FeedbackSliderTwo googlereviews={googleReviews} />
                     </LazyLoad>
                 </div>
                 }
                 {googleReviews.length > 0 &&
-                <div class="col-12">
-                    <div class="excellent text-center">
+                <div className="col-12">
+                    <div className="excellent text-center">
                         <h4>EXCELLENT
-                            <span class="star">
+                            <span className="star">
                                 <FontAwesomeIcon icon={faStar} />
                                 <FontAwesomeIcon icon={faStar} />
                                 <FontAwesomeIcon icon={faStar} />
                                 <FontAwesomeIcon icon={faStar} />
                                 <FontAwesomeIcon icon={faStar} />
                             </span>
-                            <span class="number">{googleReviewsCount}</span>
-                            <span class="review">reviews on</span>
+                            <span className="number">{googleReviewsCount}</span>
+                            <span className="review">reviews on</span>
                             <img src={googleLogo} alt="icon" />
                         </h4>
                     </div>

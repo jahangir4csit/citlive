@@ -4,60 +4,60 @@ export default function InstructorHead(data){
     const head = data.data;
 
     return(
-        <div class="row m-0 instructor_profile align-items-center">
-            <div class="col-lg-4">
+        <div className="row m-0 instructor_profile align-items-center">
+            <div className="col-lg-4">
                 {head.featuredImage ?
-                <div class="instructor_img">
-                    <img class="img-fluid" 
+                <div className="instructor_img">
+                    <img className="img-fluid" 
                     src={head.featuredImage.node.sourceUrl} 
                     alt={head.featuredImage.node.altText ? head.featuredImage.node.altText : 'Creative IT Institute'} />
                 </div>
                 : '' }
             </div>
-            <div class="col-lg-8">
-                <div class="row instructor_qualification">
-                    <div class="col-lg-12">
-                        <div class="instructor_profile_heading first_heading">
+            <div className="col-lg-8">
+                <div className="row instructor_qualification">
+                    <div className="col-lg-12">
+                        <div className="instructor_profile_heading first_heading">
                             <h2>{head.title}</h2>
                             <p>{head.mentorDsg}</p>
                         </div>
                     </div>
-                    <div class="col-lg-4 col-sm-6 col-md-4 col-6">
-                        <div class="instructor_profile_inner_item">
+                    <div className="col-lg-4 col-sm-6 col-md-4 col-6">
+                        <div className="instructor_profile_inner_item">
                             <h4>স্পেশালাইজড এরিয়াঃ</h4>
                             <ol>
                             {head.mentorSpecializations.map(
-                                specilized=>(
+                                (specilized,index)=>(
                                     specilized.title !== null ?
-                                    <li>{specilized.title}</li>
+                                    <li key={index}>{specilized.title}</li>
                                     : ''
                                 )
                             )}                   
                             </ol>
                         </div>
                     </div>
-                    <div class="col-lg-4 col-sm-6 col-md-4 col-6">
-                        <div class="instructor_profile_inner_item">
+                    <div className="col-lg-4 col-sm-6 col-md-4 col-6">
+                        <div className="instructor_profile_inner_item">
                             <h4>শিক্ষাগত যোগ্যতাঃ</h4>
                             <ol>
                             {head.mentorEducations.map(
-                                education=>(
+                                (education,index)=>(
                                     education.title !== null ?
-                                    <li>{education.title}</li>
+                                    <li key={index}>{education.title}</li>
                                     : ';'
                                 )
                             )}  
                             </ol>
                         </div>
                     </div>
-                    <div class="col-lg-4 col-sm-6 col-md-4 col-6">
-                        <div class="instructor_profile_inner_item">
+                    <div className="col-lg-4 col-sm-6 col-md-4 col-6">
+                        <div className="instructor_profile_inner_item">
                             <h4>ওয়ার্ক এক্সপেরিয়েন্স </h4>
                             <ol>
                             {head.mentorWorkexperiences.map(
-                                workexp=>(
+                                (workexp,index)=>(
                                 workexp.title !== null ?
-                                <li>{workexp.title}</li>
+                                <li key={index}>{workexp.title}</li>
                                 : ''
                                 )
                             )}  
@@ -66,16 +66,16 @@ export default function InstructorHead(data){
                     </div>
                 </div>
                 {head.instructorsWorkplace.mentorWorkplace.length > 0 || head.mentorAchievements.length > 0 ?
-                <div class="row instructor_qualification instructor_marketplace">
+                <div className="row instructor_qualification instructor_marketplace">
                     {head.instructorsWorkplace.mentorWorkplace.length > 0 && head.instructorsWorkplace.mentorWorkplace[0].title !== 'Empty'?
-                    <div class="col-lg-6 col-md-6">
-                        <div class="instructor_profile_inner_item">
+                    <div className="col-lg-6 col-md-6">
+                        <div className="instructor_profile_inner_item">
                             <h4>ওয়ার্কপ্লেস</h4>
-                            <div class="market_icon">
+                            <div className="market_icon">
                                 {head.instructorsWorkplace.mentorWorkplace.map(
-                                    workplace=>(
+                                    (workplace,index)=>(
                                     workplace.featuredImage ?
-                                    <img class="img-fluid" 
+                                    <img key={index} className="img-fluid" 
                                     src={workplace.featuredImage.node.sourceUrl} 
                                     alt={workplace.featuredImage.node.altText ? workplace.featuredImage.node.altText : 'Creative IT Institute'} />
                                     : workplace.title.concat('', ', ')
@@ -86,13 +86,13 @@ export default function InstructorHead(data){
                     </div>
                     : ''}
                     {head.mentorAchievements.length > 0 &&
-                    <div class="col-lg-6 col-md-6">
-                        <div class="instructor_profile_inner_item">
+                    <div className="col-lg-6 col-md-6">
+                        <div className="instructor_profile_inner_item">
                             <h4>এওয়ার্ড এন্ড এচিভমেন্ট</h4>
-                            <div class="market_icon award_icon">
+                            <div className="market_icon award_icon">
                                 {head.mentorAchievements.map(
-                                    mAchv=>(
-                                    <img class="img-fluid" src={mAchv.url} alt="image" />
+                                    (mAchv,index)=>(
+                                    <img key={index} className="img-fluid" src={mAchv.url} alt="image" />
                                     )
                                 )} 
                             </div>
@@ -102,15 +102,15 @@ export default function InstructorHead(data){
                 </div>
                 : ''}
 
-                <div class="row experiance">
-                    <div class="col-lg-6 col-8">
-                        <div class="instructor_profile_inner_item">
+                <div className="row experiance">
+                    <div className="col-lg-6 col-8">
+                        <div className="instructor_profile_inner_item">
                             <h4>ট্রেইনিং এক্সপেরিয়েন্স</h4>
                             <h5>{head.mentorTrainingExperiences}</h5>
                         </div>
                     </div>
-                    <div class="col-lg-6 col-4">
-                        <div class="instructor_profile_inner_item">
+                    <div className="col-lg-6 col-4">
+                        <div className="instructor_profile_inner_item">
                             <h4>স্টুডেন্ট</h4>
                             <h5>{head.mentorStudents}</h5>
                         </div>

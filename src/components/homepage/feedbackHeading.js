@@ -2,8 +2,8 @@ import React from "react";
 
 const FeedbackHeading = (data)=>{
     return(
-        <div class="col-12">
-            <div class="section_heading"
+        <div className="col-12">
+            <div className="section_heading"
             data-sal="slide-up"
             data-sal-delay="300"
             data-sal-duration="800"

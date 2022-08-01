@@ -1,5 +1,5 @@
 import { graphql } from "gatsby"
-import * as React from "react"
+import React from "react"
 import LazyLoad from 'react-lazyload';
 //import BlogSlider from "../components/blog/blogSlider"
 import CounterUp from "../components/counterUp"
@@ -26,8 +26,6 @@ export default function HomePage({data}){
   const seminarUpcomming = data.allWpSeminar.nodes;
   const reviewsData = data.allWp.nodes[0];
   const vitrualTour = data.allWpSection.nodes[0];
-
-  console.log(homeData, 'Home');
 
   return(
     <Layout>

@@ -31,18 +31,18 @@ export default function FreeSeminar({data}){
         <Seo 
         title={seo.metaTitle} 
         description={seo.metaDescription} />
-        <section id="instructors_teachers" class="free_seminer_schedule">
-            <div class="container">
-                <div class="row">
-                    <div class="col-12">
-                        <div class="navbar_btn text-center d-md-none">
+        <section id="instructors_teachers" className="free_seminer_schedule">
+            <div className="container">
+                <div className="row">
+                    <div className="col-12">
+                        <div className="navbar_btn text-center d-md-none">
                             <Link href="/our-courses">
                               <img src={BookButton} alt="book icon" />ব্রাউজ কোর্স 
-                              <i class="fa fa-angle-down ps-2"></i>
+                              <i className="fa fa-angle-down ps-2"></i>
                             </Link>
                         </div>
 
-                        <div class="facilities_heading ">
+                        <div className="facilities_heading ">
                           <h1 dangerouslySetInnerHTML={{ __html: page.title }} />
                           <div dangerouslySetInnerHTML={{ __html: page.content }} />
                         </div>
@@ -51,16 +51,16 @@ export default function FreeSeminar({data}){
             </div>
         </section>
         <section id="seminar">
-            <div class="container seminar seminer_schedule">
-                <div class="row align-items-center">
-                    <div class="col-lg-12">
-                        <div class="seminar_content">
+            <div className="container seminar seminer_schedule">
+                <div className="row align-items-center">
+                    <div className="col-lg-12">
+                        <div className="seminar_content">
                             <ul>
                               {
                               
                               seminarData.length > 0 ? 
                               seminarData.map(
-                                (seminar)=>{
+                                (seminar, index)=>{
                                   const dateTime = new Date(seminar.seminar_meta.scheduleDate);
                                   // console.log(dateTime, 'Date time map');
                                   // console.log(seminar, 's data');
@@ -76,7 +76,7 @@ export default function FreeSeminar({data}){
                                   
                                   //if (currentDate < dateTime || (currentDate-(1 * 24 * 60 * 60 * 1000)) < dateTime) {
                                   if (currentDate < dateTime) {
-                                    return <SeminarItem day={day} year={year} month={month} seminarData={seminar} />
+                                    return <SeminarItem key={index} day={day} year={year} month={month} seminarData={seminar} />
                                   }
                                 
                               })
@@ -90,18 +90,18 @@ export default function FreeSeminar({data}){
         </section>
 {page.latestSeminarVideo.latestSeminarVideoId &&
         <section id="previous_seminer_video">
-            <div class="container">
-                <div class="prev_semi_video_heading">
+            <div className="container">
+                <div className="prev_semi_video_heading">
                   <h2 dangerouslySetInnerHTML={{ __html: page.latestSeminarVideo.sectionHeading }} />
                 </div>
-                <div class="row">
-                    <div class="col-lg-12">
-                        <div class="banner_img">
+                <div className="row">
+                    <div className="col-lg-12">
+                        <div className="banner_img">
                           {page.latestSeminarVideo.latestSeminarVideoThumb !=null &&
-                            <img class="img-fluid w-100" src={page.latestSeminarVideo.latestSeminarVideoThumb.sourceUrl} alt="Seminar Video" />
+                            <img className="img-fluid w-100" src={page.latestSeminarVideo.latestSeminarVideoThumb.sourceUrl} alt="Seminar Video" />
                           }
-                            <div class="banner_img_overly">
-                                <div class="overly_icon">
+                            <div className="banner_img_overly">
+                                <div className="overly_icon">
                                   <ModalVideo channel='youtube' autoplay isOpen={isOpen} videoId={page.latestSeminarVideo.latestSeminarVideoId} onClose={() => setOpen(false)} />
                                   <button className="modalvidwrap" onClick={()=> setOpen(true)} >
                                       <FontAwesomeIcon icon={faPlay} />

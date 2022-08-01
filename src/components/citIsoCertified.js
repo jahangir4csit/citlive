@@ -6,17 +6,17 @@ const CitIsoCertified = (data) => {
     
     return(
         <section id="iso" className={`${data.classes ? data.classes : ''}`}>
-            <div class="container">
-                <div class="row align-items-center">
-                    <div class="col-lg-4 col-md-6">
+            <div className="container">
+                <div className="row align-items-center">
+                    <div className="col-lg-4 col-md-6">
                         {data.image.length > 0 ? 
-                        <div class="iso_image">
-                            <img class="img-fluid w-100" src={data.image} alt="ISO Certified"/>
+                        <div className="iso_image">
+                            <img className="img-fluid w-100" src={data.image} alt="ISO Certified"/>
                         </div>
                         : ''}
                     </div>
-                    <div class="col-lg-7 offset-lg-1 col-md-6">
-                        <div class="iso_text">
+                    <div className="col-lg-7 offset-lg-1 col-md-6">
+                        <div className="iso_text">
                             <h3 dangerouslySetInnerHTML={{ __html: data.title }} />
                             <div dangerouslySetInnerHTML={{ __html: Description }} />
                         </div>
