@@ -127,9 +127,9 @@ const GalleryGrid = (data)=>{
                                                     (<div class="all_course_btn text-center">
                                                         <a onClick={handleLoadMore} to="#"
                                                         style={{ color: '#fff', cursor: 'pointer'}}>
-                                                        Load More</a>
+                                                        আরো দেখুন</a>
                                                     </div>) 
-                                                    : (<p>No more results</p>) 
+                                                    : (<p>আর নেই</p>) 
                                                 }
                                             </div>
                                         </Tab> :
@@ -150,9 +150,9 @@ const GalleryGrid = (data)=>{
                                                     (<div class="all_course_btn text-center">
                                                         <a onClick={handleLoadMoreEvents} to="#"
                                                         style={{ color: '#fff', cursor: 'pointer'}}>
-                                                        Load More</a>
+                                                        আরো দেখুন</a>
                                                     </div>) 
-                                                    : (<p>No more results</p>) 
+                                                    : (<p>আর নেই</p>) 
                                                 }
                                             </div>
                                         </Tab>
@@ -173,9 +173,9 @@ const GalleryGrid = (data)=>{
                                                     (<div class="all_course_btn text-center">
                                                         <a onClick={handleLoadMoreFarewell} to="#"
                                                         style={{ color: '#fff', cursor: 'pointer'}}>
-                                                        Load More</a>
+                                                        আরো দেখুন</a>
                                                     </div>) 
-                                                    : (<p>No more results</p>) 
+                                                    : (<p>আর নেই</p>) 
                                                 }
                                             </div>
                                         </Tab>
