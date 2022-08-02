@@ -3,8 +3,8 @@ import { useStaticQuery, graphql } from "gatsby"
 
 export const useSuccessCases = () => {
     const data = useStaticQuery(graphql`
-    query SuccessCases {
-        allWpSuccessCaseCategory(filter: {slug: {nin: "featured"}}) {
+    query SuccessCases($exc: [String] = ["featured", "top-rated-freelancer"]) {
+        allWpSuccessCaseCategory(filter: {slug: {nin: $exc}}) {
             nodes {
               name
               uri

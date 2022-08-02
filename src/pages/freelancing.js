@@ -116,7 +116,7 @@ query($in: [String] = ["cit_initiatives", "cit_photoWall"]) {
       jpSuccessCaseTitle
     }
   }
-  allWpSuccessStories(limit: 6) {
+  allWpSuccessStories(filter: {successCasesCategories: {nodes: {elemMatch: {name: {eq: "Top Rated Freelancer"}}}}}) {
     nodes {
       successStoryLink {
         successStoryLink
