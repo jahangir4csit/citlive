@@ -5,7 +5,7 @@ import MainNav from "./navbar"
 import JoinSeminar from "../utils/joinSeminar"
 
 
-const Header = ({ siteTitle }) => (
+const Header = () => (
   <header id="header">
     <JoinSeminar/>
     <Topbar />
