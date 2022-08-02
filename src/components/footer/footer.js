@@ -10,6 +10,7 @@ import ftDots from '../../images/footer-dots.png';
 import ftBkashLogo from '../../images/bkash_marchant.png';
 import ftNagadLogo from '../../images/nagad_marchant.png';
 import ftRoketLogo from '../../images/roket_marchant.png';
+import { Link } from 'gatsby'
 
 const Footer = ()=>{
 
@@ -96,7 +97,10 @@ const Footer = ()=>{
                                     <h5>{ footerNavs[0].name }</h5>
                                     <ul>
                                         {footerNavs[0].menuItems.nodes.map(
-                                            (navItems,index)=> <li key={index}><a target={'_blank'} href={navItems.url}>{navItems.label}</a></li>
+                                            (navItems,index)=> 
+                                            <li key={index}>
+                                                <Link to={navItems.url}>{navItems.label}</Link>
+                                            </li>
                                         )}
                                     </ul>
                                 </div>
@@ -114,7 +118,10 @@ const Footer = ()=>{
                                     <h5>{ footerNavs[1].name }</h5>
                                     <ul>
                                         {footerNavs[1].menuItems.nodes.map(
-                                            (navItems,index)=> <li key={index}><a target={'_blank'} href={navItems.url}>{navItems.label}</a></li>
+                                            (navItems,index)=> 
+                                            <li key={index}>
+                                                <Link to={navItems.url}>{navItems.label}</Link>
+                                            </li>
                                         )}
                                     </ul>
                                 </div>
@@ -131,7 +138,10 @@ const Footer = ()=>{
                                     <h5>{ footerNavs[2].name }</h5>
                                     <ul>
                                         {footerNavs[2].menuItems.nodes.map(
-                                            (navItems,index)=> <li key={index}><a target={'_blank'} href={navItems.url}>{navItems.label}</a></li>
+                                            (navItems,index)=> 
+                                            <li key={index}>
+                                                <Link to={navItems.url}>{navItems.label}</Link>
+                                            </li>
                                         )}
                                     </ul>
                                 </div>
