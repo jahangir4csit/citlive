@@ -14,7 +14,11 @@ export default function CourseItemSlider(data){
                 <div className="course_single_item" >
                     <div className="course_image">
                       {courseItem.featuredImage !== null ?
-                        <img className="img-fluid w-100" src={courseItem.featuredImage.node.sourceUrl} alt={courseItem.title} />
+                        <img className="img-fluid w-100" 
+                        src={courseItem.featuredImage.node.sourceUrl} 
+                        alt={courseItem.title} 
+                        loading="lazy"
+                        />
                         : '' }
                     </div>
                     <div className="course_text">

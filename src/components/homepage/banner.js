@@ -109,6 +109,7 @@ const HomeBanner = ()=>{
                         data-sal-delay="200"
                         data-sal-duration="700"
                         data-sal-easing="ease"
+                        loading="lazy"
                         />
                         <ModalVideo channel='youtube' autoplay isOpen={isOpen} videoId={banner.homeBannerData.videoId} onClose={() => setOpen(false)} />
                         <div className="banner_img_overly" onClick={()=> setOpen(true)}>

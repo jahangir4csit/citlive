@@ -130,9 +130,22 @@ module.exports = {
         pixelId: "383471665939429",
       },
     },
-    `gatsby-plugin-smoothscroll`
+    `gatsby-plugin-smoothscroll`,
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
+    {
+      resolve: `gatsby-transformer-remark`,
+      options: {
+          plugins: [
+              {
+                  resolve: `gatsby-remark-images-native-lazy-load`,
+                  options: {
+                      loading: "lazy" // "lazy" | "eager" | "auto"
+                      }
+                  }
+          ],
+      },
+    },
   ],
 }
