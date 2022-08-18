@@ -127,7 +127,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-facebook-pixel`,
       options: {
-        pixelId: "383471665939429",
+        pixelId: "604807167825198",
       },
     },
     `gatsby-plugin-smoothscroll`,
